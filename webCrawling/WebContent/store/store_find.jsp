@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="utf-8">
-    <title>ë‹«ê¸°ê°€ ê°€ëŠ¥í•œ ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´</title>
+    <title>?«ê¸°ê°€ ê°€?¥í•œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´</title>
     <style>
-    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, 'ë‹ì›€', sans-serif;line-height: 1.5;}
+    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '?‹ì?', sans-serif;line-height: 1.5;}
     .wrap * {padding: 0;margin: 0;}
     .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
     .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
@@ -27,61 +28,1031 @@
 123
 <div id="map" style="width:100%;height:350px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=25758686751d9ec9d09f35f5b6eef26a">/* api í‚¤ */</script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=25758686751d9ec9d09f35f5b6eef26a">/* api ??*/</script>
 <script>
-var mapContainer = document.getElementById('map'), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+var mapContainer = document.getElementById('map'), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
     mapOption = { 
-        center: new daum.maps.LatLng(33.451475, 126.570528), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
-        level: 3 // ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
+        center: new daum.maps.LatLng(33.451475, 126.570528), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+        level: 3 // ì§€?„ì˜ ?•ë? ?ˆë²¨
     }; 
     alert("12");
-var map = new daum.maps.Map(mapContainer, mapOption); // ì§€ë„ë¥¼ ìƒì„±í•©ë‹ˆë‹¤
+var map = new daum.maps.Map(mapContainer, mapOption); // ì§€?„ë? ?ì„±?©ë‹ˆ??
 
-// ì§€ë„ì— ë§ˆì»¤ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤ 
+// ì§€?„ì— ë§ˆì»¤ë¥??œì‹œ?©ë‹ˆ??
 var marker = new daum.maps.Marker({
     map: map, 
     position: new daum.maps.LatLng(33.450701, 126.570667)
 });
 
-// ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ì— í‘œì‹œí•  ì»¨í…ì¸  ì…ë‹ˆë‹¤
-// ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ëŠ” ì•„ë˜ì™€ ê°™ì´ ì‚¬ìš©ìê°€ ììœ ë¡­ê²Œ ì»¨í…ì¸ ë¥¼ êµ¬ì„±í•˜ê³  ì´ë²¤íŠ¸ë¥¼ ì œì–´í•  ìˆ˜ ìˆê¸° ë•Œë¬¸ì—
-// ë³„ë„ì˜ ì´ë²¤íŠ¸ ë©”ì†Œë“œë¥¼ ì œê³µí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤ 
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???œì‹œ??ì»¨í…ì¸??…ë‹ˆ??
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???„ë˜?€ ê°™ì´ ?¬ìš©?ê? ?ìœ ë¡?²Œ ì»¨í…ì¸ ë? êµ¬ì„±?˜ê³  ?´ë²¤?¸ë? ?œì–´?????ˆê¸° ?Œë¬¸??
+// ë³„ë„???´ë²¤??ë©”ì†Œ?œë? ?œê³µ?˜ì? ?ŠìŠµ?ˆë‹¤ 
 var content = '<div class="wrap">' + 
             '    <div class="info">' + 
             '        <div class="title">' + 
-            '            ì¹´ì¹´ì˜¤ ìŠ¤í˜ì´ìŠ¤ë‹·ì›' + 
-            '            <div class="close" onclick="closeOverlay()" title="ë‹«ê¸°"></div>' + 
+            '            ì¹´ì¹´???¤í˜?´ìŠ¤?·ì›' + 
+            '            <div class="close" onclick="closeOverlay()" title="?«ê¸°"></div>' + 
             '        </div>' + 
             '        <div class="body">' + 
             '            <div class="img">' +
             '                <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
             '           </div>' + 
             '            <div class="desc">' + 
-            '                <div class="ellipsis">ì œì£¼íŠ¹ë³„ìì¹˜ë„ ì œì£¼ì‹œ ì²¨ë‹¨ë¡œ 242</div>' + 
-            '                <div class="jibun ellipsis">(ìš°) 63309 (ì§€ë²ˆ) ì˜í‰ë™ 2181</div>' + 
-            '                <div><a href="http://www.kakaocorp.com/main" target="_blank" class="link">í™ˆí˜ì´ì§€</a></div>' + 
+            '                <div class="ellipsis">?œì£¼?¹ë³„?ì¹˜???œì£¼??ì²¨ë‹¨ë¡?242</div>' + 
+            '                <div class="jibun ellipsis">(?? 63309 (ì§€ë²? ?í‰??2181</div>' + 
+            '                <div><a href="http://www.kakaocorp.com/main" target="_blank" class="link">?ˆí˜?´ì?</a></div>' + 
             '            </div>' + 
             '        </div>' + 
             '    </div>' +    
             '</div>';
 
-// ë§ˆì»¤ ìœ„ì— ì»¤ìŠ¤í…€ì˜¤ë²„ë ˆì´ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤
-// ë§ˆì»¤ë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ë¥¼ í‘œì‹œí•˜ê¸°ìœ„í•´ CSSë¥¼ ì´ìš©í•´ ìœ„ì¹˜ë¥¼ ì„¤ì •í–ˆìŠµë‹ˆë‹¤
+// ë§ˆì»¤ ?„ì— ì»¤ìŠ¤?€?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
+// ë§ˆì»¤ë¥?ì¤‘ì‹¬?¼ë¡œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?˜ê¸°?„í•´ CSSë¥??´ìš©???„ì¹˜ë¥??¤ì •?ˆìŠµ?ˆë‹¤
 var overlay = new daum.maps.CustomOverlay({
     content: content,
     map: map,
     position: marker.getPosition()       
 });
 
-// ë§ˆì»¤ë¥¼ í´ë¦­í–ˆì„ ë•Œ ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ë¥¼ í‘œì‹œí•©ë‹ˆë‹¤
+// ë§ˆì»¤ë¥??´ë¦­?ˆì„ ??ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
 daum.maps.event.addListener(marker, 'click', function() {
     overlay.setMap(map);
 });
 
-// ì»¤ìŠ¤í…€ ì˜¤ë²„ë ˆì´ë¥¼ ë‹«ê¸° ìœ„í•´ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤ 
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??«ê¸° ?„í•´ ?¸ì¶œ?˜ëŠ” ?¨ìˆ˜?…ë‹ˆ??
 function closeOverlay() {
     overlay.setMap(null);     
 }
 </script>
+=======
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <!-- SNS LINK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <!--// SNS LINK -->
+
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>ÇÑ¼Ü > STORE > ÁÖº¯Á¡Æ÷Ã£±â</title>
+
+    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/ui.pop.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/ui.store.css" />
+<!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
+
+<style>
+    .file_input {
+        font-size:45px;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        margin:0;
+        padding:0;
+        border:0;
+        z-index:-1;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -ms-filter: "alpha(opacity=0)";
+        -khtml-opacity:0;
+        -moz-opacity:0;
+    }
+</style>
+
+<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../assets/js/ui.common.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/tss.js"></script>
+<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+
+<!-- validatation check -->
+<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="../assets/js/validate.js"></script>
+
+<!-- fileupload -->
+<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
+
+<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+
+<!-- naver map api -->
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
+
+<!-- moment js api -->
+<script type="text/javascript" src="../assets/js/moment.js"></script>
+<!-- lodash js api -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+
+<script>
+    $(function () {
+        var token = $("meta[name='_csrf']").attr('content');
+        var header = "X-CSRF-TOKEN";
+        $(document).ajaxSend(function(event, xhr, options) {
+            xhr.setRequestHeader(header, token);
+        });
+        $(document).ajaxError(function(event, xhr, options) {
+            if(xhr.status === 401) {
+                console.log(xhr);
+                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                    tss.util.auth();
+                }
+            }
+            if(xhr.status === 500 || xhr.status === 400) {
+                console.log("¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+            }
+        });
+    });
+</script><script type="text/javascript">
+    </script>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/ui.menu.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.min.css"/>
+    <script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111772169-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - AdWords: 864658366 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-864658366"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-864658366');
+    </script>
+
+    <!-- kakao pixcel -->
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+    kakaoPixel('5575357302971415199').pageView();
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '241666853119648');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+</head>
+<body ontouchstart>
+<!-- wrap s -->
+<div id="wrap" class="">
+    <!-- inc header s -->
+    <!-- header -->
+<header id="header">
+    <!-- header flex-->
+    <div class="hd_flex">
+        <div class="area_flex">
+            <ul>
+                <li>
+                    <a href="../login/login.jsp">·Î±×ÀÎ</a>
+                    </li>
+                <li>
+                    <a href="../join/join1.jsp">È¸¿ø°¡ÀÔ</a>
+                    </li>
+                <li class="sns_insta">
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                </li>
+                <li class="sns_face">
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //header flex -->
+
+    <!-- header content -->
+    <div class="hd_fixed">
+        <div class="hd_content">
+            <div class="logo">
+                <h1><a href="../home.jsp"><span class="blind">ÇÑ¼Ü</span></a></h1>
+            </div>
+            <!-- gnb -->
+            <section id="gnb" class="area_gnb mo_version">
+                <!-- ¸ğ¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <div class="m_area_flex">
+                    <ul>
+                        <li>
+                            <a href="/login">·Î±×ÀÎ</a>
+                            </li>
+                        <li>
+                            <a href="/join/join_step1">È¸¿ø°¡ÀÔ</a>
+                            </li>
+                    </ul>
+                </div>
+                <!-- //¸ğ¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+
+                <div class="gnb_menu">
+                    <ul>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">BRAND</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li class="active"><a href="../brand/story.jsp">ºê·£µå ½ºÅä¸®</a></li>
+                                    <li><a href="../brand/philosophy.jsp">ºê·£µå Ã¶ÇĞ</a></li>
+                                    <li><a href="../brand/legacy.jsp">ºê·£µå À¯»ê</a></li>
+                                    </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">ESG</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li class="active"><a href="../brand/esg.jsp">ESG°æ¿µÀÌ¶õ?</a></li>
+                                    <li><a href="../brand/philosophy.jsp">È¯°æº¸È£(Environment)</a></li>
+                                    <li><a href="../hansot/social.jsp">»çÈ¸°øÇå(Social)</a></li>
+                                    <li><a href="../brand/esg.jsp">À±¸®°æ¿µ(Governance)</a></li>
+
+                                    </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">MENU</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li><a href="../menu/menu_list.jsp">ÀüÃ¼¸Ş´º</a></li>
+                                    <li><a href="../menu/material.jsp">½ÄÀç·á ÀÌ¾ß±â</a></li>
+                                    <li><a href="../menu/chancha.jsp">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
+                                    <li><a href="../menu/menu_order.jsp">´ÜÃ¼ ÁÖ¹®</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">STORE</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li><a href="../store/store_find.jsp">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">EVENT</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li><a href="../event/event_list.jsp">ÀÌ ´ŞÀÇ ÀÌº¥Æ®</a></li>
+                                    <li><a href="../event/store_event_list.jsp">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li><a href="../franchise/hansot_store.jsp">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
+                                    <li><a href="../franchise/success.jsp">¼º°ø¼ö±â</a></li>
+                                    <li><a href="../franchise/process.jsp">Ã¢¾÷°³¼³ÀıÂ÷</a></li>
+                                    <li><a href="../franchise/calc.jsp">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
+                                    <li><a href="../franchise/qna.jsp">Ã¢¾÷¹®ÀÇ</a></li>
+                                    <li><a href="../franchise/briefing.jsp">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <p class="dp1_tit"><a href="#none">HANSOT</a></p>
+                            <div class="dp2">
+                                <ul>
+                                    <li><a href="../hansot/promise.jsp">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
+                                    <li><a href="../hansot/vision.jsp">ÇÑ¼ÜÀÇ ºñÀü</a></li>
+                                    <li><a href="../hansot/history.jsp">¿¬Çõ&amp;¼ö»ó</a></li>
+                                    <li><a href="../hansot/news_list.jsp">ÇÑ¼Ü NEWS</a></li>
+                                    <li><a href="../hansot/location.jsp">¿À½Ã´Â ±æ</a></li>
+                                    <li><a href="../footer/faq_list.jsp">°í°´¼¾ÅÍ</a></li>
+                                    <li class="h_last"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--// gnb -->
+            <!-- pc:bg -->
+            <div class="bg_layer"></div>
+            <!-- //pc:bg -->
+            <!-- mobile_btn -->
+            <div class="mobile_menu_btn">
+                <div class="hamburger" id="hamburger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <!-- //mobile_btn -->
+        </div>
+        <!--// header content -->
+    </div>
+</header>
+
+<!--// header -->
+
+<!--// inc header e -->
+
+    <!-- popup -->
+<!-- container s -->
+    <div id="container" class="sub_page">
+        
+<div class="content store">
+    <!-- store_find -->
+    <section class="store_find">
+        <div class="store_wrap">
+            <!-- title -->
+            <div class="ontitle">
+                <h2 class="h2_tit h2_01 mo_version">ÁÖº¯Á¡Æ÷Ã£±â</h2>
+                <!-- ÁÖº¯Á¡Æ÷Ã£±â Form -->
+                <form id="searchForm" name="searchForm" action="../store/store_find.jsp" method="get" onsubmit="searchStore(1);return false;"><input type="hidden" id="idx" name="idx" value=""/>
+                    <dl class="store_form mo_version" id="map_position">
+                        <div class="in_box">
+                            <dl class="in_box_th">
+                                <dt class="blind">ÁÖº¯Á¡Æ÷Ã£±â</dt>
+                                <!-- ½Ã/µµ ¼±ÅÃ -->
+                                <dd class="store_select">
+                                <span class="select">
+                                    <select class="classic" title="½Ã/µµ ¼±ÅÃ ±¸ºĞ" id="sido" name="sido">
+                                        <option value="">½Ã/µµ ¼±ÅÃ</option>
+                                    </select>
+                                </span>
+                                </dd>
+                                <!-- //½Ã/µµ ¼±ÅÃ -->
+                                <!-- ±º/±¸ ¼±ÅÃ -->
+                                <dd class="store_select last_selcet">
+                                <span class="select">
+                                    <select class="classic" title="±¸/±º ¼±ÅÃ ±¸ºĞ" id="gungoo" name="gungoo">
+                                        <option value="">±¸/±º ¼±ÅÃ</option>
+                                    </select>
+                                </span>
+                                </dd>
+                                <!-- //±º/±¸ ¼±ÅÃ -->
+                                <!-- °Ë»öÃ¢ -->
+                                    <dd class="store_search">
+                                    <div class="in_box">
+                                    <span class="form text">
+                                        <input type="text" maxlength="16" id="searchKeyword" name="searchKeyword">
+                                        <label for="searchKeyword">°Ë»ö¾î ÀÔ·Â</label>
+                                        <a href="#none" onclick="searchStore(1);return false;"
+                                           class="btn_overlap se_box"><span class="blind">°Ë»ö¾ÆÀÌÄÜ</span></a>
+                                    </span>
+                                    </div>
+                                </dd>
+                                <!-- //°Ë»öÃ¢ -->
+                                <!-- btn -->
+                                <dd class="btn_store">
+                                    <div class="btn_wrap">
+                                        <span class="btn btn_st03"><a href="#none"
+                                                                      onclick="searchStore(1);return false;"
+                                                                      class="c_02" id="btn_search">¸ÅÀåÃ£±â</a></span>
+                                    </div>
+                                </dd>
+                                <!-- //btn -->
+                            </dl>
+                        </div>
+                    </dl>
+                <div>
+</div></form><!-- //ÁÖº¯Á¡Æ÷Ã£±â Form -->
+            </div>
+            <!-- //title -->
+            <!-- map -->
+            <div class="store_map">
+                <div class="map_img" id="map">
+                </div>
+            </div>
+            <!-- //map -->
+        </div>
+    </section>
+    <!-- //store_find -->
+
+    <!--°Ë»ö °á°ú Å×ÀÌºí-->
+    <section class="store_search_result">
+        <div class="table-wrapper">
+            <table class="store_table">
+            </table>
+        </div>
+
+        <div class="pager">
+            <!-- page -->
+            <!-- //page -->
+        </div>
+
+    </section>
+
+    <!-- ½Å±Ô °¡¸ÍÁ¡ -->
+    <section class="store_new">
+        <div class="store_new_wrap">
+            <h2 class="h2_tit fz_01">
+                <span class="s_block">ÇÑ¼ÜÀÇ</span>
+                <span class="s_block"><em class="f_b">½Å±Ô °¡¸ÍÁ¡</em>À»</span>
+                <span class="s_block">¼Ò°³ÇÕ´Ï´Ù</span>
+            </h2>
+            <div class="store_new_list">
+
+                <div class="indi_wrap">
+                    <!-- page -->
+                    <!-- //page -->
+                </div>
+                <!-- //page, btn -->
+            </div>
+        </div>
+    </section>
+    <!-- //½Å±Ô °¡¸ÍÁ¡ -->
+</div>
+
+<!-- ÆË¾÷ -->
+<div id="map_popup" style="display:none;">
+    <div class="marker_wrap">
+        <div class="store_info_wrap" style="display:block;">
+            <div class="store_info_de">
+                <h3 class="name" id="pop_store_name"></h3>
+                <p class="info_add" id="pop_store_address"></p>
+                <p class="info_call" id="pop_store_phone"></p>
+                <div class="detail">
+                    <a href="javascript:openLayerPopup('pop-store');" class="btn_de">ÀÚ¼¼È÷ º¸±â</a>
+                </div>
+                <a href="#none" class="btn_close" onclick="closeOverlay();"><span class="blind">close</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // ÆË¾÷-->
+
+<!-- ÀÚ¼¼È÷º¸±â popup -->
+<div class="pop-wrap" id="pop-store" style="display:none">
+    <dl class="pop-store-wrap">
+        <dt class="pop-header fz_02"><span id="pop2_store_name"></span>
+            <a href="javascript:closeLayerPopup();" class="btnp-close">close</a>
+        </dt>
+        <dd class="pop-box">
+            <div class="pop-cont">
+                <div class="pop-msg">
+                    <dl class="pop-store-info">
+                        <dt>ÁÖ¼Ò</dt>
+                        <dd id="pop2_store_address"></dd>
+                        <dt>ÀüÈ­¹øÈ£</dt>
+                        <dd id="pop2_store_phone"></dd>
+                        <dt>¿µ¾÷½Ã°£</dt>
+                        <dd id="pop2_store_business_hour"></dd>
+                    </dl>
+                    <!-- ¸ÅÀåÀÌº¥Æ® -->
+                    <dl class="shop_event">
+                        <dt>½Å±ÔÁ¡ ¿ÀÇÂ ÀÌº¥Æ®</dt>
+                        <dd id="pop2_store_event"></dd>
+                    </dl>
+                    <!-- //¸ÅÀåÀÌº¥Æ® -->
+                    <!-- ÁÂ¼®/ÁÖÂ÷ -->
+                    <dl class="shop_etc">
+                        <dt><span class="blind">ÁÂ¼®¿©ºÎ</span></dt>
+                        <dd class="seat" id="pop2_store_seat"></dd>
+                        <dt><span class="blind">ÁÖÂ÷¿©ºÎ</span></dt>
+                        <dd class="car" id="pop2_store_car"></dd>
+                    </dl>
+                    <!-- //ÁÂ¼®/ÁÖÂ÷ -->
+                </div>
+            </div>
+        </dd>
+    </dl>
+</div>
+<!-- // ÀÚ¼¼È÷º¸±â popup -->
+
+<!-- °Ë»ö°á°ú ¾øÀ»°æ¿ì popup -->
+<div class="pop-wrap" id="pop-search" style="display:none">
+    <dl class="pop-search-wrap">
+        <dt class="pop-header fz_02"></dt>
+        <dd class="pop-box">
+            <div class="pop-cont">
+                <div class="pop-msg">
+                    °Ë»ö°á°ú°¡ ¾ø½À´Ï´Ù.
+                </div>
+                <a href="javascript:closeLayerPopup();" class="btnp-close">È®ÀÎ</a>
+            </div>
+        </dd>
+    </dl>
+</div>
+<!-- //°Ë»ö°á°ú ¾øÀ»°æ¿ì popup -->
+
+<script type="text/javascript">
+  $(function () {
+    mapResize();
+    currentLoc();
+    newStore(1);    // ½Å±Ô °¡¸ÍÁ¡
+  });
+
+  var useCurrentLoc = true;
+  var lat, lng;
+  var map, markerOptions, infowindow, contentString;
+  var mapContainer = document.getElementById("map"); // Áöµµ¸¦ Ç¥½ÃÇÒ div
+  var eventStoreIdx = $.trim('');    // ¸ÅÀåÀÌº¥Æ®¿¡¼­ ³Ñ¾î¿Â idx
+  var markerList = [];
+
+  // ÇöÀçÀ§Ä¡
+  function currentLoc() {
+
+    if (eventStoreIdx != "" && !isNaN(parseInt(eventStoreIdx))) {
+      chanageLoc(eventStoreIdx);
+    } else {
+      lat = 37.4964502;   // À§Ä¡ °Ë»ö¾ÈµÉ½Ã ±âº»³ëÃâ : °­³²¿ªÁ¡
+      lng = 127.0278032;
+
+      // HTML5ÀÇ geolocationÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù
+      if (navigator.geolocation) {
+        // GeoLocationÀ» ÀÌ¿ëÇØ¼­ Á¢¼Ó À§Ä¡¸¦ ¾ò¾î¿É´Ï´Ù
+        navigator.geolocation.getCurrentPosition(function (position) {
+          lat = position.coords.latitude; // ÇöÀç À§µµ
+          lng = position.coords.longitude; // ÇöÀç °æµµ
+        });
+      }
+
+      loadMap();
+    }
+  }
+
+  // Áöµµ»ı¼º
+  function loadMap() {
+    var loc = new naver.maps.LatLng(lat, lng);
+    var mapOption = {
+      center: loc.destinationPoint(0, 500), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
+      zoom: 9, // ÁöµµÀÇ È®´ë ·¹º§
+      minZoom: 3, // ÁöµµÀÇ ÃÖ¼Ò ·¹º§
+      logoControl: false,        // naver ·Î°í
+      mapDataControl: false      // ÀúÀÛ±Ç ÄÁÆ®·Ñ
+    };
+
+    // Áöµµ¸¦ »ı¼ºÇÑ´Ù
+    map = new naver.maps.Map(mapContainer, mapOption);
+  }
+
+  // Á¤º¸Ã¢¿­±â
+  function makeOverlay(idx) {
+    closeOverlay();
+    $.getJSON("/api/store_detail/" + idx, function (rst) {
+
+      var data = rst[0];
+      var event = rst[1];
+
+      $("#pop_store_name, #pop2_store_name").text(data.name);
+      $("#pop_store_address, #pop2_store_address").text(data.address);
+      $("#pop_store_phone, #pop2_store_phone").text(tss.util.phoneFormat(data.phoneNumber));
+      $("#pop2_store_business_hour").html(tss.util.nl2br(data.businessHour));
+
+      $("#pop2_store_event").text("");
+      if (event.length > 0) {
+        var event_content = "";
+        $.each(event, function (ekey, eval) {
+          event_content += eval.title + "<br/>";
+        });
+        $("#pop2_store_event").html(event_content);
+      } else {
+        $("#pop2_store_event").text("ÀÌº¥Æ®°¡ ¾ø½À´Ï´Ù.");
+      }
+
+      if (data.seatYn == 'Y') $("#pop2_store_seat").removeClass("off");
+      else $("#pop2_store_seat").addClass("off");
+
+      if (data.parkingYn == 'Y') $("#pop2_store_car").removeClass("off");
+      else $("#pop2_store_car").addClass("off");
+
+      contentString = $("#map_popup").html();
+      var moveLatLon = new naver.maps.LatLng(data.lat, data.lng);
+      infowindow = new naver.maps.InfoWindow({
+        content: contentString,
+        position: moveLatLon,
+        pixelOffset: new naver.maps.Point(-22, -57),
+        disableAnchor: true
+      });
+
+      infowindow.open(map);
+      //$(".store_info_wrap").show();
+
+
+      // Å¬¸¯ÇÑ ÁöÁ¡ÀÌ Áß½ÉÀ¸·Î ¿Àµµ·Ï ÀÌµ¿
+      //map.setCenter(moveLatLon);
+      var moveLatLon = new naver.maps.LatLng(data.lat, data.lng);
+      map.panTo(moveLatLon);
+    });
+  }
+
+  // Á¤º¸Ã¢´İ±â
+  function closeOverlay() {
+    if (infowindow != null) infowindow.close();
+  }
+
+  // Áöµµ»çÀÌÁî
+  function mapResize() {
+    var rate = window.innerWidth <= 1023 ? 0.9 : 0.598;
+    var w = $(".store_wrap").width();
+    var h = w * rate;
+
+
+    mapContainer.style.width = w + 'px';
+    mapContainer.style.height = h + 'px';
+  }
+
+  $(window).on("resize", function () {
+    mapResize();
+  });
+
+  // ¸ÅÀåÃ£±â
+  function searchStore(pageNo) {
+    useCurrentLoc = false;
+    $("#idx").val("");
+    /*console.log($("input[name='searchCondition']:checked").val());
+    if($("input[name='searchCondition']:checked").val() == 'address') { //ÁÖ¼Ò·Î °Ë»ö
+
+    } else { //¸ÅÀå¸íÀ¸·Î °Ë»ö
+
+    }*/
+
+    for (var i = 0 ; i < markerList.length ; i++) {
+      markerList[i].setMap(null);
+    }
+
+
+    $.getJSON("/api/store_search?" + $("#searchForm").serialize(), function (data) {
+      if (data.length > 0) {
+
+        $.each(data, function (key, val) {
+          // Áöµµ¿¡ ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Ç¥½ÃÇÑ´Ù.
+          markerOptions = {
+            position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
+            map: map,
+            icon: {
+              url: '../assets/images/common/icon_map.png',
+              size: new naver.maps.Size(50, 52),
+              scaledSize: new naver.maps.Size(42, 52),
+
+            }
+          };
+
+          // ¸¶Ä¿¿¡ Å¬¸¯ÀÌº¥Æ® µî·Ï
+          var marker = new naver.maps.Marker(markerOptions);
+          naver.maps.Event.addListener(marker, 'click', function () {
+            // ¿À¹ö·¹ÀÌ »ı¼º
+            makeOverlay(val.idx);
+          });
+
+          markerList.push(marker);
+
+        });
+      }
+
+    });
+
+    renderSearchResult(pageNo);
+
+  }
+
+  //¸ÅÀåÃ£±â ¸®½ºÆ® ·»´õ
+  function renderSearchResult(pageNo) {
+    $.getJSON("/api/store_search/" + pageNo + "?" + $("#searchForm").serialize(), function (data) {
+      console.log(data);
+
+      var list = "";
+
+      if (data.list.length > 0) {
+
+        list += '<tr>';
+        list += ' <th>¸ÅÀå¸í</th>';
+        list += ' <th>¿¬¶ôÃ³</th>';
+        list += ' <th>ÁÖ¼Ò</th>';
+        list += '<tr>';
+
+        $.each(data.list, function (key, val) {
+
+          list += '<tr>';
+          list += ' <td class="store_name"><a href="#none" onclick="makeOverlay(' + val["idx"] + ');">' + val["name"] + '</a></td>';
+          list += ' <td>' + tss.util.phoneFormat(val["phoneNumber"]) + '</td>';
+          list += ' <td>' + val["address"] + '</td>';
+          list += '<tr>';
+
+        });
+
+        $(".store_table > tbody > tr").remove();
+        $(".store_table").prepend(list);
+        searchPaging(data.pagination);
+        $(".store_search_result").show();
+
+
+        var moveLatLon = new naver.maps.LatLng(data.list[0].lat, data.list[0].lng);
+        map.setCenter(moveLatLon);
+
+      } else {
+        openLayerPopup('pop-search');
+        $(".store_search_result").hide();
+      }
+
+    });
+  }
+
+  // ½Å±Ô °¡¸ÍÁ¡ _ À§Ä¡º¯°æ
+  function chanageLoc(idx) {
+    useCurrentLoc = false;
+    $("#idx").val(idx);
+    loadMap();
+
+    $.getJSON("/api/store_search?" + $("#searchForm").serialize(), function (data) {
+      if (data.length > 0) {
+
+        $.each(data, function (key, val) {
+          // Áöµµ¿¡ ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Ç¥½ÃÇÑ´Ù.
+          console.log(val)
+
+          markerOptions = {
+            position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
+            map: map,
+            icon: {
+              url: '../assets/images/common/icon_map.png',
+              size: new naver.maps.Size(50, 52),
+              scaledSize: new naver.maps.Size(42, 52),
+
+            }
+          };
+
+          // ¸¶Ä¿¿¡ Å¬¸¯ÀÌº¥Æ® µî·Ï
+          var marker = new naver.maps.Marker(markerOptions);
+          naver.maps.Event.addListener(marker, 'click', function () {
+            // ¿À¹ö·¹ÀÌ »ı¼º
+            makeOverlay(val.idx);
+          });
+
+          markerList.push(marker);
+
+        });
+
+        // ¸¶Ä¿ÀÇ Áß½ÉÀ» ÀÌµ¿ ½ÃÅµ´Ï´Ù.
+        if (useCurrentLoc === false) {
+          lat = data[0].lat;
+          lng = data[0].lng;
+        }
+
+        makeOverlay(data[0].idx);
+      }
+
+    });
+
+    // ½ºÅ©·Ñ À§Ä¡ ÀÌµ¿
+    var offset = $("#map_position").offset();
+    $("html, body").animate({scrollTop: offset.top}, 400);
+  }
+
+
+  // ½Å±Ô °¡¸ÍÁ¡
+  function newStore(pageNo) {
+    $.ajax({
+      type: 'POST',
+      url: "/api/store_new/" + pageNo,
+      headers: {
+        Accept: "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      dataType: "json"
+    }).done(function (data) {
+
+      var list = "";
+      if (data.list.length > 0) {
+
+        $.each(data.list, function (key, val) {
+
+          var dd = getFormattedDate(new Date(val["openDt"]));
+          var opendt = dd.replace(/-/gi, ".").substring(2);
+
+          list += '<li>';
+          list += '   <p class="new_date">' + opendt + ' OPEN</p>';
+          list += '   <div class="new_info">';
+          list += '   <h3 class="h3_tit fz_02 f_b">' + val["name"] + '</h3>';
+          list += '   <p class="new_add"><span>' + val["address"] + '</span></p>';
+          list += '   <p class="new_call">' + tss.util.phoneFormat(val["phoneNumber"]) + '</p>';
+          list += '   <dl>';
+          list += '       <dt><span>OPEN EVENT</span></dt>';
+
+          if (val["openEvent"] != null) {
+            list += '       <dd><span>' + val["openEvent"] + '</span></dd>';
+          } else {
+            list += '       <dd><span>ÀÌº¥Æ®°¡ ¾ø½À´Ï´Ù</span></dd>';
+          }
+          list += '   </dl>';
+          list += '   <a href="#none" class="location" onclick="chanageLoc(' + val["idx"] + ');">À§Ä¡º¸±â</a>';
+          list += '   </div>';
+          list += '</li>';
+
+        });
+
+        $(".store_new_list > ul").remove();
+        $(".store_new_list").prepend("<ul>" + list + "</ul>");
+        paging(data.pagination);
+
+      } else {
+        $(".store_new").hide();
+      }
+
+    }).fail(function () {
+      $(".store_new").hide();
+    });
+  }
+
+  // ½Å±Ô¸ÅÀå ÆäÀÌÂ¡
+  function paging(data) {
+
+    var txt = '';
+    txt += '<div class="pageinate">';
+    txt += '    <div class="cont">';
+
+    // ÀÌÀüÆäÀÌÁö
+    if (data.prevPageNo == data.currentPageNo) {
+      txt += '        <a href="#none" class="arr prev off">ÀÌÀüÆäÀÌÁö</a>';
+    } else {
+      txt += '        <a href="javascript:newStore(' + data.prevPageNo + ')" class="arr prev">ÀÌÀüÆäÀÌÁö</a>';
+    }
+
+    for (var i = data.startPageNo; i <= data.endPageNo; i++) {
+      if (data.currentPageNo == i) {
+        txt += '        <a href="#none" class="active">' + i + '</a>';
+      } else {
+        txt += '        <a href="javascript:newStore(' + i + ')">' + i + '</a>';
+      }
+    }
+
+    // ´ÙÀ½ÆäÀÌÁö
+    if (data.lastPageNo == data.currentPageNo) {
+      txt += '        <a href="#none" class="arr next off">´ÙÀ½ÆäÀÌÁö</a>';
+    } else {
+      txt += '        <a href="javascript:newStore(' + data.nextPageNo + ')" class="arr next">´ÙÀ½ÆäÀÌÁö</a>';
+    }
+    txt += '    </div>';
+    txt += '</div>';
+
+    $(".indi_wrap > div").remove();
+    $(".indi_wrap").append(txt);
+
+  }
+
+  // ¸ÅÀå °Ë»ö°á°ú ÆäÀÌÂ¡
+  function searchPaging(data) {
+
+    var txt = '';
+    txt += '<div class="pageinate">';
+    txt += '    <div class="cont">';
+
+    // ÀÌÀüÆäÀÌÁö
+    if (data.prevPageNo == data.currentPageNo) {
+      txt += '        <a href="#none" class="arr prev off">ÀÌÀüÆäÀÌÁö</a>';
+    } else {
+      txt += '        <a href="javascript:renderSearchResult(' + data.prevPageNo + ')" class="arr prev">ÀÌÀüÆäÀÌÁö</a>';
+    }
+
+    for (var i = data.startPageNo; i <= data.endPageNo; i++) {
+      if (data.currentPageNo == i) {
+        txt += '        <a href="#none" class="active">' + i + '</a>';
+      } else {
+        txt += '        <a href="javascript:renderSearchResult(' + i + ')">' + i + '</a>';
+      }
+    }
+
+    // ´ÙÀ½ÆäÀÌÁö
+    if (data.lastPageNo == data.currentPageNo) {
+      txt += '        <a href="#none" class="arr next off">´ÙÀ½ÆäÀÌÁö</a>';
+    } else {
+      txt += '        <a href="javascript:renderSearchResult(' + data.nextPageNo + ')" class="arr next">´ÙÀ½ÆäÀÌÁö</a>';
+    }
+    txt += '    </div>';
+    txt += '</div>';
+
+    $(".pager > div").remove();
+    $(".pager").append(txt);
+
+  }
+
+</script>
+
+    </div>
+    <!--// container e -->
+
+    <!-- inc footer s -->
+    <!-- footer -->
+
+
+<footer id="footer">
+    <div class="ft_content mo_version">
+
+        <!-- family goods -->
+        <div class="ft_menu">
+            <ul>
+                <li class="first_be off"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
+                <li class="off"><a href="../footer/partners.jsp">Çù·Â¾÷Ã¼µî·Ï</a></li>
+                <li class="mo_bl"><a href="../footer/notice_list.jsp">°øÁö»çÇ×</a></li>
+                <li><a href="../footer/faq_list.jsp">°í°´ ¼¾ÅÍ</a></li>
+                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>°³ÀÎÁ¤º¸Ãë±Ş¹æÄ§</strong></a></li>
+                <li><a href="../footer/agreement.jsp">ÀÌ¿ë¾à°ü</a></li>
+            </ul>
+        </div>
+        <!--// family goods -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºĞ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+        <!-- info -->
+        <div class="ft_info_wrap">
+            <!-- pc -->
+            <div class="ft_info pc_info">
+                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãş</span>
+                <span>T.  02-585-1114</span>
+                <span>F.  02-598-1116</span>
+                <span class="first_be">E.  webmaster@hsd.co.kr</span>
+                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
+                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
+                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+            </div>
+            <!-- //pc -->
+            <!-- mobile -->
+            <div class="ft_info mo_info">
+                <div class="mo_info_list">
+                    <p class="btn_toggle">
+                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                    </p>
+                    <div class="mo_info_on">
+                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <br/>
+                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãş</span>
+                        <br/>
+                        <span class="mo_bl">T.  02-585-1114</span>
+                        <span>F.  02-598-1116</span>
+                        <br/>
+                        <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
+                        <div class="mo_info_call">
+                            <dl>
+                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dd>02-585-1114</dd>
+                            </dl>
+                            <dl>
+                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dd>1811-0188</dd>
+                            </dl>
+                            <dl>
+                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dd>1644-3288</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //mobile -->
+
+            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+
+            <div class="ft_sns">
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+            </div>
+        </div>
+        <!--// info -->
+    </div>
+</footer>
+<!--// footer -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109125197-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-109125197-1');
+        </script>
+    <!--// inc footer e -->
+</div>
+<!--// wrap e -->
+>>>>>>> master
 </body>
 </html>
