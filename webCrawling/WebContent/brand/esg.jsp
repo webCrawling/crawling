@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 
@@ -12,15 +13,15 @@
 
     
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="�Ѽ� ������Ʈ Ŭ��" />
+    <meta property="og:title" content="ÇÑ¼Ü À¥»çÀÌÆ® Å¬·Ð" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="../assets/images/brand/brand_m_visual_01.jpg" />
-    <meta property="og:description" content="3���� �������!" />
+    <meta property="og:description" content="3Á¶°¡ ¸¸µé¾ú´Ù!" />
    
 	
-    <meta name="�Ѽ�" content="�Ѽܸ޴�,�ֹ�" />
+    <meta name="ÇÑ¼Ü" content="ÇÑ¼Ü¸Þ´º,ÁÖ¹®" />
     
-    <title>ESG �濵</title>
+    <title>ESG °æ¿µ</title>
 
     
    
@@ -90,12 +91,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('�α����� �ʿ��մϴ�.')) {
+                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("������ �߻��߽��ϴ�.");
+                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
             }
         });
     });
@@ -104,9 +105,9 @@
     <script type="text/javascript" src="../assets/js/jquery.viewportchecker.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics 
-    async �Ӽ� : ��ũ��Ʈ�� �񵿱� ����
-     �������� async �Ӽ��� ������ ��ũ��Ʈ ������ �ڷ� �̷�� �켱 ��ũ��Ʈ ������ ���Ű� HTML ������ �Ľ̿� �����Ѵ�. 
-     �ܺ� ��ũ��Ʈ ������ ������ �Ϸ�Ǿ��� �� ��ũ��Ʈ�� �����Ų��.
+    async ¼Ó¼º : ½ºÅ©¸³Æ®ÀÇ ºñµ¿±â ½ÇÇà
+     ºê¶ó¿ìÀú°¡ async ¼Ó¼ºÀ» ¸¸³ª¸é ½ºÅ©¸³Æ® ½ÇÇàÀ» µÚ·Î ¹Ì·ç°í ¿ì¼± ½ºÅ©¸³Æ® ÆÄÀÏÀÇ ¼ö½Å°ú HTML ¹®¼­ÀÇ ÆÄ½Ì¿¡ ÁýÁßÇÑ´Ù. 
+     ¿ÜºÎ ½ºÅ©¸³Æ® ÆÄÀÏÀÇ ¼ö½ÅÀÌ ¿Ï·áµÇ¾úÀ» ¶§ ½ºÅ©¸³Æ®¸¦ ½ÇÇà½ÃÅ²´Ù.
     -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
@@ -147,7 +148,7 @@
         fbq('track', 'PageView');
     </script>
     <!-- 
-    noscript : ��ũ��Ʈ �������� ǥ���Ѵ�
+    noscript : ½ºÅ©¸³Æ® ¹ÌÁö¿øÀ» Ç¥½ÃÇÑ´Ù
      -->
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
@@ -167,16 +168,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">�α���</a>
+                    <a href="/login">·Î±×ÀÎ</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">ȸ������</a>
+                    <a href="/join/join_step1">È¸¿ø°¡ÀÔ</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -187,22 +188,22 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="../home.jsp"><span class="blind">�Ѽ�</span></a></h1>
+                <h1><a href="../home.jsp"><span class="blind">ÇÑ¼Ü</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ����� �α���/ȸ������ -->
+                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="/login">�α���</a>
+                            <a href="/login">·Î±×ÀÎ</a>
                             </li>
                         <li>
-                            <a href="/join/join_step1">ȸ������</a>
+                            <a href="/join/join_step1">È¸¿ø°¡ÀÔ</a>
                             </li>
                     </ul>
                 </div>
-                <!-- //����� �α���/ȸ������ -->
+                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
 
                 <div class="gnb_menu">
                     <ul>
@@ -210,9 +211,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./story.jsp">�귣�� ���丮</a></li>
-                                    <li><a href="./philosophy.jsp">�귣�� ö��</a></li>
-                                    <li><a href="./legacy.jsp">�귣�� ����</a></li>
+                                    <li class="active"><a href="./story.jsp">ºê·£µå ½ºÅä¸®</a></li>
+                                    <li><a href="./philosophy.jsp">ºê·£µå Ã¶ÇÐ</a></li>
+                                    <li><a href="./legacy.jsp">ºê·£µå À¯»ê</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -220,10 +221,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./esg.jsp">ESG�濵�̶�?</a></li>
-                                    <li><a href="./philosophy.jsp">ȯ�溸ȣ(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">��ȸ����(Social)</a></li>
-                                    <li><a href="./esg.jsp">�����濵(Governance)</a></li>
+                                    <li class="active"><a href="./esg.jsp">ESG°æ¿µÀÌ¶õ?</a></li>
+                                    <li><a href="./philosophy.jsp">È¯°æº¸È£(Environment)</a></li>
+                                    <li><a href="../hansot/social.jsp">»çÈ¸°øÇå(Social)</a></li>
+                                    <li><a href="./esg.jsp">À±¸®°æ¿µ(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -232,10 +233,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">��ü�޴�</a></li>
-                                    <li><a href="../menu/material.jsp">����� �̾߱�</a></li>
-                                    <li><a href="../menu/chancha.jsp">�����������Ŀ��</a></li>
-                                    <li><a href="../menu/menu_order.jsp">��ü �ֹ�</a></li>
+                                    <li><a href="../menu/menu_list.jsp">ÀüÃ¼¸Þ´º</a></li>
+                                    <li><a href="../menu/material.jsp">½ÄÀç·á ÀÌ¾ß±â</a></li>
+                                    <li><a href="../menu/chancha.jsp">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
+                                    <li><a href="../menu/menu_order.jsp">´ÜÃ¼ ÁÖ¹®</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -243,7 +244,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">�ֺ�����ã��</a></li>
+                                    <li><a href="../store/store_find.jsp">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -251,8 +252,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">�� ���� �̺�Ʈ</a></li>
-                                    <li><a href="../event/store_event_list.jsp">�ű��� �����̺�Ʈ</a></li>
+                                    <li><a href="../event/event_list.jsp">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
+                                    <li><a href="../event/store_event_list.jsp">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -260,12 +261,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why �Ѽ� ������</a></li>
-                                    <li><a href="../franchise/success.jsp">��������</a></li>
-                                    <li><a href="../franchise/process.jsp">â����������</a></li>
-                                    <li><a href="../franchise/calc.jsp">���� â�� ���</a></li>
-                                    <li><a href="../franchise/qna.jsp">â������</a></li>
-                                    <li><a href="../franchise/briefing.jsp">â������ȸ ��������û</a></li>
+                                    <li><a href="../franchise/hansot_store.jsp">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
+                                    <li><a href="../franchise/success.jsp">¼º°ø¼ö±â</a></li>
+                                    <li><a href="../franchise/process.jsp">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
+                                    <li><a href="../franchise/calc.jsp">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
+                                    <li><a href="../franchise/qna.jsp">Ã¢¾÷¹®ÀÇ</a></li>
+                                    <li><a href="../franchise/briefing.jsp">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -273,13 +274,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">�Ѽ��� ���</a></li>
-                                    <li><a href="../hansot/vision.jsp">�Ѽ��� ����</a></li>
-                                    <li><a href="../hansot/history.jsp">����&amp;����</a></li>
-                                    <li><a href="../hansot/news_list.jsp">�Ѽ� NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">���ô� ��</a></li>
-                                    <li><a href="../footer/faq_list.jsp">��������</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">����ä��</a></li>
+                                    <li><a href="../hansot/promise.jsp">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
+                                    <li><a href="../hansot/vision.jsp">ÇÑ¼ÜÀÇ ºñÀü</a></li>
+                                    <li><a href="../hansot/history.jsp">¿¬Çõ&amp;¼ö»ó</a></li>
+                                    <li><a href="../hansot/news_list.jsp">ÇÑ¼Ü NEWS</a></li>
+                                    <li><a href="../hansot/location.jsp">¿À½Ã´Â ±æ</a></li>
+                                    <li><a href="../footer/faq_list.jsp">°í°´¼¾ÅÍ</a></li>
+                                    <li class="h_last"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -314,31 +315,31 @@
 <div class="content brand">
     <!-- group_order -->
     <section class="brand_esg">
-        <!-- ���bg ���� -->
+        <!-- »ó´Übg ¿µ¿ª -->
         <div class="brand_visual_wrap mo_tr">
             <div class="visual_bg"></div>
         </div>
-        <!-- //���bg ���� -->
+        <!-- //»ó´Übg ¿µ¿ª -->
         <!-- section01 -->
         <div class="bs_wrap section_01">
-            <p class="menu_tit mo_version">ESG �濵</p>
+            <p class="menu_tit mo_version">ESG °æ¿µ</p>
             <div class="bs_cont mo_tr">
-                <h2 class="h2_tit">�Ѽ��� ESG �濵</h2>
+                <h2 class="h2_tit">ÇÑ¼ÜÀÇ ESG °æ¿µ</h2>
                 <div class="bs_txt">
                     <p>
-                        �Ѽܵ��ö��� UN���� 2015�� ������ SDGs(���Ӱ��ɰ��߸�ǥ)�� �����Ͽ� ����������� ��õ�� �䱸�Ǵ� ESG �濵�� �����Ͽ� �Խ��ϴ�.
+                        ÇÑ¼Üµµ½Ã¶ôÀº UN¿¡¼­ 2015³â °øÆ÷ÇÑ SDGs(Áö¼Ó°¡´É°³¹ß¸ñÇ¥)¿¡ ºÎÀÀÇÏ¿© ±â¾÷Â÷¿ø¿¡¼­ ½ÇÃµÀÌ ¿ä±¸µÇ´Â ESG °æ¿µ¿¡ ¸ÅÁøÇÏ¿© ¿Ô½À´Ï´Ù.
                     </p>
                     <p>
-                        ESG�� ȯ�溸ȣ(Environment)����ȸ����(Social)�������濵(Governance)�� ���ڷ�, ����� ȯ�溸ȣ�� ���弭��,
-                        ��ȸ�� ���ڿ� ���� ������ ���� ����� ���幮ȭ�� ���� �� ��ȸ���� Ȱ���� �ϸ�,
-                        ���� ������ ö���� �ؼ��ϴ� �����濵 �� ESG�濵�� ��õ�ؾ� �������� ������ �����ϴٴ� ���Դϴ�.
-                        ���������̳� �̱� ����� �̹� ����� ���ϴµ� �߿��� �������� �ڸ���� ������,
-                        ���� �� ���������� Ȯ��� ������ �ִ� �߼��Դϴ�.
-                        ���������� �������� ����ȭ �Ǿ����� ������ �Ѽܵ��ö��� â�� ������ ESG�濵�� ��õ�ؿ��� �ֽ��ϴ�.
+                        ESG¶õ È¯°æº¸È£(Environment)¡¤»çÈ¸°øÇå(Social)¡¤À±¸®°æ¿µ(Governance)ÀÇ ¾àÀÚ·Î, ±â¾÷ÀÌ È¯°æº¸È£¿¡ ¾ÕÀå¼­¸ç,
+                        »çÈ¸Àû ¾àÀÚ¿¡ ´ëÇÑ Áö¿ø°ú ³²³à ÆòµîÇÑ Á÷Àå¹®È­ÀÇ Á¶¼º µî »çÈ¸°øÇå È°µ¿À» ÇÏ¸ç,
+                        ¹ý°ú À±¸®¸¦ Ã¶ÀúÈ÷ ÁØ¼öÇÏ´Â À±¸®°æ¿µ µî ESG°æ¿µÀ» ½ÇÃµÇØ¾ß Áö¼ÓÀûÀÎ ¼ºÀåÀÌ °¡´ÉÇÏ´Ù´Â ¶æÀÔ´Ï´Ù.
+                        À¯·´¿¬ÇÕÀÌ³ª ¹Ì±¹ µî¿¡¼­´Â ÀÌ¹Ì ±â¾÷À» Æò°¡ÇÏ´Âµ¥ Áß¿äÇÑ ±âÁØÀ¸·Î ÀÚ¸®Àâ°í ÀÖÀ¸¸ç,
+                        ÇöÀç Àü ¼¼°èÀûÀ¸·Î È®»êµÅ ³ª°¡°í ÀÖ´Â Ãß¼¼ÀÔ´Ï´Ù.
+                        ±¹³»¿¡¼­´Â ¾ÆÁ÷±îÁö º¸ÆíÈ­ µÇ¾îÀÖÁö ¾ÊÀ¸³ª ÇÑ¼Üµµ½Ã¶ôÀº Ã¢¾÷ ¶§ºÎÅÍ ESG°æ¿µÀ» ½ÇÃµÇØ¿À°í ÀÖ½À´Ï´Ù.
                     </p>
                 </div>
                 <div class="bs_img mo_tr">
-                    <img src="../assets/images/brand/brand_esg.jpg" alt="ESG����� 3�� ���" usemap="#map"/>
+                    <img src="../assets/images/brand/brand_esg.jpg" alt="ESG±â¾÷ÀÇ 3´ë ¿ä°Ç" usemap="#map"/>
                     <map name="map" id="map">
                         <area target="" alt="social" title="social" href="https://www.hsd.co.kr/hansot/social" shape="rect" coords="240,422,121,323">
                     </map>
@@ -350,17 +351,17 @@
 </div>
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">�� ���� �̾߱�</h2>
+    <h2 class="more_tit">´õ ¸¹Àº ÀÌ¾ß±â</h2>
     <ul>
         <li>
             <a href="../hansot/vision.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_vision.jpg" alt="�Ѽ��� ����" />
+                    <img src="../assets/images/common/more_vision.jpg" alt="ÇÑ¼ÜÀÇ ºñÀü" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">�Ѽ��� ����</h3>
-                    <h3 class="h3_tit_o">�Ѽ��� ����</h3>
+                    <h3 class="h3_tit">ÇÑ¼ÜÀÇ ºñÀü</h3>
+                    <h3 class="h3_tit_o">ÇÑ¼ÜÀÇ ºñÀü</h3>
                 </figcaption>
             </figure>
         </li>
@@ -368,11 +369,11 @@
             <a href="../hansot/promise.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_hansot.jpg" alt="�Ѽ��� ���" />
+                    <img src="../assets/images/common/more_hansot.jpg" alt="ÇÑ¼ÜÀÇ ¾à¼Ó" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">�Ѽ��� ���</h3>
-                    <h3 class="h3_tit_o">�Ѽ��� ���</h3>
+                    <h3 class="h3_tit">ÇÑ¼ÜÀÇ ¾à¼Ó</h3>
+                    <h3 class="h3_tit_o">ÇÑ¼ÜÀÇ ¾à¼Ó</h3>
                 </figcaption>
             </figure>
         </li>
@@ -380,11 +381,11 @@
             <a href="../hansot/news_list.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_news.jpg" alt="�Ѽ� NEWS" />
+                    <img src="../assets/images/common/more_news.jpg" alt="ÇÑ¼Ü NEWS" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">�Ѽ� NEWS</h3>
-                    <h3 class="h3_tit_o">�Ѽ� NEWS</h3>
+                    <h3 class="h3_tit">ÇÑ¼Ü NEWS</h3>
+                    <h3 class="h3_tit_o">ÇÑ¼Ü NEWS</h3>
                 </figcaption>
             </figure>
         </li>
@@ -413,42 +414,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">����ä��</a></li>
-                <li class="off"><a href="../footer/partners.jsp">���¾�ü���</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">��������</a></li>
-                <li><a href="../footer/faq_list.jsp">���� ����</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>����������޹�ħ</strong></a></li>
-                <li><a href="../footer/agreement.jsp">�̿���</a></li>
+                <li class="first_be off"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
+                <li class="off"><a href="../footer/partners.jsp">Çù·Â¾÷Ã¼µî·Ï</a></li>
+                <li class="mo_bl"><a href="../footer/notice_list.jsp">°øÁö»çÇ×</a></li>
+                <li><a href="../footer/faq_list.jsp">°í°´ ¼¾ÅÍ</a></li>
+                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
+                <li><a href="../footer/agreement.jsp">ÀÌ¿ë¾à°ü</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ����������о� ���2017</span></p></div><!-- 2018-01-11������帶ũ -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">��ǥ�̻�  �̿���</span>
-                <span>����ڵ�Ϲ�ȣ  214-81-96569</span>
-                <span>����� ������ ������� 318(���ﵿ) Ÿ��837���� 8,9��</span>
+                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>�Ѽ� ���ö� ��������  02-585-1114</span>
-                <span>����â������ȸ  1811-0188</span>
-                <span>��ü�ֹ�  1644-3288</span>
+                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
+                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
+                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">�Ѽ� ����� ����</a>
+                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">��ǥ�̻�  �̿���</span>
-                        <span>����ڵ�Ϲ�ȣ  214-81-96569</span>
+                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">����� ������ ������� 318(���ﵿ) Ÿ��837���� 8,9��</span>
+                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -456,15 +457,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>�Ѽ� ��������</dt>
+                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>����â������ȸ</dt>
+                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>��ü�ֹ�</dt>
+                                <dt>´ÜÃ¼ÁÖ¹®</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -473,11 +474,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>���Ѽ�. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" class="sns_insta_02" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
@@ -498,4 +499,5 @@
 </div>
 <!--// wrap e -->
 </body>
+
 </html>

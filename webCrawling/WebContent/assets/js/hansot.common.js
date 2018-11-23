@@ -1,5 +1,7 @@
 $(function(){
+
     // 모두동의
+
     $('#all_agree').click(function(){
         if($(this).is(":checked")){
             $("#regForm :checkbox").prop("checked", true);
@@ -16,7 +18,9 @@ $(function(){
        }
     });
 
+
     // 시도, 군구, 점포명선택
+
     if($("#sido").length > 0) {
         searchSido();
 
@@ -33,7 +37,9 @@ $(function(){
 });
 
 
+
 // 상담구분
+
 function searchCode(cd, id, type){
     $.getJSON("/api/find/code/" + cd, function(data){
         $.each(data,function(key,val){
@@ -51,6 +57,7 @@ function searchCode(cd, id, type){
 }
 
 // 시도
+
 function searchSido(){
     $.getJSON("/api/find/sido", function(data){
         $.each(data,function(key,val){
@@ -59,7 +66,9 @@ function searchSido(){
     });
 }
 
+
 // 군구
+
 function searchGungoo(){
     var sido = $("#sido").val();
     if(sido == "") return;
@@ -73,7 +82,9 @@ function searchGungoo(){
     });
 }
 
+
 // 매장
+
 function searchStore(){
     var sido = $("#sido").val();
     var gungoo = $("#gungoo").val();
@@ -87,7 +98,9 @@ function searchStore(){
     });
 }
 
+
 // 날짜포멧변경
+
 function getFormattedDate(date) {
     var year = date.getFullYear();
 
@@ -100,12 +113,14 @@ function getFormattedDate(date) {
     return year + '-' + month + '-' + day;
 }
 
+
 // 주소찾기
 function searchAddress(){
     new daum.Postcode({
         oncomplete: function(data) {
             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
             // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+
             $("#zipcode").val(data.zonecode).trigger('focusin');
             $("#addr1").val(data.roadAddress).trigger('focusin');
             $("#addr2").focus();
@@ -113,7 +128,9 @@ function searchAddress(){
     }).open();
 }
 
+
 // 레이어팝업띄우기
+
 var currentLayer = null;
 function openLayerPopup(target){
     currentLayer = $("#"+target);
@@ -136,14 +153,18 @@ function openLayerPopup(target){
     $(".dim-layer").css(dimLayerConfig).show();
 }
 
+
 // 레이어팝업 삭제
+
 function closeLayerPopup(){
     $(".dim-layer").remove();
     currentLayer.hide();
     $("body").css("overflow","auto");
 }
 
+
 // 휴대전화번호 '-' 추가
+
 function autoHypenPhone(str){
   str = str.replace(/[^0-9]/g, '');
   var tmp = '';
