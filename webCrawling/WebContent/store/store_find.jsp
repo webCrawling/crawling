@@ -18,7 +18,7 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>한솥 > STORE > 주변점포찾기</title>
 
-    <link rel="icon" href="/assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
@@ -161,10 +161,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="../login/login.jsp">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="../join/join1.jsp">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -628,7 +628,7 @@
             position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
             map: map,
             icon: {
-              url: '/assets/images/common/icon_map.png',
+              url: '../assets/images/common/icon_map.png',
               size: new naver.maps.Size(50, 52),
               scaledSize: new naver.maps.Size(42, 52),
 
@@ -712,7 +712,7 @@
             position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
             map: map,
             icon: {
-              url: '/assets/images/common/icon_map.png',
+              url: '../assets/images/common/icon_map.png',
               size: new naver.maps.Size(50, 52),
               scaledSize: new naver.maps.Size(42, 52),
 

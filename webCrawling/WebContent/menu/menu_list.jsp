@@ -160,10 +160,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="../login/login.jsp">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="../join/join1.jsp">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
