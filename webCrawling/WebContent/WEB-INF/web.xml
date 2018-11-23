@@ -10,18 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  
-  <servlet>
-    <servlet-name>FrontController_order</servlet-name>
-    <servlet-class>frontController.FrontController_order</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>FrontController_order</servlet-name>
-    <url-pattern>*.do</url-pattern>
-  </servlet-mapping>
-  
-  
+ 
   <resource-ref>
     <description>Connection</description>
     <res-ref-name>jdbc/OracleDB</res-ref-name>
