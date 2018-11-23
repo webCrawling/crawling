@@ -1,0 +1,36 @@
+
+@charset "utf-8";
+
+
+.my_hansot_menu {position:relative; width:100%; margin-top:50px; overflow:hidden;}
+
+.my_hansot_menu ul {margin:10px 0 0 -28px; overflow: hidden}
+.my_hansot_menu ul li {position:relative; display:inline-block; margin:30px 0 0 27px;  width:270px; height:335px;  cursor: pointer; vertical-align: top;}
+
+
+.my_hansot_menu ul li .my_item_img img{width:270px; height:230px; overflow: hidden; position:relative; display:block;}
+.my_hansot_menu ul li .my_item_text {font-size:18px; text-align:center; padding:30px 0; font-weight:bold; background-color: #e4e2e2;}
+.my_hansot_menu ul li .my_item_text .my_item_price {padding-top: 6px; color: #909090;-webkit-font-smoothing: antialiased;}
+
+
+
+.my_hansot_menu ul li .my_item_text .my_item_price input[type="checkbox"] + label {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+}
+.my_hansot_menu ul li .my_item_text .my_item_price input[type="checkbox"]:checked + label {
+	background-color: #666666;
+}
+.my_hansot_menu ul li .my_item_text .my_item_price input[type="checkbox"] {
+	display: none;
+}
+
+
+
+ 
+ 
+
+
