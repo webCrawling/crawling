@@ -18,10 +18,10 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>한솥도시락 > 로그인</title>
     
-    <link rel="icon" href="image/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="css/common.css" />
-<link rel="stylesheet" type="text/css" href="css/min.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -44,33 +44,33 @@
     }
 </style>
 
-<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="./js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="./js/jquery.cookie.js"></script>
-<script type="text/javascript" src="./js/ui.common.js"></script>
-<script type="text/javascript" src="./js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../assets/js/ui.common.js"></script>
+<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
 
-<script type="text/javascript" src="./js/tss.js"></script>
-<script type="text/javascript" src="./js/tss.util.js"></script>
+<script type="text/javascript" src="../assets/js/tss.js"></script>
+<script type="text/javascript" src="../assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="./js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="./js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="./js/validate.js"></script>
+<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="../assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="./js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="./js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="./js/hansot.common.js"></script>
+<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="./js/moment.js"></script>
+<script type="text/javascript" src="../assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -98,7 +98,7 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="./css/login.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/ui.login.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
@@ -158,10 +158,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="./login.jsp">로그인</a>
+                    <a href="../login/login.jsp">로그인</a>
                     </li>
                 <li>
-                    <a href="../join/join.jsp">회원가입</a>
+                    <a href="../join/join1.jsp">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -212,10 +212,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="/brand/esg">ESG경영이란?</a></li>
-                                    <li><a href="/brand/philosophy">환경보호(Environment)</a></li>
-                                    <li><a href="/hansot/social">사회공헌(Social)</a></li>
-                                    <li><a href="/brand/esg">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="../brand/esg.jsp">ESG경영이란?</a></li>
+                                    <li><a href="../brand/philosophy.jsp">환경보호(Environment)</a></li>
+                                    <li><a href="../hansot/social.jsp">사회공헌(Social)</a></li>
+                                    <li><a href="../brand/esg.jsp">윤리경영(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -358,13 +358,13 @@
         <!-- //로그인 form -->
         <!-- 회원가입 선택 -->
         <div class="join_select">
-            <span><img src="./image/login/join_temp_01.jpg" alt="bg" /></span>
+            <span><img src="../assets/images/login/join_temp_01.jpg" alt="bg" /></span>
             <div class="join_formcont">
                 <h3 class="h3_tit">한솥 회원이 아니신가요?</h3>
                 <p class="txt">회원이 되시면 한솥 도시락의 다양한 정보와 이벤트를 만나보실 수 있습니다.</p>
                 <!-- btn -->
                 <div class="btn_wrap">
-                    <span class="btn btn_st02"><a href="../join/join.jsp" class="c_02">회원가입</a></span>
+                    <span class="btn btn_st02"><a href="../join/join1.jsp" class="c_02">회원가입</a></span>
                 </div>
                 <!-- //btn -->
             </div>
