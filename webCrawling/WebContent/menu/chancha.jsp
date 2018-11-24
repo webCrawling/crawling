@@ -18,7 +18,7 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>찬차마요 커피 이야기</title>
 
-    <link rel="icon" href="/assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
@@ -224,7 +224,7 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">전체메뉴</a></li>
+                                    <li><a href="../order1.or">전체메뉴</a></li>
                                     <li><a href="../menu/material.jsp">식재료 이야기</a></li>
                                     <li><a href="../menu/chancha.jsp">페루찬차마요커피</a></li>
                                     <li><a href="../menu/menu_order.jsp">단체 주문</a></li>
