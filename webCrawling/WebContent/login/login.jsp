@@ -20,8 +20,8 @@
     
     <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -44,33 +44,33 @@
     }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
 
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -79,7 +79,7 @@
         var token = $("meta[name='_csrf']").attr('content');
         var header = "X-CSRF-TOKEN";
         $(document).ajaxSend(function(event, xhr, options) {
-            xhr.setRequestHeader(header, token);
+            xhr.setRequestHeader(hea der, token);
         });
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
@@ -98,7 +98,7 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.login.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.login.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
@@ -158,10 +158,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="../login/login.jsp">로그인</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="../join/join1.jsp">회원가입</a>
+                    <a href="join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -187,10 +187,10 @@
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="./login.jsp">로그인</a>
+                            <a href="/login.do">로그인</a>
                             </li>
                         <li>
-                            <a href="../join/join.jsp">회원가입</a>
+                            <a href=/join.do">회원가입</a>
                             </li>
                     </ul>
                 </div>
@@ -401,19 +401,17 @@ $(function() {
 
 // 로그인
 function checkSubmit(){
+	
+	  var userid = document.getElementById("userid");	
+	  var userpwd = document.getElementById("userpwd");
+	  var userid1 =  userid.value;
+	  var userpwd1 = userpwd.value;
+	  alert(userid1);
+	  alert(userpwd1);
 
-    if($("#btnlogin").hasClass("disabled")){
-        return;
-    }
-
-    if($("#saveid").is(":checked")) {
-        $.cookie("saveid", $("#userid").val(), {expires:30, path : "/"});
-    }else{
-        $.cookie("saveid","", {expires:-1});
-    }
-
-    document.loginForm.submit();
+	    location.href = "./home.do?userid1="+userid1+"&userpwd1="+userpwd1;  
 }
+
 //]]>
 </script>
 
