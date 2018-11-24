@@ -59,14 +59,15 @@ public class FrontController_order extends HttpServlet {
 		
 		// 회원의 주문 로직
 		if(com.equals("/order2.or")) {
+		
 			command = new Command_order();
 			
 			command.exe(request,response);
 			forward = "/menu/order_list.jsp";
 					
 		}else if(com.equals("/order1.or")) {
-			System.out.println("debug1");
-			forward="/menu/order.jsp";
+			
+			forward="/menu/menu_list.jsp";
 		}
 		
 		//request객체 유지를 위한 forwarding 방식의 페이지 이동
