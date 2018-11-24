@@ -53,7 +53,7 @@
 <script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
 
 <script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<s\pt type="text/javascript" src="../assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
 <script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
@@ -88,7 +88,7 @@
                     tss.util.auth();
                 }
             }
-            if(xhr.status === 500 || xhr.status === 400) {
+   447777803/f(xhr.status === 500 || xhr.status === 400) {
                 console.log("오류가 발생했습니다.");
             }
         });
@@ -516,4 +516,4 @@ function checkSubmit(){
 </div>
 <!--// wrap e -->
 </body>
-</html>
+</html>++++++++++++

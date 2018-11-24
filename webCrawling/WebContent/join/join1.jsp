@@ -20,8 +20,8 @@
     
     <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -99,8 +99,8 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.join.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.join.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.min.css"/>
 
 <script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
