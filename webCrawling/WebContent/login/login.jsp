@@ -16,12 +16,12 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>ÇÑ¼Üµµ½Ã¶ô > ·Î±×ÀÎ</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>í•œì†¥ë„ì‹œë½ > ë¡œê·¸ì¸</title>
     
     <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -44,33 +44,35 @@
     }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+
 
 <script type="text/javascript" src="../assets/js/tss.js"></script>
 <s\pt type="text/javascript" src="../assets/js/tss.util.js"></script>
 
+
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -79,17 +81,17 @@
         var token = $("meta[name='_csrf']").attr('content');
         var header = "X-CSRF-TOKEN";
         $(document).ajaxSend(function(event, xhr, options) {
-            xhr.setRequestHeader(header, token);
+            xhr.setRequestHeader(hea der, token);
         });
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
    447777803/f(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -98,7 +100,7 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.login.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.login.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
@@ -158,16 +160,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="../login/login.jsp">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="../join/join1.jsp">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -178,23 +180,23 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="/"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="./login.jsp">·Î±×ÀÎ</a>
+                            <a href="/login.do">ë¡œê·¸ì¸</a>
                             </li>
                         <li>
-                            <a href="../join/join.jsp">È¸¿ø°¡ÀÔ</a>
+                            <a href=/join.do">íšŒì›ê°€ìž…</a>
                             </li>
                     </ul>
                 </div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
                 <div class="gnb_menu">
                     <ul>
@@ -202,9 +204,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/story.jsp">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="../brand/philosophy.jsp">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="../brand/legacy.jsp">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="../brand/story.jsp">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="../brand/philosophy.jsp">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="../brand/legacy.jsp">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -212,10 +214,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/esg.jsp">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="../brand/philosophy.jsp">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="../brand/esg.jsp">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="../brand/esg.jsp">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="../brand/philosophy.jsp">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="../hansot/social.jsp">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="../brand/esg.jsp">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -224,10 +226,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="../menu/material.jsp">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="../menu/chancha.jsp">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
-                                    <li><a href="../menu/menu_order.jsp">´ÜÃ¼ ÁÖ¹®</a></li>
+                                    <li><a href="../menu/menu_list.jsp">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="../menu/material.jsp">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="../menu/chancha.jsp">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
+                                    <li><a href="../menu/menu_order.jsp">ë‹¨ì²´ ì£¼ë¬¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -235,7 +237,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="../store/store_find.jsp">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -243,8 +245,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="../event/store_event_list.jsp">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="../event/event_list.jsp">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="../event/store_event_list.jsp">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -252,12 +254,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="../franchise/success.jsp">¼º°ø¼ö±â</a></li>
-                                    <li><a href="../franchise/process.jsp">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="../franchise/calc.jsp">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
-                                    <li><a href="../franchise/qna.jsp">Ã¢¾÷¹®ÀÇ</a></li>
-                                    <li><a href="../franchise/briefing.jsp">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                    <li><a href="../franchise/hansot_store.jsp">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="../franchise/success.jsp">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="../franchise/process.jsp">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="../franchise/calc.jsp">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
+                                    <li><a href="../franchise/qna.jsp">ì°½ì—…ë¬¸ì˜</a></li>
+                                    <li><a href="../franchise/briefing.jsp">ì°½ì—…ì„¤ëª…íšŒ ì¼ì •Â·ì‹ ì²­</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -265,13 +267,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="../hansot/vision.jsp">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="../hansot/history.jsp">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="../hansot/news_list.jsp">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">¿À½Ã´Â ±æ</a></li>
-                                    <li><a href="../footer/faq_list.jsp">°í°´¼¾ÅÍ</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
+                                    <li><a href="../hansot/promise.jsp">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="../hansot/vision.jsp">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="../hansot/history.jsp">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="../hansot/news_list.jsp">í•œì†¥ NEWS</a></li>
+                                    <li><a href="../hansot/location.jsp">ì˜¤ì‹œëŠ” ê¸¸</a></li>
+                                    <li><a href="../footer/faq_list.jsp">ê³ ê°ì„¼í„°</a></li>
+                                    <li class="h_last"><a href="../footer/incruit.jsp">ì¸ìž¬ì±„ìš©</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -305,71 +307,71 @@
         
 <div class="content login bg_none">
     <section class="login_page mo_version">
-        <!-- ·Î±×ÀÎ form -->
+        <!-- ë¡œê·¸ì¸ form -->
         <div class="login_wrap">
             <div class="login_formcont">
-                <h2 class="h2_tit">·Î±×ÀÎ</h2>
+                <h2 class="h2_tit">ë¡œê·¸ì¸</h2>
                 <!-- form -->
                 <form id="loginForm" name="loginForm" class="login_form" action="/authentication" method="post"><input type="hidden" id="_targetUrl" name="_targetUrl" value=""/>
                     <fieldset>
-                        <legend>·Î±×ÀÎ</legend>
-                        <!-- id,pw ÀÔ·ÂÆû -->
+                        <legend>ë¡œê·¸ì¸</legend>
+                        <!-- id,pw ìž…ë ¥í¼ -->
                         <div class="area_login">
-                            <!-- ¾ÆÀÌµð -->
+                            <!-- ì•„ì´ë”” -->
                             <div class="in_box">
                             <span class="form text">
                                 <input type="text" id="userid" minlength="6" maxlength="20" name="userid">
-                                <label for="userid">¾ÆÀÌµð</label>
+                                <label for="userid">ì•„ì´ë””</label>
                             </span>
                             </div>
-                            <!-- //¾ÆÀÌµð -->
-                            <!-- ºñ¹Ð¹øÈ£ -->
+                            <!-- //ì•„ì´ë”” -->
+                            <!-- ë¹„ë°€ë²ˆí˜¸ -->
                             <div class="in_box">
                             <span class="form text">
                                 <input type="password" id="userpwd" minlength="8" name="userpwd" autocomplete="new-password">
-                                <label for="userpwd">ºñ¹Ð¹øÈ£</label>
+                                <label for="userpwd">ë¹„ë°€ë²ˆí˜¸</label>
                             </span>
                             </div>
-                            <!-- //ºñ¹Ð¹øÈ£ -->
+                            <!-- //ë¹„ë°€ë²ˆí˜¸ -->
                         </div>
-                        <!--// id,pw ÀÔ·ÂÆû -->
+                        <!--// id,pw ìž…ë ¥í¼ -->
                         <!-- check -->
                         <div class="area_check">
                             <span class="form checkbox">
                                 <input type="checkbox" id="saveid">
-                                <label for="saveid">¾ÆÀÌµð ÀúÀå</label>
+                                <label for="saveid">ì•„ì´ë”” ì €ìž¥</label>
                             </span>
                             <span class="find_idpw">
-                                <a href="./login_find.jsp">¾ÆÀÌµð/ºñ¹Ð¹øÈ£Ã£±â</a>
+                                <a href="./login_find.jsp">ì•„ì´ë””/ë¹„ë°€ë²ˆí˜¸ì°¾ê¸°</a>
                             </span>
                         </div>
                         <!-- //check -->
-                        <!-- ·Î±×ÀÎ btn -->
+                        <!-- ë¡œê·¸ì¸ btn -->
                         <div class="btn_wrap">
-                            <span class="btn btn_st02"><a href="#none" class="c_01 disabled" id="btnlogin" onclick="checkSubmit();">·Î±×ÀÎ</a></span>
+                            <span class="btn btn_st02"><a href="#none" class="c_01 disabled" id="btnlogin" onclick="checkSubmit();">ë¡œê·¸ì¸</a></span>
                             </div>
-                        <!-- //·Î±×ÀÎ btn -->
+                        <!-- //ë¡œê·¸ì¸ btn -->
                     </fieldset>
                 <div>
 <input type="hidden" name="_csrf" value="3a1f9029-2dc0-42ff-bbc3-227a8384a395" />
 </div></form><!-- //form -->
             </div>
         </div>
-        <!-- //·Î±×ÀÎ form -->
-        <!-- È¸¿ø°¡ÀÔ ¼±ÅÃ -->
+        <!-- //ë¡œê·¸ì¸ form -->
+        <!-- íšŒì›ê°€ìž… ì„ íƒ -->
         <div class="join_select">
             <span><img src="../assets/images/login/join_temp_01.jpg" alt="bg" /></span>
             <div class="join_formcont">
-                <h3 class="h3_tit">ÇÑ¼Ü È¸¿øÀÌ ¾Æ´Ï½Å°¡¿ä?</h3>
-                <p class="txt">È¸¿øÀÌ µÇ½Ã¸é ÇÑ¼Ü µµ½Ã¶ôÀÇ ´Ù¾çÇÑ Á¤º¸¿Í ÀÌº¥Æ®¸¦ ¸¸³ªº¸½Ç ¼ö ÀÖ½À´Ï´Ù.</p>
+                <h3 class="h3_tit">í•œì†¥ íšŒì›ì´ ì•„ë‹ˆì‹ ê°€ìš”?</h3>
+                <p class="txt">íšŒì›ì´ ë˜ì‹œë©´ í•œì†¥ ë„ì‹œë½ì˜ ë‹¤ì–‘í•œ ì •ë³´ì™€ ì´ë²¤íŠ¸ë¥¼ ë§Œë‚˜ë³´ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
                 <!-- btn -->
                 <div class="btn_wrap">
-                    <span class="btn btn_st02"><a href="../join/join1.jsp" class="c_02">È¸¿ø°¡ÀÔ</a></span>
+                    <span class="btn btn_st02"><a href="../join/join1.jsp" class="c_02">íšŒì›ê°€ìž…</a></span>
                 </div>
                 <!-- //btn -->
             </div>
         </div>
-        <!-- //È¸¿ø°¡ÀÔ ¼±ÅÃ -->
+        <!-- //íšŒì›ê°€ìž… ì„ íƒ -->
     </section>
 </div>
 
@@ -380,7 +382,7 @@ $(function() {
     $("#userpwd").on("keyup",function(event){
         if(event.keyCode == 13) checkSubmit();
     });
-    // ·Î±×ÀÎ ¹öÆ° È°¼ºÈ­
+    // ë¡œê·¸ì¸ ë²„íŠ¼ í™œì„±í™”
     $("#loginForm > :text, :password").keyup(function(){
         if($("#userid").val() !="" && $("#userpwd").val() != "")
             $("#btnlogin").removeClass("disabled");
@@ -388,7 +390,7 @@ $(function() {
             $("#btnlogin").addClass("disabled");
     });
 
-    // ¾ÆÀÌµð ÀúÀå
+    // ì•„ì´ë”” ì €ìž¥
     if($.cookie("saveid") != "" && $.cookie("saveid") != undefined) {
         $("#userid").val($.cookie("saveid"));
         $("#saveid").attr("checked", true);
@@ -399,21 +401,19 @@ $(function() {
 
 });
 
-// ·Î±×ÀÎ
+// ë¡œê·¸ì¸
 function checkSubmit(){
+	
+	  var userid = document.getElementById("userid");	
+	  var userpwd = document.getElementById("userpwd");
+	  var userid1 =  userid.value;
+	  var userpwd1 = userpwd.value;
+	  alert(userid1);
+	  alert(userpwd1);
 
-    if($("#btnlogin").hasClass("disabled")){
-        return;
-    }
-
-    if($("#saveid").is(":checked")) {
-        $.cookie("saveid", $("#userid").val(), {expires:30, path : "/"});
-    }else{
-        $.cookie("saveid","", {expires:-1});
-    }
-
-    document.loginForm.submit();
+	    location.href = "./home.do?userid1="+userid1+"&userpwd1="+userpwd1;  
 }
+
 //]]>
 </script>
 
@@ -431,42 +431,42 @@ function checkSubmit(){
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="../footer/partners.jsp">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">°øÁö»çÇ×</a></li>
-                <li><a href="../footer/faq_list.jsp">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="../footer/agreement.jsp">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="../footer/incruit.jsp">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="../footer/partners.jsp">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="../footer/notice_list.jsp">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="../footer/faq_list.jsp">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="../footer/agreement.jsp">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -474,15 +474,15 @@ function checkSubmit(){
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -491,11 +491,11 @@ function checkSubmit(){
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

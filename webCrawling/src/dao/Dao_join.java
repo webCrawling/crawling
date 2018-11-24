@@ -75,9 +75,9 @@ public class Dao_join {
 	}
 
 	
-	public String login(String id, String pass) {
+	public boolean login(String id, String pass) {
 		String username=null;
-		sql = "select id from webCrawling where id=? and pw=?";
+		sql = "select id from webCrawling where id=? and pass=?";
 
 	
 		try {
@@ -88,6 +88,9 @@ public class Dao_join {
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
 			
+			System.out.println(id);
+			System.out.println(pass);
+			
 			rs = pstmt.executeQuery();
 			
 			
@@ -96,8 +99,11 @@ public class Dao_join {
 			
 			username = (String)(rs.getString(1));
 			System.out.println("  id: "+username);
-			
-			
+			if(username==null)return false;
+			else {
+				
+				
+				return true;}
 		} 
 		catch (Exception e) {
 			System.out.println("연결에 실패하였습니다.");
@@ -109,7 +115,7 @@ public class Dao_join {
 
 		}
 
-		return username;
+		return false;
 	}
 	
 	public ArrayList<Dto_join> list() {
@@ -161,12 +167,12 @@ public class Dao_join {
 		rs = pstmt.executeQuery();
 		
 		if(rs.next()){	//id 존재		
-			System.out.println("예스!");
+			
 			System.out.println(rs.getString(1));
-			return true;
-		}else {
-			System.out.println("노!");
 			return false;
+		}else {
+			
+			return true;
 		}
 	}
 	catch (Exception e) {
@@ -179,7 +185,7 @@ public class Dao_join {
 	}
 		
 	
-		return true;
+		return false;
 	}
 	
 	
