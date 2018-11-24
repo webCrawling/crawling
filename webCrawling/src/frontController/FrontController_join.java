@@ -10,12 +10,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import command.Action;
 import command.Command_CheckingId;
 import command.Command_Join;
 import command.Command_home;
 import dao.Dao_join;
 import dto.Dto_join;
+import etc.Action;
 import etc.ActionForward;
 
 @WebServlet("*.do")

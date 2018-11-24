@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.Dao_join;
 import dto.Dto_join;
+import etc.Action;
 import etc.ActionForward;
 
 public class Command_CheckingId implements Action{
