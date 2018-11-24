@@ -2,7 +2,6 @@
 	pageEncoding="utf-8"%>
 
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -162,7 +161,7 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">로그인</a>
+                    <a href="./login.do">로그인</a>
                     </li>
                 <li>
                     <a href="./join.do">회원가입</a>
@@ -190,10 +189,10 @@
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="../login/login.jsp">로그인</a>
+                            <a href="./login.dp">로그인</a>
                             </li>
                         <li>
-                            <a href="../join/join1.jsp">회원가입</a>
+                            <a href="./join.do">회원가입</a>
                             </li>
                     </ul>
                 </div>
@@ -297,47 +296,22 @@
         </div>
         <!--// header content -->
     </div>
-    <script type="text/javascript">
 
-		$(document).ready(function() {
-			//아이디 중복 체크 실행 여부(0:중복체크X 1:중복체크O)
-			var count = 0;
-			
-			$('#confirmId').click(function() {
-				var uid = $('#memId').val();
-				if(uid == ''){
-					alert('아이디를 입력하세요!');
-					$('#memId').focus();
-					return;
-				}
-				
-				//서버프로그램 연동해서 아이디 중복체크하기
-				$.getJSON('./CheckingId.do',{memId:uid},function(data){
-					alert('sasdfsadf');
-					if(data.result == 'success'){
-						if(data.id == 'idDuplicated') {	//id중복
-							count = 0;
-							$('#id_signed').html('이미 등록된 아이디').css('color','red');
-							$('#memId').val('').focus();
-						}else {	//id 미중복
-							//중복확인 작업을 수행하면 count를 1로 변경
-							count = 1;
-							$('#id_signed').html('사용 가능한 아이디').css('color','black');
-						}
-					}else {
-						alert('오류발생!');
-					}
-				});
-			});
-			
-			//input태그에 key이벤트 연결
-			$('#insert_form #memId').keyup(function(){
-				count = 0;
-				$('#id_signed').html('');
-			});
-			
-		
-		});
+<script type="text/javascript">
+
+   function confirming(){
+
+      var memId = document.getElementById("memId");
+      var query = memId.value;
+      if(query == ''){
+    	  alert('아이디는 입력하시고 누르세요');
+    	  return false;
+      }
+      window.open("../CheckingId.do?query="+query, "중복확인", 
+    		  "width=300, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+   }
+
+</script>
 </script>
 </header>
 <!--// header -->
@@ -349,7 +323,7 @@
     <div id="container" class="sub_page">
         
 <div class="content join"><!--1depth-->
-    <form action="./joinCompleted.do" method="post" onsubmit="return validate();">
+    <form action="../joinCompleted.do" method="post" onsubmit="return validate();">
     <section class="join_step_03 mo_version"><!--2depth-->
         <!-- 회원가입_약관동의 -->
         <div class="join_step_wrap">
@@ -357,26 +331,13 @@
             <div class="join_step_cont cont_st01">
                 <!-- join_left -->
                 <div class="join_tit">
-                    <h3 class="h3_tit">개인정보 입력</h3>
-                    <p>
-                        <span class="s_block"><em class="emphasis">홍수호</em>님, 환영합니다.</span>
-                        <span class="s_block">간단한 개인정보를 입력해주시면</span>
-                        <span class="s_block">회원가입이 완료됩니다.</span>
-                    </p>
+                  
                 </div>
                 <!-- //join_left -->
                 <!-- join_right -->
                 <div class="join_sub">
                 
-                <form id="joinForm" name="joinForm" action="/join/join_step3" method="post"><input type="hidden" name="name" value="홍수호" />
-                    <input type="hidden" name="mobile_phone" value="01089475740" />
-                    <input type="hidden" name="di" value="MC0GCCqGSIb3DQIJAyEA/cRJYrjmC3/307mi7I4s0GSBl52uwKA4KEPf/xF8/7U=" />
-                    <input type="hidden" name="mobile_certification_req_num" value="20181121195553268657" />
-                    <input type="hidden" name="agree_use" value="Y" />
-                    <input type="hidden" name="agree_personal" value="Y" />
-                    <input type="hidden" name="agree_3rd" value="Y" />
-                    <input type="hidden" id="id" name="id" value="" />
-                    <!-- 필수 입력 사항 -->
+               
                     <div class="join_form">
                         <h4 class="h4_tit">필수 입력 사항</h4>
                         <!-- 아이디입력 -->
@@ -384,17 +345,15 @@
                             <dl class="in_box_th">
                                 <dt>아이디</dt>
                                 <dd>
-                                    <span class="form text">
-                                    
-                                    
-                                        <input type="text" id="memId" maxlength="20" name="memId">
-                                        <label for="memId">아이디를 입력해 주세요</label>
-                                    <a href="javascript:chkId();" class="btn_overlap">중복확인</a>
-                                    <input type="button" id="confirmId" value="아이디 중복 체크">
-                                    <span id="id_signed"></span>
-      
+                                
+                                    <span class="form text">               
+                                    <input type="text" id="memId" maxlength="20" name="memId">
+                                    <label for="memId">아이디를 입력해 주세요</label>
+                                      <a href="#nome" class="btn_overlap" style="cursor:default; width:100px">
+                                      <input type="button" style="position:relative; color:#373737; font-size:15px; bottom:33px;width:100px;height:50px; background-color: rgba( 255, 255, 255, 0); outline:0; border: 0; cursor:pointer " 
+                                      		 onclick="confirming()" value="중복확인" >
+                                      </a>
                                     </span>
-                                    </form> 
                                     <p class="result_comment true idResultTrue" style="display:none;">사용 가능한 아이디 입니다</p>
                                     <p class="result_comment false idResultFalse" style="display:none;">이미 등록된 아이디 입니다</p>
                                 </dd>
@@ -448,14 +407,12 @@
                                 <dt>휴대폰</dt>
                                 <dd>
                                     <span class="form text">
-                                        <input type="text" id="phone" name="phone" disabled="disabled" class="loadtext" value="01089475740">
-                                        <label for="phone"></label>
+                                        <input type="text" id="phone" name="phone">
+                                        <label for="phone">핸드폰 번호를 입력해주세요</label>
                                     </span>
                                 </dd>
                             </dl>
-                            <!-- 캡션 -->
-                            <p class="result_comment true">인증이 완료되었습니다</p>
-                            <!-- //캡션 -->
+ 
                         </div>
                         <!-- //휴대폰 -->
                     </div>
@@ -482,10 +439,11 @@
                     <!-- btn -->
                     <div class="btn_wrap">
                         <span class="btn btn_st03">
-                        	<input type = submit value="가입하기">
-                            <a href="#none" class="c_01" onclick="$('#joinForm').submit();">가입하기</a>
+                        	<a href="#none" class="c_01"><button style="width:150px;height:30px; background-color: rgba( 255, 255, 255, 0); outline:0; border: 0 ";type = submit id="input_01">가입하기</button></a>
+                        
                         </span>
                     </div>
+                
                     <!-- //btn -->
                 <div>
 <input type="hidden" name="_csrf" value="81deaaae-2b7d-44da-9efe-a4177045ca77" />

@@ -20,11 +20,12 @@ public class Command_CheckingId implements Action{
 		
 		try {
 			
-			id = (String)request.getParameter("memId");
+			id = (String)request.getParameter("query");
 			confirmIds = dao.CheckingId(id);
-			
+			System.out.println(confirmIds);
+			request.setAttribute("confirmIds", confirmIds);
 			forward.setRedirect(false);
-	   		forward.setPath("./join.jsp");
+	   		forward.setPath("/join/confirm.jsp");
    			return forward;
    		
 		} catch (Exception ex) {

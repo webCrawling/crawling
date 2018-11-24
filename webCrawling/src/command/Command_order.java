@@ -15,6 +15,7 @@ public class Command_order implements Command {
 	private Dao_order dao;
 	
 	private String menu; // 주문한 메뉴들
+	
 	private int price;	// 주문한 메뉴들 총 가격
 	
 	// constructor
@@ -23,13 +24,15 @@ public class Command_order implements Command {
 		dao = new Dao_order();
 		
 		menu = "";
+		
 		price = 0;
 	}
 	
 	// method
 	public void exe(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("doCommand_order");
 		
+		
+		System.out.println("Command_order.exe 실행");
 		// 주문 고객 정보 가져오기
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
@@ -37,15 +40,25 @@ public class Command_order implements Command {
 				
 		// 주문 내역 가져오기
 		String[] check = request.getParameterValues("check");	// check된 메뉴 목록
+		String[] quan =request.getParameterValues("num"); // 주문할 메뉴 수량
 		String[] field = request.getParameterValues("field");	// check된 메뉴들의 가격
 		
-		// 가격을 int타입으로 파싱
+		
+		
+		// 수량과 가격을 int타입으로 파싱
+		int[] quan_parsing=new int[quan.length];
 		int[] parsing = new int[field.length];
+		
+		
+		for(int i =0 ; i<quan.length ; i++) {
+			quan_parsing[i] = Integer.parseInt(quan[i]);
+			
+		}
 		
 		for(int i =0 ; i<field.length ; i++) {
 			parsing[i] = Integer.parseInt(field[i]);
+			
 		}
-		
 		
 		for(int i=0;i<check.length;i++) {
 			
@@ -58,7 +71,7 @@ public class Command_order implements Command {
 			}
 			
 			// 총 금액
-			price = price + parsing[i];
+			price += parsing[i]*quan_parsing[i];
 		}
 		
 		System.out.println("주문내역 : "+menu);

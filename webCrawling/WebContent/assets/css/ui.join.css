@@ -278,6 +278,7 @@ table.list_tb td.td_04 {padding-right:30px;}
 	.view_btn_wrap {margin-top:55px;}
 	.view_btn_wrap span input em.mo_none {display:none;}
 	.area_cont .view_btn_wrap .btn_wrap .btn input.c_01 {width:50px; height:50px; }
+	.area_cont .view_btn_wrap .btn_wrap .btn input.z_01 {width:50px; height:50px; }
 	.view_btn_wrap .view_list .btn a:before {content: ''; margin-right:0;}
 	.np_btn_wrap .np_txt {display:none !important;}
 

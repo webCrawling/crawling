@@ -261,6 +261,18 @@ h2.h2_02 {padding:53px 0 0 30px; height:140px; box-sizing: border-box;}
 .btn_wrap .btn a.c_01:hover,
 .btn_wrap .btn a.c_01:active {color:#373737; background-color:#f2c000;}
 
+.btn_wrap .btn label.c_01 {color:#373737; background-color:#f6ca00; transition-duration: 0.3s;}
+.btn_wrap .btn label.c_01.disabled {color:#c3c1c1; background-color:#eeecec; cursor:default;}
+.btn_wrap .btn label.c_01.disabled:hover {color:#c3c1c1; background-color:#eeecec;}
+.btn_wrap .btn label.c_01:hover,
+.btn_wrap .btn label.c_01:active {color:#373737; background-color:#f2c000;}
+
+.btn_wrap .btn input.z_01 {color:#373737; background-color:#f6ca00; transition-duration: 0.3s;}
+.btn_wrap .btn input.z_01.disabled {color:#c3c1c1; background-color:#eeecec; cursor:default;}
+.btn_wrap .btn input.z_01.disabled:hover {color:#c3c1c1; background-color:#eeecec;}
+.btn_wrap .btn input.z_01:hover,
+.btn_wrap .btn input.z_01:active {color:#373737; background-color:#f2c000;}
+
 .btn_wrap .btn a.c_02 {color:#fff; background-color:#5c5953; transition-duration: 0.3s;}
 .btn_wrap .btn a.c_02.disabled {color:#c3c1c1; background-color:#eeecec; cursor:default;}
 .btn_wrap .btn a.c_02.disabled:hover {color:#c3c1c1; background-color:#eeecec;}
@@ -523,6 +535,8 @@ a.more_link.over + figure h3.h3_tit {margin-top:-58px;}
 
 	/*상세>목록버튼*/
 	.view_btn_wrap .btn_wrap .btn a.c_01 {width:50px; height:50px;}
+	.view_btn_wrap .btn_wrap .btn label.c_01 {width:50px; height:50px;}
+	.view_btn_wrap .btn_wrap .btn input.z_01 {width:50px; height:50px;}
 	.btn_wrap.view_list .btn a:before {content: ''; margin:0;}
 	.view_btn_wrap span a em.mo_none {display:none;}
 	.np_btn_wrap .np_txt {display:none !important;}

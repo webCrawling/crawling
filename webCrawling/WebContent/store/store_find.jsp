@@ -1,9 +1,90 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="utf-8">
+    <title>?«ê¸°ê°€ ê°€?¥í•œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´</title>
+    <style>
+    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '?‹ì?', sans-serif;line-height: 1.5;}
+    .wrap * {padding: 0;margin: 0;}
+    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+    .info .close:hover {cursor: pointer;}
+    .info .body {position: relative;overflow: hidden;}
+    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+    .info .link {color: #5085BB;}
+</style>
+
+</head>
+<body>
+123
+<div id="map" style="width:100%;height:350px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=25758686751d9ec9d09f35f5b6eef26a">/* api ??*/</script>
+<script>
+var mapContainer = document.getElementById('map'), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+    mapOption = { 
+        center: new daum.maps.LatLng(33.451475, 126.570528), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+        level: 3 // ì§€?„ì˜ ?•ë? ?ˆë²¨
+    }; 
+    alert("12");
+var map = new daum.maps.Map(mapContainer, mapOption); // ì§€?„ë? ?ì„±?©ë‹ˆ??
+
+// ì§€?„ì— ë§ˆì»¤ë¥??œì‹œ?©ë‹ˆ??
+var marker = new daum.maps.Marker({
+    map: map, 
+    position: new daum.maps.LatLng(33.450701, 126.570667)
+});
+
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???œì‹œ??ì»¨í…ì¸??…ë‹ˆ??
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???„ë˜?€ ê°™ì´ ?¬ìš©?ê? ?ìœ ë¡?²Œ ì»¨í…ì¸ ë? êµ¬ì„±?˜ê³  ?´ë²¤?¸ë? ?œì–´?????ˆê¸° ?Œë¬¸??
+// ë³„ë„???´ë²¤??ë©”ì†Œ?œë? ?œê³µ?˜ì? ?ŠìŠµ?ˆë‹¤ 
+var content = '<div class="wrap">' + 
+            '    <div class="info">' + 
+            '        <div class="title">' + 
+            '            ì¹´ì¹´???¤í˜?´ìŠ¤?·ì›' + 
+            '            <div class="close" onclick="closeOverlay()" title="?«ê¸°"></div>' + 
+            '        </div>' + 
+            '        <div class="body">' + 
+            '            <div class="img">' +
+            '                <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
+            '           </div>' + 
+            '            <div class="desc">' + 
+            '                <div class="ellipsis">?œì£¼?¹ë³„?ì¹˜???œì£¼??ì²¨ë‹¨ë¡?242</div>' + 
+            '                <div class="jibun ellipsis">(?? 63309 (ì§€ë²? ?í‰??2181</div>' + 
+            '                <div><a href="http://www.kakaocorp.com/main" target="_blank" class="link">?ˆí˜?´ì?</a></div>' + 
+            '            </div>' + 
+            '        </div>' + 
+            '    </div>' +    
+            '</div>';
+
+// ë§ˆì»¤ ?„ì— ì»¤ìŠ¤?€?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
+// ë§ˆì»¤ë¥?ì¤‘ì‹¬?¼ë¡œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?˜ê¸°?„í•´ CSSë¥??´ìš©???„ì¹˜ë¥??¤ì •?ˆìŠµ?ˆë‹¤
+var overlay = new daum.maps.CustomOverlay({
+    content: content,
+    map: map,
+    position: marker.getPosition()       
+});
+
+// ë§ˆì»¤ë¥??´ë¦­?ˆì„ ??ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
+daum.maps.event.addListener(marker, 'click', function() {
+    overlay.setMap(map);
+});
+
+// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??«ê¸° ?„í•´ ?¸ì¶œ?˜ëŠ” ?¨ìˆ˜?…ë‹ˆ??
+function closeOverlay() {
+    overlay.setMap(null);     
+}
+</script>
+=======
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -972,5 +1053,6 @@
     <!--// inc footer e -->
 </div>
 <!--// wrap e -->
+>>>>>>> master
 </body>
 </html>

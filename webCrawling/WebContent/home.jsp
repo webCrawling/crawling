@@ -17,10 +17,10 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="0b92501b-0d87-447c-b011-ba9391ff1167" /><title>한솥도시락</title>
 
-    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="./assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="./assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -43,33 +43,33 @@
     }
 </style>
 
-<script type="text/javascript" src="./assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="./assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="./assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="./assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="./assets/js/ui.common.js"></script>
-<script type="text/javascript" src="./assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="./assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/assets/js/ui.common.js"></script>
+<script type="text/javascript" src="/assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/TweenMax.min.js"></script>
 
-<script type="text/javascript" src="./assets/js/tss.js"></script>
-<script type="text/javascript" src="./assets/js/tss.util.js"></script>
+<script type="text/javascript" src="/assets/js/tss.js"></script>
+<script type="text/javascript" src="/assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="./assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="./assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="./assets/js/validate.js"></script>
+<script type="text/javascript" src="/assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="/assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="./assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="./assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="/assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="/assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="./assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="/assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="./assets/js/moment.js"></script>
+<script type="text/javascript" src="/assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -97,10 +97,10 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="./assets/css/ui.main.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/ui.pop.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/ui.main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/ui.pop.css" />
 
-    <script type="text/javascript" src="./assets/js/ui.main.js"></script>
+    <script type="text/javascript" src="/assets/js/ui.main.js"></script>
 
     <script>
     $(function(){
@@ -181,10 +181,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="./login/login.jsp">로그인</a>
+                    <a href="./login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="./join/join1.jsp">회원가입</a>
+                    <a href="./join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -209,10 +209,10 @@
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="/login">로그인</a>
+                            <a href="./login.do">로그인</a>
                             </li>
                         <li>
-                            <a href="/join/join_step1">회원가입</a>
+                            <a href="./join.do">회원가입</a>
                             </li>
                     </ul>
                 </div>
@@ -287,13 +287,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="./hansot/promise.jsp">한솥의 약속</a></li>
-                                    <li><a href="./hansot/vision.jsp">한솥의 비전</a></li>
-                                    <li><a href="./hansot/history.jsp">연혁&amp;수상</a></li>
-                                    <li><a href="./hansot/news_list.jsp">한솥 NEWS</a></li>
-                                    <li><a href="./hansot/location.jsp">오시는 길</a></li>
-                                    <li><a href="./footer/faq_list.jsp">고객센터</a></li>
-                                    <li class="h_last"><a href="./footer/incruit.jsp">인재채용</a></li>
+                                    <li><a href="/hansot/promise.jsp">한솥의 약속</a></li>
+                                    <li><a href="/hansot/vision.jsp">한솥의 비전</a></li>
+                                    <li><a href="/hansot/history.jsp">연혁&amp;수상</a></li>
+                                    <li><a href="/hansot/news_list.jsp">한솥 NEWS</a></li>
+                                    <li><a href="/hansot/location.jsp">오시는 길</a></li>
+                                    <li><a href="/footer/faq_list.jsp">고객센터</a></li>
+                                    <li class="h_last"><a href="/footer/incruit.jsp">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -383,10 +383,10 @@
             <div class="main_cont_wrap mo_tr">
                 <!-- 전체메뉴 -->
                 <div class="area_sc first">
-                    <a href="./menu/menu_list.jsp" class="sc_link"></a>
+                    <a href="/menu/menu_list.jsp" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
-                            <img src="./assets/images/main/main_img_01.jpg" alt="전체메뉴 이미지">
+                            <img src="/assets/images/main/main_img_01.jpg" alt="전체메뉴 이미지">
                         </span>
                         <figcaption>
                             <p class="sc_tit fz_02">
@@ -400,7 +400,7 @@
                 <!-- //전체메뉴 -->
                 <!-- 주변점포찾기 -->
                 <div class="area_sc">
-                    <a href="./store/store_find.jsp" class="sc_link"></a>
+                    <a href="/store/store_find.jsp" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
                             <img src="./assets/images/main/main_img_02.jpg" alt="주변점포찾기 이미지">
@@ -437,7 +437,7 @@
                 <div class="to_wrap">
                     <!-- why한솥 가맹점 -->
                     <div class="area_sc first">
-                        <a href="./franchise/hansot_store.jsp" class="sc_link"></a>
+                        <a href="/franchise/hansot_store.jsp" class="sc_link"></a>
                         <figure class="sc_wrap">
                             <span class="sc_img">
                                 <img src="./assets/images/main/main_img_03.jpg" alt="why한솥 가맹점 이미지">
@@ -454,10 +454,10 @@
                     <!-- //why한솥 가맹점 -->
                     <!-- 성공수기 -->
                     <div class="area_sc">
-                        <a href="./franchise/success.jsp" class="sc_link"></a>
+                        <a href="/franchise/success.jsp" class="sc_link"></a>
                         <figure class="sc_wrap">
                             <span class="sc_img">
-                                <img src="./assets/images/main/main_img_04.jpg" alt="성공수기 이미지">
+                                <img src="/assets/images/main/main_img_04.jpg" alt="성공수기 이미지">
                             </span>
                             <figcaption>
                                 <p class="sc_tit fz_02">
@@ -496,7 +496,7 @@
                         </p>
                         <!-- btn -->
                         <div class="btn_wrap btn_info">
-                            <span class="btn btn_st04"><a href="./brand/philosophy.jsp" class="c_06">브랜드 철학</a></span>
+                            <span class="btn btn_st04"><a href="/brand/philosophy.jsp" class="c_06">브랜드 철학</a></span>
                         </div>
                         <!-- //btn -->
                     </div>
@@ -514,7 +514,7 @@
                     <a href="./menu/material.jsp" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
-                            <img src="./assets/images/main/main_img_05.jpg" alt="식재료 이미지">
+                            <img src="/assets/images/main/main_img_05.jpg" alt="식재료 이미지">
                         </span>
                         <figcaption>
                             <h2 class="h2_mt fz_01">
@@ -547,7 +547,7 @@
             <a href="./hansot/promise.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="./assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
+                    <img src="/assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥의 약속</h3>
@@ -556,10 +556,10 @@
             </figure>
         </li>
         <li>
-            <a href="./event/event_list.jsp" class="more_link"></a>
+            <a href="/event/event_list.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="./assets/images/common/more_event.jpg" alt="온라인 이벤트" />
+                    <img src="/assets/images/common/more_event.jpg" alt="온라인 이벤트" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">온라인 이벤트</h3>
@@ -568,7 +568,7 @@
             </figure>
         </li>
         <li>
-            <a href="./hansot/news_list.jsp" class="more_link"></a>
+            <a href="/hansot/news_list.jsp" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="./assets/images/common/more_news.jpg" alt="한솥 NEWS" />
