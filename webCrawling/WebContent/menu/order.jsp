@@ -55,7 +55,6 @@ function submit1(f)
     }
     
     //-----------------
-   submit2(f);
     
     return true;
 }
