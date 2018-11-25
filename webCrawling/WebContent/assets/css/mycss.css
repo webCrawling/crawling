@@ -61,6 +61,92 @@
     font-weight: bold;
     text-align: center;
 }
- 
+body{
+	     background-color:#eeecec;
+} 
+#my_container.my_sub_page {
+	text-align:center;
+    background-color: white;
+    padding: 30px 0 30px 0;
+    font-size: 20px;
+    color:black;
+    margin : 50px 200px 50px 200px;
+    box-sizing: border-box;
+}
 
+.my_container2{
+	
+	text-align:center;
+	font-size: 23px;
+	margin : 80px 350px 50px 350px;
+	padding: 30px 0 30px 0;
+	
+}
+
+	.my_container2 h3{
+	display:inline-block;
+	}
+	
+	.my_container2 #h31{
+	float:left;
+	}
+	
+	.my_container2 #h32{
+	float:center;
+	}
+	
+	.my_container2 #h33{
+	float:right;
+	}
+	h3:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #373737;
+    display: block;
+    margin-top: 15px;
+
+}
+
+.my_container3{
+	text-align:center;
+	font-size: 20px;
+	margin : 0 300px 80px 300px;
+	padding: 30px 0 30px 0;
+	
+}
+.my_container3 span{
+
+	
+	
+}
+
+.my_container3 h4{
+	<!-- display:inline-block; -->
+	
+	}
+
+.my_container3 #h41{
+	float:left;
+	}
+	
+	.my_container3 #h42{
+	float:center;
+		
+ 
+  
+	
+	}
+	
+	.my_container3 #h43{
+	float:center;
+	}
+	
+.my_container4{
+	text-align:center;
+	font-size: 20px;
+	margin : 150px 350px 30px 350px;
+	padding: 30px 0 30px 0;
+	}	
+	
 

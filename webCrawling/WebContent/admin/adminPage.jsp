@@ -1,33 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
-<html>
+
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <!-- SNS LINK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <!--// SNS LINK -->
+
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>ì£¼ë¬¸ ë‚´ì—­</title>
+
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/mycss.css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/ui.menu.css" />
+
 </head>
 <body>
 
+<%
 
-<%	
-	//String id = (String)session.getAttribute("id");
-
-	// test
-	String id = "admin";
 	
-	if(id.equals("admin")){
-		out.println("</br>"+"<a href="+"memberList.am"+">È¸¿ø °ü¸®</a><br>");
+    out.println("</br>"+"<a href="+"memberList.am"+">íšŒì› ê´€ë¦¬</a><br>");
 
-		out.println("</br>"+"<a href="+"deliver_admin.am"+">¹è´Ş °ü¸®</a>");
-	}
-	
-	else{
-		out.println(session.getAttribute("id")+"´ÔÀÇ MY PAGE"); 
-	}
+    out.println("</br>"+"<a href="+"deliver_admin.am"+">ë°°ë‹¬ ê´€ë¦¬</a>");
+ 
 %>
 
+<div id="my_container" class="my_sub_page" >
+<h1 class="my_h1"> Manager Dash board </h1>
+
+</div>
+
+<div class="my_container2">
+<h3 id="h31">ë©”ë‰´ </h3>  <h3 id="h32"> ê°€ê²© </h3><h3 id="h33"> ìˆ˜ëŸ‰</h3>
+</div>
 
 
+<input type="button" class="my2" value="í™•ì¸í–ˆìŠµë‹ˆë‹¤." onclick="javascript:location.href='home.do'"/>
 
+
+	
 </body>
 </html>
