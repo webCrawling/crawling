@@ -38,7 +38,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		Action action = null;
 
 		System.out.println("command is " + command);
-		System.out.println("ignore확인");
+		System.out.println("ignore확인2");
 
 		// 로그인 버튼 클릭 시 홈 페이지로 이동
 		if (command.equals("/home.do")) {
