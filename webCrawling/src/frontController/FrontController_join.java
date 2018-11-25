@@ -119,5 +119,8 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		}
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8796eb0e1098ae62b07924e92cdf3d81e6155f6b
 }
