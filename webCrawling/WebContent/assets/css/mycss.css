@@ -64,6 +64,7 @@
 body{
 	     background-color:#eeecec;
 } 
+
 #my_container.my_sub_page {
 	text-align:center;
     background-color: white;
@@ -86,8 +87,13 @@ body{
 	.my_container2 h3{
 	display:inline-block;
 	}
+	.my_container2 #a1{
 	
-	.my_container2 #h31{
+	font-size:23px;
+	float:left;
+	
+	}
+	.my_container2 #a2{
 	float:left;
 	}
 	
@@ -113,11 +119,6 @@ body{
 	font-size: 20px;
 	margin : 0 300px 80px 300px;
 	padding: 30px 0 30px 0;
-	
-}
-.my_container3 span{
-
-	
 	
 }
 
@@ -148,5 +149,4 @@ body{
 	margin : 150px 350px 30px 350px;
 	padding: 30px 0 30px 0;
 	}	
-	
 
