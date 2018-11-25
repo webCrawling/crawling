@@ -16,7 +16,7 @@ import etc.Command;
 
 
 	//@WebServlet("/FrontController_order")
-	// *.do로 매핑되어 있는 컨트롤러
+	// *.or로 매핑되어 있는 컨트롤러
 public class FrontController_order extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

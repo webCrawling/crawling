@@ -40,7 +40,7 @@ public class Dao_join {
 	}
 	
 
-	//method
+	//회원가입
 	public boolean join(Dto_join dto) {
 
 		
@@ -74,7 +74,7 @@ public class Dao_join {
 
 	}
 
-	
+	//로그인
 	public boolean login(String id, String pass) {
 		String username=null;
 		sql = "select id from webCrawling where id=? and pass=?";
@@ -114,42 +114,8 @@ public class Dao_join {
 		return false;
 	}
 	
-	public ArrayList<Dto_join> list() {
-		
-		ArrayList<Dto_join> list = new ArrayList<>();
-		sql = "select * from webCrawling"; 
 
-		try {
-			conn = datasource.getConnection();
-
-			pstmt = conn.prepareStatement(sql);
-			
-			rs = pstmt.executeQuery();
-
-			int i=0;
-			while (rs.next()) {
-				Dto_join dto = new Dto_join();
-				dto.setId(rs.getString(1));
-				dto.setPass(rs.getString(2));
-				dto.setEmail(rs.getString(3));
-				dto.setPhone(rs.getString(4));
-				list.add(dto);
-				i++;
-			}
-
-		} 
-		catch (Exception e) {
-			System.out.println("연결에 실패하였습니다.");
-			e.printStackTrace();
-		}finally{
-			if(rs!=null) try{rs.close();}catch(SQLException ex){}
-			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
-		}
-
-		return list;
-	}
-	
-	
+	//중복확인
 	public boolean CheckingId(String id) {
 	
 	sql = "select id from webCrawling where id=?";
@@ -184,70 +150,36 @@ public class Dao_join {
 		return false;
 	}
 	
-	
-	public void delete(String name) {
-		sql = "delete from webCrawling where name=?";
+	//아이디 찾기
+	public void FindingId(String id) {
 		
-	
+		sql = "select id from webCrawling where id=?";
+		
 		try {
 			conn = datasource.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, name);
-			pstmt.executeUpdate();
-			
-			
-		} 
-		catch (Exception e) {
-			System.out.println("연결에 실패하였습니다.");
-			e.printStackTrace();
-		}finally{
-			if(rs!=null) try{rs.close();}catch(SQLException ex){}
-			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
-		}
 
-	}
-	
-	
-	
-		@SuppressWarnings("finally")
-		public Dto_join info(String name) {
-		Dto_join dto = new Dto_join();
-		sql = "select * from webCrawling where name=?";
-
-		try {
-			conn = datasource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1,name);
-			
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-
-			System.out.println("while진입전이다");
-			if (rs.next()) {
-				System.out.println("while진입했다.");
-				dto.setId(rs.getString(1));
-				dto.setPass(rs.getString(2));
-				dto.setEmail(rs.getString(3));
-				dto.setPhone(rs.getString(4));
+			
+			if(rs.next()){	//id 존재		
+				
+				System.out.println(rs.getString(1));
+				
+			}else {
+				
+				
 			}
-		
-			
-		
-			
-		} 
+		}
 		catch (Exception e) {
 			System.out.println("연결에 실패하였습니다.");
 			e.printStackTrace();
 		}finally{
-			if(rs!=null) try{rs.close();}catch(SQLException ex){}
-			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
+			if(rs!=null)try{rs.close();}catch(SQLException e){}
+			if(pstmt!=null)try{pstmt.close();}catch(SQLException e){}
 			if(conn!=null)try{conn.close();}catch(SQLException e){}
-
-		return dto;
-	}
-	
-	
 		}
-	
-
+		
+	}
 }
