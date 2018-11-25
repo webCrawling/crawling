@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -51,6 +51,11 @@
 <script type="text/javascript" src="assets/js/ui.common.js"></script>
 <script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
 <script type="text/javascript" src="assets/js/tss.js"></script>
 <script type="text/javascript" src="assets/js/tss.util.js"></script>
 
@@ -62,6 +67,10 @@
 <!-- fileupload -->
 <script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
 <script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
 <script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
@@ -105,7 +114,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-111772169-1');
     </script>
 
@@ -115,7 +123,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-864658366');
     </script>
 
@@ -330,7 +337,11 @@
                 <!-- join_right -->
                 <div class="join_sub">
 
+<<<<<<< HEAD
                     <form id="joinForm" name="joinForm" action="join2.jsp" method="post"><h4 class="h4_tit">¿ÃøÎæ‡∞¸</h4>
+=======
+                    <form id="joinForm" name="joinForm" action="join2.do" method="post"><h4 class="h4_tit">Ïù¥Ïö©ÏïΩÍ¥Ä</h4>
+>>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
                     <div class="textarea_wrap cont">
                         <div class="cont_area">
                             <!-- ¿ÃøÎæ‡∞¸ cont-->
@@ -847,7 +858,6 @@
 
 <script>
     $(function(){
-
         $("#agree_personal, #agree_use, #agree_3rd").on('click',function(){
             if($("#agree_use").is(":checked") && $("#agree_personal").is(":checked") && $("#agree_3rd").is(":checked")){
                 $("#allchk").prop("checked", true);
@@ -855,10 +865,13 @@
                 $("#allchk").prop("checked", false);
             }
         });
-
     });
+<<<<<<< HEAD
 
     // ∏µŒ µø¿«
+=======
+    // Î™®Îëê ÎèôÏùò
+>>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
     function allchk(){
         if($("#allchk").is(":checked")){
             $("#joinForm :checkbox").prop("checked", true);
@@ -866,39 +879,34 @@
             $("#joinForm :checkbox").prop("checked", false);
         }
     }
+<<<<<<< HEAD
 
     // ¥Ÿ¿Ω
+=======
+    // Îã§Ïùå
+>>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
     function nextStep(){
         if(!$("#agree_use").is(":checked")){
             alert("¿ÃøÎæ‡∞¸ø° µø¿««ÿ ¡÷ººø‰.");
             $("#agree_use").focus();
             return;
         }
-
         if(!$("#agree_personal").is(":checked")){
             alert("∞≥¿Œ¡§∫∏ ∫∏»£¡§√•ø° µø¿««ÿ ¡÷ººø‰.");
             $("#agree_personal").focus();
             return;
         }
-
       $("#joinForm").submit();
-
-
       /*if(!$("#agree_3rd").is(":checked")){
         alert("∏∂ƒ…∆√ »∞øÎ∏Ò¿˚ø° µø¿««ÿ ¡÷ººø‰.");
         $("#agree_3rd").focus();
         return;
       }*/
-
-
     }
-
-
     $(".cont_area").mCustomScrollbar({
         theme: "minimal-dark",
         scrollInertia: 400
     });
-
 </script>
 
     </div>
@@ -991,7 +999,6 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'UA-109125197-1');
         </script>
     <!--// inc footer e -->

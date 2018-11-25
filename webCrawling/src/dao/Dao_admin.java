@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -200,6 +201,26 @@ public class Dao_admin {
 		return list;
 
 	}
+	
+	// 배달 완료
+	public void orderComplete(String id, int price, int state) throws SQLException {
+		sql = "update ordermenu set statement = 1 where id=? and price=? and statement= ?";
+		
+			conn = datasource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, id);
+			pstmt.setInt(2, price);
+			pstmt.setInt(3, state);
+
+			rs = pstmt.executeQuery();
+
+			rs.close();
+		
+		
+	}
+	
+	
 
 	// 회원 삭제
 	public void delete(String id) {
@@ -218,5 +239,6 @@ public class Dao_admin {
 		}
 
 	}
+
 
 }

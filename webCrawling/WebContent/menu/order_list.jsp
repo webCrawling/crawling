@@ -1,29 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
-<title>ÁÖ¹® È®ÀÎ¼­</title>
-</head>
-<body>
-   
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%
    String id =(String)session.getAttribute("id");
    String phone = request.getParameter("phone");
    
    String menu = null;
    int price = 0;
-%>
-
-<%
    
-   // ÁÖ¹® ³»¿ª °¡Á®¿À±â
-   String[] check = request.getParameterValues("check");   // checkµÈ ¸Ş´º ¸ñ·Ï
-   String[] field = request.getParameterValues("field");   // checkµÈ ¸Ş´ºµéÀÇ °¡°İ
+   // ì£¼ë¬¸ ë‚´ì—­ ê°€ì ¸ì˜¤ê¸°
+   String[] check = request.getParameterValues("check");   // checkëœ ë©”ë‰´ ëª©ë¡
+   String[] field = request.getParameterValues("field");   // checkëœ ë©”ë‰´ë“¤ì˜ ê°€ê²©
    String[] quan =request.getParameterValues("num");      
-   // °¡°İÀ» intÅ¸ÀÔÀ¸·Î ÆÄ½Ì
+   // ê°€ê²©ì„ intíƒ€ì…ìœ¼ë¡œ íŒŒì‹±
    int[] parsing = new int[field.length];
    int[] quan_parsing=new int[quan.length];
    
@@ -36,25 +24,80 @@
       parsing[i] = Integer.parseInt(field[i]);
    }
          
-   // ÃÑ ±İ¾×   
+   // ì´ ê¸ˆì•¡   
    for(int i=0;i<check.length;i++) {   
       price += parsing[i]*quan_parsing[i];
    }
-         
+
 %>
 
+<!DOCTYPE html>
 
-<h1><%=id%>´Ô ÁÖ¹® ¿Ï·á µÇ¾ú½À´Ï´Ù.</h1>
+<head>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
-<h2>ÁÖ¹® ³»¿ª</h2>
+    <!-- SNS LINK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <!--// SNS LINK -->
+
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>ì£¼ë¬¸ ë‚´ì—­</title>
+
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/mycss.css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/ui.menu.css" />
+
+</head>
+<body>
+
+
+
+<div id="my_container" class="my_sub_page" >
+<h1 class="my_h1"> <%=id%> &nbsp;íšŒì›ë‹˜ì˜ ì£¼ë¬¸ ë‚´ì—­</h1>
+
+</div>
+
+<div class="my_container2">
+<h3 id="h31">ë©”ë‰´ </h3>  <h3 id="h32"> ê°€ê²© </h3><h3 id="h33"> ìˆ˜ëŸ‰</h3>
+</div>
+
+
+
+
+
+<div class="my_container3">
+<table >
 <% for(int i = 0 ; i<field.length ; i++){
-      out.println("<ul>");
-      out.println("<li>"+check[i]+" - "+field[i]+" - "+ quan[i]+"</li>");
-      out.println("</ul>");
+     
+      out.println("<tr><td style='width:250px'><h4 id='h41'>"+check[i]+"</h4></td><td><h4 id='h42'>"+field[i]+"</h4></td><td><h4 id='h43'>"+quan[i]+"</h4></td></tr>");
+      
 }%>
+</table>
+<div class="my_container4">
 
-<h2>ÃÑ °¡°İ</h2>
-<%=price %><br>
+<h2>ì´ ê°€ê²©</h2>
+<%=price %>ì›
 
+</div>
+
+<input type="button" class="my2" value="í™•ì¸í–ˆìŠµë‹ˆë‹¤." onclick="javascript:location.href='home.do'"/>
+
+
+
+</div>
+
+
+ 
+
+    
+
+	
 </body>
 </html>
