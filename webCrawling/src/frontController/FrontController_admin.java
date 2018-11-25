@@ -19,6 +19,7 @@ import command.Command_deliveryAdmin;
 import command.Command_deliveryComplete;
 import command.Command_memInfo;
 import command.Command_memList;
+import command.Command_mypage;
 import dao.Dao_admin;
 import dto.Dto_join;
 import dto.Dto_order;
@@ -29,42 +30,42 @@ import etc.Command;
 //@WebServlet("*.am")
 public class FrontController_admin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-  
-    public FrontController_admin() {
-    }
 
-	
+
+	public FrontController_admin() {
+	}
+
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet");
 		doProcess(request,response);
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
 		doProcess(request,response);
 	}
-	
+
 	// FrontController Process
 	public void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doProcess");
-		
+
 		request.setCharacterEncoding("utf-8");
 		String forward = null;
-		
+
 		String uri = request.getRequestURI(); 
 		String contextPath = request.getContextPath(); 
 		String com = uri.substring(contextPath.length());
 
 		System.out.println("contextPath : "+contextPath);
 		System.out.println("selected command : "+com);
-		
+
 		// 관리 페이지로 이동
 		if(com.equals("/goAdmin.am")) {
 			forward = "/admin/adminPage.jsp";
 		}
-		
+
 		// 배달 관리 (관리자)
 		if(com.equals("/deliver_admin.am")) {
 			Command command = new Command_deliveryAdmin();
@@ -75,7 +76,7 @@ public class FrontController_admin extends HttpServlet {
 			}
 			forward = "/admin/delivery_admin.jsp";
 		}
-		
+
 		// 배달 완료
 		if(com.equals("/deliveryComplete.am")) {
 			Command command = new Command_deliveryComplete();
@@ -86,8 +87,8 @@ public class FrontController_admin extends HttpServlet {
 			}
 			forward = "deliver_admin.am";
 		}
-		
-		
+
+
 		// 회원 관리 버튼 클릭시 클라이언트에게 보여줄 회원 목록을 가져오는 로직
 		else if(com.equals("/memberList.am")) {
 			Command command = new Command_memList();
@@ -98,7 +99,7 @@ public class FrontController_admin extends HttpServlet {
 			}
 			forward = "/admin/list_member.jsp";
 		}
-		
+
 		// 회원이름 클릭시 회원정보 + 회원의 전체 주문내역을 가져오는 로직
 		else if (com.equals("/memberInfo.am")){
 			String id = request.getParameter("id");
@@ -111,10 +112,10 @@ public class FrontController_admin extends HttpServlet {
 			}
 			forward = "/admin/information_member.jsp";			
 		}
-		
+
 		// 회원 삭제 로직
 		else if (com.equals("/delete.am")){
-			
+
 			String id = request.getParameter("id");
 			request.setAttribute("id",id);
 			Command command = new Command_delete();
@@ -123,18 +124,29 @@ public class FrontController_admin extends HttpServlet {
 			} catch (NamingException e) {
 				e.printStackTrace();
 			}
-			
+
 			forward = "/memberList.am";		
-			
-			
+
+
 		}
+
+		//마이페이지 (수정)으로 이동
 		
+		else if (com.equals("/modification.am")){
+
+			Command command = new Command_mypage();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+		}
 		// 페이지 이동
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
-		
-		
+
+
 	}
-	
+
 
 }
