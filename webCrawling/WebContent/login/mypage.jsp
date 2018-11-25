@@ -162,12 +162,12 @@
 function modification(){
 	alert('modification()들어옴');
 	
-	var orgPassword = document.getElementById("orgPassword");
-	var newPassword = document.getElementById("newPassword");
-	var orgQuery = orgPassword.value; //현재 비밀번호 
-	var newQuery = newPassword.value; //새로운 비밀번호
+	var pass = document.getElementById("orgPassword");
+	var modifiedpass = document.getElementById("newPassword");
+	var passQuery = orgPassword.value; //현재 비밀번호 
+	var modifiedpassQuery = newPassword.value; //새로운 비밀번호
 	alert(orgQuery+','+newQuery);
-	location.href = "./modification.am?orgQuery="+orgQuery+"&newQuery="+newQuery;
+	location.href = "./modification.am?passQuery="+passQuery+"&modifiedpassQuery="+modifiedpassQuery;
 }
     </script>
 

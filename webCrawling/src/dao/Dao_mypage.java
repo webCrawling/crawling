@@ -40,12 +40,19 @@ public class Dao_mypage {
 	// method
 
 	//비밀번호 변경
-	public boolean passModification(String id, String pass, String Modifiedpass) {
+	public boolean passModification(String id, String pass, String modifiedpass) {
 
 		sql = "select pass from webCrawling where id=?";
 		sql2 = "update webcrawling set pass = ? where id = ?";
 
 		try {
+			
+			//새로운 비밀번호 칸에 입력을 안했을 시 바로 폴스로 리턴
+			if(modifiedpass == null) {
+				System.out.println("새로운 비밀번호를 입력하지 않음");
+				return false;
+			}
+			
 			conn = datasource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
@@ -54,7 +61,7 @@ public class Dao_mypage {
 			if(rs.getString(1).equals(pass)) {
 
 				pstmt = conn.prepareStatement(sql2);
-				pstmt.setString(1, Modifiedpass);
+				pstmt.setString(1, modifiedpass);
 				pstmt.setString(2, id);
 				pstmt.executeUpdate();
 				
@@ -86,6 +93,11 @@ public class Dao_mypage {
 		sql = "update webcrawling set email = ? where id = ?";
 
 		try {
+			//이메일 칸에 입력을 안했을 시 바로 폴스로 리턴
+			if(email == null) {
+				System.out.println("새로운 이메일을 입력하지 않음");
+				return false;
+			}
 			conn = datasource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, email);
@@ -116,6 +128,12 @@ public class Dao_mypage {
 		sql = "update webcrawling set phone = ? where id = ?";
 
 		try {
+			
+			//폰번호 칸에 입력을 안했을 시 바로 폴스로 리턴
+			if(phone == null) {
+				System.out.println("폰번호를 입력하지 않음");
+				return false;
+			}
 			conn = datasource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, phone);
