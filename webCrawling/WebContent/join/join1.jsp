@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -46,34 +46,34 @@
     }
 </style>
 
-<script type="text/javascript" src="/assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="/assets/js/ui.common.js"></script>
-<script type="text/javascript" src="/assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="/assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
 
 
-<script type="text/javascript" src="/assets/js/tss.js"></script>
-<script type="text/javascript" src="/assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="/assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="/assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="/assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="/assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="/assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="/assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="/assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -105,14 +105,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/ui.join.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.min.css"/>
 
-<script type="text/javascript" src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-111772169-1');
     </script>
 
@@ -122,7 +121,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-864658366');
     </script>
 
@@ -339,7 +337,7 @@
                 <!-- join_right -->
                 <div class="join_sub">
 
-                    <form id="joinForm" name="joinForm" action="join2.jsp" method="post"><h4 class="h4_tit">이용약관</h4>
+                    <form id="joinForm" name="joinForm" action="join2.do" method="post"><h4 class="h4_tit">이용약관</h4>
                     <div class="textarea_wrap cont">
                         <div class="cont_area">
                             <!-- 이용약관 cont-->
@@ -856,7 +854,6 @@
 
 <script>
     $(function(){
-
         $("#agree_personal, #agree_use, #agree_3rd").on('click',function(){
             if($("#agree_use").is(":checked") && $("#agree_personal").is(":checked") && $("#agree_3rd").is(":checked")){
                 $("#allchk").prop("checked", true);
@@ -864,9 +861,7 @@
                 $("#allchk").prop("checked", false);
             }
         });
-
     });
-
     // 모두 동의
     function allchk(){
         if($("#allchk").is(":checked")){
@@ -875,7 +870,6 @@
             $("#joinForm :checkbox").prop("checked", false);
         }
     }
-
     // 다음
     function nextStep(){
         if(!$("#agree_use").is(":checked")){
@@ -883,31 +877,22 @@
             $("#agree_use").focus();
             return;
         }
-
         if(!$("#agree_personal").is(":checked")){
             alert("개인정보 보호정책에 동의해 주세요.");
             $("#agree_personal").focus();
             return;
         }
-
       $("#joinForm").submit();
-
-
       /*if(!$("#agree_3rd").is(":checked")){
         alert("마케팅 활용목적에 동의해 주세요.");
         $("#agree_3rd").focus();
         return;
       }*/
-
-
     }
-
-
     $(".cont_area").mCustomScrollbar({
         theme: "minimal-dark",
         scrollInertia: 400
     });
-
 </script>
 
     </div>
@@ -1000,7 +985,6 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'UA-109125197-1');
         </script>
     <!--// inc footer e -->
