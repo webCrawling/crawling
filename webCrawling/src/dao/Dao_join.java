@@ -88,25 +88,21 @@ public class Dao_join {
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
 			
-			System.out.println(id);
-			System.out.println(pass);
-			
 			rs = pstmt.executeQuery();
-			
 			
 			rs.next();
 		
+			username = rs.getString("id");
 			
-			username = (String)(rs.getString(1));
-			System.out.println("  id: "+username);
-			if(username==null)return false;
+			if(username==null) {
+				return false;
+			}
 			else {
-				
-				
-				return true;}
+				return true;
+				}
 		} 
 		catch (Exception e) {
-			System.out.println("연결에 실패하였습니다.");
+			System.out.println("login() : 로그인 예외 하였습니다");
 			e.printStackTrace();
 		}finally{
 			if(rs!=null) try{rs.close();}catch(SQLException ex){}

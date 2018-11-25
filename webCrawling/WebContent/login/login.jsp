@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -108,7 +108,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-111772169-1');
     </script>
 
@@ -118,7 +117,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-864658366');
     </script>
 
@@ -197,7 +195,6 @@
                     </ul>
                 </div>
                 <!-- //모바일 로그인/회원가입 -->
-
                 <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
@@ -218,7 +215,6 @@
                                     <li><a href="../brand/philosophy.jsp">환경보호(Environment)</a></li>
                                     <li><a href="../hansot/social.jsp">사회공헌(Social)</a></li>
                                     <li><a href="../brand/esg.jsp">윤리경영(Governance)</a></li>
-
                                     </ul>
                             </div>
                         </li>
@@ -298,9 +294,7 @@
     </div>
 </header>
 <!--// header -->
-
 <!--// inc header e -->
-
     <!-- popup -->
 <!-- container s -->
     <div id="container" class="sub_page">
@@ -374,10 +368,8 @@
         <!-- //회원가입 선택 -->
     </section>
 </div>
-
 <script type="text/javascript">
 //<![CDATA[
-
 $(function() {
     $("#userpwd").on("keyup",function(event){
         if(event.keyCode == 13) checkSubmit();
@@ -508,7 +500,6 @@ function checkSubmit(){
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'UA-109125197-1');
         </script>
     <!--// inc footer e -->
@@ -516,4 +507,4 @@ function checkSubmit(){
 </div>
 <!--// wrap e -->
 </body>
-</html>++++++++++++
+</html>
