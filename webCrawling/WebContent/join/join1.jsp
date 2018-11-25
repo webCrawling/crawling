@@ -16,14 +16,12 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>í•œì†¥ë„ì‹œë½ > íšŒì›ê°€ìž…</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>ÇÑ¼Üµµ½Ã¶ô > È¸¿ø°¡ÀÔ</title>
     
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
-
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
-
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -46,34 +44,30 @@
     }
 </style>
 
-<script type="text/javascript" src="/assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="/assets/js/ui.common.js"></script>
-<script type="text/javascript" src="/assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="/assets/js/TweenMax.min.js"></script>
-
-
-<script type="text/javascript" src="/assets/js/tss.js"></script>
-<script type="text/javascript" src="/assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="/assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="/assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="/assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="/assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="/assets/js/fileupload/jquery.fileupload.js"></script>
-
-<script type="text/javascript" src="/assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
-
 <!-- moment js api -->
-<script type="text/javascript" src="/assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -87,12 +81,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
+                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
+                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
             }
         });
     });
@@ -101,11 +95,10 @@
 
     
 
-
     <link rel="stylesheet" type="text/css" href="assets/css/ui.join.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.min.css"/>
 
-<script type="text/javascript" src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
@@ -163,16 +156,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login/login.jsp">ë¡œê·¸ì¸</a>
+                    <a href="login.do">·Î±×ÀÎ</a>
                     </li>
                 <li>
-                    <a href="join1.jsp">íšŒì›ê°€ìž…</a>
+                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -183,33 +176,30 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">í•œì†¥</span></a></h1>
+                <h1><a href="/"><span class="blind">ÇÑ¼Ü</span></a></h1>
             </div>
             
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
+                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="../login/login.jsp">ë¡œê·¸ì¸</a>
-                            </li>
-                        <li>
-                            <a href="join.jsp">íšŒì›ê°€ìž…</a>
-                            </li>
-                    </ul>
-                </div>
-                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
+							<ul>
+								<li><a href="login.do">·Î±×ÀÎ</a></li>
+								<li><a href="join.do">È¸¿ø°¡ÀÔ</a></li>
+							</ul>
+						</div>
+                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
 
+                
                 <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/story.jsp">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
-                                    <li><a href="../brand/philosophy.jsp">ë¸Œëžœë“œ ì² í•™</a></li>
-                                    <li><a href="../brand/legacy.jsp">ë¸Œëžœë“œ ìœ ì‚°</a></li>
+                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
+                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
+                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -217,10 +207,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/esg.jsp">ESGê²½ì˜ì´ëž€?</a></li>
-                                    <li><a href="../brand/philosophy.jsp">í™˜ê²½ë³´í˜¸(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">ì‚¬íšŒê³µí—Œ(Social)</a></li>
-                                    <li><a href="../brand/esg.jsp">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
+                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
+                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
+                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -229,10 +219,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">ì „ì²´ë©”ë‰´</a></li>
-                                    <li><a href="../menu/material.jsp">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
-                                    <li><a href="../menu/chancha.jsp">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
-                                    <li><a href="../menu/menu_order.jsp">ë‹¨ì²´ ì£¼ë¬¸</a></li>
+                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
+                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
+                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
+                                    <li><a href="menu_order.go">´ÜÃ¼ ÁÖ¹®</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -240,7 +230,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
+                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -248,8 +238,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
-                                    <li><a href="../event/store_event_list.jsp">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
+                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
+                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -257,12 +247,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why í•œì†¥ ê°€ë§¹ì </a></li>
-                                    <li><a href="../franchise/success.jsp">ì„±ê³µìˆ˜ê¸°</a></li>
-                                    <li><a href="../franchise/process.jsp">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
-                                    <li><a href="../franchise/calc.jsp">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
-                                    <li><a href="../franchise/qna.jsp">ì°½ì—…ë¬¸ì˜</a></li>
-                                    <li><a href="../franchise/briefing.jsp">ì°½ì—…ì„¤ëª…íšŒ ì¼ì •Â·ì‹ ì²­</a></li>
+                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
+                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
+                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
+                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
+                                    <li><a href="qna.go">Ã¢¾÷¹®ÀÇ</a></li>
+                                    <li><a href="briefing.go">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -270,18 +260,19 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">í•œì†¥ì˜ ì•½ì†</a></li>
-                                    <li><a href="../hansot/vision.jsp">í•œì†¥ì˜ ë¹„ì „</a></li>
-                                    <li><a href="../hansot/history.jsp">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
-                                    <li><a href="../hansot/news_list.jsp">í•œì†¥ NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">ì˜¤ì‹œëŠ” ê¸¸</a></li>
-                                    <li><a href="../footer/faq_list.jsp">ê³ ê°ì„¼í„°</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">ì¸ìž¬ì±„ìš©</a></li>
+                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
+                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
+                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
+                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
+                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
+                                    <li><a href="faq_list.go">°í°´¼¾ÅÍ</a></li>
+                                    <li class="h_last"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
@@ -313,25 +304,25 @@
         
 <div class="content join">
     <section class="join_step_01 mo_version">
-        <!-- íšŒì›ê°€ìž…_ì•½ê´€ë™ì˜ -->
+        <!-- È¸¿ø°¡ÀÔ_¾à°üµ¿ÀÇ -->
         <div class="join_step_wrap">
-            <h2 class="h2_tit h2_01">íšŒì›ê°€ìž…</h2>
+            <h2 class="h2_tit h2_01">È¸¿ø°¡ÀÔ</h2>
             <div class="join_step_cont cont_st01">
                 <!-- join_left -->
                 <div class="join_tit">
-                    <h3 class="h3_tit">ì•½ê´€ë™ì˜</h3>
+                    <h3 class="h3_tit">¾à°üµ¿ÀÇ</h3>
                     <!-- pc -->
                     <p class="pc_s_block">
-                        <span class="s_block">íšŒì›ê°€ìž…ì„ ìœ„í•´ì„œ <em class="emphasis">ì´ìš©ì•½ê´€ ë°</em> </span>
-                        <span class="s_block"> <em class="emphasis">ê°œì¸ì •ë³´ ìˆ˜ì§‘ ë° ì´ìš©</em>ì— ëŒ€í•œ</span>
-                        <span class="s_block">ì•ˆë‚´ë¥¼ ì½ê³  <em class="emphasis">ë™ì˜</em>í•´ì£¼ì„¸ìš”.</span>
+                        <span class="s_block">È¸¿ø°¡ÀÔÀ» À§ÇØ¼­ <em class="emphasis">ÀÌ¿ë¾à°ü ¹×</em> </span>
+                        <span class="s_block"> <em class="emphasis">°³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë</em>¿¡ ´ëÇÑ</span>
+                        <span class="s_block">¾È³»¸¦ ÀÐ°í <em class="emphasis">µ¿ÀÇ</em>ÇØÁÖ¼¼¿ä.</span>
                     </p>
                     <!-- //pc -->
                     <!-- mobile -->
                     <p class="mo_s_block">
-                        <span class="s_block">íšŒì›ê°€ìž…ì„ ìœ„í•´ì„œ</span>
-                        <span class="s_block"><em class="emphasis">ì´ìš©ì•½ê´€ ë° ê°œì¸ì •ë³´ ìˆ˜ì§‘ ë° ì´ìš©</em>ì— ëŒ€í•œ</span>
-                        <span class="s_block">ì•ˆë‚´ë¥¼ ì½ê³  <em class="emphasis">ë™ì˜</em>í•´ì£¼ì„¸ìš”.</span>
+                        <span class="s_block">È¸¿ø°¡ÀÔÀ» À§ÇØ¼­</span>
+                        <span class="s_block"><em class="emphasis">ÀÌ¿ë¾à°ü ¹× °³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë</em>¿¡ ´ëÇÑ</span>
+                        <span class="s_block">¾È³»¸¦ ÀÐ°í <em class="emphasis">µ¿ÀÇ</em>ÇØÁÖ¼¼¿ä.</span>
                     </p>
                     <!-- //mobile -->
                 </div>
@@ -339,518 +330,518 @@
                 <!-- join_right -->
                 <div class="join_sub">
 
-                    <form id="joinForm" name="joinForm" action="join2.jsp" method="post"><h4 class="h4_tit">ì´ìš©ì•½ê´€</h4>
+                    <form id="joinForm" name="joinForm" action="join2.jsp" method="post"><h4 class="h4_tit">ÀÌ¿ë¾à°ü</h4>
                     <div class="textarea_wrap cont">
                         <div class="cont_area">
-                            <!-- ì´ìš©ì•½ê´€ cont-->
+                            <!-- ÀÌ¿ë¾à°ü cont-->
 <div class="agree_cont">
     <!-- list01-->
     <div class="list">
-        <h3 class="h3_tit">ì œ1ìž¥ ì´ì¹™</h3>
-        <!-- 1ì¡° -->
+        <h3 class="h3_tit">Á¦1Àå ÃÑÄ¢</h3>
+        <!-- 1Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 1 ì¡° (ëª©ì )</h4>
-            <p class="list_txt">ì´ ì•½ê´€ì€ (ì£¼)í•œì†¥(ì´í•˜ "íšŒì‚¬"ë¼ í•©ë‹ˆë‹¤)ì´ ì œê³µí•˜ëŠ” ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•± ì„œë¹„ìŠ¤(ì´í•˜ "ì„œë¹„ìŠ¤"ë¼ í•©ë‹ˆë‹¤)ì˜ ì´ìš©ì¡°ê±´ ë° ì ˆì°¨, ê¸°íƒ€ í•„ìš”í•œ ì‚¬í•­ì„ ê·œì •í•¨ì„ ëª©ì ìœ¼ë¡œ í•©ë‹ˆë‹¤.</p>
+            <h4 class="h4_tit">Á¦ 1 Á¶ (¸ñÀû)</h4>
+            <p class="list_txt">ÀÌ ¾à°üÀº (ÁÖ)ÇÑ¼Ü(ÀÌÇÏ "È¸»ç"¶ó ÇÕ´Ï´Ù)ÀÌ Á¦°øÇÏ´Â À¥»çÀÌÆ® ¹× ÁÖ¹®¾Û ¼­ºñ½º(ÀÌÇÏ "¼­ºñ½º"¶ó ÇÕ´Ï´Ù)ÀÇ ÀÌ¿ëÁ¶°Ç ¹× ÀýÂ÷, ±âÅ¸ ÇÊ¿äÇÑ »çÇ×À» ±ÔÁ¤ÇÔÀ» ¸ñÀûÀ¸·Î ÇÕ´Ï´Ù.</p>
         </div>
-        <!-- //1ì¡° -->
-        <!-- 2ì¡° -->
+        <!-- //1Á¶ -->
+        <!-- 2Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 2 ì¡° (ì•½ê´€ì˜ íš¨ë ¥ê³¼ ë³€ê²½)</h4>
+            <h4 class="h4_tit">Á¦ 2 Á¶ (¾à°üÀÇ È¿·Â°ú º¯°æ)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  ì´ ì•½ê´€ì€ ê·¸ ë‚´ìš©ì„ íšŒì‚¬ê°€ ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•±ì— ê²Œì‹œí•˜ê±°ë‚˜ ê¸°íƒ€ì˜ ë°©ë²•ìœ¼ë¡œ íšŒì›ì—ê²Œ ê³µì§€í•¨ìœ¼ë¡œì¨ ê·¸ íš¨ë ¥ì´ ë°œìƒí•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç ÀÌ ¾à°üÀº ±× ³»¿ëÀ» È¸»ç°¡ À¥»çÀÌÆ® ¹× ÁÖ¹®¾Û¿¡ °Ô½ÃÇÏ°Å³ª ±âÅ¸ÀÇ ¹æ¹ýÀ¸·Î È¸¿ø¿¡°Ô °øÁöÇÔÀ¸·Î½á ±× È¿·ÂÀÌ ¹ß»ýÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ” í•©ë¦¬ì ì¸ ì‚¬ìœ ê°€ ìžˆëŠ” ê²½ìš° ì´ ì•½ê´€ì„ ë³€ê²½í•  ìˆ˜ ìžˆìœ¼ë©°, ë³€ê²½ëœ ì•½ê´€ì€ ì œ1í•­ê³¼ ê°™ì€ ë°©ë²•ìœ¼ë¡œ ê²Œì‹œ ë˜ëŠ” ê³µì§€í•¨ìœ¼ë¡œì¨ íš¨ë ¥ì´ ë°œìƒí•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸»ç´Â ÇÕ¸®ÀûÀÎ »çÀ¯°¡ ÀÖ´Â °æ¿ì ÀÌ ¾à°üÀ» º¯°æÇÒ ¼ö ÀÖÀ¸¸ç, º¯°æµÈ ¾à°üÀº Á¦1Ç×°ú °°Àº ¹æ¹ýÀ¸·Î °Ô½Ã ¶Ç´Â °øÁöÇÔÀ¸·Î½á È¿·ÂÀÌ ¹ß»ýÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì›ì€ ë³€ê²½ëœ ì•½ê´€ì— ë™ì˜í•˜ì§€ ì•Šìœ¼ë©´ ì–¸ì œë“ ì§€ ì„œë¹„ìŠ¤ ì´ìš©ì„ ì¤‘ë‹¨í•˜ê³  ì´ìš©ê³„ì•½ì„ í•´ì§€í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì•½ê´€ì˜ íš¨ë ¥ë°œìƒì¼ ì´í›„ì˜ ê³„ì†ì ì¸ ì„œë¹„ìŠ¤ ì´ìš©ì€ ì•½ê´€ì˜ ë³€ê²½ì‚¬í•­ì— ë™ì˜í•œ ê²ƒìœ¼ë¡œ ê°„ì£¼ë©ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨é È¸¿øÀº º¯°æµÈ ¾à°ü¿¡ µ¿ÀÇÇÏÁö ¾ÊÀ¸¸é ¾ðÁ¦µçÁö ¼­ºñ½º ÀÌ¿ëÀ» Áß´ÜÇÏ°í ÀÌ¿ë°è¾àÀ» ÇØÁöÇÒ ¼ö ÀÖ½À´Ï´Ù. ¾à°üÀÇ È¿·Â¹ß»ýÀÏ ÀÌÈÄÀÇ °è¼ÓÀûÀÎ ¼­ºñ½º ÀÌ¿ëÀº ¾à°üÀÇ º¯°æ»çÇ×¿¡ µ¿ÀÇÇÑ °ÍÀ¸·Î °£ÁÖµË´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //2ì¡° -->
-        <!-- 3ì¡° -->
+        <!-- //2Á¶ -->
+        <!-- 3Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 3 ì¡° (ì•½ê´€ ì™¸ ì¤€ì¹™)</h4>
-            <p class="list_txt">ì´ ì•½ê´€ì— ëª…ì‹œë˜ì§€ ì•Šì€ ì‚¬í•­ì€ ì „ê¸°í†µì‹ ê¸°ë³¸ë²•, ì „ê¸°í†µì‹ ì‚¬ì—…ë²•, ì •ë³´í†µì‹ ë§ ì´ìš©ì´‰ì§„ ë“±ì— ê´€í•œ ë²•ë¥ , ì „ìžê±°ëž˜ê¸°ë³¸ë²•, ì „ìžì„œëª…ë²• ë° ê¸°íƒ€ ê´€ë ¨ ë²•ë ¹ì˜ ê·œì •ì— ë”°ë¦…ë‹ˆë‹¤. </p>
+            <h4 class="h4_tit">Á¦ 3 Á¶ (¾à°ü ¿Ü ÁØÄ¢)</h4>
+            <p class="list_txt">ÀÌ ¾à°ü¿¡ ¸í½ÃµÇÁö ¾ÊÀº »çÇ×Àº Àü±âÅë½Å±âº»¹ý, Àü±âÅë½Å»ç¾÷¹ý, Á¤º¸Åë½Å¸Á ÀÌ¿ëÃËÁø µî¿¡ °üÇÑ ¹ý·ü, ÀüÀÚ°Å·¡±âº»¹ý, ÀüÀÚ¼­¸í¹ý ¹× ±âÅ¸ °ü·Ã ¹ý·ÉÀÇ ±ÔÁ¤¿¡ µû¸¨´Ï´Ù. </p>
         </div>
-        <!-- //3ì¡° -->
-        <!-- 4ì¡° -->
+        <!-- //3Á¶ -->
+        <!-- 4Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 4 ì¡° (ìš©ì–´ì˜ ì •ì˜)</h4>
+            <h4 class="h4_tit">Á¦ 4 Á¶ (¿ë¾îÀÇ Á¤ÀÇ)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  ì´ ì•½ê´€ì—ì„œ ì‚¬ìš©í•˜ëŠ” ìš©ì–´ì˜ ì •ì˜ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç ÀÌ ¾à°ü¿¡¼­ »ç¿ëÇÏ´Â ¿ë¾îÀÇ Á¤ÀÇ´Â ´ÙÀ½°ú °°½À´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1.íšŒì› : íšŒì‚¬ì™€ ì„œë¹„ìŠ¤ ì´ìš©ì— ê´€í•œ ê³„ì•½ì„ ì²´ê²°í•˜ê³  ì´ìš©ìž ì•„ì´ë””ë¥¼ ë¶€ì—¬ ë°›ì€ ìž</li>
+                            <li>1.È¸¿ø : È¸»ç¿Í ¼­ºñ½º ÀÌ¿ë¿¡ °üÇÑ °è¾àÀ» Ã¼°áÇÏ°í ÀÌ¿ëÀÚ ¾ÆÀÌµð¸¦ ºÎ¿© ¹ÞÀº ÀÚ</li>
                             <li>
-                                2.ì•„ì´ë””(ID) : íšŒì› ì‹ë³„ê³¼ íšŒì›ì˜ ì„œë¹„ìŠ¤ ì´ìš©ì„ ìœ„í•˜ì—¬ íšŒì›ì´ ì„ ì •í•˜ê³  íšŒì‚¬ê°€ ìŠ¹ì¸í•˜ëŠ” ë¬¸ìž, ìˆ«ìž ë˜ëŠ” ì–‘ìžì˜ ì¡°í•©
+                                2.¾ÆÀÌµð(ID) : È¸¿ø ½Äº°°ú È¸¿øÀÇ ¼­ºñ½º ÀÌ¿ëÀ» À§ÇÏ¿© È¸¿øÀÌ ¼±Á¤ÇÏ°í È¸»ç°¡ ½ÂÀÎÇÏ´Â ¹®ÀÚ, ¼ýÀÚ ¶Ç´Â ¾çÀÚÀÇ Á¶ÇÕ
                             </li>
                             <li>
-                                3.ë¹„ë°€ë²ˆí˜¸ : íšŒì›ì˜ ë³¸ì¸ í™•ì¸ê³¼ ë¹„ë°€ ë³´í˜¸ë¥¼ ìœ„í•´ íšŒì› ìžì‹ ì´ ì„¤ì •í•œ ë¬¸ìž, ìˆ«ìž ë˜ëŠ” ì–‘ìžì˜ ì¡°í•©
+                                3.ºñ¹Ð¹øÈ£ : È¸¿øÀÇ º»ÀÎ È®ÀÎ°ú ºñ¹Ð º¸È£¸¦ À§ÇØ È¸¿ø ÀÚ½ÅÀÌ ¼³Á¤ÇÑ ¹®ÀÚ, ¼ýÀÚ ¶Ç´Â ¾çÀÚÀÇ Á¶ÇÕ
                             </li>
                             <li>
-                                4.ì´ìš©ê³„ì•½ : ì„œë¹„ìŠ¤ë¥¼ ì œê³µë°›ê¸° ìœ„í•˜ì—¬ ì´ ì•½ê´€ìœ¼ë¡œ íšŒì‚¬ì™€ íšŒì› ê°„ì— ì²´ê²°í•˜ëŠ” ê³„ì•½
+                                4.ÀÌ¿ë°è¾à : ¼­ºñ½º¸¦ Á¦°ø¹Þ±â À§ÇÏ¿© ÀÌ ¾à°üÀ¸·Î È¸»ç¿Í È¸¿ø °£¿¡ Ã¼°áÇÏ´Â °è¾à
                             </li>
                             <li>
-                                5.í•´ì§€ : íšŒì‚¬ ë˜ëŠ” íšŒì›ì´ ì„œë¹„ìŠ¤ ê°œí†µ í›„ ì´ìš©ê³„ì•½ì„ í•´ì•½í•˜ëŠ” ê²ƒ
+                                5.ÇØÁö : È¸»ç ¶Ç´Â È¸¿øÀÌ ¼­ºñ½º °³Åë ÈÄ ÀÌ¿ë°è¾àÀ» ÇØ¾àÇÏ´Â °Í
                             </li>
                             <li>
-                                6.ìš´ì˜ìž : ì„œë¹„ìŠ¤ì˜ ì „ë°˜ì ì¸ ê´€ë¦¬ì™€ ì›í™œí•œ ìš´ì˜ì„ ìœ„í•˜ì—¬ íšŒì‚¬ì—ì„œ ì„ ì •í•œ ì‚¬ëžŒ
+                                6.¿î¿µÀÚ : ¼­ºñ½ºÀÇ Àü¹ÝÀûÀÎ °ü¸®¿Í ¿øÈ°ÇÑ ¿î¿µÀ» À§ÇÏ¿© È¸»ç¿¡¼­ ¼±Á¤ÇÑ »ç¶÷
                             </li>
                         </ol>
                     </div>
 
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ì œ1í•­ì˜ ìš©ì–´ë¥¼ ì œì™¸í•œ ìš©ì–´ì˜ ì •ì˜ëŠ” ê±°ëž˜ ê´€í–‰ ë° ê´€ê³„ ë²•ë ¹ì— ë”°ë¦…ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è Á¦1Ç×ÀÇ ¿ë¾î¸¦ Á¦¿ÜÇÑ ¿ë¾îÀÇ Á¤ÀÇ´Â °Å·¡ °üÇà ¹× °ü°è ¹ý·É¿¡ µû¸¨´Ï´Ù.</p>
                 </li>
             </ol>
         </div>
-        <!-- //4ì¡° -->
+        <!-- //4Á¶ -->
     </div>
     <!-- //list01 -->
     <!-- list02-->
     <div class="list">
-        <h3 class="h3_tit">ì œ2ìž¥ ì„œë¹„ìŠ¤ ì´ìš©ê³„ì•½ì˜ ì²´ê²° </h3>
-        <!-- 5ì¡° -->
+        <h3 class="h3_tit">Á¦2Àå ¼­ºñ½º ÀÌ¿ë°è¾àÀÇ Ã¼°á </h3>
+        <!-- 5Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 5 ì¡° (ì„œë¹„ìŠ¤ì˜ êµ¬ë¶„)</h4>
+            <h4 class="h4_tit">Á¦ 5 Á¶ (¼­ºñ½ºÀÇ ±¸ºÐ)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ê°€ íšŒì›ì—ê²Œ ì œê³µí•˜ëŠ” ì„œë¹„ìŠ¤ëŠ” ê¸°ë³¸ì„œë¹„ìŠ¤ì™€ ë¶€ê°€ì„œë¹„ìŠ¤ ë“±ìœ¼ë¡œ êµ¬ë¶„í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç°¡ È¸¿ø¿¡°Ô Á¦°øÇÏ´Â ¼­ºñ½º´Â ±âº»¼­ºñ½º¿Í ºÎ°¡¼­ºñ½º µîÀ¸·Î ±¸ºÐÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ì„œë¹„ìŠ¤ì˜ êµ¬ì²´ì ì¸ ì¢…ë¥˜ì™€ ë‚´ìš©ì€ íšŒì‚¬ê°€ ì´ ì•½ê´€ ë˜ëŠ” ê³µì§€, ì´ìš© ì•ˆë‚´ ë“±ì—ì„œ ë³„ë„ë¡œ ì •í•˜ëŠ” ë°”ì— ë”°ë¦…ë‹ˆë‹¤.</p>
-                </li>
-            </ol>
-        </div>
-        <!-- //5ì¡° -->
-        <!-- 6ì¡° -->
-        <div class="ag_list">
-            <h4 class="h4_tit">ì œ 6 ì¡° (ì´ìš©ê³„ì•½ì˜ ì„±ë¦½)</h4>
-            <p class="list_txt">ì´ìš©ê³„ì•½ì€ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•˜ê³ ìž í•˜ëŠ” ìžì˜ ì´ìš© ì‹ ì²­ì— ëŒ€í•œ íšŒì‚¬ì˜ ì´ìš© ìŠ¹ë‚™ìœ¼ë¡œ ì„±ë¦½í•©ë‹ˆë‹¤. </p>
-        </div>
-        <!-- //6ì¡° -->
-        <!-- 7ì¡° -->
-        <div class="ag_list">
-            <h4 class="h4_tit">ì œ 7 ì¡° (ì´ìš© ì‹ ì²­)</h4>
-            <ol class="o_st_01">
-                <li>
-                    <p class="list_txt">â‘  ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•˜ê³ ìž í•˜ëŠ” ìžëŠ” íšŒì‚¬ ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•±ì˜ "íšŒì›ê°€ìž…" ë©”ë‰´ì—ì„œ íšŒì› ì•½ê´€ì— ë™ì˜í•˜ë©´ íšŒì‚¬ ì†Œì •ì˜ ê°€ìž…ì‹ ì²­ ì–‘ì‹ì— ìš”êµ¬í•˜ëŠ” ì‚¬í•­ì„ ê¸°ìž¬í•˜ê³  'ê°€ìž…' ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ë©ë‹ˆë‹¤.</p>
-                    <p class="list_txt">â‘¡ íšŒì› ê°€ìž…ì„ í•˜ë©´ ì´ ì•½ê´€ì— ë™ì˜í•˜ëŠ” ê²ƒìœ¼ë¡œ ê°„ì£¼ë©ë‹ˆë‹¤. </p>
-                    <p class="list_txt">â‘¢ ì˜¨ë¼ì¸ ê°€ìž… ì‹ ì²­ ì–‘ì‹ì— ê¸°ìž¬í•˜ëŠ” ëª¨ë“  íšŒì› ì •ë³´ëŠ” ì‹¤ì œì™€ ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ì¸ ê²ƒìœ¼ë¡œ ê°„ì£¼ë©ë‹ˆë‹¤. ì‹¤ëª…ì´ë‚˜ ì‹¤ì œì™€ ì¼ì¹˜í•˜ëŠ” ì •ë³´ë¥¼ ìž…ë ¥í•˜ì§€ ì•Šì€ ìžëŠ” ë²•ì ì¸ ë³´í˜¸ë¥¼ ë°›ì„ ìˆ˜ ì—†ìœ¼ë©° ì„œë¹„ìŠ¤ì˜ ì´ìš©ì„ ì œí•œ ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è ¼­ºñ½ºÀÇ ±¸Ã¼ÀûÀÎ Á¾·ù¿Í ³»¿ëÀº È¸»ç°¡ ÀÌ ¾à°ü ¶Ç´Â °øÁö, ÀÌ¿ë ¾È³» µî¿¡¼­ º°µµ·Î Á¤ÇÏ´Â ¹Ù¿¡ µû¸¨´Ï´Ù.</p>
                 </li>
             </ol>
         </div>
-        <!-- //7ì¡° -->
-        <!-- 8ì¡° -->
+        <!-- //5Á¶ -->
+        <!-- 6Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 8 ì¡° (ì´ìš© ì‹ ì²­ì˜ ìŠ¹ë‚™)</h4>
-            <p class="list_txt">íšŒì‚¬ëŠ” ì œ7ì¡°ì˜ ê·œì •ì— ì˜í•œ ì´ìš© ì‹ ì²­ì— ëŒ€í•˜ì—¬ ì›ì¹™ì ìœ¼ë¡œ ì¦‰ì‹œ ì´ìš© ì‹ ì²­ì„ ìŠ¹ë‚™í•˜ë©°, ì´ìš© ìŠ¹ë‚™ì˜ ì‚¬ì‹¤ì„ íšŒì›ì—ê²Œ ì „ìžìš°íŽ¸ìœ¼ë¡œ í†µë³´í•©ë‹ˆë‹¤.</p>
+            <h4 class="h4_tit">Á¦ 6 Á¶ (ÀÌ¿ë°è¾àÀÇ ¼º¸³)</h4>
+            <p class="list_txt">ÀÌ¿ë°è¾àÀº ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ°íÀÚ ÇÏ´Â ÀÚÀÇ ÀÌ¿ë ½ÅÃ»¿¡ ´ëÇÑ È¸»çÀÇ ÀÌ¿ë ½Â³«À¸·Î ¼º¸³ÇÕ´Ï´Ù. </p>
         </div>
-        <!-- //8ì¡° -->
-        <!-- 9ì¡° -->
+        <!-- //6Á¶ -->
+        <!-- 7Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 9 ì¡° (ì´ìš© ì‹ ì²­ì˜ ë¶ˆìŠ¹ë‚™ ë° ë³´ë¥˜)</h4>
+            <h4 class="h4_tit">Á¦ 7 Á¶ (ÀÌ¿ë ½ÅÃ»)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” ë‹¤ìŒ ê° í˜¸ì— í•´ë‹¹í•˜ëŠ” ê²½ìš° ì´ìš© ì‹ ì²­ì— ëŒ€í•˜ì—¬ ìŠ¹ë‚™ì„ í•˜ì§€ ì•Šì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ°íÀÚ ÇÏ´Â ÀÚ´Â È¸»ç À¥»çÀÌÆ® ¹× ÁÖ¹®¾ÛÀÇ "È¸¿ø°¡ÀÔ" ¸Þ´º¿¡¼­ È¸¿ø ¾à°ü¿¡ µ¿ÀÇÇÏ¸é È¸»ç ¼ÒÁ¤ÀÇ °¡ÀÔ½ÅÃ» ¾ç½Ä¿¡ ¿ä±¸ÇÏ´Â »çÇ×À» ±âÀçÇÏ°í '°¡ÀÔ' ¹öÆ°À» ´©¸£¸é µË´Ï´Ù.</p>
+                    <p class="list_txt">¨è È¸¿ø °¡ÀÔÀ» ÇÏ¸é ÀÌ ¾à°ü¿¡ µ¿ÀÇÇÏ´Â °ÍÀ¸·Î °£ÁÖµË´Ï´Ù. </p>
+                    <p class="list_txt">¨é ¿Â¶óÀÎ °¡ÀÔ ½ÅÃ» ¾ç½Ä¿¡ ±âÀçÇÏ´Â ¸ðµç È¸¿ø Á¤º¸´Â ½ÇÁ¦¿Í ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍÀÎ °ÍÀ¸·Î °£ÁÖµË´Ï´Ù. ½Ç¸íÀÌ³ª ½ÇÁ¦¿Í ÀÏÄ¡ÇÏ´Â Á¤º¸¸¦ ÀÔ·ÂÇÏÁö ¾ÊÀº ÀÚ´Â ¹ýÀûÀÎ º¸È£¸¦ ¹ÞÀ» ¼ö ¾øÀ¸¸ç ¼­ºñ½ºÀÇ ÀÌ¿ëÀ» Á¦ÇÑ ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.</p>
+                </li>
+            </ol>
+        </div>
+        <!-- //7Á¶ -->
+        <!-- 8Á¶ -->
+        <div class="ag_list">
+            <h4 class="h4_tit">Á¦ 8 Á¶ (ÀÌ¿ë ½ÅÃ»ÀÇ ½Â³«)</h4>
+            <p class="list_txt">È¸»ç´Â Á¦7Á¶ÀÇ ±ÔÁ¤¿¡ ÀÇÇÑ ÀÌ¿ë ½ÅÃ»¿¡ ´ëÇÏ¿© ¿øÄ¢ÀûÀ¸·Î Áï½Ã ÀÌ¿ë ½ÅÃ»À» ½Â³«ÇÏ¸ç, ÀÌ¿ë ½Â³«ÀÇ »ç½ÇÀ» È¸¿ø¿¡°Ô ÀüÀÚ¿ìÆíÀ¸·Î Åëº¸ÇÕ´Ï´Ù.</p>
+        </div>
+        <!-- //8Á¶ -->
+        <!-- 9Á¶ -->
+        <div class="ag_list">
+            <h4 class="h4_tit">Á¦ 9 Á¶ (ÀÌ¿ë ½ÅÃ»ÀÇ ºÒ½Â³« ¹× º¸·ù)</h4>
+            <ol class="o_st_01">
+                <li>
+                    <p class="list_txt">¨ç È¸»ç´Â ´ÙÀ½ °¢ È£¿¡ ÇØ´çÇÏ´Â °æ¿ì ÀÌ¿ë ½ÅÃ»¿¡ ´ëÇÏ¿© ½Â³«À» ÇÏÁö ¾ÊÀ» ¼ö ÀÖ½À´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ê°€ëª…, ì°¨ëª…, í—ˆë¬´ì¸ ëª…ì˜ ê¸°íƒ€ ì´ìš©ì‹ ì²­ìž ë³¸ì¸ì˜ ì‹¤ì œ ì„±ëª…ê³¼ ë‹¤ë¥¸ ëª…ì˜ì— ì˜í•œ ì‹ ì²­</li>
+                            <li>1. °¡¸í, Â÷¸í, Çã¹«ÀÎ ¸íÀÇ ±âÅ¸ ÀÌ¿ë½ÅÃ»ÀÚ º»ÀÎÀÇ ½ÇÁ¦ ¼º¸í°ú ´Ù¸¥ ¸íÀÇ¿¡ ÀÇÇÑ ½ÅÃ»</li>
                             <li>
-                                2. ì´ìš© ì‹ ì²­ ì‹œ ê°€ìž…ì‹ ì²­ ì–‘ì‹ìƒì˜ ê¸°ìž¬ ì‚¬í•­ì„ í—ˆìœ„ë¡œ í•˜ì—¬ ì‹ ì²­í•œ ê²½ìš°
+                                2. ÀÌ¿ë ½ÅÃ» ½Ã °¡ÀÔ½ÅÃ» ¾ç½Ä»óÀÇ ±âÀç »çÇ×À» ÇãÀ§·Î ÇÏ¿© ½ÅÃ»ÇÑ °æ¿ì
                             </li>
                             <li>
-                                3. ì´ìš©ì‹ ì²­ìžê°€ íšŒì‚¬ì˜ ì±„ë¬´ìžë¡œì„œ ì±„ë¬´ë¥¼ ì™„ì œí•˜ì§€ ì•Šê³  ìžˆëŠ” ê²½ìš°
+                                3. ÀÌ¿ë½ÅÃ»ÀÚ°¡ È¸»çÀÇ Ã¤¹«ÀÚ·Î¼­ Ã¤¹«¸¦ ¿ÏÁ¦ÇÏÁö ¾Ê°í ÀÖ´Â °æ¿ì
                             </li>
                             <li>
-                                4. ì´ìš©ì‹ ì²­ìžê°€ ì´ ì•½ê´€ ì œ23ì¡° ì œ2í•­ì— ì˜ê±°í•˜ì—¬ ì´ìš©ê³„ì•½ì´ í•´ì§€ëœ ì ì´ ìžˆëŠ” ê²½ìš°
+                                4. ÀÌ¿ë½ÅÃ»ÀÚ°¡ ÀÌ ¾à°ü Á¦23Á¶ Á¦2Ç×¿¡ ÀÇ°ÅÇÏ¿© ÀÌ¿ë°è¾àÀÌ ÇØÁöµÈ ÀûÀÌ ÀÖ´Â °æ¿ì
                             </li>
                             <li>
-                                5. ê¸°íƒ€ ì´ìš©ì‹ ì²­ìžì˜ ê·€ì±…ì‚¬ìœ ë¡œ ì´ìš© ìŠ¹ë‚™ì´ ê³¤ëž€í•œ ê²½ìš°
+                                5. ±âÅ¸ ÀÌ¿ë½ÅÃ»ÀÚÀÇ ±ÍÃ¥»çÀ¯·Î ÀÌ¿ë ½Â³«ÀÌ °ï¶õÇÑ °æ¿ì
                             </li>
                         </ol>
                     </div>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ” ë‹¤ìŒ ê° í˜¸ì— í•´ë‹¹í•˜ëŠ” ê²½ìš°ì—ëŠ” ê·¸ ì‚¬ìœ ê°€ í•´ì†Œë  ë•Œê¹Œì§€ ì´ìš© ìŠ¹ë‚™ì„ ë³´ë¥˜í•  ìˆ˜ ìžˆìœ¼ë©°, ê·¸ ì‚¬ìœ ë¥¼ ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•±ì— ê³µì§€í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸»ç´Â ´ÙÀ½ °¢ È£¿¡ ÇØ´çÇÏ´Â °æ¿ì¿¡´Â ±× »çÀ¯°¡ ÇØ¼ÒµÉ ¶§±îÁö ÀÌ¿ë ½Â³«À» º¸·ùÇÒ ¼ö ÀÖÀ¸¸ç, ±× »çÀ¯¸¦ À¥»çÀÌÆ® ¹× ÁÖ¹®¾Û¿¡ °øÁöÇÕ´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ì„¤ë¹„ì˜ ì—¬ìœ ê°€ ì—†ëŠ” ê²½ìš°</li>
+                            <li>1. ¼³ºñÀÇ ¿©À¯°¡ ¾ø´Â °æ¿ì</li>
                             <li>
-                                2. ê¸°ìˆ  ìƒ ë˜ëŠ” ì—…ë¬´ ìˆ˜í–‰ ìƒ ì§€ìž¥ì´ ìžˆëŠ” ê²½ìš°
-                            </li>
-                        </ol>
-                    </div>
-                </li>
-            </ol>
-        </div>
-        <!-- //9ì¡° -->
-        <!-- 10ì¡° -->
-        <div class="ag_list">
-            <h4 class="h4_tit">ì œ 10 ì¡° (ì´ìš©ê³„ì•½ ì‚¬í•­ì˜ ë³€ê²½)</h4>
-            <ol class="o_st_01">
-                <li>
-                    <p class="list_txt">â‘  íšŒì›ì€ ì´ìš© ì‹ ì²­ ì‹œ ê¸°ìž¬í•œ ì‚¬í•­ì´ ë³€ê²½ë˜ì—ˆì„ ê²½ìš°ì— ì˜¨ë¼ì¸ìœ¼ë¡œ ìˆ˜ì •í•©ë‹ˆë‹¤.</p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘¡ íšŒì›ì˜ ì´ìš© ì‹ ì²­ ì‹œ ê¸°ìž¬ì‚¬í•­ì˜ ë¯¸ë³€ê²½ ë˜ëŠ” í—ˆìœ„ ë³€ê²½ìœ¼ë¡œ ì¸í•˜ì—¬ ë°œìƒë˜ëŠ” ë¬¸ì œì— ëŒ€í•œ ì±…ìž„ì€ íšŒì›ì—ê²Œ ìžˆìŠµë‹ˆë‹¤.</p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” ë‹¤ìŒ ê° í˜¸ì— í•´ë‹¹í•˜ëŠ” ê²½ìš°ì— ì§ê¶Œì— ì˜í•˜ì—¬ ì•„ì´ë””ì˜ ì‚¬ìš©ì„ ì œí•œí•˜ê±°ë‚˜ íšŒì›ì˜ ì‹ ì²­ì— ì˜í•˜ì—¬ ì•„ì´ë””ë¥¼ ë³€ê²½í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. </p>
-                    <div class="sub_list">
-                        <ol class="sub_list01">
-                            <li>1. ì•„ì´ë””ê°€ ë¯¸í’ì–‘ì†ì„ í•´í•˜ëŠ” ê²½ìš°</li>
-                            <li>
-                                2. ì•„ì´ë””ê°€ íšŒì›ì˜ ì‚¬ìƒí™œì„ ì¹¨í•´í•  ìš°ë ¤ê°€ ìžˆëŠ” ê²½ìš°
-                            </li>
-                            <li>
-                                3. ê¸°íƒ€ í•©ë¦¬ì ì¸ ì‚¬ìœ ê°€ ìžˆëŠ” ê²½ìš°
+                                2. ±â¼ú »ó ¶Ç´Â ¾÷¹« ¼öÇà »ó ÁöÀåÀÌ ÀÖ´Â °æ¿ì
                             </li>
                         </ol>
                     </div>
                 </li>
             </ol>
         </div>
-        <!-- //10ì¡° -->
+        <!-- //9Á¶ -->
+        <!-- 10Á¶ -->
+        <div class="ag_list">
+            <h4 class="h4_tit">Á¦ 10 Á¶ (ÀÌ¿ë°è¾à »çÇ×ÀÇ º¯°æ)</h4>
+            <ol class="o_st_01">
+                <li>
+                    <p class="list_txt">¨ç È¸¿øÀº ÀÌ¿ë ½ÅÃ» ½Ã ±âÀçÇÑ »çÇ×ÀÌ º¯°æµÇ¾úÀ» °æ¿ì¿¡ ¿Â¶óÀÎÀ¸·Î ¼öÁ¤ÇÕ´Ï´Ù.</p>
+                </li>
+                <li>
+                    <p class="list_txt">¨è È¸¿øÀÇ ÀÌ¿ë ½ÅÃ» ½Ã ±âÀç»çÇ×ÀÇ ¹Ìº¯°æ ¶Ç´Â ÇãÀ§ º¯°æÀ¸·Î ÀÎÇÏ¿© ¹ß»ýµÇ´Â ¹®Á¦¿¡ ´ëÇÑ Ã¥ÀÓÀº È¸¿ø¿¡°Ô ÀÖ½À´Ï´Ù.</p>
+                </li>
+                <li>
+                    <p class="list_txt">¨é È¸»ç´Â ´ÙÀ½ °¢ È£¿¡ ÇØ´çÇÏ´Â °æ¿ì¿¡ Á÷±Ç¿¡ ÀÇÇÏ¿© ¾ÆÀÌµðÀÇ »ç¿ëÀ» Á¦ÇÑÇÏ°Å³ª È¸¿øÀÇ ½ÅÃ»¿¡ ÀÇÇÏ¿© ¾ÆÀÌµð¸¦ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù. </p>
+                    <div class="sub_list">
+                        <ol class="sub_list01">
+                            <li>1. ¾ÆÀÌµð°¡ ¹ÌÇ³¾ç¼ÓÀ» ÇØÇÏ´Â °æ¿ì</li>
+                            <li>
+                                2. ¾ÆÀÌµð°¡ È¸¿øÀÇ »ç»ýÈ°À» Ä§ÇØÇÒ ¿ì·Á°¡ ÀÖ´Â °æ¿ì
+                            </li>
+                            <li>
+                                3. ±âÅ¸ ÇÕ¸®ÀûÀÎ »çÀ¯°¡ ÀÖ´Â °æ¿ì
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <!-- //10Á¶ -->
     </div>
     <!-- //list02 -->
     <!-- list03-->
     <div class="list">
-        <h3 class="h3_tit">ì œ3ìž¥ ì„œë¹„ìŠ¤ì˜ ì´ìš©</h3>
-        <!-- 11ì¡° -->
+        <h3 class="h3_tit">Á¦3Àå ¼­ºñ½ºÀÇ ÀÌ¿ë</h3>
+        <!-- 11Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 11 ì¡° (ì„œë¹„ìŠ¤ì˜ ì´ìš© ê°œì‹œ)</h4>
-            <p class="list_txt">íšŒì‚¬ëŠ” ì œ8ì¡°ì˜ ê·œì •ì— ë”°ë¼ì„œ ì´ìš©ì‹ ì²­ì„ ìŠ¹ë‚™í•œ ë•Œë¡œë¶€í„° ì¦‰ì‹œ ì„œë¹„ìŠ¤ë¥¼ ê°œì‹œí•©ë‹ˆë‹¤. ë‹¤ë§Œ, íšŒì‚¬ì˜ ì—…ë¬´ìƒ ë˜ëŠ” ê¸°ìˆ ìƒì˜ ìž¥ì• ë¡œ ì¸í•˜ì—¬ ì¦‰ì‹œ ì„œë¹„ìŠ¤ë¥¼ ê°œì‹œí•˜ì§€ ëª»í•˜ëŠ” ê²½ìš°, íšŒì‚¬ëŠ” ì´ë¥¼ íšŒì‚¬ì˜ ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•±ì— ê³µì§€í•˜ê±°ë‚˜ íšŒì›ì—ê²Œ í†µì§€í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤. </p>
+            <h4 class="h4_tit">Á¦ 11 Á¶ (¼­ºñ½ºÀÇ ÀÌ¿ë °³½Ã)</h4>
+            <p class="list_txt">È¸»ç´Â Á¦8Á¶ÀÇ ±ÔÁ¤¿¡ µû¶ó¼­ ÀÌ¿ë½ÅÃ»À» ½Â³«ÇÑ ¶§·ÎºÎÅÍ Áï½Ã ¼­ºñ½º¸¦ °³½ÃÇÕ´Ï´Ù. ´Ù¸¸, È¸»çÀÇ ¾÷¹«»ó ¶Ç´Â ±â¼ú»óÀÇ Àå¾Ö·Î ÀÎÇÏ¿© Áï½Ã ¼­ºñ½º¸¦ °³½ÃÇÏÁö ¸øÇÏ´Â °æ¿ì, È¸»ç´Â ÀÌ¸¦ È¸»çÀÇ À¥»çÀÌÆ® ¹× ÁÖ¹®¾Û¿¡ °øÁöÇÏ°Å³ª È¸¿ø¿¡°Ô ÅëÁöÇÏ¿©¾ß ÇÕ´Ï´Ù. </p>
         </div>
-        <!-- //11ì¡° -->
-        <!-- 12ì¡° -->
+        <!-- //11Á¶ -->
+        <!-- 12Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 12 ì¡° (ì„œë¹„ìŠ¤ì˜ ë‚´ìš©)</h4>
+            <h4 class="h4_tit">Á¦ 12 Á¶ (¼­ºñ½ºÀÇ ³»¿ë)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘ íšŒì‚¬ê°€ ì œê³µí•˜ëŠ” ì„œë¹„ìŠ¤ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨çÈ¸»ç°¡ Á¦°øÇÏ´Â ¼­ºñ½º´Â ´ÙÀ½°ú °°½À´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ë‹¹ì‚¬ ì œí’ˆì˜ ì†Œê°œ</li>
+                            <li>1. ´ç»ç Á¦Ç°ÀÇ ¼Ò°³</li>
                             <li>
-                                2. ê°ì¢… ì´ë²¤íŠ¸
+                                2. °¢Á¾ ÀÌº¥Æ®
                             </li>
                             <li>
-                                3. ì œí’ˆ êµ¬ìž…ì²˜ ì•ˆë‚´
+                                3. Á¦Ç° ±¸ÀÔÃ³ ¾È³»
                             </li>
                             <li>
-                                4. ê²Œì‹œíŒ ì„œë¹„ìŠ¤
+                                4. °Ô½ÃÆÇ ¼­ºñ½º
                             </li>
                         </ol>
                     </div>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ” í•„ìš”í•œ ê²½ìš° ì„œë¹„ìŠ¤ì˜ ë‚´ìš©ì„ ì¶”ê°€ ë˜ëŠ” ë³€ê²½í•  ìˆ˜ ìžˆìœ¼ë©°, ì¶”ê°€ ë˜ëŠ” ë³€ê²½ ë‚´ìš©ì€ íšŒì‚¬ì˜ ë° ì£¼ë¬¸ì•±ì— ê³µì§€í•©ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨è È¸»ç´Â ÇÊ¿äÇÑ °æ¿ì ¼­ºñ½ºÀÇ ³»¿ëÀ» Ãß°¡ ¶Ç´Â º¯°æÇÒ ¼ö ÀÖÀ¸¸ç, Ãß°¡ ¶Ç´Â º¯°æ ³»¿ëÀº È¸»çÀÇ ¹× ÁÖ¹®¾Û¿¡ °øÁöÇÕ´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //12ì¡° -->
-        <!-- 13ì¡° -->
+        <!-- //12Á¶ -->
+        <!-- 13Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 13 ì¡° (ì„œë¹„ìŠ¤ì˜ ì´ìš© ìš”ê¸ˆ)</h4>
+            <h4 class="h4_tit">Á¦ 13 Á¶ (¼­ºñ½ºÀÇ ÀÌ¿ë ¿ä±Ý)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  ë³„ë„ë¡œ í‘œì‹œëœ ìœ ë£Œ ì„œë¹„ìŠ¤ë¥¼ ì œì™¸í•œ ëª¨ë“  ì„œë¹„ìŠ¤ëŠ” íšŒì›ë“¤ì—ê²Œ ë¬´ë£Œë¡œ ì œê³µë©ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨ç º°µµ·Î Ç¥½ÃµÈ À¯·á ¼­ºñ½º¸¦ Á¦¿ÜÇÑ ¸ðµç ¼­ºñ½º´Â È¸¿øµé¿¡°Ô ¹«·á·Î Á¦°øµË´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //13ì¡° -->
+        <!-- //13Á¶ -->
     </div>
     <!-- //list03 -->
     <!-- list04-->
     <div class="list">
-        <h3 class="h3_tit">ì œ4ìž¥ ê³„ì•½ë‹¹ì‚¬ìžì˜ ê¶Œë¦¬ì™€ ì˜ë¬´</h3>
-        <!-- 14ì¡° -->
+        <h3 class="h3_tit">Á¦4Àå °è¾à´ç»çÀÚÀÇ ±Ç¸®¿Í ÀÇ¹«</h3>
+        <!-- 14Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 14 ì¡° (ê°œì¸ ì •ë³´ì˜ ë³´í˜¸)</h4>
+            <h4 class="h4_tit">Á¦ 14 Á¶ (°³ÀÎ Á¤º¸ÀÇ º¸È£)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” ì •ë³´í†µì‹ ë§ì´ìš©ì´‰ì§„ ë“±ì— ê´€í•œ ë²•ë¥  ë“± ê´€ê³„ ë²•ë ¹ì— ë”°ë¼ ì´ìš© ì‹ ì²­ ì‹œ ì œê³µë°›ì€ íšŒì›ì˜ ê°œì¸ ì •ë³´, ì¶”í›„ì— ì¶”ê°€ë¡œ ì œê³µë°›ëŠ” ê°œì¸ ì •ë³´ ë° ì„œë¹„ìŠ¤ ì´ìš© ì¤‘ ìƒì„±ë˜ëŠ” ê°œì¸ ì •ë³´ë¥¼ ë³´í˜¸í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç´Â Á¤º¸Åë½Å¸ÁÀÌ¿ëÃËÁø µî¿¡ °üÇÑ ¹ý·ü µî °ü°è ¹ý·É¿¡ µû¶ó ÀÌ¿ë ½ÅÃ» ½Ã Á¦°ø¹ÞÀº È¸¿øÀÇ °³ÀÎ Á¤º¸, ÃßÈÄ¿¡ Ãß°¡·Î Á¦°ø¹Þ´Â °³ÀÎ Á¤º¸ ¹× ¼­ºñ½º ÀÌ¿ë Áß »ý¼ºµÇ´Â °³ÀÎ Á¤º¸¸¦ º¸È£ÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ê°œì¸ ì •ë³´ì˜ ìˆ˜ì§‘ ëª©ì  ë° ì´ìš© ëª©ì ì€ ë‹¤ìŒ ê° í˜¸ì™€ ê°™ìœ¼ë©°, íšŒì‚¬ëŠ” íšŒì›ì˜ ë³„ë„ì˜ ì‚¬ì „ ë™ì˜ ì—†ì´ ì´ ëª©ì ì„ ë„˜ì–´ì„œëŠ” ê°œì¸ ì •ë³´ì˜ ìˆ˜ì§‘ ë° ì´ìš©ì„ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è °³ÀÎ Á¤º¸ÀÇ ¼öÁý ¸ñÀû ¹× ÀÌ¿ë ¸ñÀûÀº ´ÙÀ½ °¢ È£¿Í °°À¸¸ç, È¸»ç´Â È¸¿øÀÇ º°µµÀÇ »çÀü µ¿ÀÇ ¾øÀÌ ÀÌ ¸ñÀûÀ» ³Ñ¾î¼­´Â °³ÀÎ Á¤º¸ÀÇ ¼öÁý ¹× ÀÌ¿ëÀ» ÇÏÁö ¾Ê½À´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ì„œë¹„ìŠ¤ì˜ ì œê³µ</li>
+                            <li>1. ¼­ºñ½ºÀÇ Á¦°ø</li>
                             <li>
-                                2. ì„œë¹„ìŠ¤ë¥¼ ìœ„í•œ íšŒì›ì˜ ê´€ë¦¬
+                                2. ¼­ºñ½º¸¦ À§ÇÑ È¸¿øÀÇ °ü¸®
                             </li>
                         </ol>
                     </div>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” ê°œì¸ ì •ë³´ë¥¼ íšŒì›ì˜ ë³„ë„ì˜ ì‚¬ì „ë™ì˜ ì—†ì´ ì œ3ìžì—ê²Œ ì œê³µí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ë§Œ, ë‹¤ìŒ ê° í˜¸ì˜ ê²½ìš°ì—ëŠ” íšŒì›ì˜ ë³„ë„ì˜ ë™ì˜ ì—†ì´ ì œ3ìžì—ê²Œ íšŒ ì›ì˜ ê°œì¸ ì •ë³´ë¥¼ ì œê³µí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨é È¸»ç´Â °³ÀÎ Á¤º¸¸¦ È¸¿øÀÇ º°µµÀÇ »çÀüµ¿ÀÇ ¾øÀÌ Á¦3ÀÚ¿¡°Ô Á¦°øÇÏÁö ¾Ê½À´Ï´Ù. ´Ù¸¸, ´ÙÀ½ °¢ È£ÀÇ °æ¿ì¿¡´Â È¸¿øÀÇ º°µµÀÇ µ¿ÀÇ ¾øÀÌ Á¦3ÀÚ¿¡°Ô È¸ ¿øÀÇ °³ÀÎ Á¤º¸¸¦ Á¦°øÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ë²•ë ¹ì— íŠ¹ë³„í•œ ê·œì •ì´ ìžˆëŠ” ê²½ìš°</li>
-                            <li>2. ì„œë¹„ìŠ¤ ì œê³µì— ë”°ë¥¸ ìš”ê¸ˆì •ì‚°ì„ ìœ„í•˜ì—¬ í•„ìš”í•œ ê²½ìš°</li>
-                            <li>3. í†µê³„ìž‘ì„±, í•™ìˆ ì—°êµ¬ ë˜ëŠ” ì‹œìž¥ì¡°ì‚¬ë¥¼ ìœ„í•˜ì—¬ í•„ìš”í•œ ê²½ìš°ë¡œì„œ íŠ¹ì • ê°œì¸ì„ ì‹ë³„í•  ìˆ˜ ì—†ëŠ” í˜•íƒœë¡œ ì œê³µë˜ëŠ” ê²½ìš°</li>
+                            <li>1. ¹ý·É¿¡ Æ¯º°ÇÑ ±ÔÁ¤ÀÌ ÀÖ´Â °æ¿ì</li>
+                            <li>2. ¼­ºñ½º Á¦°ø¿¡ µû¸¥ ¿ä±ÝÁ¤»êÀ» À§ÇÏ¿© ÇÊ¿äÇÑ °æ¿ì</li>
+                            <li>3. Åë°èÀÛ¼º, ÇÐ¼ú¿¬±¸ ¶Ç´Â ½ÃÀåÁ¶»ç¸¦ À§ÇÏ¿© ÇÊ¿äÇÑ °æ¿ì·Î¼­ Æ¯Á¤ °³ÀÎÀ» ½Äº°ÇÒ ¼ö ¾ø´Â ÇüÅÂ·Î Á¦°øµÇ´Â °æ¿ì</li>
                         </ol>
                     </div>
                 </li>
                 <li>
-                    <p class="list_txt">â‘£ íšŒì›ì€ ì–¸ì œë“ ì§€ ìžì‹ ì˜ ê°œì¸ ì •ë³´ë¥¼ ì—´ëžŒí•  ìˆ˜ ìžˆìœ¼ë©°, ì˜¤ë¥˜ë¥¼ ìˆ˜ì •í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì—´ëžŒ ë° ìˆ˜ì •ì€ ì›ì¹™ì ìœ¼ë¡œ ì´ìš© ì‹ ì²­ê³¼ ë™ì¼í•œ ë°©ë²•ìœ¼ë¡œ í•˜ë©°, ìžì„¸í•œ ë°©ë²•ì€ ë³„ë„ë¡œ ì •í•œ "ê°œì¸ì •ë³´ë³´í˜¸ì •ì±…" ë° ì´ìš©ì•ˆë‚´ì— ì •í•œ ë°”ì— ë”°ë¦…ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ê È¸¿øÀº ¾ðÁ¦µçÁö ÀÚ½ÅÀÇ °³ÀÎ Á¤º¸¸¦ ¿­¶÷ÇÒ ¼ö ÀÖÀ¸¸ç, ¿À·ù¸¦ ¼öÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù. ¿­¶÷ ¹× ¼öÁ¤Àº ¿øÄ¢ÀûÀ¸·Î ÀÌ¿ë ½ÅÃ»°ú µ¿ÀÏÇÑ ¹æ¹ýÀ¸·Î ÇÏ¸ç, ÀÚ¼¼ÇÑ ¹æ¹ýÀº º°µµ·Î Á¤ÇÑ "°³ÀÎÁ¤º¸º¸È£Á¤Ã¥" ¹× ÀÌ¿ë¾È³»¿¡ Á¤ÇÑ ¹Ù¿¡ µû¸¨´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¤ íšŒì›ì€ ì–¸ì œë“ ì§€ ê°œì¸ ì •ë³´ì˜ ìˆ˜ì§‘ ë° ì´ìš©ì— ëŒ€í•œ ë™ì˜, ê³ ì§€ ë˜ëŠ” ëª…ì‹œëœ ë²”ìœ„ë¥¼ ì´ˆê³¼í•˜ëŠ” ì´ìš© ë° ì œ3ìž ì œê³µì— ëŒ€í•œ ë™ì˜ë¥¼ ì² íšŒí•  ìˆ˜ ìžˆìœ¼ë©°, ì´ ê²½ìš° íšŒì‚¬ëŠ” ì§€ì²´ ì—†ì´ í•„ìš”í•œ ì¡°ì¹˜ë¥¼ ì·¨í•©ë‹ˆë‹¤. ë‹¤ë§Œ íšŒì›ì´ ê°œì¸ ì •ë³´ì˜ ìˆ˜ì§‘ ë° ì´ìš©ì— ëŒ€í•œ ë™ì˜ë¥¼ ì² íšŒí•œ ê²½ìš°ì— íšŒì‚¬ëŠ” ì´ìš©ê³„ì•½ì„ í•´ì§€í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ë È¸¿øÀº ¾ðÁ¦µçÁö °³ÀÎ Á¤º¸ÀÇ ¼öÁý ¹× ÀÌ¿ë¿¡ ´ëÇÑ µ¿ÀÇ, °íÁö ¶Ç´Â ¸í½ÃµÈ ¹üÀ§¸¦ ÃÊ°úÇÏ´Â ÀÌ¿ë ¹× Á¦3ÀÚ Á¦°ø¿¡ ´ëÇÑ µ¿ÀÇ¸¦ Ã¶È¸ÇÒ ¼ö ÀÖÀ¸¸ç, ÀÌ °æ¿ì È¸»ç´Â ÁöÃ¼ ¾øÀÌ ÇÊ¿äÇÑ Á¶Ä¡¸¦ ÃëÇÕ´Ï´Ù. ´Ù¸¸ È¸¿øÀÌ °³ÀÎ Á¤º¸ÀÇ ¼öÁý ¹× ÀÌ¿ë¿¡ ´ëÇÑ µ¿ÀÇ¸¦ Ã¶È¸ÇÑ °æ¿ì¿¡ È¸»ç´Â ÀÌ¿ë°è¾àÀ» ÇØÁöÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¥ íšŒì‚¬ì˜ ê°œì¸ ì •ë³´ ê´€ë¦¬ì±…ìž„ìžë¥¼ ë¹„ë¡¯í•œ ê°œì¸ì •ë³´ë³´í˜¸ì— ê´€í•œ ê¸°íƒ€ ì‚¬í•­ì€ ë³„ë„ë¡œ ì •í•œ "ê°œì¸ì •ë³´ë³´í˜¸ì •ì±…"ì— ê¸°ìž¬í•˜ì—¬ ê³µì§€í•©ë‹ˆë‹¤. </p>
-                </li>
-            </ol>
-        </div>
-        <!-- //14ì¡° -->
-        <!-- 15ì¡° -->
-        <div class="ag_list">
-            <h4 class="h4_tit">ì œ 15 ì¡° (íšŒì‚¬ì˜ ì˜ë¬´)</h4>
-            <ol class="o_st_01">
-                <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” ì´ ì•½ê´€ì´ ì •í•˜ëŠ” ë°”ì— ë”°ë¼ ì§€ì†ì ì´ê³  ì•ˆì •ì ì¸ ì„œë¹„ìŠ¤ë¥¼ ì œê³µí•˜ëŠ” ë° ìµœì„ ì„ ë‹¤í•´ì•¼ í•©ë‹ˆë‹¤.</p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ” íšŒì›ì˜ ì‹ ìš©ì •ë³´ë¥¼ í¬í•¨í•œ ê°œì¸ì‹ ìƒì •ë³´ì˜ ë³´ì•ˆì— ëŒ€í•˜ì—¬ ê¸°ìˆ ì  ì•ˆì „ ì¡°ì¹˜ë¥¼ ê°•êµ¬í•˜ê³  ê´€ë¦¬ì— ë§Œì „ì„ ê¸°í•¨ìœ¼ë¡œì¨ íšŒì›ì˜ ê°œì¸ì •ë³´ ë³´ì•ˆì— ìµœì„ ì„ ë‹¤í•´ì•¼ í•©ë‹ˆë‹¤.</p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” íšŒì›ìœ¼ë¡œë¶€í„° ì œê¸°ë˜ëŠ” ì˜ê²¬ ë° ë¶ˆë§Œì‚¬í•­ì´ ì •ë‹¹í•˜ë‹¤ê³  íŒë‹¨ë˜ëŠ” ê²½ìš° ê·¸ ì‚¬í•­ì„ ì‹ ì†ížˆ ì²˜ë¦¬í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤. ë‹¤ë§Œ, ì‹ ì†í•œ ì²˜ë¦¬ê°€ ê³¤ëž€í•œ ê²½ìš°ì—ëŠ” íšŒì›ì—ê²Œ ê·¸ ì‚¬ìœ ì™€ ì²˜ë¦¬ ì¼ì •ì„ í†µì§€í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤. </p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘£ íšŒì‚¬ëŠ” ì´ìš©ê³„ì•½ì˜ ì²´ê²°, ê³„ì•½ì‚¬í•­ì˜ ë³€ê²½ ë° í•´ì§€ ë“± íšŒì›ê³¼ì˜ ê³„ì•½ ê´€ë ¨ ì ˆì°¨ ë° ë‚´ìš© ë“±ì— ìžˆì–´ íšŒì›ì—ê²Œ íŽ¸ì˜ë¥¼ ì œê³µí•˜ë„ë¡ ë…¸ë ¥í•©ë‹ˆë‹¤.</p>
-                </li>
-                <li>
-                    <p class="list_txt">â‘¤ íšŒì‚¬ëŠ” ê³µì •í•˜ê³  ê±´ì „í•œ ìš´ì˜ê³¼ ì§€ì†ì ì¸ ì—°êµ¬ ê°œë°œì„ í†µí•˜ì—¬ ì–‘ì§ˆì˜ ì„œë¹„ìŠ¤ë¥¼ ì œê³µí•¨ìœ¼ë¡œì¨ ê³ ê°ë§Œì¡±ì„ ê·¹ëŒ€í™”í•˜ì—¬ ì¸í„°ë„· ë¹„ì¦ˆë‹ˆìŠ¤ ë°œì „ì— ê¸°ì—¬í•˜ë„ë¡ í•©ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨ì È¸»çÀÇ °³ÀÎ Á¤º¸ °ü¸®Ã¥ÀÓÀÚ¸¦ ºñ·ÔÇÑ °³ÀÎÁ¤º¸º¸È£¿¡ °üÇÑ ±âÅ¸ »çÇ×Àº º°µµ·Î Á¤ÇÑ "°³ÀÎÁ¤º¸º¸È£Á¤Ã¥"¿¡ ±âÀçÇÏ¿© °øÁöÇÕ´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //15ì¡° -->
-        <!-- 16ì¡° -->
+        <!-- //14Á¶ -->
+        <!-- 15Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 16 ì¡° (íšŒì›ì˜ ì˜ë¬´)</h4>
+            <h4 class="h4_tit">Á¦ 15 Á¶ (È¸»çÀÇ ÀÇ¹«)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì›ì€ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•¨ì— ìžˆì–´ ë‹¤ìŒ ê° í˜¸ì˜ í–‰ìœ„ë¥¼ í•˜ì—¬ì„œëŠ” ì•ˆë©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç´Â ÀÌ ¾à°üÀÌ Á¤ÇÏ´Â ¹Ù¿¡ µû¶ó Áö¼ÓÀûÀÌ°í ¾ÈÁ¤ÀûÀÎ ¼­ºñ½º¸¦ Á¦°øÇÏ´Â µ¥ ÃÖ¼±À» ´ÙÇØ¾ß ÇÕ´Ï´Ù.</p>
+                </li>
+                <li>
+                    <p class="list_txt">¨è È¸»ç´Â È¸¿øÀÇ ½Å¿ëÁ¤º¸¸¦ Æ÷ÇÔÇÑ °³ÀÎ½Å»óÁ¤º¸ÀÇ º¸¾È¿¡ ´ëÇÏ¿© ±â¼úÀû ¾ÈÀü Á¶Ä¡¸¦ °­±¸ÇÏ°í °ü¸®¿¡ ¸¸ÀüÀ» ±âÇÔÀ¸·Î½á È¸¿øÀÇ °³ÀÎÁ¤º¸ º¸¾È¿¡ ÃÖ¼±À» ´ÙÇØ¾ß ÇÕ´Ï´Ù.</p>
+                </li>
+                <li>
+                    <p class="list_txt">¨é È¸»ç´Â È¸¿øÀ¸·ÎºÎÅÍ Á¦±âµÇ´Â ÀÇ°ß ¹× ºÒ¸¸»çÇ×ÀÌ Á¤´çÇÏ´Ù°í ÆÇ´ÜµÇ´Â °æ¿ì ±× »çÇ×À» ½Å¼ÓÈ÷ Ã³¸®ÇÏ¿©¾ß ÇÕ´Ï´Ù. ´Ù¸¸, ½Å¼ÓÇÑ Ã³¸®°¡ °ï¶õÇÑ °æ¿ì¿¡´Â È¸¿ø¿¡°Ô ±× »çÀ¯¿Í Ã³¸® ÀÏÁ¤À» ÅëÁöÇÏ¿©¾ß ÇÕ´Ï´Ù. </p>
+                </li>
+                <li>
+                    <p class="list_txt">¨ê È¸»ç´Â ÀÌ¿ë°è¾àÀÇ Ã¼°á, °è¾à»çÇ×ÀÇ º¯°æ ¹× ÇØÁö µî È¸¿ø°úÀÇ °è¾à °ü·Ã ÀýÂ÷ ¹× ³»¿ë µî¿¡ ÀÖ¾î È¸¿ø¿¡°Ô ÆíÀÇ¸¦ Á¦°øÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.</p>
+                </li>
+                <li>
+                    <p class="list_txt">¨ë È¸»ç´Â °øÁ¤ÇÏ°í °ÇÀüÇÑ ¿î¿µ°ú Áö¼ÓÀûÀÎ ¿¬±¸ °³¹ßÀ» ÅëÇÏ¿© ¾çÁúÀÇ ¼­ºñ½º¸¦ Á¦°øÇÔÀ¸·Î½á °í°´¸¸Á·À» ±Ø´ëÈ­ÇÏ¿© ÀÎÅÍ³Ý ºñÁî´Ï½º ¹ßÀü¿¡ ±â¿©ÇÏµµ·Ï ÇÕ´Ï´Ù. </p>
+                </li>
+            </ol>
+        </div>
+        <!-- //15Á¶ -->
+        <!-- 16Á¶ -->
+        <div class="ag_list">
+            <h4 class="h4_tit">Á¦ 16 Á¶ (È¸¿øÀÇ ÀÇ¹«)</h4>
+            <ol class="o_st_01">
+                <li>
+                    <p class="list_txt">¨ç È¸¿øÀº ¼­ºñ½º¸¦ ÀÌ¿ëÇÔ¿¡ ÀÖ¾î ´ÙÀ½ °¢ È£ÀÇ ÇàÀ§¸¦ ÇÏ¿©¼­´Â ¾ÈµË´Ï´Ù.</p>
                     <div class="sub_list">
                         <ol class="sub_list01">
-                            <li>1. ê°€ëª…, ì°¨ëª…, í—ˆë¬´ì¸ ëª…ì˜ ê¸°íƒ€ íšŒì›ì˜ ì‹¤ì œ ì„±ëª…ê³¼ ë‹¤ë¥¸ ëª…ì˜ì— ì˜í•´ ì´ìš© ì‹ ì²­ì„ í•˜ëŠ” í–‰ìœ„</li>
-                            <li>2. í—ˆìœ„ì˜ ê°œì¸ì •ë³´ë¥¼ ê¸°ìž¬í•˜ê±°ë‚˜ ì¤‘ë³µí•˜ì—¬ ê°€ìž…í•˜ëŠ” í–‰ìœ„</li>
-                            <li>3. íƒ€ì¸ì˜ ì„œë¹„ìŠ¤ ì•„ì´ë”” ë° ë¹„ë°€ë²ˆí˜¸ë¥¼ ë„ìš©í•˜ëŠ” í–‰ìœ„</li>
-                            <li>4. íƒ€ì¸ì˜ ì§€ì ìž¬ì‚°ê¶Œì„ ì¹¨í•´í•˜ëŠ” í–‰ìœ„</li>
-                            <li>5. íƒ€ì¸ì˜ ëª…ì˜ˆë¥¼ í›¼ì†í•˜ê±°ë‚˜ ì‚¬ìƒí™œì„ ì¹¨í•´í•˜ëŠ” í–‰ìœ„</li>
-                            <li>6. ê²Œì‹œíŒì´ë‚˜ ëŒ€í™”ì‹¤ ë“±ì—ì„œ ìš•ì„¤, ë¹„ë°© ë˜ëŠ” ìŒëž€, í­ë ¥ì ì¸ ë‚´ìš©ì˜ í‘œí˜„ì„ í•˜ëŠ” í–‰ìœ„</li>
-                            <li>7. ê³¼ì‹¤ ë˜ëŠ” ê³ ì˜ë¡œ í—ˆìœ„ì˜ ì •ë³´ë¥¼ ê³µê°œ ë˜ëŠ” ìœ í¬í•˜ëŠ” í–‰ìœ„</li>
-                            <li>8. ë‹¤ëŸ‰ì˜ ì •ë³´ë¥¼ ì „ì†¡í•˜ê±°ë‚˜ ë™ì¼í•œ ë˜ëŠ” ìœ ì‚¬í•œ ë‚´ìš©ì˜ ì •ë³´ë¥¼ ë°˜ë³µì ìœ¼ë¡œ ê²Œì‹œí•˜ì—¬ ì„œë¹„ìŠ¤ì˜ ì•ˆì •ì ì¸ ìš´ì˜ì„ ë°©í•´í•˜ëŠ” í–‰ìœ„</li>
-                            <li>9. ê´‘ê³ ì„± ì •ë³´ë¥¼ ìˆ˜ì‹ ìžì˜ ì˜ì‚¬ì— ë°˜í•˜ì—¬ ì „ìžìš°íŽ¸ìœ¼ë¡œ ì¼ì‹œì— ë‹¤ëŸ‰ìœ¼ë¡œ ë˜ëŠ” ì§€ì†ì ìœ¼ë¡œ ì „ì†¡í•˜ê±°ë‚˜ ê²Œì‹œíŒì— ê²Œì‹œí•˜ì—¬ ë‹¤ë¥¸ íšŒì›ì˜ ì„œë¹„ìŠ¤ ì´ìš©ì„ ë°©í•´í•˜ëŠ” í–‰ìœ„</li>
-                            <li>10. ì •ë³´í†µì‹ ì„¤ë¹„ì˜ ì˜¤ìž‘ë™ì´ë‚˜ ì •ë³´ ë“±ì˜ íŒŒê´´ë¥¼ ìœ ë°œí•˜ëŠ” ì»´í“¨í„° ë°”ì´ëŸ¬ìŠ¤ ë“±ì„ ìœ í¬í•˜ëŠ” í–‰ìœ„</li>
-                            <li>11. íšŒì‚¬ì˜ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ì–»ì€ ì •ë³´ë¥¼ íšŒì‚¬ì˜ ì‚¬ì „ ìŠ¹ë‚™ ì—†ì´ ë³µì œ ë˜ëŠ” ìœ í†µì‹œí‚¤ê±°ë‚˜ ìƒì—…ì ìœ¼ë¡œ ì´ìš©í•˜ëŠ” í–‰ìœ„</li>
-                            <li>12. íšŒì‚¬ì˜ ì •ìƒì ì¸ ê²½ì˜ ë˜ëŠ” ì—…ë¬´ë¥¼ ë°©í•´í•˜ê±°ë‚˜ ì„œë¹„ìŠ¤ì˜ ìš´ì˜ì„ ë°©í•´í•˜ëŠ” í–‰ìœ„</li>
-                            <li>13. ë¶ˆë²•ì„ ê±°ìš´ë™ì„ í•˜ëŠ” í–‰ìœ„</li>
-                            <li>14. ê¸°íƒ€ ë¯¸í’ì–‘ì†ì„ í•´í•˜ê±°ë‚˜ ê´€ë ¨ë²•ë ¹ ë° ì´ ì•½ê´€ì„ í¬í•¨í•˜ì—¬ íšŒì‚¬ê°€ ì •í•œ ì´ìš© ì¡°ê±´ì— ìœ„ë°˜í•˜ëŠ” í–‰ìœ„</li>
+                            <li>1. °¡¸í, Â÷¸í, Çã¹«ÀÎ ¸íÀÇ ±âÅ¸ È¸¿øÀÇ ½ÇÁ¦ ¼º¸í°ú ´Ù¸¥ ¸íÀÇ¿¡ ÀÇÇØ ÀÌ¿ë ½ÅÃ»À» ÇÏ´Â ÇàÀ§</li>
+                            <li>2. ÇãÀ§ÀÇ °³ÀÎÁ¤º¸¸¦ ±âÀçÇÏ°Å³ª Áßº¹ÇÏ¿© °¡ÀÔÇÏ´Â ÇàÀ§</li>
+                            <li>3. Å¸ÀÎÀÇ ¼­ºñ½º ¾ÆÀÌµð ¹× ºñ¹Ð¹øÈ£¸¦ µµ¿ëÇÏ´Â ÇàÀ§</li>
+                            <li>4. Å¸ÀÎÀÇ ÁöÀûÀç»ê±ÇÀ» Ä§ÇØÇÏ´Â ÇàÀ§</li>
+                            <li>5. Å¸ÀÎÀÇ ¸í¿¹¸¦ ÈÑ¼ÕÇÏ°Å³ª »ç»ýÈ°À» Ä§ÇØÇÏ´Â ÇàÀ§</li>
+                            <li>6. °Ô½ÃÆÇÀÌ³ª ´ëÈ­½Ç µî¿¡¼­ ¿å¼³, ºñ¹æ ¶Ç´Â À½¶õ, Æø·ÂÀûÀÎ ³»¿ëÀÇ Ç¥ÇöÀ» ÇÏ´Â ÇàÀ§</li>
+                            <li>7. °ú½Ç ¶Ç´Â °íÀÇ·Î ÇãÀ§ÀÇ Á¤º¸¸¦ °ø°³ ¶Ç´Â À¯Æ÷ÇÏ´Â ÇàÀ§</li>
+                            <li>8. ´Ù·®ÀÇ Á¤º¸¸¦ Àü¼ÛÇÏ°Å³ª µ¿ÀÏÇÑ ¶Ç´Â À¯»çÇÑ ³»¿ëÀÇ Á¤º¸¸¦ ¹Ýº¹ÀûÀ¸·Î °Ô½ÃÇÏ¿© ¼­ºñ½ºÀÇ ¾ÈÁ¤ÀûÀÎ ¿î¿µÀ» ¹æÇØÇÏ´Â ÇàÀ§</li>
+                            <li>9. ±¤°í¼º Á¤º¸¸¦ ¼ö½ÅÀÚÀÇ ÀÇ»ç¿¡ ¹ÝÇÏ¿© ÀüÀÚ¿ìÆíÀ¸·Î ÀÏ½Ã¿¡ ´Ù·®À¸·Î ¶Ç´Â Áö¼ÓÀûÀ¸·Î Àü¼ÛÇÏ°Å³ª °Ô½ÃÆÇ¿¡ °Ô½ÃÇÏ¿© ´Ù¸¥ È¸¿øÀÇ ¼­ºñ½º ÀÌ¿ëÀ» ¹æÇØÇÏ´Â ÇàÀ§</li>
+                            <li>10. Á¤º¸Åë½Å¼³ºñÀÇ ¿ÀÀÛµ¿ÀÌ³ª Á¤º¸ µîÀÇ ÆÄ±«¸¦ À¯¹ßÇÏ´Â ÄÄÇ»ÅÍ ¹ÙÀÌ·¯½º µîÀ» À¯Æ÷ÇÏ´Â ÇàÀ§</li>
+                            <li>11. È¸»çÀÇ ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ¿© ¾òÀº Á¤º¸¸¦ È¸»çÀÇ »çÀü ½Â³« ¾øÀÌ º¹Á¦ ¶Ç´Â À¯Åë½ÃÅ°°Å³ª »ó¾÷ÀûÀ¸·Î ÀÌ¿ëÇÏ´Â ÇàÀ§</li>
+                            <li>12. È¸»çÀÇ Á¤»óÀûÀÎ °æ¿µ ¶Ç´Â ¾÷¹«¸¦ ¹æÇØÇÏ°Å³ª ¼­ºñ½ºÀÇ ¿î¿µÀ» ¹æÇØÇÏ´Â ÇàÀ§</li>
+                            <li>13. ºÒ¹ý¼±°Å¿îµ¿À» ÇÏ´Â ÇàÀ§</li>
+                            <li>14. ±âÅ¸ ¹ÌÇ³¾ç¼ÓÀ» ÇØÇÏ°Å³ª °ü·Ã¹ý·É ¹× ÀÌ ¾à°üÀ» Æ÷ÇÔÇÏ¿© È¸»ç°¡ Á¤ÇÑ ÀÌ¿ë Á¶°Ç¿¡ À§¹ÝÇÏ´Â ÇàÀ§</li>
                         </ol>
                     </div>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì›ì€ ì•„ì´ë”” ë° ë¹„ë°€ë²ˆí˜¸ì˜ ê´€ë¦¬ì— ìƒë‹¹í•œ ì£¼ì˜ë¥¼ ê¸°ìš¸ì—¬ì•¼ í•©ë‹ˆë‹¤. ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ì— ê´€í•œ ëª¨ë“  ê´€ë¦¬ ì±…ìž„ì€ íšŒì›ì—ê²Œ ìžˆìœ¼ë©°, íšŒì›ì—ê²Œ ë¶€ì—¬ëœ ì•„ì´ë”” ë° ë¹„ë°€ë²ˆí˜¸ì˜ ê´€ë¦¬ ì†Œí™€, ë¶€ì •ì‚¬ìš©ì— ì˜í•˜ì—¬ ë°œìƒí•˜ëŠ” ëª¨ë“  ê²°ê³¼ì— ëŒ€í•œ ì±…ìž„ì€ íšŒì›ì—ê²Œ ìžˆìŠµë‹ˆë‹¤. íšŒì›ì€ ìžì‹ ì˜ ì•„ì´ë”” ë˜ëŠ” ë¹„ë°€ ë²ˆí˜¸ê°€ ë¶€ì •í•˜ê²Œ ì‚¬ìš©ëœ ê²½ìš° ë°˜ë“œì‹œ íšŒì‚¬ì— ê·¸ ì‚¬ì‹¤ì„ í†µë³´í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸¿øÀº ¾ÆÀÌµð ¹× ºñ¹Ð¹øÈ£ÀÇ °ü¸®¿¡ »ó´çÇÑ ÁÖÀÇ¸¦ ±â¿ï¿©¾ß ÇÕ´Ï´Ù. ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£¿¡ °üÇÑ ¸ðµç °ü¸® Ã¥ÀÓÀº È¸¿ø¿¡°Ô ÀÖÀ¸¸ç, È¸¿ø¿¡°Ô ºÎ¿©µÈ ¾ÆÀÌµð ¹× ºñ¹Ð¹øÈ£ÀÇ °ü¸® ¼ÒÈ¦, ºÎÁ¤»ç¿ë¿¡ ÀÇÇÏ¿© ¹ß»ýÇÏ´Â ¸ðµç °á°ú¿¡ ´ëÇÑ Ã¥ÀÓÀº È¸¿ø¿¡°Ô ÀÖ½À´Ï´Ù. È¸¿øÀº ÀÚ½ÅÀÇ ¾ÆÀÌµð ¶Ç´Â ºñ¹Ð ¹øÈ£°¡ ºÎÁ¤ÇÏ°Ô »ç¿ëµÈ °æ¿ì ¹Ýµå½Ã È¸»ç¿¡ ±× »ç½ÇÀ» Åëº¸ÇÏ¿©¾ß ÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì›ì€ íšŒì‚¬ì˜ ì‚¬ì „ ì„œë©´ ë™ì˜ ì—†ì´ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ì˜ë¦¬ì ì¸ ëª©ì ì˜ ì˜ì—… í–‰ìœ„ë¥¼ í•˜ì—¬ì„œëŠ” ì•ˆë©ë‹ˆë‹¤. ì´ë¥¼ ìœ„ë°˜í•œ ì˜ì—… í–‰ìœ„ì˜ ê²°ê³¼ì— ëŒ€í•˜ì—¬ íšŒì‚¬ëŠ” ì±…ìž„ì„ ì§€ì§€ ì•Šìœ¼ë©°, ì´ì™€ ê°™ì€ ì˜ì—… í–‰ìœ„ì˜ ê²°ê³¼ë¡œ íšŒì‚¬ì— ì†í•´ê°€ ë°œìƒí•œ ê²½ìš°, íšŒì›ì€ íšŒì‚¬ì— ëŒ€í•˜ì—¬ ì†í•´ë°°ìƒì˜ ì˜ë¬´ë¥¼ ì§‘ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨é È¸¿øÀº È¸»çÀÇ »çÀü ¼­¸é µ¿ÀÇ ¾øÀÌ ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ¿© ¿µ¸®ÀûÀÎ ¸ñÀûÀÇ ¿µ¾÷ ÇàÀ§¸¦ ÇÏ¿©¼­´Â ¾ÈµË´Ï´Ù. ÀÌ¸¦ À§¹ÝÇÑ ¿µ¾÷ ÇàÀ§ÀÇ °á°ú¿¡ ´ëÇÏ¿© È¸»ç´Â Ã¥ÀÓÀ» ÁöÁö ¾ÊÀ¸¸ç, ÀÌ¿Í °°Àº ¿µ¾÷ ÇàÀ§ÀÇ °á°ú·Î È¸»ç¿¡ ¼ÕÇØ°¡ ¹ß»ýÇÑ °æ¿ì, È¸¿øÀº È¸»ç¿¡ ´ëÇÏ¿© ¼ÕÇØ¹è»óÀÇ ÀÇ¹«¸¦ Áý´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘£ íšŒì›ì€ ëª…ì‹œì  ë™ì˜ê°€ ì—†ëŠ” í•œ íšŒì‚¬ì˜ ì„œë¹„ìŠ¤ì˜ ì´ìš© ê¶Œí•œ, ê¸°íƒ€ ì´ìš©ê³„ì•½ ìƒì˜ ì§€ìœ„ë¥¼ íƒ€ì¸ì—ê²Œ ì–‘ë„, ì¦ì—¬í•  ìˆ˜ ì—†ìœ¼ë©°, ì´ë¥¼ ë‹´ë³´ë¡œ ì œê³µí•˜ê±°ë‚˜ ê¸°íƒ€ ì²˜ë¶„í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨ê È¸¿øÀº ¸í½ÃÀû µ¿ÀÇ°¡ ¾ø´Â ÇÑ È¸»çÀÇ ¼­ºñ½ºÀÇ ÀÌ¿ë ±ÇÇÑ, ±âÅ¸ ÀÌ¿ë°è¾à »óÀÇ ÁöÀ§¸¦ Å¸ÀÎ¿¡°Ô ¾çµµ, Áõ¿©ÇÒ ¼ö ¾øÀ¸¸ç, ÀÌ¸¦ ´ãº¸·Î Á¦°øÇÏ°Å³ª ±âÅ¸ Ã³ºÐÇÒ ¼ö ¾ø½À´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //16ì¡° -->
-        <!-- 17ì¡° -->
+        <!-- //16Á¶ -->
+        <!-- 17Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 17 ì¡° (ì§€ì ìž¬ì‚°ê¶Œ ë“±)</h4>
+            <h4 class="h4_tit">Á¦ 17 Á¶ (ÁöÀûÀç»ê±Ç µî)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ê°€ ìž‘ì„±í•˜ì—¬ ì œê³µí•˜ëŠ” ì„œë¹„ìŠ¤ì— ê´€í•œ ì €ìž‘ê¶Œ ë° ê¸°íƒ€ ì§€ì ìž¬ì‚°ê¶Œì€ íšŒì‚¬ì— ì†í•©ë‹ˆë‹¤. íšŒì›ì€ íšŒì‚¬ê°€ ì œê³µí•˜ëŠ” ì„œë¹„ìŠ¤ë¥¼ íšŒì‚¬ì˜ ì‚¬ì „ë™ì˜ ì—†ì´ ì˜ë¦¬ ëª©ì ìœ¼ë¡œ ë³µì œ, ì „ì†¡, ì¶œíŒ, ë°°í¬, ë°©ì†¡ ê¸°íƒ€ ë°©ë²•ì— ì˜í•˜ì—¬ ì´ìš©í•˜ê±°ë‚˜ ì œ3ìžì—ê²Œ ì´ìš©í•˜ê²Œ í•˜ì—¬ì„œëŠ” ì•ˆë©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç°¡ ÀÛ¼ºÇÏ¿© Á¦°øÇÏ´Â ¼­ºñ½º¿¡ °üÇÑ ÀúÀÛ±Ç ¹× ±âÅ¸ ÁöÀûÀç»ê±ÇÀº È¸»ç¿¡ ¼ÓÇÕ´Ï´Ù. È¸¿øÀº È¸»ç°¡ Á¦°øÇÏ´Â ¼­ºñ½º¸¦ È¸»çÀÇ »çÀüµ¿ÀÇ ¾øÀÌ ¿µ¸® ¸ñÀûÀ¸·Î º¹Á¦, Àü¼Û, ÃâÆÇ, ¹èÆ÷, ¹æ¼Û ±âÅ¸ ¹æ¹ý¿¡ ÀÇÇÏ¿© ÀÌ¿ëÇÏ°Å³ª Á¦3ÀÚ¿¡°Ô ÀÌ¿ëÇÏ°Ô ÇÏ¿©¼­´Â ¾ÈµË´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì›ì´ ì„œë¹„ìŠ¤ì— ê²Œìž¬í•œ ê²Œì‹œë¬¼, ìžë£Œì— ê´€í•œ ê¶Œë¦¬ì™€ ì±…ìž„ì€ ê²Œì‹œí•œ íšŒì›ì—ê²Œ ìžˆìŠµë‹ˆë‹¤. íšŒì‚¬ëŠ” íšŒì›ì´ ê²Œìž¬í•œ ê²Œì‹œë¬¼, ìžë£Œì— ëŒ€í•˜ì—¬ ì„œë¹„ìŠ¤ ë‚´ì˜ ê²Œìž¬ê¶Œì„ ê°€ì§€ë©°, ê²Œìž¬í•œ íšŒì›ì˜ ë™ì˜ ì—†ì´ ì´ë¥¼ ì˜ë¦¬ì ì¸ ëª©ì ìœ¼ë¡œ ì‚¬ìš©í•˜ì§€ ì•„ë‹ˆí•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸¿øÀÌ ¼­ºñ½º¿¡ °ÔÀçÇÑ °Ô½Ã¹°, ÀÚ·á¿¡ °üÇÑ ±Ç¸®¿Í Ã¥ÀÓÀº °Ô½ÃÇÑ È¸¿ø¿¡°Ô ÀÖ½À´Ï´Ù. È¸»ç´Â È¸¿øÀÌ °ÔÀçÇÑ °Ô½Ã¹°, ÀÚ·á¿¡ ´ëÇÏ¿© ¼­ºñ½º ³»ÀÇ °ÔÀç±ÇÀ» °¡Áö¸ç, °ÔÀçÇÑ È¸¿øÀÇ µ¿ÀÇ ¾øÀÌ ÀÌ¸¦ ¿µ¸®ÀûÀÎ ¸ñÀûÀ¸·Î »ç¿ëÇÏÁö ¾Æ´ÏÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” ì œ19ì¡°ì˜ ì˜ë¬´ë¥¼ ìœ„ë°˜í•˜ëŠ” ë‚´ìš©ì„ ë‹´ê³  ìžˆëŠ” ê²Œì‹œë¬¼ì— ëŒ€í•˜ì—¬ ìˆ˜ì • ë˜ëŠ” ì‚­ì œí•  ê¶Œí•œì„ ê°–ìŠµë‹ˆë‹¤. ì´ì— ëŒ€í•œ êµ¬ì²´ì ì¸ ê¸°ì¤€ê³¼ ì ˆì°¨ëŠ” ë³„ë„ì˜ ê·œì •ì— ë”°ë¦…ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨é È¸»ç´Â Á¦19Á¶ÀÇ ÀÇ¹«¸¦ À§¹ÝÇÏ´Â ³»¿ëÀ» ´ã°í ÀÖ´Â °Ô½Ã¹°¿¡ ´ëÇÏ¿© ¼öÁ¤ ¶Ç´Â »èÁ¦ÇÒ ±ÇÇÑÀ» °®½À´Ï´Ù. ÀÌ¿¡ ´ëÇÑ ±¸Ã¼ÀûÀÎ ±âÁØ°ú ÀýÂ÷´Â º°µµÀÇ ±ÔÁ¤¿¡ µû¸¨´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //17ì¡° -->
+        <!-- //17Á¶ -->
     </div>
     <!-- //list04 -->
     <!-- list05-->
     <div class="list">
-        <h3 class="h3_tit">ì œ5ìž¥ ì„œë¹„ìŠ¤ì˜ ì´ìš© ì œí•œ ë° ê³„ì•½ì˜ í•´ì§€ </h3>
-        <!-- 18ì¡° -->
+        <h3 class="h3_tit">Á¦5Àå ¼­ºñ½ºÀÇ ÀÌ¿ë Á¦ÇÑ ¹× °è¾àÀÇ ÇØÁö </h3>
+        <!-- 18Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 18 ì¡° (ì„œë¹„ìŠ¤ ì´ìš© ì œí•œ ë“±)</h4>
+            <h4 class="h4_tit">Á¦ 18 Á¶ (¼­ºñ½º ÀÌ¿ë Á¦ÇÑ µî)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” íšŒì›ì´ ì œ16ì¡°ì˜ ì˜ë¬´ë¥¼ ìœ„ë°˜í•œ ê²½ìš° íšŒì›ì˜ ì„œë¹„ìŠ¤ ì´ìš©ì„ ì¼ë¶€ ë˜ëŠ” ì „ë¶€ ì œí•œí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç´Â È¸¿øÀÌ Á¦16Á¶ÀÇ ÀÇ¹«¸¦ À§¹ÝÇÑ °æ¿ì È¸¿øÀÇ ¼­ºñ½º ÀÌ¿ëÀ» ÀÏºÎ ¶Ç´Â ÀüºÎ Á¦ÇÑÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ì œ1í•­ì˜ ê·œì •ì— ì˜í•˜ì—¬ íšŒì›ì˜ ì„œë¹„ìŠ¤ ì´ìš©ì„ ì œí•œí•˜ëŠ” ê²½ìš°, ì œí•œì˜ ì¢…ë¥˜ ë° ê¸°ê°„ ë“± êµ¬ì²´ì ì¸ ê¸°ì¤€ì€ ë³„ë„ì˜ ê·œì •ì— ë”°ë¦…ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨è Á¦1Ç×ÀÇ ±ÔÁ¤¿¡ ÀÇÇÏ¿© È¸¿øÀÇ ¼­ºñ½º ÀÌ¿ëÀ» Á¦ÇÑÇÏ´Â °æ¿ì, Á¦ÇÑÀÇ Á¾·ù ¹× ±â°£ µî ±¸Ã¼ÀûÀÎ ±âÁØÀº º°µµÀÇ ±ÔÁ¤¿¡ µû¸¨´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //18ì¡° -->
-        <!-- 19ì¡° -->
+        <!-- //18Á¶ -->
+        <!-- 19Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 19 ì¡° (ì´ìš© ì œí•œ ë° ì œí•œ í•´ì œì˜ ì ˆì°¨)</h4>
+            <h4 class="h4_tit">Á¦ 19 Á¶ (ÀÌ¿ë Á¦ÇÑ ¹× Á¦ÇÑ ÇØÁ¦ÀÇ ÀýÂ÷)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” ì œ18ì¡°ì˜ ê·œì •ì— ì˜í•˜ì—¬ ì´ìš©ì œí•œì„ í•˜ê³ ìž í•˜ëŠ” ê²½ìš° ê·¸ ì‚¬ìœ , ì¼ì‹œ ë° ê¸°ê°„ì„ ì •í•´ ì „ìžìš°íŽ¸ ë˜ëŠ” ì „í™” ë“±ì˜ ë°©ë²•ì— ì˜í•˜ì—¬ í•´ë‹¹ íšŒì› ë˜ëŠ” ê·¸ ëŒ€ë¦¬ì¸ì—ê²Œ í†µì§€í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤. ë‹¤ë§Œ íšŒì‚¬ê°€ ê¸´ê¸‰í•˜ê²Œ ì´ìš©ì„ ì œí•œí•  í•„ìš”ê°€ ìžˆë‹¤ê³  ì¸ì •í•˜ëŠ” ê²½ìš°ì—ëŠ” ê·¸ëŸ¬í•˜ì§€ ì•„ë‹ˆí•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç´Â Á¦18Á¶ÀÇ ±ÔÁ¤¿¡ ÀÇÇÏ¿© ÀÌ¿ëÁ¦ÇÑÀ» ÇÏ°íÀÚ ÇÏ´Â °æ¿ì ±× »çÀ¯, ÀÏ½Ã ¹× ±â°£À» Á¤ÇØ ÀüÀÚ¿ìÆí ¶Ç´Â ÀüÈ­ µîÀÇ ¹æ¹ý¿¡ ÀÇÇÏ¿© ÇØ´ç È¸¿ø ¶Ç´Â ±× ´ë¸®ÀÎ¿¡°Ô ÅëÁöÇÏ¿©¾ß ÇÕ´Ï´Ù. ´Ù¸¸ È¸»ç°¡ ±ä±ÞÇÏ°Ô ÀÌ¿ëÀ» Á¦ÇÑÇÒ ÇÊ¿ä°¡ ÀÖ´Ù°í ÀÎÁ¤ÇÏ´Â °æ¿ì¿¡´Â ±×·¯ÇÏÁö ¾Æ´ÏÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ì œ1í•­ì˜ ê·œì •ì— ì˜í•˜ì—¬ ì´ìš© ì œí•œì˜ í†µì§€ë¥¼ ë°›ê±°ë‚˜ ê¸´ê¸‰í•˜ê²Œ ì´ìš© ì œí•œ ì¡°ì¹˜ë¥¼ ë°›ì€ íšŒì› ë˜ëŠ” ê·¸ ëŒ€ë¦¬ì¸ì€ ì „ìžìš°íŽ¸ ë˜ëŠ” ì„œë©´ì˜ ë°©ë²•ì— ì˜í•˜ì—¬ íšŒì‚¬ì— ì´ì˜ë¥¼ ì œê¸°í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è Á¦1Ç×ÀÇ ±ÔÁ¤¿¡ ÀÇÇÏ¿© ÀÌ¿ë Á¦ÇÑÀÇ ÅëÁö¸¦ ¹Þ°Å³ª ±ä±ÞÇÏ°Ô ÀÌ¿ë Á¦ÇÑ Á¶Ä¡¸¦ ¹ÞÀº È¸¿ø ¶Ç´Â ±× ´ë¸®ÀÎÀº ÀüÀÚ¿ìÆí ¶Ç´Â ¼­¸éÀÇ ¹æ¹ý¿¡ ÀÇÇÏ¿© È¸»ç¿¡ ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” ì œ2í•­ì˜ ê·œì •ì— ì˜í•œ ì´ì˜ì‹ ì²­ì— ëŒ€í•˜ì—¬ ê·¸ í™•ì¸ì„ ìœ„í•œ ê¸°ê°„ê¹Œì§€ ì´ìš©ì œí•œì„ ì¼ì‹œ ì—°ê¸°í•  ìˆ˜ ìžˆìœ¼ë©°, ê·¸ ê²°ê³¼ë¥¼ ë‹¹í•´ íšŒì› ë˜ëŠ” ê·¸ ëŒ€ë¦¬ì¸ì—ê²Œ í†µì§€í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨é È¸»ç´Â Á¦2Ç×ÀÇ ±ÔÁ¤¿¡ ÀÇÇÑ ÀÌÀÇ½ÅÃ»¿¡ ´ëÇÏ¿© ±× È®ÀÎÀ» À§ÇÑ ±â°£±îÁö ÀÌ¿ëÁ¦ÇÑÀ» ÀÏ½Ã ¿¬±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× °á°ú¸¦ ´çÇØ È¸¿ø ¶Ç´Â ±× ´ë¸®ÀÎ¿¡°Ô ÅëÁöÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘£ íšŒì‚¬ëŠ” ì´ìš© ì œí•œ ê¸°ê°„ ì¤‘ ê·¸ ì‚¬ìœ ê°€ í•´ì†Œë˜ëŠ” ë“±ì˜ í•©ë¦¬ì ì¸ ì‚¬ìœ ê°€ ìžˆëŠ” ê²½ìš° ì´ìš© ì œí•œ ì¡°ì¹˜ë¥¼ í•´ì œí•©ë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨ê È¸»ç´Â ÀÌ¿ë Á¦ÇÑ ±â°£ Áß ±× »çÀ¯°¡ ÇØ¼ÒµÇ´Â µîÀÇ ÇÕ¸®ÀûÀÎ »çÀ¯°¡ ÀÖ´Â °æ¿ì ÀÌ¿ë Á¦ÇÑ Á¶Ä¡¸¦ ÇØÁ¦ÇÕ´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //19ì¡° -->
-        <!-- 20ì¡° -->
+        <!-- //19Á¶ -->
+        <!-- 20Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 20 ì¡° (ê³„ì•½ì˜ í•´ì§€)</h4>
+            <h4 class="h4_tit">Á¦ 20 Á¶ (°è¾àÀÇ ÇØÁö)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì›ì€, ì´ìš©ê³„ì•½ì„ í•´ì§€í•˜ê³ ìž í•˜ëŠ” ê²½ìš°, íšŒì‚¬ ì›¹ì‚¬ì´íŠ¸ ë° ì£¼ë¬¸ì•±ì˜ "íšŒì›íƒˆí‡´" ë©”ë‰´ì—ì„œ íƒˆí‡´ ì‹ ì²­ì„ í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤. íšŒì‚¬ëŠ” íšŒì›ì˜ íƒˆí‡´ ì‹ ì²­ì„ ë¹ ë¥¸ ì‹œê°„ ë‚´ì— ì²˜ë¦¬í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸¿øÀº, ÀÌ¿ë°è¾àÀ» ÇØÁöÇÏ°íÀÚ ÇÏ´Â °æ¿ì, È¸»ç À¥»çÀÌÆ® ¹× ÁÖ¹®¾ÛÀÇ "È¸¿øÅ»Åð" ¸Þ´º¿¡¼­ Å»Åð ½ÅÃ»À» ÇÏ¿©¾ß ÇÕ´Ï´Ù. È¸»ç´Â È¸¿øÀÇ Å»Åð ½ÅÃ»À» ºü¸¥ ½Ã°£ ³»¿¡ Ã³¸®ÇÏ¿©¾ß ÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ”, íšŒì›ì´ ì œ19ì¡°ì˜ ì˜ë¬´ë¥¼ ìœ„ë°˜í•œ ê²½ìš° ì‚¬ì „ í†µì§€ë¥¼ ê±°ì³ ì´ìš©ê³„ì•½ì„ í•´ì§€í•˜ê³  íšŒì›íƒˆí‡´ ì²˜ë¦¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ë‹¤ë§Œ, ê·¸ ë‚´ìš©ì´ ì¤‘í•˜ì—¬ íšŒì‚¬ì˜ ì •ìƒì ì¸ ê²½ì˜ì´ë‚˜ ì—…ë¬´ í™œë™ ë˜ëŠ” ì„œë¹„ìŠ¤ ìš´ì˜ì— ì§€ìž¥ì´ ìžˆëŠ” ê²½ìš° ì‚¬ì „í†µì§€ ì—†ì´ ê³„ì•½ì„ í•´ì§€í•˜ê³  íƒˆí‡´ ì²˜ë¦¬ë¥¼ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê·¸ êµ¬ì²´ì ì¸ ê¸°ì¤€ê³¼ ì ˆì°¨ëŠ” ë³„ë„ì˜ ê·œì •ì— ë”°ë¦…ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸»ç´Â, È¸¿øÀÌ Á¦19Á¶ÀÇ ÀÇ¹«¸¦ À§¹ÝÇÑ °æ¿ì »çÀü ÅëÁö¸¦ °ÅÃÄ ÀÌ¿ë°è¾àÀ» ÇØÁöÇÏ°í È¸¿øÅ»Åð Ã³¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù. ´Ù¸¸, ±× ³»¿ëÀÌ ÁßÇÏ¿© È¸»çÀÇ Á¤»óÀûÀÎ °æ¿µÀÌ³ª ¾÷¹« È°µ¿ ¶Ç´Â ¼­ºñ½º ¿î¿µ¿¡ ÁöÀåÀÌ ÀÖ´Â °æ¿ì »çÀüÅëÁö ¾øÀÌ °è¾àÀ» ÇØÁöÇÏ°í Å»Åð Ã³¸®¸¦ ÇÒ ¼ö ÀÖ½À´Ï´Ù. ±× ±¸Ã¼ÀûÀÎ ±âÁØ°ú ÀýÂ÷´Â º°µµÀÇ ±ÔÁ¤¿¡ µû¸¨´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ”, ì œ2í•­ì— ì˜í•˜ì—¬ íƒˆí‡´ ì²˜ë¦¬ëœ íšŒì›ì´ ë‹¤ì‹œ ì´ìš© ì‹ ì²­ì„ í•˜ëŠ” ê²½ìš°, ê·¸ì— ëŒ€í•œ ìŠ¹ë‚™ì„ ê±°ì ˆí•˜ê±°ë‚˜ ì¼ì • ê¸°ê°„ ê·¸ ìŠ¹ë‚™ì„ ë³´ë¥˜í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨é È¸»ç´Â, Á¦2Ç×¿¡ ÀÇÇÏ¿© Å»Åð Ã³¸®µÈ È¸¿øÀÌ ´Ù½Ã ÀÌ¿ë ½ÅÃ»À» ÇÏ´Â °æ¿ì, ±×¿¡ ´ëÇÑ ½Â³«À» °ÅÀýÇÏ°Å³ª ÀÏÁ¤ ±â°£ ±× ½Â³«À» º¸·ùÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
                 </li>
             </ol>
         </div>
-        <!-- //20ì¡° -->
-        <!-- 21ì¡° -->
+        <!-- //20Á¶ -->
+        <!-- 21Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 21 ì¡° (ë©´ì±…)</h4>
+            <h4 class="h4_tit">Á¦ 21 Á¶ (¸éÃ¥)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ëŠ” ì „ì‹œ, ì‚¬ë³€ ë“± êµ­ê°€ë¹„ìƒì‚¬íƒœ, ì²œìž¬ì§€ë³€, ê¸°ê°„í†µì‹ ì‚¬ì—…ìžì˜ ì„œë¹„ìŠ¤ ì œê³µ ì¤‘ë‹¨, ì „ë ¥ê³µê¸‰ ì¤‘ë‹¨, í•´ì»¤ì˜ ì¹¨ìž…, ì»´í“¨í„° ë°”ì´ëŸ¬ìŠ¤ ê¸°íƒ€ ì´ì™€ ìœ ì‚¬í•œ ì‚¬ì •ìœ¼ë¡œ ì¸í•œ íšŒì‚¬ ì‹œìŠ¤í…œì˜ ìž‘ë™ë¶ˆëŠ¥ ê¸°íƒ€ íšŒì‚¬ì˜ ê·€ì±… ì‚¬ìœ  ì—†ì´ íšŒì‚¬ê°€ ì„œë¹„ìŠ¤ë¥¼ ì œê³µí•  ìˆ˜ ì—†ëŠ” ê²½ìš° íšŒì‚¬ëŠ” ê·¸ë¡œ ì¸í•œ ì±…ìž„ì„ ë©´í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç´Â Àü½Ã, »çº¯ µî ±¹°¡ºñ»ó»çÅÂ, ÃµÀçÁöº¯, ±â°£Åë½Å»ç¾÷ÀÚÀÇ ¼­ºñ½º Á¦°ø Áß´Ü, Àü·Â°ø±Þ Áß´Ü, ÇØÄ¿ÀÇ Ä§ÀÔ, ÄÄÇ»ÅÍ ¹ÙÀÌ·¯½º ±âÅ¸ ÀÌ¿Í À¯»çÇÑ »çÁ¤À¸·Î ÀÎÇÑ È¸»ç ½Ã½ºÅÛÀÇ ÀÛµ¿ºÒ´É ±âÅ¸ È¸»çÀÇ ±ÍÃ¥ »çÀ¯ ¾øÀÌ È¸»ç°¡ ¼­ºñ½º¸¦ Á¦°øÇÒ ¼ö ¾ø´Â °æ¿ì È¸»ç´Â ±×·Î ÀÎÇÑ Ã¥ÀÓÀ» ¸éÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ íšŒì‚¬ëŠ” ì´ìš©ê³ ê°ì´ íšŒì‚¬ì˜ ì„œë¹„ìŠ¤ë¡œë¶€í„° ê¸°ëŒ€í•˜ëŠ” ì´ìµì„ ì–»ì§€ ëª»í•˜ê±°ë‚˜ ì œê³µëœ ìžë£Œì— ëŒ€í•œ ì·¨ì‚¬ì„ íƒ ë˜ëŠ” ì´ìš©ìœ¼ë¡œ ë°œìƒí•˜ëŠ” ì†í•´ ë“±ì— ëŒ€í•´ì„œëŠ” ì±…ìž„ì´ ë©´ì œë©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨è È¸»ç´Â ÀÌ¿ë°í°´ÀÌ È¸»çÀÇ ¼­ºñ½º·ÎºÎÅÍ ±â´ëÇÏ´Â ÀÌÀÍÀ» ¾òÁö ¸øÇÏ°Å³ª Á¦°øµÈ ÀÚ·á¿¡ ´ëÇÑ Ãë»ç¼±ÅÃ ¶Ç´Â ÀÌ¿ëÀ¸·Î ¹ß»ýÇÏ´Â ¼ÕÇØ µî¿¡ ´ëÇØ¼­´Â Ã¥ÀÓÀÌ ¸éÁ¦µË´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¢ íšŒì‚¬ëŠ” íšŒì›ì´ ê²Œì‹œ, ì „ì†¡í•œ ì •ë³´ ë˜ëŠ” ìžë£Œì˜ ë‚´ìš©ê³¼ ê´€ë ¨í•˜ì—¬ì„œëŠ” ì±…ìž„ì„ ë¶€ë‹´í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨é È¸»ç´Â È¸¿øÀÌ °Ô½Ã, Àü¼ÛÇÑ Á¤º¸ ¶Ç´Â ÀÚ·áÀÇ ³»¿ë°ú °ü·ÃÇÏ¿©¼­´Â Ã¥ÀÓÀ» ºÎ´ãÇÏÁö ¾Ê½À´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘£ íšŒì‚¬ëŠ” íšŒì› ìƒí˜¸ê°„ ë˜ëŠ” íšŒì›ê³¼ ì œ3ìž ìƒí˜¸ê°„ì— ì„œë¹„ìŠ¤ë¥¼ ë§¤ê°œí•¨ìœ¼ë¡œ ê·¸ë“¤ ì‚¬ì´ì— ë°œìƒí•œ ë¶„ìŸì— ê´€ì—¬í•  ì˜ë¬´ê°€ ì—†ìœ¼ë©°, ì´ë¡œ ì¸í•œ ì–´ë– í•œ ì†í•´ë„ ë°°ìƒí•  ì±…ìž„ì´ ì—†ìŠµë‹ˆë‹¤. </p>
+                    <p class="list_txt">¨ê È¸»ç´Â È¸¿ø »óÈ£°£ ¶Ç´Â È¸¿ø°ú Á¦3ÀÚ »óÈ£°£¿¡ ¼­ºñ½º¸¦ ¸Å°³ÇÔÀ¸·Î ±×µé »çÀÌ¿¡ ¹ß»ýÇÑ ºÐÀï¿¡ °ü¿©ÇÒ ÀÇ¹«°¡ ¾øÀ¸¸ç, ÀÌ·Î ÀÎÇÑ ¾î¶°ÇÑ ¼ÕÇØµµ ¹è»óÇÒ Ã¥ÀÓÀÌ ¾ø½À´Ï´Ù. </p>
                 </li>
             </ol>
         </div>
-        <!-- //21ì¡° -->
-        <!-- 22ì¡° -->
+        <!-- //21Á¶ -->
+        <!-- 22Á¶ -->
         <div class="ag_list">
-            <h4 class="h4_tit">ì œ 22 ì¡° (ë¶„ìŸì˜ í•´ê²°)</h4>
+            <h4 class="h4_tit">Á¦ 22 Á¶ (ºÐÀïÀÇ ÇØ°á)</h4>
             <ol class="o_st_01">
                 <li>
-                    <p class="list_txt">â‘  íšŒì‚¬ì™€ íšŒì›ì€ ì„œë¹„ìŠ¤ì™€ ê´€ë ¨í•˜ì—¬ ë°œìƒí•œ ë¶„ìŸì„ ì›ë§Œí•˜ê²Œ í•´ê²°í•˜ê¸° ìœ„í•˜ì—¬ í•„ìš”í•œ ëª¨ë“  ë…¸ë ¥ì„ í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.</p>
+                    <p class="list_txt">¨ç È¸»ç¿Í È¸¿øÀº ¼­ºñ½º¿Í °ü·ÃÇÏ¿© ¹ß»ýÇÑ ºÐÀïÀ» ¿ø¸¸ÇÏ°Ô ÇØ°áÇÏ±â À§ÇÏ¿© ÇÊ¿äÇÑ ¸ðµç ³ë·ÂÀ» ÇÏ¿©¾ß ÇÕ´Ï´Ù.</p>
                 </li>
                 <li>
-                    <p class="list_txt">â‘¡ ì œ1í•­ì˜ ê·œì •ì—ë„ ë¶ˆêµ¬í•˜ê³  íšŒì‚¬ì™€ íšŒì› ì‚¬ì´ì— ì†Œì†¡ì´ ì œê¸°ë  ê²½ìš°, ì†Œì†¡ì€ íšŒì‚¬ì˜ ë³¸ì‚¬ ì†Œìž¬ì§€ë¥¼ ê´€í• í•˜ëŠ” ë²•ì›ì„ ê´€í• ë²•ì›ìœ¼ë¡œ í•©ë‹ˆë‹¤</p>
+                    <p class="list_txt">¨è Á¦1Ç×ÀÇ ±ÔÁ¤¿¡µµ ºÒ±¸ÇÏ°í È¸»ç¿Í È¸¿ø »çÀÌ¿¡ ¼Ò¼ÛÀÌ Á¦±âµÉ °æ¿ì, ¼Ò¼ÛÀº È¸»çÀÇ º»»ç ¼ÒÀçÁö¸¦ °üÇÒÇÏ´Â ¹ý¿øÀ» °üÇÒ¹ý¿øÀ¸·Î ÇÕ´Ï´Ù</p>
                 </li>
             </ol>
         </div>
-        <!-- //22ì¡° -->
+        <!-- //22Á¶ -->
     </div>
     <!-- //list05 -->
 </div>
-<!-- //ì´ìš©ì•½ê´€ cont --></div>
+<!-- //ÀÌ¿ë¾à°ü cont --></div>
 
-                        <!-- ë™ì˜ -->
+                        <!-- µ¿ÀÇ -->
                         <span class="form checkbox">
                             <input type="checkbox" id="agree_use" name="agree_use" value="Y">
-                            <label for="agree_use">ë™ì˜í•©ë‹ˆë‹¤</label>
-                            <span class="ck_txt">(í•„ìˆ˜)</span>
+                            <label for="agree_use">µ¿ÀÇÇÕ´Ï´Ù</label>
+                            <span class="ck_txt">(ÇÊ¼ö)</span>
                         </span>
-                        <!-- //ë™ì˜ -->
+                        <!-- //µ¿ÀÇ -->
                     </div>
 
-                    <h4 class="h4_tit prive">ê°œì¸ì •ë³´ ìˆ˜ì§‘ ë° í™œìš©ë™ì˜</h4>
+                    <h4 class="h4_tit prive">°³ÀÎÁ¤º¸ ¼öÁý ¹× È°¿ëµ¿ÀÇ</h4>
                     <div class="textarea_wrap">
                         <div class="cont_area">
-                            <!-- ê°œì¸ì •ë³´ cont -->
+                            <!-- °³ÀÎÁ¤º¸ cont -->
 <div class="agree_cont" style="white-space: pre-line">
-    1. ìˆ˜ì§‘ëª©ì  : íšŒì›ê°€ìž…, ìƒë‹´, ì„œë¹„ìŠ¤ ì‹ ì²­ ë“±
+    1. ¼öÁý¸ñÀû : È¸¿ø°¡ÀÔ, »ó´ã, ¼­ºñ½º ½ÅÃ» µî
 
-    2. ìˆ˜ì§‘í•˜ëŠ” ê°œì¸ì •ë³´ í•­ëª©
-    - í•„ìˆ˜í•­ëª© : ì„±ëª…, ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸, íœ´ëŒ€í°ë²ˆí˜¸, ì´ë©”ì¼
-    - ì„ íƒí•­ëª© : ì—†ìŒ
+    2. ¼öÁýÇÏ´Â °³ÀÎÁ¤º¸ Ç×¸ñ
+    - ÇÊ¼öÇ×¸ñ : ¼º¸í, ¾ÆÀÌµð, ºñ¹Ð¹øÈ£, ÈÞ´ëÆù¹øÈ£, ÀÌ¸ÞÀÏ
+    - ¼±ÅÃÇ×¸ñ : ¾øÀ½
 
-    3. ë³´ìœ ê¸°ê°„ : íšŒì› íƒˆí‡´ì‹œ
+    3. º¸À¯±â°£ : È¸¿ø Å»Åð½Ã
 
-    4. ê°œì¸ì •ë³´ì£¼ì²´ìžëŠ” ê°œì¸ì •ë³´ ìˆ˜ì§‘ ë° ì´ìš©ì— ëŒ€í•œ ë™ì˜ë¥¼ ê±°ë¶€í•  ê¶Œë¦¬ê°€ ìžˆìŠµë‹ˆë‹¤. ë™ì˜ë¥¼ ê±°ë¶€í•  ê²½ìš° ì›í™œí•œ ì„œë¹„ìŠ¤ ì´ìš©ì´ ë¶ˆê°€í•¨ì„ ì•Œë ¤ë“œë¦½ë‹ˆë‹¤.
+    4. °³ÀÎÁ¤º¸ÁÖÃ¼ÀÚ´Â °³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë¿¡ ´ëÇÑ µ¿ÀÇ¸¦ °ÅºÎÇÒ ±Ç¸®°¡ ÀÖ½À´Ï´Ù. µ¿ÀÇ¸¦ °ÅºÎÇÒ °æ¿ì ¿øÈ°ÇÑ ¼­ºñ½º ÀÌ¿ëÀÌ ºÒ°¡ÇÔÀ» ¾Ë·Áµå¸³´Ï´Ù.
 </div>
-<!-- //ê°œì¸ì •ë³´ cont --></div>
-                        <!-- ë™ì˜ -->
+<!-- //°³ÀÎÁ¤º¸ cont --></div>
+                        <!-- µ¿ÀÇ -->
                         <span class="form checkbox">
                             <input type="checkbox" id="agree_personal" name="agree_personal" value="Y">
-                            <label for="agree_personal">ë™ì˜í•©ë‹ˆë‹¤</label>
-                            <span class="ck_txt">(í•„ìˆ˜)</span>
+                            <label for="agree_personal">µ¿ÀÇÇÕ´Ï´Ù</label>
+                            <span class="ck_txt">(ÇÊ¼ö)</span>
                         </span>
-                        <!-- //ë™ì˜ -->
+                        <!-- //µ¿ÀÇ -->
                     </div>
-                    <h4 class="h4_tit prive">ë§ˆì¼€íŒ… í™œìš©ëª©ì  ë™ì˜</h4>
+                    <h4 class="h4_tit prive">¸¶ÄÉÆÃ È°¿ë¸ñÀû µ¿ÀÇ</h4>
                     <div class="textarea_wrap">
                          <div class="cont_area">
-                             <!-- ê°œì¸ì •ë³´ cont -->
+                             <!-- °³ÀÎÁ¤º¸ cont -->
 <div class="agree_cont" style="white-space: pre-line">
-    1. ìˆ˜ì§‘ëª©ì  : ì‹ ê·œ ì„œë¹„ìŠ¤(ì œí’ˆ) ê°œë°œ ë° ë§žì¶¤ ì„œë¹„ìŠ¤ ì œê³µ, ì´ë²¤íŠ¸ ë‹¹ì²¨ ì‹œ ì•ˆë‚´ ë“±ì„ ëª©ì ìœ¼ë¡œ ê°œì¸ì •ë³´ë¥¼ ì²˜ë¦¬í•©ë‹ˆë‹¤.
+    1. ¼öÁý¸ñÀû : ½Å±Ô ¼­ºñ½º(Á¦Ç°) °³¹ß ¹× ¸ÂÃã ¼­ºñ½º Á¦°ø, ÀÌº¥Æ® ´çÃ· ½Ã ¾È³» µîÀ» ¸ñÀûÀ¸·Î °³ÀÎÁ¤º¸¸¦ Ã³¸®ÇÕ´Ï´Ù.
 
-    2. ë§ˆì¼€íŒ… ë° ê´‘ê³ ì—ì˜ í™œìš©
-    - í•„ìˆ˜í•­ëª© : ì„±ëª…, ì´ë©”ì¼, ì„œë¹„ìŠ¤ ì´ìš© ê¸°ë¡, ì ‘ì† ë¡œê·¸, ì¿ í‚¤, ì ‘ì† IP ì •ë³´
-    - ì„ íƒí•­ëª© : íœ´ëŒ€í°ë²ˆí˜¸
+    2. ¸¶ÄÉÆÃ ¹× ±¤°í¿¡ÀÇ È°¿ë
+    - ÇÊ¼öÇ×¸ñ : ¼º¸í, ÀÌ¸ÞÀÏ, ¼­ºñ½º ÀÌ¿ë ±â·Ï, Á¢¼Ó ·Î±×, ÄíÅ°, Á¢¼Ó IP Á¤º¸
+    - ¼±ÅÃÇ×¸ñ : ÈÞ´ëÆù¹øÈ£
 
-    3. ë³´ìœ ê¸°ê°„ : íšŒì› íƒˆí‡´ ì‹œ ê¹Œì§€ ë³´ìœ 
+    3. º¸À¯±â°£ : È¸¿ø Å»Åð ½Ã ±îÁö º¸À¯
 
-    4. ë§ˆì¼€íŒ…ì— í™œìš©í•˜ëŠ” ëª©ì  ë²”ìœ„ ë‚´ì—ì„œ ê°œì¸ì •ë³´ë¥¼ ì´ìš©í•˜ë©°, ë™ ë²”ìœ„ë¥¼ ì´ˆê³¼í•˜ì—¬ ê°œì¸ì •ë³´ë¥¼ ì´ìš©í•˜ê±°ë‚˜ ì œ 3 ìžì—ê²Œ ì œê³µ, ê³µê°œí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+    4. ¸¶ÄÉÆÃ¿¡ È°¿ëÇÏ´Â ¸ñÀû ¹üÀ§ ³»¿¡¼­ °³ÀÎÁ¤º¸¸¦ ÀÌ¿ëÇÏ¸ç, µ¿ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© °³ÀÎÁ¤º¸¸¦ ÀÌ¿ëÇÏ°Å³ª Á¦ 3 ÀÚ¿¡°Ô Á¦°ø, °ø°³ÇÏÁö ¾Ê½À´Ï´Ù.
 </div>
-<!-- //ê°œì¸ì •ë³´ cont --></div>
-                        <!-- ë™ì˜ -->
+<!-- //°³ÀÎÁ¤º¸ cont --></div>
+                        <!-- µ¿ÀÇ -->
                         <span class="form checkbox">
                             <input type="checkbox" id="agree_3rd" name="agree_3rd" value="Y">
-                            <label for="agree_3rd">ë™ì˜í•©ë‹ˆë‹¤</label>
-                            <span class="ck_txt">(ì„ íƒ)</span>
+                            <label for="agree_3rd">µ¿ÀÇÇÕ´Ï´Ù</label>
+                            <span class="ck_txt">(¼±ÅÃ)</span>
                         </span>
-                            <!-- //ë™ì˜ -->
+                            <!-- //µ¿ÀÇ -->
                     </div>
                     <div>
 <input type="hidden" name="_csrf" value="4a6b1751-f4cf-4dee-af18-69d93735802e" />
-</div></form><!-- ì „ì²´ë™ì˜ -->
+</div></form><!-- ÀüÃ¼µ¿ÀÇ -->
                     <div class="all_check_wrap">
                         <span class="form checkbox pa_01">
                             <input type="checkbox" id="allchk" onclick="allchk();">
-                            <label for="allchk">ìœ„ ì•½ê´€ì— ëª¨ë‘ ë™ì˜í•©ë‹ˆë‹¤</label>
+                            <label for="allchk">À§ ¾à°ü¿¡ ¸ðµÎ µ¿ÀÇÇÕ´Ï´Ù</label>
                         </span>
                         <!-- btn -->
                         <div class="btn_wrap pa_01">
-                            <span class="btn btn_st03"><a href="javascript:nextStep();" class="c_01">ë‹¤ìŒ</a></span>
+                            <span class="btn btn_st03"><a href="javascript:nextStep();" class="c_01">´ÙÀ½</a></span>
                         </div>
                         <!--// btn -->
                     </div>
-                    <!--// ì „ì²´ë™ì˜ -->
+                    <!--// ÀüÃ¼µ¿ÀÇ -->
                 </div>
                 <!-- //join_right -->
             </div>
         </div>
-        <!-- //íšŒì›ê°€ìž…_ì•½ê´€ë™ì˜ -->
+        <!-- //È¸¿ø°¡ÀÔ_¾à°üµ¿ÀÇ -->
     </section>
 </div>
 
@@ -867,7 +858,7 @@
 
     });
 
-    // ëª¨ë‘ ë™ì˜
+    // ¸ðµÎ µ¿ÀÇ
     function allchk(){
         if($("#allchk").is(":checked")){
             $("#joinForm :checkbox").prop("checked", true);
@@ -876,16 +867,16 @@
         }
     }
 
-    // ë‹¤ìŒ
+    // ´ÙÀ½
     function nextStep(){
         if(!$("#agree_use").is(":checked")){
-            alert("ì´ìš©ì•½ê´€ì— ë™ì˜í•´ ì£¼ì„¸ìš”.");
+            alert("ÀÌ¿ë¾à°ü¿¡ µ¿ÀÇÇØ ÁÖ¼¼¿ä.");
             $("#agree_use").focus();
             return;
         }
 
         if(!$("#agree_personal").is(":checked")){
-            alert("ê°œì¸ì •ë³´ ë³´í˜¸ì •ì±…ì— ë™ì˜í•´ ì£¼ì„¸ìš”.");
+            alert("°³ÀÎÁ¤º¸ º¸È£Á¤Ã¥¿¡ µ¿ÀÇÇØ ÁÖ¼¼¿ä.");
             $("#agree_personal").focus();
             return;
         }
@@ -894,7 +885,7 @@
 
 
       /*if(!$("#agree_3rd").is(":checked")){
-        alert("ë§ˆì¼€íŒ… í™œìš©ëª©ì ì— ë™ì˜í•´ ì£¼ì„¸ìš”.");
+        alert("¸¶ÄÉÆÃ È°¿ë¸ñÀû¿¡ µ¿ÀÇÇØ ÁÖ¼¼¿ä.");
         $("#agree_3rd").focus();
         return;
       }*/
@@ -923,42 +914,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">ì¸ìž¬ì±„ìš©</a></li>
-                <li class="off"><a href="../footer/partners.jsp">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">ê³µì§€ì‚¬í•­</a></li>
-                <li><a href="../footer/faq_list.jsp">ê³ ê° ì„¼í„°</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
-                <li><a href="../footer/agreement.jsp">ì´ìš©ì•½ê´€</a></li>
+                <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
+                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
+                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
+                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
+                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
-                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
-                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
+                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
-                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
-                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
+                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
+                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
+                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
+                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
-                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
+                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
+                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -966,15 +957,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
+                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
+                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
+                                <dt>´ÜÃ¼ÁÖ¹®</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -983,11 +974,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

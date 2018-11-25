@@ -17,10 +17,10 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="6c2568a4-599f-481b-8bf7-b42ae0626cec" /><title>사회공헌활동</title>
 
-    <link rel="icon" href="/assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -43,33 +43,30 @@
     }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
-
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
-
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
-
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -97,7 +94,7 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.hansot.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.hansot.css"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
@@ -156,11 +153,12 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="join.do">회원가입</a>
                     </li>
+
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
                 </li>
@@ -182,26 +180,23 @@
             <section id="gnb" class="area_gnb mo_version">
                 <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="/login">로그인</a>
-                            </li>
-                        <li>
-                            <a href="/join/join_step1">회원가입</a>
-                            </li>
-                    </ul>
-                </div>
+							<ul>
+								<li><a href="login.do">로그인</a></li>
+								<li><a href="join.do">회원가입</a></li>
+
+							</ul>
+						</div>
                 <!-- //모바일 로그인/회원가입 -->
 
-                <div class="gnb_menu">
+               <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/story.jsp">브랜드 스토리</a></li>
-                                    <li><a href="../brand/philosophy.jsp">브랜드 철학</a></li>
-                                    <li><a href="../brand/legacy.jsp">브랜드 유산</a></li>
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -209,10 +204,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/esg.jsp">ESG경영이란?</a></li>
-                                    <li><a href="../brand/philosophy.jsp">환경보호(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">사회공헌(Social)</a></li>
-                                    <li><a href="../brand/esg.jsp">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -221,10 +216,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">전체메뉴</a></li>
-                                    <li><a href="../menu/material.jsp">식재료 이야기</a></li>
-                                    <li><a href="../menu/chancha.jsp">페루찬차마요커피</a></li>
-                                    <li><a href="../menu/menu_order.jsp">단체 주문</a></li>
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -232,7 +227,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">주변점포찾기</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -240,8 +235,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">이 달의 이벤트</a></li>
-                                    <li><a href="../event/store_event_list.jsp">신규점 오픈이벤트</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -249,12 +244,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why 한솥 가맹점</a></li>
-                                    <li><a href="../franchise/success.jsp">성공수기</a></li>
-                                    <li><a href="../franchise/process.jsp">창업개설절차</a></li>
-                                    <li><a href="../franchise/calc.jsp">예상 창업 비용</a></li>
-                                    <li><a href="../franchise/qna.jsp">창업문의</a></li>
-                                    <li><a href="../franchise/briefing.jsp">창업설명회 일정·신청</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -262,13 +257,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">한솥의 약속</a></li>
-                                    <li><a href="../hansot/vision.jsp">한솥의 비전</a></li>
-                                    <li><a href="../hansot/history.jsp">연혁&amp;수상</a></li>
-                                    <li><a href="../hansot/news_list.jsp">한솥 NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">오시는 길</a></li>
-                                    <li><a href="../footer/faq_list.jsp">고객센터</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">인재채용</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -329,7 +324,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_10.jpg" alt="다운복지관 도시락 후원" />
+                                        <img src="assets/images/hansot/so_img_10.jpg" alt="다운복지관 도시락 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">다운복지관 도시락 후원</h3>
@@ -354,7 +349,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_11.jpg" alt="혜심원 후원" />
+                                        <img src="assets/images/hansot/so_img_11.jpg" alt="혜심원 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">혜심원 후원</h3>
@@ -379,7 +374,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_08.jpg" alt="사랑의 쌀 나눔운동본부" />
+                                        <img src="assets/images/hansot/so_img_08.jpg" alt="사랑의 쌀 나눔운동본부" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">사랑의 쌀 나눔운동본부 후원</h3>
@@ -404,7 +399,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_07.jpg" alt="강남복지재단" />
+                                        <img src="assets/images/hansot/so_img_07.jpg" alt="강남복지재단" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">강남복지재단 후원</h3>
@@ -429,7 +424,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_01.jpg" alt="사랑의 열매" />
+                                        <img src="assets/images/hansot/so_img_01.jpg" alt="사랑의 열매" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">사회복지공동모금회 사랑의열매 후원</h3>
@@ -465,7 +460,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_02.jpg" alt="삼성서울병원 후원" /><!-- 2017.10.26 텍스트 수정 -->
+                                        <img src="assets/images/hansot/so_img_02.jpg" alt="삼성서울병원 후원" /><!-- 2017.10.26 텍스트 수정 -->
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">삼성서울병원 후원</h3>
@@ -491,7 +486,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_03.jpg" alt="세브란스" />
+                                        <img src="assets/images/hansot/so_img_03.jpg" alt="세브란스" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">연세의료원 후원</h3>
@@ -516,7 +511,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_04.jpg" alt="서울아산병원 후원" />
+                                        <img src="assets/images/hansot/so_img_04.jpg" alt="서울아산병원 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">서울아산병원 후원</h3>
@@ -541,7 +536,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_05.jpg" alt="국립암센터" />
+                                        <img src="assets/images/hansot/so_img_05.jpg" alt="국립암센터" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">국립암센터 후원</h3>
@@ -573,7 +568,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_06.jpg" alt="서울대학교" />
+                                        <img src="assets/images/hansot/so_img_06.jpg" alt="서울대학교" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">서울대학교 후원</h3>
@@ -605,7 +600,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_14.JPG" alt="서울로 7017 공감나눔 축제" />
+                                        <img src="assets/images/hansot/so_img_14.JPG" alt="서울로 7017 공감나눔 축제" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">서울로 7017 공감나눔 축제</h3>
@@ -631,7 +626,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_15.JPG" alt="대한적십자사" />
+                                        <img src="assets/images/hansot/so_img_15.JPG" alt="대한적십자사" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">대한적십자사</h3>
@@ -657,7 +652,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_12.jpg" alt="굿시즈 후원" />
+                                        <img src="assets/images/hansot/so_img_12.jpg" alt="굿시즈 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">굿시즈 후원</h3>
@@ -683,7 +678,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_09.jpg" alt="한일축제한마당 행사 후원" />
+                                        <img src="assets/images/hansot/so_img_09.jpg" alt="한일축제한마당 행사 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">한일축제한마당 행사 후원</h3>
@@ -709,7 +704,7 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="../assets/images/hansot/so_img_13.jpg" alt="페루찬차마요시 정흥원 사장 후원" />
+                                        <img src="assets/images/hansot/so_img_13.jpg" alt="페루찬차마요시 정흥원 사장 후원" />
                                     </div>
                                     <div class="news_txt">
                                         <h3 class="h3_tit fz_02">페루찬차마요시 정흥원 사장 후원</h3>
@@ -747,10 +742,10 @@
     <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="../brand/story.jsp" class="more_link"></a>
+            <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_story.jpg" alt="브랜드 스토리" />
+                    <img src="assets/images/common/more_story.jpg" alt="브랜드 스토리" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">브랜드 스토리</h3>
@@ -759,10 +754,10 @@
             </figure>
         </li>
         <li>
-            <a href="../brand/philosophy.jsp" class="more_link"></a>
+            <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_philosophy.jpg" alt="브랜드 철학" />
+                    <img src="assets/images/common/more_philosophy.jpg" alt="브랜드 철학" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">브랜드 철학</h3>
@@ -771,10 +766,10 @@
             </figure>
         </li>
         <li>
-            <a href="../brand/legacy.jsp" class="more_link"></a>
+            <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_legacy.jpg" alt="브랜드 유산" />
+                    <img src="assets/images/common/more_legacy.jpg" alt="브랜드 유산" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">브랜드 유산</h3>
@@ -797,12 +792,12 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">인재채용</a></li>
-                <li class="off"><a href="../footer/partners.jsp">협력업체등록</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">공지사항</a></li>
-                <li><a href="../footer/faq_list.jsp">고객 센터</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="../footer/agreement.jsp">이용약관</a></li>
+               <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
             </ul>
         </div>
         <!--// family goods -->

@@ -63,7 +63,7 @@ import etc.ActionForward;
 			   } catch (Exception e) {
 				   e.printStackTrace();
 			   }
-				
+			   		
 		   }else if(command.equals("/join2.do")){
 			   
 			   forward=new ActionForward();
@@ -80,6 +80,7 @@ import etc.ActionForward;
 				   e.printStackTrace();
 			   }
 		   }
+		   
 		   
 		   
 		   if(forward.isRedirect()){

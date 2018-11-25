@@ -16,49 +16,141 @@ import command.Command_order;
  */
 @WebServlet("*.go")
 public class FrontController_pageGo extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-	public FrontController_pageGo() {
-	}
+   public FrontController_pageGo() {
+   }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		System.out.println("doGet");
-		goPage(request, response);
-	}
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      System.out.println("doGet");
+      goPage(request, response);
+   }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		System.out.println("doPost");
-		goPage(request, response);
+   protected void doPost(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      System.out.println("doPost");
+      goPage(request, response);
 
-	}
+   }
 
-	public void goPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   public void goPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String forward = null;
-		
-		String uri = request.getRequestURI();
-		String contextPath = request.getContextPath();
-		String com = uri.substring(contextPath.length());
+      String forward = null;
+      
+      String uri = request.getRequestURI();
+      String contextPath = request.getContextPath();
+      String com = uri.substring(contextPath.length());
 
-		System.out.println("go to " + com);
+      System.out.println("go to " + com);
 
-		if (com.equals("/join1.go")) {
-			
-			forward = "/join/join1.jsp";
+      if (com.equals("/join1.go")) {
+         
+         forward = "/join/join1.jsp";
+      }
+      
+      //brand
+      if (com.equals("/esg.go")) {
+    	  forward = "/brand/esg.jsp";
+    	  
+      }else if(com.equals("/legacy.go")) {
+    	  forward = "/brand/legacy.jsp";
+    	  
+      }else if(com.equals("/philosophy.go")) {
+    	  forward = "/brand/philosophy.jsp";
+    	  
+      }else if(com.equals("/story.go")) {
+    	  forward = "/brand/story.jsp";
+      }
+      
+      //event
+      if (com.equals("/event_list.go")) {
+    	  forward = "/event/event_list.jsp";
+    	 
+      }else if(com.equals("/store_event_list.go")) {
+    	  forward = "/event/store_event_list.jsp";
+    	  
+      }
+      //footer - ªÊª·
+      
+      //franchise
+      if (com.equals("/briefing.go")) {
+    	  forward = "/franchise/briefing.jsp";//attention
+    	  
+      }else if(com.equals("/calc.go")) {
+    	  forward = "/franchise/calc.jsp";
+    	  
+      }else if(com.equals("/hansot_store.go")) {
+    	  forward = "/franchise/hansot_store.jsp";
+    	  
+      }else if(com.equals("/process.go")) {
+    	  forward = "/franchise/process.jsp";
+    	  
+      }else if(com.equals("/qna.go")) {
+    	  forward = "/franchise/qna.jsp";//attention
+    	  
+      }else if(com.equals("/success.go")) {
+    	  forward = "/franchise/success.jsp";
+     
+      }
+      
+      //hansot
+      if(com.equals("/award.go")) {
+    	  forward = "/hansot/award.jsp";
+    	  
+      }else if(com.equals("/history.go")) {
+    	  forward = "/hansot/history.jsp";
+    	  
+      }else if(com.equals("/location.go")) {
+    	  forward = "/hansot/location.jsp";
+      
+      }else if(com.equals("/news_list.go")) {
+    	  forward = "/hansot/news_list.jsp";
+    	  
+      }else if(com.equals("/promise.go")) {
+    	  forward = "/hansot/promise.jsp";
+    	  
+      }else if(com.equals("/social.go")) {
+    	  forward = "/hansot/social.jsp";
+    			 
+      }else if(com.equals("/vision.go")) {
+    	  forward = "/hansot/vision.jsp";
+    	  
+      }
 
-		}
-		
-		
-		
-		
-		
-		RequestDispatcher dis = request.getRequestDispatcher(forward);
-		dis.forward(request, response);
-		
-		
+      //menu
+      if(com.equals("/chacha.go")) {
+    	  forward = "/menu/chacha.jsp";
+    	  
+      }else if(com.equals("/material.go")) {
+    	  forward = "/menu/material.jsp";
+    	  
+      }else if(com.equals("/menu_keyword.go")) {
+    	  forward = "/menu/menu_keyword.jsp";
+    	  
+      }else if(com.equals("/menu_list.go")) {
+    	  forward = "/menu/menu_list.jsp";
+    	  
+      }else if(com.equals("/menu_order.go")) {
+    	  forward = "/menu/menu_order.jsp";
+    	  
+      }//order_list, order Á¦¿Ü
+      
+      //store
+      if(com.equals("/store_find.go")) {
+    	  forward = "/store/store_find.jsp";
+      }
+      
+      //home
+      if(com.equals("/home.go")) {
+    	  forward = "home.jsp";
+    	  
+      }
+      RequestDispatcher dis = request.getRequestDispatcher(forward);
+      dis.forward(request, response);
+      
+      
 
-	}
+   }
 
 }

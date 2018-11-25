@@ -74,8 +74,6 @@ public class FrontController_order extends HttpServlet {
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
 		
-		
-		
 	}
 	
 	

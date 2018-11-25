@@ -18,10 +18,10 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3686d4d2-3095-4d0a-b475-9e59503b5982" /><title>한솥 NEWS</title>
 
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -44,33 +44,30 @@
     }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
-
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
-
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
-
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -98,7 +95,7 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.hansot.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.hansot.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
@@ -157,10 +154,10 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -177,32 +174,28 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">한솥</span></a></h1>
+                <h1><a href="home.go"><span class="blind">한솥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
                 <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="/login">로그인</a>
-                            </li>
-                        <li>
-                            <a href="/join/join_step1">회원가입</a>
-                            </li>
-                    </ul>
-                </div>
+							<ul>
+								<li><a href="login.do">로그인</a></li>
+								<li><a href="join.do">회원가입</a></li>
+							</ul>
+						</div>
                 <!-- //모바일 로그인/회원가입 -->
 
-                <div class="gnb_menu">
+                 <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="/brand/story">브랜드 스토리</a></li>
-                                    <li><a href="/brand/philosophy">브랜드 철학</a></li>
-                                    <li><a href="/brand/legacy">브랜드 유산</a></li>
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -210,10 +203,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="/brand/esg">ESG경영이란?</a></li>
-                                    <li><a href="/brand/philosophy">환경보호(Environment)</a></li>
-                                    <li><a href="/hansot/social">사회공헌(Social)</a></li>
-                                    <li><a href="/brand/esg">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -222,10 +215,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="/menu/menu_list">전체메뉴</a></li>
-                                    <li><a href="/menu/material">식재료 이야기</a></li>
-                                    <li><a href="/menu/chancha">페루찬차마요커피</a></li>
-                                    <li><a href="/menu/menu_order">단체 주문</a></li>
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -233,7 +226,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="/store/store_find">주변점포찾기</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -241,8 +234,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="/event/event_list">이 달의 이벤트</a></li>
-                                    <li><a href="/event/store_event_list">신규점 오픈이벤트</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -250,12 +243,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="/franchise/hansot_store">Why 한솥 가맹점</a></li>
-                                    <li><a href="/franchise/success">성공수기</a></li>
-                                    <li><a href="/franchise/process">창업개설절차</a></li>
-                                    <li><a href="/franchise/calc">예상 창업 비용</a></li>
-                                    <li><a href="/franchise/qna">창업문의</a></li>
-                                    <li><a href="/franchise/briefing">창업설명회 일정·신청</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -263,18 +256,19 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="/hansot/promise">한솥의 약속</a></li>
-                                    <li><a href="/hansot/vision">한솥의 비전</a></li>
-                                    <li><a href="/hansot/history">연혁&amp;수상</a></li>
-                                    <li><a href="/hansot/news_list">한솥 NEWS</a></li>
-                                    <li><a href="/hansot/location">오시는 길</a></li>
-                                    <li><a href="/footer/faq_list">고객센터</a></li>
-                                    <li class="h_last"><a href="/footer/incruit">인재채용</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
@@ -456,12 +450,12 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="/footer/incruit">인재채용</a></li>
-                <li class="off"><a href="/footer/partners">협력업체등록</a></li>
-                <li class="mo_bl"><a href="/footer/notice_list">공지사항</a></li>
-                <li><a href="/footer/faq_list">고객 센터</a></li>
-                <li class="mo_bl"><a href="/footer/policy"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="/footer/agreement">이용약관</a></li>
+                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
             </ul>
         </div>
         <!--// family goods -->

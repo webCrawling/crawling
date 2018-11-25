@@ -29,7 +29,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="한솥 웹사이트 클론" />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="../assets/images/brand/brand_m_visual_01.jpg" />
+    <meta property="og:image" content="assets/images/brand/brand_m_visual_01.jpg" />
     <meta property="og:description" content="3조가 만들었다!" />
    
 	<!--
@@ -46,11 +46,11 @@
     rel 속성:현재문서와 연결문서의 관계 
     type 속성:연결문서의 타입(content type) 
      -->
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/ui.brand.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css" />
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/ui.brand.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
      <!-- 
     <style>태그를 사용해서 css 코드 작성하기
       -->
@@ -83,30 +83,30 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
 (src에 있는 파일을 읽은 후 페이지로딩 그래서 js파일로드하는것을 페이지 마지막에서 하는 걸 권장한다.) 
  -->
  
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -131,7 +131,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
     });
 </script>
 
-    <script type="text/javascript" src="../assets/js/jquery.viewportchecker.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics 
     async 속성 : 스크립트의 비동기 실행
@@ -197,10 +197,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -225,10 +225,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="/login">로그인</a>
+                            <a href="login.do">로그인</a>
                             </li>
                         <li>
-                            <a href="/join/join_step1">회원가입</a>
+                            <a href="join.do">회원가입</a>
                             </li>
                     </ul>
                 </div>
@@ -240,9 +240,9 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./story.jsp">브랜드 스토리</a></li>
-                                    <li><a href="philosophy.jsp">브랜드 철학</a></li>
-                                    <li><a href="./legacy.jsp">브랜드 유산</a></li>
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -250,10 +250,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./esg.jsp">ESG경영이란?</a></li>
-                                    <li><a href="./philosophy.jsp">환경보호(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">사회공헌(Social)</a></li>
-                                    <li><a href="./esg.jsp">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -262,10 +262,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">전체메뉴</a></li>
-                                    <li><a href="../menu/material.jsp">식재료 이야기</a></li>
-                                    <li><a href="../menu/chancha.jsp">페루찬차마요커피</a></li>
-                                    <li><a href="../menu/menu_order.jsp">단체 주문</a></li>
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -273,7 +273,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">주변점포찾기</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -281,8 +281,8 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">이 달의 이벤트</a></li>
-                                    <li><a href="../event/store_event_list.jsp">신규점 오픈이벤트</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -290,12 +290,12 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why 한솥 가맹점</a></li>
-                                    <li><a href="../franchise/success.jsp">성공수기</a></li>
-                                    <li><a href="../franchise/process.jsp">창업개설절차</a></li>
-                                    <li><a href="../franchise/calc.jsp">예상 창업 비용</a></li>
-                                    <li><a href="../franchise/qna.jsp">창업문의</a></li>
-                                    <li><a href="../franchise/briefing.jsp">창업설명회 일정·신청</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -303,13 +303,13 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">한솥의 약속</a></li>
-                                    <li><a href="../hansot/vision.jsp">한솥의 비전</a></li>
-                                    <li><a href="../hansot/history.jsp">연혁&amp;수상</a></li>
-                                    <li><a href="../hansot/news_list.jsp">한솥 NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">오시는 길</a></li>
-                                    <li><a href="../footer/faq_list.jsp">고객센터</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">인재채용</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -372,7 +372,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="../assets/images/brand/bg_legacy_01.png" alt="지구 50바퀴">
+                        <img src="assets/images/brand/bg_legacy_01.png" alt="지구 50바퀴">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
@@ -394,7 +394,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="../assets/images/brand/bg_legacy_02.png" alt="온 국민이 3그릇 씩">
+                        <img src="assets/images/brand/bg_legacy_02.png" alt="온 국민이 3그릇 씩">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
@@ -415,7 +415,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="../assets/images/brand/bg_legacy_03.png" alt="3년 2개월">
+                        <img src="assets/images/brand/bg_legacy_03.png" alt="3년 2개월">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
@@ -436,7 +436,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="../assets/images/brand/bg_legacy_04.png" alt="200여종의 메뉴 출시">
+                        <img src="assets/images/brand/bg_legacy_04.png" alt="200여종의 메뉴 출시">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
@@ -461,10 +461,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
     <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="../hansot/vision.jsp" class="more_link"></a>
+            <a href="hansot/vision.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_vision.jpg" alt="한솥의 비전" />
+                    <img src="assets/images/common/more_vision.jpg" alt="한솥의 비전" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥의 비전</h3>
@@ -473,10 +473,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             </figure>
         </li>
         <li>
-            <a href="../hansot/promise.jsp" class="more_link"></a>
+            <a href="hansot/promise.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
+                    <img src="assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥의 약속</h3>
@@ -485,10 +485,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             </figure>
         </li>
         <li>
-            <a href="../hansot/news_list.jsp" class="more_link"></a>
+            <a href="../hansot/news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_news.jpg" alt="한솥 NEWS" />
+                    <img src="assets/images/common/more_news.jpg" alt="한솥 NEWS" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥 NEWS</h3>
@@ -520,12 +520,12 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">인재채용</a></li>
-                <li class="off"><a href="../footer/partners.jsp">협력업체등록</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">공지사항</a></li>
-                <li><a href="../footer/faq_list.jsp">고객 센터</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="../footer/agreement.jsp">이용약관</a></li>
+                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
             </ul>
         </div>
         <!--// family goods -->

@@ -2,36 +2,30 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 
+
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-	
-    <meta charset=utf-8 />
-    
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
-    
+    <!-- SNS LINK -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="��쩌� �짜쨩챌���짰 �짭쨌�" />
+    <meta property="og:title" content="" />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="../assets/images/brand/brand_m_visual_01.jpg" />
-    <meta property="og:description" content="3�쨋째징 쨍쨍쨉챕쩐첬쨈�!" />
-   
-	
-    <meta name="��쩌�" content="��쩌�쨍�쨈쨘,��쨔짰" />
-    
-    <title>ESG 째챈쩔쨉</title>
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <!--// SNS LINK -->
 
-    
-   
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/ui.brand.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css" />
-    
-     
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="0731cdce-8c3e-4b56-bae3-706d37051ba0" /><title>ESG 경영</title>
+
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+<!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
+
 <style>
     .file_input {
         font-size:45px;
@@ -52,32 +46,30 @@
     }
 </style>
 
-
- 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -91,24 +83,24 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('쨌�짹����� ��쩔채��쨈�쨈�.')) {
+                if(tss.util.confirm('로그인이 필요합니다.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("쩔�쨌첫째징 쨔�쨩첵��쩍�쨈�쨈�.");
+                console.log("오류가 발생했습니다.");
             }
         });
     });
-</script>
+</script><script type="text/javascript">
+    </script>
 
-    <script type="text/javascript" src="../assets/js/jquery.viewportchecker.min.js"></script>
+    
 
-    <!-- Global site tag (gtag.js) - Google Analytics 
-    async 쩌�쩌쨘 : 쩍쨘�짤쨍쨀�짰�� 쨘챰쨉쩔짹창 쩍���
-     쨘챗쨋처쩔챙�첬째징 async 쩌�쩌쨘�쨩 쨍쨍쨀짧쨍챕 쩍쨘�짤쨍쨀�짰 쩍����쨩 쨉�쨌� 쨔�쨌챌째챠 쩔챙쩌짹 쩍쨘�짤쨍쨀�짰 ������ 쩌철쩍�째첬 HTML 쨔짰쩌짯�� ��쩍�쩔징 �첵����쨈�. 
-     쩔�쨘� 쩍쨘�짤쨍쨀�짰 ������ 쩌철쩍��� 쩔�쨌찼쨉�쩐첬�쨩 쨋짠 쩍쨘�짤쨍쨀�짰쨍짝 쩍���쩍��짼쨈�.
-    -->
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.brand.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -127,6 +119,7 @@
 
       gtag('config', 'AW-864658366');
     </script>
+
 
     <!-- kakao pixcel -->
     <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
@@ -147,16 +140,12 @@
         fbq('init', '241666853119648');
         fbq('track', 'PageView');
     </script>
-    <!-- 
-    noscript : 쩍쨘�짤쨍쨀�짰 쨔��철쩔첩�쨩 �짜쩍���쨈�
-     -->
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
 
 </head>
-
 <body ontouchstart>
 <!-- wrap s -->
 <div id="wrap" class="bg_w">
@@ -168,16 +157,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">쨌�짹���</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">�쨍쩔첩째징��</a>
+                    <a href="join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="쨩천 �짖 쩔짯쨍짼" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="쨩천 �짖 쩔짯쨍짼" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -188,32 +177,28 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="../home.jsp"><span class="blind">��쩌�</span></a></h1>
+                <h1><a href="home.go"><span class="blind">한솥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- 쨍챨쨔��� 쨌�짹���/�쨍쩔첩째징�� -->
+                <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="/login">쨌�짹���</a>
-                            </li>
-                        <li>
-                            <a href="/join/join_step1">�쨍쩔첩째징��</a>
-                            </li>
-                    </ul>
-                </div>
-                <!-- //쨍챨쨔��� 쨌�짹���/�쨍쩔첩째징�� -->
+							<ul>
+								<li><a href="login.do">로그인</a></li>
+								<li><a href="join.do">회원가입</a></li>
+							</ul>
+						</div>
+                <!-- //모바일 로그인/회원가입 -->
 
-                <div class="gnb_menu">
+                 <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./story.jsp">쨘챗쨌짙쨉책 쩍쨘�채쨍짰</a></li>
-                                    <li><a href="./philosophy.jsp">쨘챗쨌짙쨉책 �쨋��</a></li>
-                                    <li><a href="./legacy.jsp">쨘챗쨌짙쨉책 �짱쨩챗</a></li>
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -221,10 +206,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="./esg.jsp">ESG째챈쩔쨉��쨋천?</a></li>
-                                    <li><a href="./philosophy.jsp">�짱째챈쨘쨍�짙(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">쨩챌�쨍째첩�책(Social)</a></li>
-                                    <li><a href="./esg.jsp">�짹쨍짰째챈쩔쨉(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -233,10 +218,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">�체�쩌쨍�쨈쨘</a></li>
-                                    <li><a href="../menu/material.jsp">쩍��챌쨌찼 ��쩐�짹창</a></li>
-                                    <li><a href="../menu/chancha.jsp">�채쨌챌�첫�첨쨍쨋쩔채�쩔��</a></li>
-                                    <li><a href="../menu/menu_order.jsp">쨈��쩌 ��쨔짰</a></li>
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -244,7 +229,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">��쨘짱�징�첨�짙짹창</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -252,8 +237,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">�� 쨈��� ��쨘짜�짰</a></li>
-                                    <li><a href="../event/store_event_list.jsp">쩍�짹��징 쩔�����쨘짜�짰</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -261,12 +246,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why ��쩌� 째징쨍��징</a></li>
-                                    <li><a href="../franchise/success.jsp">쩌쨘째첩쩌철짹창</a></li>
-                                    <li><a href="../franchise/process.jsp">�짖쩐첨째쨀쩌쨀�첵�첨</a></li>
-                                    <li><a href="../franchise/calc.jsp">쩔쨔쨩처 �짖쩐첨 쨘챰쩔챘</a></li>
-                                    <li><a href="../franchise/qna.jsp">�짖쩐첨쨔짰��</a></li>
-                                    <li><a href="../franchise/briefing.jsp">�짖쩐첨쩌쨀쨍챠�쨍 ���짚징짚쩍��쨩</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -274,13 +259,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">��쩌��� 쩐�쩌�</a></li>
-                                    <li><a href="../hansot/vision.jsp">��쩌��� 쨘챰�체</a></li>
-                                    <li><a href="../hansot/history.jsp">쩔짭�천&amp;쩌철쨩처</a></li>
-                                    <li><a href="../hansot/news_list.jsp">��쩌� NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">쩔�쩍�쨈� 짹챈</a></li>
-                                    <li><a href="../footer/faq_list.jsp">째챠째쨈쩌쩐��</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">���챌�짚쩔챘</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -315,31 +300,31 @@
 <div class="content brand">
     <!-- group_order -->
     <section class="brand_esg">
-        <!-- 쨩처쨈�bg 쩔쨉쩔짧 -->
+        <!-- 상단bg 영역 -->
         <div class="brand_visual_wrap mo_tr">
             <div class="visual_bg"></div>
         </div>
-        <!-- //쨩처쨈�bg 쩔쨉쩔짧 -->
+        <!-- //상단bg 영역 -->
         <!-- section01 -->
         <div class="bs_wrap section_01">
-            <p class="menu_tit mo_version">ESG 째챈쩔쨉</p>
+            <p class="menu_tit mo_version">ESG 경영</p>
             <div class="bs_cont mo_tr">
-                <h2 class="h2_tit">��쩌��� ESG 째챈쩔쨉</h2>
+                <h2 class="h2_tit">한솥의 ESG 경영</h2>
                 <div class="bs_txt">
                     <p>
-                        ��쩌�쨉쨉쩍�쨋척�쨘 UN쩔징쩌짯 2015쨀창 째첩�첨�� SDGs(�철쩌�째징쨈�째쨀쨔�쨍챰�짜)쩔징 쨘�����쩔짤 짹창쩐첨�첨쩔첩쩔징쩌짯 쩍��쨉�� 쩔채짹쨍쨉�쨈� ESG 째챈쩔쨉쩔징 쨍��첩��쩔짤 쩔�쩍�쨈�쨈�.
+                        한솥도시락은 UN에서 2015년 공포한 SDGs(지속가능개발목표)에 부응하여 기업차원에서 실천이 요구되는 ESG 경영에 매진하여 왔습니다.
                     </p>
                     <p>
-                        ESG쨋천 �짱째챈쨘쨍�짙(Environment)징짚쨩챌�쨍째첩�책(Social)징짚�짹쨍짰째챈쩔쨉(Governance)�� 쩐���쨌�, 짹창쩐첨�� �짱째챈쨘쨍�짙쩔징 쩐��책쩌짯쨍챌,
-                        쨩챌�쨍�청 쩐���쩔징 쨈챘�� �철쩔첩째첬 쨀짼쨀� �챵쨉챤�� �첨�책쨔짰�짯�� �쨋쩌쨘 쨉챤 쨩챌�쨍째첩�책 �째쨉쩔�쨩 ��쨍챌,
-                        쨔첵째첬 �짹쨍짰쨍짝 �쨋�첬�첨 ��쩌철��쨈� �짹쨍짰째챈쩔쨉 쨉챤 ESG째챈쩔쨉�쨩 쩍��쨉��쩐� �철쩌��청�� 쩌쨘�책�� 째징쨈���쨈�쨈� 쨋챈��쨈�쨈�.
-                        �짱쨌쨈쩔짭����쨀짧 쨔�짹쨔 쨉챤쩔징쩌짯쨈� ��쨔� 짹창쩐첨�쨩 �챵째징��쨈�쨉짜 ��쩔채�� 짹창���쨍쨌� ��쨍짰�창째챠 ���쨍쨍챌,
-                        �철�챌 �체 쩌쩌째챔�청�쨍쨌� �짰쨩챗쨉� 쨀짧째징째챠 ��쨈� ��쩌쩌��쨈�쨈�.
-                        짹쨔쨀쨩쩔징쩌짯쨈� 쩐��첨짹챤�철 쨘쨍�챠�짯 쨉�쩐챤���철 쩐��쨍쨀짧 ��쩌�쨉쨉쩍�쨋척�쨘 �짖쩐첨 쨋짠쨘��� ESG째챈쩔쨉�쨩 쩍��쨉��쩔�째챠 ��쩍�쨈�쨈�.
+                        ESG란 환경보호(Environment)·사회공헌(Social)·윤리경영(Governance)의 약자로, 기업이 환경보호에 앞장서며,
+                        사회적 약자에 대한 지원과 남녀 평등한 직장문화의 조성 등 사회공헌 활동을 하며,
+                        법과 윤리를 철저히 준수하는 윤리경영 등 ESG경영을 실천해야 지속적인 성장이 가능하다는 뜻입니다.
+                        유럽연합이나 미국 등에서는 이미 기업을 평가하는데 중요한 기준으로 자리잡고 있으며,
+                        현재 전 세계적으로 확산돼 나가고 있는 추세입니다.
+                        국내에서는 아직까지 보편화 되어있지 않으나 한솥도시락은 창업 때부터 ESG경영을 실천해오고 있습니다.
                     </p>
                 </div>
                 <div class="bs_img mo_tr">
-                    <img src="../assets/images/brand/brand_esg.jpg" alt="ESG짹창쩐첨�� 3쨈챘 쩔채째�" usemap="#map"/>
+                    <img src="assets/images/brand/brand_esg.jpg" alt="ESG기업의 3대 요건" usemap="#map"/>
                     <map name="map" id="map">
                         <area target="" alt="social" title="social" href="https://www.hsd.co.kr/hansot/social" shape="rect" coords="240,422,121,323">
                     </map>
@@ -349,57 +334,65 @@
     </section>
     <!-- //group_order -->
 </div>
+
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">쨈천 쨍쨔�쨘 ��쩐�짹창</h2>
+    <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="../hansot/vision.jsp" class="more_link"></a>
+            <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_vision.jpg" alt="��쩌��� 쨘챰�체" />
+                    <img src="assets/images/common/more_story.jpg" alt="브랜드 스토리" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">��쩌��� 쨘챰�체</h3>
-                    <h3 class="h3_tit_o">��쩌��� 쨘챰�체</h3>
+                    <h3 class="h3_tit">브랜드 스토리</h3>
+                    <h3 class="h3_tit_o">브랜드 스토리</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="../hansot/promise.jsp" class="more_link"></a>
+            <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_hansot.jpg" alt="��쩌��� 쩐�쩌�" />
+                    <img src="assets/images/common/more_philosophy.jpg" alt="브랜드 철학" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">��쩌��� 쩐�쩌�</h3>
-                    <h3 class="h3_tit_o">��쩌��� 쩐�쩌�</h3>
+                    <h3 class="h3_tit">브랜드 철학</h3>
+                    <h3 class="h3_tit_o">브랜드 철학</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="../hansot/news_list.jsp" class="more_link"></a>
+            <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="../assets/images/common/more_news.jpg" alt="��쩌� NEWS" />
+                    <img src="assets/images/common/more_legacy.jpg" alt="브랜드 유산" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">��쩌� NEWS</h3>
-                    <h3 class="h3_tit_o">��쩌� NEWS</h3>
+                    <h3 class="h3_tit">브랜드 유산</h3>
+                    <h3 class="h3_tit_o">브랜드 유산</h3>
                 </figcaption>
             </figure>
         </li>
-    </ul>
+        </ul>
 </div>
 <!--// more_cont-->
-<script type="text/javascript">
-    $(document).ready(function() {
-        //contents viewportChecker
-        $('.bs_cont').addClass("hidden").viewportChecker({
-            classToAdd: 'visible animated fadeInUp',
-            offset: 120
-        });
+<script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>
+<script type="text/javascript" src="assets/js/imageMapResizer.min.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+
+    $('map').imageMapResize();
+
+    //contents viewportChecker
+    $('.bs_cont').addClass("hidden").viewportChecker({
+      classToAdd: 'visible animated fadeInUp',
+      offset: 120
     });
+  });
 </script>
 
 
@@ -414,42 +407,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">���챌�짚쩔챘</a></li>
-                <li class="off"><a href="../footer/partners.jsp">�첫쨌�쩐첨�쩌쨉챤쨌�</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">째첩�철쨩챌��</a></li>
-                <li><a href="../footer/faq_list.jsp">째챠째쨈 쩌쩐��</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>째쨀���짚쨘쨍�챘짹�쨔챈�짠</strong></a></li>
-                <li><a href="../footer/agreement.jsp">��쩔챘쩐�째체</a></li>
+                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ��쨌짙�첨���챤쨘�쩐� 쨈챘쨩처2017</span></p></div><!-- 2018-01-11�짜쩐챤쩔철쨉책쨍쨋�짤 -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 프랜차이즈분야 대상2017</span></p></div><!-- 2018-01-11웹어워드마크 -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">쨈챘�짜��쨩챌  ��쩔쨉쨈철</span>
-                <span>쨩챌쩐첨��쨉챤쨌�쨔첩�짙  214-81-96569</span>
-                <span>쩌짯쩔챦쩍� 째짯쨀짼짹쨍 째짯쨀짼쨈챘쨌� 318(쩔짧쨩챦쨉쩔) �쨍쩔철837쨘척쨉첫 8,9�첸</span>
+                <span class="first_be">대표이사  이영덕</span>
+                <span>사업자등록번호  214-81-96569</span>
+                <span>서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>��쩌� 쨉쨉쩍�쨋척 째챠째쨈쩌쩐��  02-585-1114</span>
-                <span>�체짹쨔�짖쩐첨쩌쨀쨍챠�쨍  1811-0188</span>
-                <span>쨈��쩌��쨔짰  1644-3288</span>
+                <span>한솥 도시락 고객센터  02-585-1114</span>
+                <span>전국창업설명회  1811-0188</span>
+                <span>단체주문  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">��쩌� 쨩챌쩐첨�� �짚쨘쨍</a>
+                        <a href="#none">한솥 사업자 정보</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">쨈챘�짜��쨩챌  ��쩔쨉쨈철</span>
-                        <span>쨩챌쩐첨��쨉챤쨌�쨔첩�짙  214-81-96569</span>
+                        <span class="mo_bl">대표이사  이영덕</span>
+                        <span>사업자등록번호  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">쩌짯쩔챦쩍� 째짯쨀짼짹쨍 째짯쨀짼쨈챘쨌� 318(쩔짧쨩챦쨉쩔) �쨍쩔철837쨘척쨉첫 8,9�첸</span>
+                        <span class="mo_bl">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -457,15 +450,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>��쩌� 째챠째쨈쩌쩐��</dt>
+                                <dt>한솥 고객센터</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>�체짹쨔�짖쩐첨쩌쨀쨍챠�쨍</dt>
+                                <dt>전국창업설명회</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>쨈��쩌��쨔짰</dt>
+                                <dt>단체주문</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -474,11 +467,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>짖���쩌�. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>㈜한솥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="쨩천 �짖 쩔짯쨍짼" class="sns_insta_02" target="_blank" title="쨩천 �짖 쩔짯쨍짼" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="쨩천 �짖 쩔짯쨍짼" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" class="sns_insta_02" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
@@ -499,5 +492,4 @@
 </div>
 <!--// wrap e -->
 </body>
-
 </html>
