@@ -189,13 +189,7 @@
             
             %>
                 <li>
-<<<<<<< HEAD
-                    <a href="login.do">�α���</a>
-                    </li>
-                <li>
-                    <a href="join.do">ȸ������</a>
-                    </li>
-=======
+
                     <a href="./login.do">로그인</a>
                 </li>
                     
@@ -203,7 +197,7 @@
                     <a href="./join.do">회원가입</a>
                </li>
              <%} %> 
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
                 </li>
@@ -222,35 +216,20 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-<<<<<<< HEAD
-                <h1><a href="home.go"><span class="blind">�Ѽ�</span></a></h1>
-=======
-                <h1><a href="home.jsp"><span class="blind">한솥</span></a></h1>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                <h1><a href="home.go"><span class="blind">�Ѽ�</span></a></h1>
+
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
                 <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-<<<<<<< HEAD
 							<ul>
-								<li><a href="login.do">�α���</a></li>
-								<li><a href="join.do">ȸ������</a></li>
+								<li><a href="login.do">로그인</a></li>
+								<li><a href="join.do">회원가입</a></li>
 							</ul>
 						</div>
-                <!-- //����� �α���/ȸ������ -->
-=======
-                    <ul>
-                        <li>
-                            <a href="./login.do">로그인</a>
-                            </li>
-                        <li>
-                            <a href="./join.do">회원가입</a>
-                            </li>
-                    </ul>
-                </div>
-                <!-- //모바일 로그인/회원가입 -->
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                <!-- //����� �α���/ȸ������ -->
+
 
                 <div class="gnb_menu">
                     <ul>
@@ -258,15 +237,10 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li class="active"><a href="story.go">�귣�� ���丮</a></li>
-                                    <li><a href="philosophy.go">�귣�� ö��</a></li>
-                                    <li><a href="legacy.go">�귣�� ����</a></li>
-=======
-                                    <li class="active"><a href="./brand/story.jsp">브랜드 스토리</a></li>
-                                    <li><a href="./brand/philosophy.jsp">브랜드 철학</a></li>
-                                    <li><a href="./brand/legacy.jsp">브랜드 유산</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
+
                                     </ul>
                             </div>
                         </li>
@@ -274,17 +248,11 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li class="active"><a href="esg.go">ESG�濵�̶�?</a></li>
-                                    <li><a href="philosophy.go">ȯ�溸ȣ(Environment)</a></li>
-                                    <li><a href="social.go">��ȸ����(Social)</a></li>
-                                    <li><a href="esg.go">�����濵(Governance)</a></li>
-=======
-                                    <li class="active"><a href="./brand/esg.jsp">ESG경영이란?</a></li>
-                                    <li><a href="./brand/philosophy.jsp">환경보호(Environment)</a></li>
-                                    <li><a href="./hansot/social.jsp">사회공헌(Social)</a></li>
-                                    <li><a href="./brand/esg.jsp">윤리경영(Governance)</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li class="active"><a href="esg.go">ESG�濵�̶�?</a></li>
+                                    <li><a href="philosophy.go">ȯ�溸ȣ(Environment)</a></li>
+                                    <li><a href="social.go">��ȸ����(Social)</a></li>
+                                    <li><a href="esg.go">�����濵(Governance)</a></li>
+
 
                                     </ul>
                             </div>
@@ -293,17 +261,11 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li><a href="menu_list.go">��ü�޴�</a></li>
-                                    <li><a href="material.go">����� �̾߱�</a></li>
-                                    <li><a href="chancha.go">�����������Ŀ��</a></li>
-                                    <li><a href="menu_order.go">��ü �ֹ�</a></li>
-=======
-                                    <li><a href="./menu/menu_list.jsp">전체메뉴</a></li>
-                                    <li><a href="./menu/material.jsp">식재료 이야기</a></li>
-                                    <li><a href="./menu/chancha.jsp">페루찬차마요커피</a></li>
-                                    <li><a href="./menu/menu_order.jsp">단체 주문</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li><a href="menu_list.go">��ü�޴�</a></li>
+                                    <li><a href="material.go">����� �̾߱�</a></li>
+                                    <li><a href="chancha.go">�����������Ŀ��</a></li>
+                                    <li><a href="menu_order.go">��ü �ֹ�</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -311,11 +273,8 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li><a href="store_find.go">�ֺ�����ã��</a></li>
-=======
-                                    <li><a href="./store/store_find.jsp">주변점포찾기</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li><a href="store_find.go">�ֺ�����ã��</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -323,13 +282,9 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li><a href="event_list.go">�� ���� �̺�Ʈ</a></li>
-                                    <li><a href="store_event_list.go">�ű��� �����̺�Ʈ</a></li>
-=======
-                                    <li><a href="./event/event_list.jsp">이 달의 이벤트</a></li>
-                                    <li><a href="./event/store_event_list.jsp">신규점 오픈이벤트</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li><a href="event_list.go">�� ���� �̺�Ʈ</a></li>
+                                    <li><a href="store_event_list.go">�ű��� �����̺�Ʈ</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -337,21 +292,13 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li><a href="hansot_store.go">Why �Ѽ� ������</a></li>
-                                    <li><a href="success.go">��������</a></li>
-                                    <li><a href="process.go">â����������</a></li>
-                                    <li><a href="calc.go">���� â�� ���</a></li>
-                                    <li><a href="qna.go">â������</a></li>
-                                    <li><a href="briefing.go">â������ȸ ��������û</a></li>
-=======
-                                    <li><a href="./franchise/hansot_store.jsp">Why 한솥 가맹점</a></li>
-                                    <li><a href="./franchise/success.jsp">성공수기</a></li>
-                                    <li><a href="./franchise/process.jsp">창업개설절차</a></li>
-                                    <li><a href="./franchise/calc.jsp">예상 창업 비용</a></li>
-                                    <li><a href="./franchise/qna.jsp">창업문의</a></li>
-                                    <li><a href="./franchise/briefing.jsp">창업설명회 일정·신청</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li><a href="hansot_store.go">Why �Ѽ� ������</a></li>
+                                    <li><a href="success.go">��������</a></li>
+                                    <li><a href="process.go">â����������</a></li>
+                                    <li><a href="calc.go">���� â�� ���</a></li>
+                                    <li><a href="qna.go">â������</a></li>
+                                    <li><a href="briefing.go">â������ȸ ��������û</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -359,23 +306,14 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-<<<<<<< HEAD
-                                    <li><a href="promise.go">�Ѽ��� ���</a></li>
-                                    <li><a href="vision.go">�Ѽ��� ����</a></li>
-                                    <li><a href="history.go">����&amp;����</a></li>
-                                    <li><a href="news_list.go">�Ѽ� NEWS</a></li>
-                                    <li><a href="location.go">���ô� ��</a></li>
-                                    <li><a href="faq_list.go">��������</a></li>
-                                    <li class="h_last"><a href="incruit.go">����ä��</a></li>
-=======
-                                    <li><a href="/hansot/promise.jsp">한솥의 약속</a></li>
-                                    <li><a href="/hansot/vision.jsp">한솥의 비전</a></li>
-                                    <li><a href="/hansot/history.jsp">연혁&amp;수상</a></li>
-                                    <li><a href="/hansot/news_list.jsp">한솥 NEWS</a></li>
-                                    <li><a href="/hansot/location.jsp">오시는 길</a></li>
-                                    <li><a href="/footer/faq_list.jsp">고객센터</a></li>
-                                    <li class="h_last"><a href="/footer/incruit.jsp">인재채용</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                    <li><a href="promise.go">�Ѽ��� ���</a></li>
+                                    <li><a href="vision.go">�Ѽ��� ����</a></li>
+                                    <li><a href="history.go">����&amp;����</a></li>
+                                    <li><a href="news_list.go">�Ѽ� NEWS</a></li>
+                                    <li><a href="location.go">���ô� ��</a></li>
+                                    <li><a href="faq_list.go">������</a></li>
+                                    <li class="h_last"><a href="incruit.go">����ä��</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -468,11 +406,8 @@
                     <a href="menu_list.go" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
-<<<<<<< HEAD
-                            <img src="assets/images/main/main_img_01.jpg" alt="��ü�޴� �̹���">
-=======
-                            <img src="/assets/images/main/main_img_01.jpg" alt="전체메뉴 이미지">
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                            <img src="assets/images/main/main_img_01.jpg" alt="��ü�޴� �̹���">
+
                         </span>
                         <figcaption>
                             <p class="sc_tit fz_02">
@@ -489,11 +424,8 @@
                     <a href="store_find.go" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
-<<<<<<< HEAD
-                            <img src="assets/images/main/main_img_02.jpg" alt="�ֺ�����ã�� �̹���">
-=======
-                            <img src="./assets/images/main/main_img_02.jpg" alt="주변점포찾기 이미지">
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                            <img src="assets/images/main/main_img_02.jpg" alt="주변점포찾기 이미지�">
+
                         </span>
                         <figcaption>
                             <p class="sc_tit fz_02">
@@ -530,11 +462,8 @@
                         <a href="hansot_store.go" class="sc_link"></a>
                         <figure class="sc_wrap">
                             <span class="sc_img">
-<<<<<<< HEAD
-                                <img src="assets/images/main/main_img_03.jpg" alt="why�Ѽ� ������ �̹���">
-=======
-                                <img src="./assets/images/main/main_img_03.jpg" alt="why한솥 가맹점 이미지">
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                <img src="assets/images/main/main_img_03.jpg" alt="why�Ѽ� ������ �̹���">
+
                             </span>
                             <figcaption>
                                 <p class="sc_tit fz_02">
@@ -551,11 +480,8 @@
                         <a href="success.go" class="sc_link"></a>
                         <figure class="sc_wrap">
                             <span class="sc_img">
-<<<<<<< HEAD
-                                <img src="assets/images/main/main_img_04.jpg" alt="�������� �̹���">
-=======
-                                <img src="/assets/images/main/main_img_04.jpg" alt="성공수기 이미지">
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                                <img src="assets/images/main/main_img_04.jpg" alt="�������� �̹���">
+
                             </span>
                             <figcaption>
                                 <p class="sc_tit fz_02">
@@ -594,11 +520,8 @@
                         </p>
                         <!-- btn -->
                         <div class="btn_wrap btn_info">
-<<<<<<< HEAD
-                            <span class="btn btn_st04"><a href="philosophy.go" class="c_06">�귣�� ö��</a></span>
-=======
-                            <span class="btn btn_st04"><a href="/brand/philosophy.jsp" class="c_06">브랜드 철학</a></span>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                            <span class="btn btn_st04"><a href="philosophy.go" class="c_06">�귣�� ö��</a></span>
+
                         </div>
                         <!-- //btn -->
                     </div>
@@ -616,11 +539,8 @@
                     <a href="material.go" class="sc_link"></a>
                     <figure class="sc_wrap">
                         <span class="sc_img">
-<<<<<<< HEAD
-                            <img src="assets/images/main/main_img_05.jpg" alt="����� �̹���">
-=======
-                            <img src="/assets/images/main/main_img_05.jpg" alt="식재료 이미지">
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                            <img src="assets/images/main/main_img_05.jpg" alt="����� �̹���">
+
                         </span>
                         <figcaption>
                             <h2 class="h2_mt fz_01">
@@ -653,11 +573,7 @@
             <a href="promise.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-<<<<<<< HEAD
-                    <img src="assets/images/common/more_hansot.jpg" alt="�Ѽ��� ���" />
-=======
-                    <img src="/assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                    <img src="assets/images/common/more_hansot.jpg" alt="�Ѽ��� ���" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥의 약속</h3>
@@ -669,11 +585,7 @@
             <a href="event_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-<<<<<<< HEAD
-                    <img src="assets/images/common/more_event.jpg" alt="�¶��� �̺�Ʈ" />
-=======
-                    <img src="/assets/images/common/more_event.jpg" alt="온라인 이벤트" />
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                    <img src="assets/images/common/more_event.jpg" alt="�¶��� �̺�Ʈ" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">온라인 이벤트</h3>
@@ -685,11 +597,7 @@
             <a href="news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-<<<<<<< HEAD
-                    <img src="more_news.go" alt="�Ѽ� NEWS" />
-=======
-                    <img src="./assets/images/common/more_news.jpg" alt="한솥 NEWS" />
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                    <img src="more_news.go" alt="�Ѽ� NEWS" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥 NEWS</h3>
@@ -736,21 +644,12 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-<<<<<<< HEAD
-                <li class="first_be off"><a href="incruit.go">����ä��</a></li>
-                <li class="off"><a href="partners.go">���¾�ü���</a></li>
-                <li class="mo_bl"><a href="notice_list.go">��������</a></li>
-                <li><a href="faq_list.go">���� ����</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>����������޹�ħ</strong></a></li>
-                <li><a href="agreement.go">�̿���</a></li>
-=======
-                <li class="first_be off"><a href="./footer/incruit.jsp">인재채용</a></li>
-                <li class="off"><a href="./footer/partners.jsp">협력업체등록</a></li>
-                <li class="mo_bl"><a href="./footer/notice_list.jsp">공지사항</a></li>
-                <li><a href="./footer/faq_list.jsp">고객 센터</a></li>
-                <li class="mo_bl"><a href="./footer/policy.jsp"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="./footer/agreement.jsp">이용약관</a></li>
->>>>>>> 537cac0794d9a025645bb5ae7e4a78ddfe83423b
+                <li class="first_be off"><a href="incruit.go">����ä��</a></li>
+                <li class="off"><a href="partners.go">���¾�ü���</a></li>
+                <li class="mo_bl"><a href="notice_list.go">��������</a></li>
+                <li><a href="faq_list.go">�� ����</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>����������޹�ħ</strong></a></li>
+                <li><a href="agreement.go">�̿���</a></li>
             </ul>
         </div>
         <!--// family goods -->
