@@ -496,8 +496,8 @@
     if (eventStoreIdx != "" && !isNaN(parseInt(eventStoreIdx))) {
       chanageLoc(eventStoreIdx);
     } else {
-      lat = 37.4964502;   // 위치 검색안될시 기본노출 : 강남역점
-      lng = 127.0278032;
+      lat = 35.155562;   // 위치 검색안될시 기본노출 : 구서동
+      lng = 129.050999;
 
       // HTML5의 geolocation으로 사용할 수 있는지 확인합니다
       if (navigator.geolocation) {
@@ -622,7 +622,7 @@
             position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
             map: map,
             icon: {
-              url: 'assets/images/common/icon_map.png',
+              url: '../assets/images/common/icon_map.png',
               size: new naver.maps.Size(50, 52),
               scaledSize: new naver.maps.Size(42, 52),
 
@@ -651,7 +651,6 @@
   function renderSearchResult(pageNo) {
     $.getJSON("/api/store_search/" + pageNo + "?" + $("#searchForm").serialize(), function (data) {
       console.log(data);
-
       var list = "";
 
       if (data.list.length > 0) {
