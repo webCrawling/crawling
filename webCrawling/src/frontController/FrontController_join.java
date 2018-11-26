@@ -35,7 +35,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		String RequestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String command = RequestURI.substring(contextPath.length());
-		ActionForward forward = null;
+		Action Forward forward = null;
 		Action action = null;
 
 		System.out.println("command is " + command);
