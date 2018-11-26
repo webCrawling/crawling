@@ -1,50 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- 
 	*meta tag 
-	html¹®¼­ ÀÚÃ¼ÀÇ Æ¯¼ºÀ» ´ã°í ÀÖ´Ù.
+	htmlë¬¸ì„œ ìžì²´ì˜ íŠ¹ì„±ì„ ë‹´ê³  ìžˆë‹¤.
 	 -->
 	<!-- 
-	*ÀÎÄÚµù ¹æ½Ä ¼±¾ðÇÏ±â
+	*ì¸ì½”ë”© ë°©ì‹ ì„ ì–¸í•˜ê¸°
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	HTML4¿¡¼­ »ç¿ëÇÏ´Â ÀÎÄÚµù ¼³Á¤¹æ½ÄÀÌ´Ù.
-	HTML5¿¡¼­ »ç¿ëÇÏ´Â ÀÎÄÚµù ¼³Á¤¹æ½ÄÀÌ ´õ °£°áÇÏ´Ù.
+	HTML4ì—ì„œ ì‚¬ìš©í•˜ëŠ” ì¸ì½”ë”© ì„¤ì •ë°©ì‹ì´ë‹¤.
+	HTML5ì—ì„œ ì‚¬ìš©í•˜ëŠ” ì¸ì½”ë”© ì„¤ì •ë°©ì‹ì´ ë” ê°„ê²°í•˜ë‹¤.
 	 -->
     <meta charset=utf-8 />
     
     <!-- 
-    *viewport È­¸é»ó È­»ó Ç¥½Ã ¿µ¿ª
-    µ¥½ºÅ©Å¾¿¡ ±â¹ÝÇÏ¿© ¼³°èµÈ À¥ÆäÀÌÁö¸¦ ¸ð¹ÙÀÏ È¯°æ¿¡¼­µµ ÃÖÀûÈ­½ÃÅ°±â À§ÇØ
-    ÆäÀÌÁöÀÇ ³Êºñ³ª ¹èÀ²À» ¼³Á¤ÇØ¾ß ÇÑ´Ù. 
+    *viewport í™”ë©´ìƒ í™”ìƒ í‘œì‹œ ì˜ì—­
+    ë°ìŠ¤í¬íƒ‘ì— ê¸°ë°˜í•˜ì—¬ ì„¤ê³„ëœ ì›¹íŽ˜ì´ì§€ë¥¼ ëª¨ë°”ì¼ í™˜ê²½ì—ì„œë„ ìµœì í™”ì‹œí‚¤ê¸° ìœ„í•´
+    íŽ˜ì´ì§€ì˜ ë„ˆë¹„ë‚˜ ë°°ìœ¨ì„ ì„¤ì •í•´ì•¼ í•œë‹¤. 
     -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
     <!-- 
     *og tag Open Graph
-      SNS »ó¿¡¼­ À¥ »çÀÌÆ®ÀÇ URL¸µÅ© °øÀ¯ ½Ã Á¦¸ñ,³»¿ë,ÀÌ¹ÌÁö ¹Ì¸®º¸±â¸¦ ¸¸µé ¶§ »ç¿ëÇÏ´Â ÅÂ±×
+      SNS ìƒì—ì„œ ì›¹ ì‚¬ì´íŠ¸ì˜ URLë§í¬ ê³µìœ  ì‹œ ì œëª©,ë‚´ìš©,ì´ë¯¸ì§€ ë¯¸ë¦¬ë³´ê¸°ë¥¼ ë§Œë“¤ ë•Œ ì‚¬ìš©í•˜ëŠ” íƒœê·¸
     -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ÇÑ¼Ü À¥»çÀÌÆ® Å¬·Ð" />
+    <meta property="og:title" content="í•œì†¥ ì›¹ì‚¬ì´íŠ¸ í´ë¡ " />
     <meta property="og:url" content="" />
     <meta property="og:image" content="assets/images/brand/brand_m_visual_01.jpg" />
-    <meta property="og:description" content="3Á¶°¡ ¸¸µé¾ú´Ù!" />
+    <meta property="og:description" content="3ì¡°ê°€ ë§Œë“¤ì—ˆë‹¤!" />
    
 	<!--
-	*meta tag ¼Ó¼º name,content
-	°Ë»ö¿£Áø¿¡°Ô ¹®¼­ÀÇ ³»¿ëÀ» ¿ä¾àÇØ ÁÖ´Â ¿ªÇÒ
+	*meta tag ì†ì„± name,content
+	ê²€ìƒ‰ì—”ì§„ì—ê²Œ ë¬¸ì„œì˜ ë‚´ìš©ì„ ìš”ì•½í•´ ì£¼ëŠ” ì—­í• 
 	 -->
-    <meta name="ÇÑ¼Ü" content="ÇÑ¼Ü¸Þ´º,ÁÖ¹®" />
+    <meta name="í•œì†¥" content="í•œì†¥ë©”ë‰´,ì£¼ë¬¸" />
     
-    <title>ºê·£µå À¯»ê</title>
+    <title>ë¸Œëžœë“œ ìœ ì‚°</title>
 
     
     <!-- 
-    link tag¸¦ »ç¿ëÇØ¼­ ¿ÜºÎ¹®¼­¿Í ¿¬°áÇÏ±â
-    rel ¼Ó¼º:ÇöÀç¹®¼­¿Í ¿¬°á¹®¼­ÀÇ °ü°è 
-    type ¼Ó¼º:¿¬°á¹®¼­ÀÇ Å¸ÀÔ(content type) 
+    link tagë¥¼ ì‚¬ìš©í•´ì„œ ì™¸ë¶€ë¬¸ì„œì™€ ì—°ê²°í•˜ê¸°
+    rel ì†ì„±:í˜„ìž¬ë¬¸ì„œì™€ ì—°ê²°ë¬¸ì„œì˜ ê´€ê³„ 
+    type ì†ì„±:ì—°ê²°ë¬¸ì„œì˜ íƒ€ìž…(content type) 
      -->
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
@@ -52,7 +52,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/ui.brand.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
      <!-- 
-    <style>ÅÂ±×¸¦ »ç¿ëÇØ¼­ css ÄÚµå ÀÛ¼ºÇÏ±â
+    <style>íƒœê·¸ë¥¼ ì‚¬ìš©í•´ì„œ css ì½”ë“œ ìž‘ì„±í•˜ê¸°
       -->
      
 <style>
@@ -76,11 +76,11 @@
 </style>
 
 <!-- 
-¿ÜºÎ jsÆÄÀÏÀ» client-side¿¡¼­ µ¿ÀÛ½ÃÅ°±â 
-±×·¸´Ù¸é link tag ¸¦ »ç¿ëÇØ¼­ jsÆÄÀÏÀ» °¡Á®¿Í º¼¼öµµ ÀÖÀ»±î?
-º¸Åë link tagÀÇ °æ¿ì href¼Ó¼ºÀ» ÅëÇØ.css ÆÄÀÏÀ» ¿¬°áÇÏ´Â °ÍÀÌ°í (¿ÜºÎÆÄÀÏÀ» ÀÐÀ¸¸é¼­ ÆäÀÌÁö·ÎµùÀ» º´·ÄÃ³¸®) 
-script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
-(src¿¡ ÀÖ´Â ÆÄÀÏÀ» ÀÐÀº ÈÄ ÆäÀÌÁö·Îµù ±×·¡¼­ jsÆÄÀÏ·ÎµåÇÏ´Â°ÍÀ» ÆäÀÌÁö ¸¶Áö¸·¿¡¼­ ÇÏ´Â °É ±ÇÀåÇÑ´Ù.) 
+ì™¸ë¶€ jsíŒŒì¼ì„ client-sideì—ì„œ ë™ìž‘ì‹œí‚¤ê¸° 
+ê·¸ë ‡ë‹¤ë©´ link tag ë¥¼ ì‚¬ìš©í•´ì„œ jsíŒŒì¼ì„ ê°€ì ¸ì™€ ë³¼ìˆ˜ë„ ìžˆì„ê¹Œ?
+ë³´í†µ link tagì˜ ê²½ìš° hrefì†ì„±ì„ í†µí•´.css íŒŒì¼ì„ ì—°ê²°í•˜ëŠ” ê²ƒì´ê³  (ì™¸ë¶€íŒŒì¼ì„ ì½ìœ¼ë©´ì„œ íŽ˜ì´ì§€ë¡œë”©ì„ ë³‘ë ¬ì²˜ë¦¬) 
+script tagëŠ” srcì†ì„±ì„ í†µí•´  .js íŒŒì¼ì„ ê°€ì ¸ì™€ ë°”ë¡œ ì‹¤í–‰í•˜ëŠ” ì½”ë“œì´ë‹¤.
+(srcì— ìžˆëŠ” íŒŒì¼ì„ ì½ì€ í›„ íŽ˜ì´ì§€ë¡œë”© ê·¸ëž˜ì„œ jsíŒŒì¼ë¡œë“œí•˜ëŠ”ê²ƒì„ íŽ˜ì´ì§€ ë§ˆì§€ë§‰ì—ì„œ í•˜ëŠ” ê±¸ ê¶Œìž¥í•œë‹¤.) 
  -->
  
 <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
@@ -120,12 +120,12 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -134,9 +134,9 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
     <script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics 
-    async ¼Ó¼º : ½ºÅ©¸³Æ®ÀÇ ºñµ¿±â ½ÇÇà
-     ºê¶ó¿ìÀú°¡ async ¼Ó¼ºÀ» ¸¸³ª¸é ½ºÅ©¸³Æ® ½ÇÇàÀ» µÚ·Î ¹Ì·ç°í ¿ì¼± ½ºÅ©¸³Æ® ÆÄÀÏÀÇ ¼ö½Å°ú HTML ¹®¼­ÀÇ ÆÄ½Ì¿¡ ÁýÁßÇÑ´Ù. 
-     ¿ÜºÎ ½ºÅ©¸³Æ® ÆÄÀÏÀÇ ¼ö½ÅÀÌ ¿Ï·áµÇ¾úÀ» ¶§ ½ºÅ©¸³Æ®¸¦ ½ÇÇà½ÃÅ²´Ù.
+    async ì†ì„± : ìŠ¤í¬ë¦½íŠ¸ì˜ ë¹„ë™ê¸° ì‹¤í–‰
+     ë¸Œë¼ìš°ì €ê°€ async ì†ì„±ì„ ë§Œë‚˜ë©´ ìŠ¤í¬ë¦½íŠ¸ ì‹¤í–‰ì„ ë’¤ë¡œ ë¯¸ë£¨ê³  ìš°ì„  ìŠ¤í¬ë¦½íŠ¸ íŒŒì¼ì˜ ìˆ˜ì‹ ê³¼ HTML ë¬¸ì„œì˜ íŒŒì‹±ì— ì§‘ì¤‘í•œë‹¤. 
+     ì™¸ë¶€ ìŠ¤í¬ë¦½íŠ¸ íŒŒì¼ì˜ ìˆ˜ì‹ ì´ ì™„ë£Œë˜ì—ˆì„ ë•Œ ìŠ¤í¬ë¦½íŠ¸ë¥¼ ì‹¤í–‰ì‹œí‚¨ë‹¤.
     -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
@@ -177,7 +177,7 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
         fbq('track', 'PageView');
     </script>
     <!-- 
-    noscript : ½ºÅ©¸³Æ® ¹ÌÁö¿øÀ» Ç¥½ÃÇÑ´Ù
+    noscript : ìŠ¤í¬ë¦½íŠ¸ ë¯¸ì§€ì›ì„ í‘œì‹œí•œë‹¤
      -->
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
@@ -197,16 +197,16 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -217,32 +217,32 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="login.do">·Î±×ÀÎ</a>
+                            <a href="login.do">ë¡œê·¸ì¸</a>
                             </li>
                         <li>
-                            <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                            <a href="join.do">íšŒì›ê°€ìž…</a>
                             </li>
                     </ul>
                 </div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
-                <div class="gnb_menu">
+               <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -250,10 +250,10 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -262,10 +262,9 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
-                                    <li><a href="menu_order.go">´ÜÃ¼ ÁÖ¹®</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -273,7 +272,7 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -281,8 +280,8 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -290,12 +289,10 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
-                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
-                                    <li><a href="qna.go">Ã¢¾÷¹®ÀÇ</a></li>
-                                    <li><a href="briefing.go">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -303,18 +300,17 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
-                                    <li><a href="faq_list.go">°í°´¼¾ÅÍ</a></li>
-                                    <li class="h_last"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="news_list.go">í•œì†¥ NEWS</a></li>
+                                    <li><a href="location.go">ì˜¤ì‹œëŠ” ê¸¸</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
@@ -342,26 +338,26 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
     <div id="container" class="sub_page bg">
         
 <div class="content brand">
-    <!-- ºê·£µå À¯»ê -->
+    <!-- ë¸Œëžœë“œ ìœ ì‚° -->
     <section class="brand_legacy">
-        <!-- »ó´Übg ¿µ¿ª -->
+        <!-- ìƒë‹¨bg ì˜ì—­ -->
         <div class="brand_visual_wrap mo_tr">
             <div class="visual_bg"></div>
         </div>
-        <!-- //»ó´Übg ¿µ¿ª -->
+        <!-- //ìƒë‹¨bg ì˜ì—­ -->
         <!-- section01 -->
         <div class="bs_wrap section_01">
-            <p class="menu_tit mo_version">ºê·£µå À¯»ê</p>
+            <p class="menu_tit mo_version">ë¸Œëžœë“œ ìœ ì‚°</p>
             <div class="bs_cont mo_tr">
                 <h2 class="h2_tit">
-                    <span class="s_block">¿ìÁ÷ÇÑ ÇÑ¼ÜÀÌ</span>
-                    <span class="s_block">Áö±Ý±îÁö ½×¾Æ¿Â °Í</span>
+                    <span class="s_block">ìš°ì§í•œ í•œì†¥ì´</span>
+                    <span class="s_block">ì§€ê¸ˆê¹Œì§€ ìŒ“ì•„ì˜¨ ê²ƒ</span>
                 </h2>
                 <div class="bs_txt">
                     <p>
-                        <span class="s_block">µû²öÇÑ ÇÑ ³¢·Î ´ëÇÑ¹Î±¹ÀÇ ÈûÀÌ µÇ°Ú´Ù´Â ½Å³äÀ¸·Î ÇÑ °ÉÀ½ ÇÑ °ÉÀ½¾¿ ³ª¾Æ°£ </span>
-                        <span class="s_block">ÇÑ¼ÜÀÇ ¹ßÀÚ±¹µé. Áö³­ 24³â µ¿¾È ÇÑ°á °°Àº ¸¶À½À¸·Î °í°´À» À§ÇØ ¼ºÀåÇÏ°í ÀÖ´Â, </span>
-                        <span class="s_block">¿ì¸®´Â ÇÑ¼ÜÀÔ´Ï´Ù.</span>
+                        <span class="s_block">ë”°ëˆí•œ í•œ ë¼ë¡œ ëŒ€í•œë¯¼êµ­ì˜ íž˜ì´ ë˜ê² ë‹¤ëŠ” ì‹ ë…ìœ¼ë¡œ í•œ ê±¸ìŒ í•œ ê±¸ìŒì”© ë‚˜ì•„ê°„ </span>
+                        <span class="s_block">í•œì†¥ì˜ ë°œìžêµ­ë“¤. ì§€ë‚œ 24ë…„ ë™ì•ˆ í•œê²° ê°™ì€ ë§ˆìŒìœ¼ë¡œ ê³ ê°ì„ ìœ„í•´ ì„±ìž¥í•˜ê³  ìžˆëŠ”, </span>
+                        <span class="s_block">ìš°ë¦¬ëŠ” í•œì†¥ìž…ë‹ˆë‹¤.</span>
                     </p>
                 </div>
             </div>
@@ -372,17 +368,17 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="assets/images/brand/bg_legacy_01.png" alt="Áö±¸ 50¹ÙÄû">
+                        <img src="assets/images/brand/bg_legacy_01.png" alt="ì§€êµ¬ 50ë°”í€´">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
-                            <span class="s_block lg_tit fz_01">Áö±¸ 60¹ÙÄû</span>
-                            <span class="s_block lg_txt">ÃÑ ÆÇ¸Å 6¾ï ±×¸©</span>
+                            <span class="s_block lg_tit fz_01">ì§€êµ¬ 60ë°”í€´</span>
+                            <span class="s_block lg_txt">ì´ íŒë§¤ 6ì–µ ê·¸ë¦‡</span>
                         </h3>
                         <p class="lg_cont_txt">
-                            <span class="s_block">1993³âÀÌÈÄ ÆÇ¸ÅµÈ ÇÑ¼ÜÀÇ µµ½Ã¶ôÀº 6¾ï ±×¸©¿¡ ´ÞÇÕ´Ï´Ù.</span>
-                            <span class="s_block">±× µµ½Ã¶ô ¿ë±âÀÇ ±æÀÌ¸¦ ¸ðµÎ ´õÇØ ¶ì¸¦ ¸¸µé¸é</span>
-                            <span class="s_block">Áö±¸¸¦ 60¹ÙÄû °¨À» ¼ö ÀÖ´ä´Ï´Ù.</span>
+                            <span class="s_block">1993ë…„ì´í›„ íŒë§¤ëœ í•œì†¥ì˜ ë„ì‹œë½ì€ 6ì–µ ê·¸ë¦‡ì— ë‹¬í•©ë‹ˆë‹¤.</span>
+                            <span class="s_block">ê·¸ ë„ì‹œë½ ìš©ê¸°ì˜ ê¸¸ì´ë¥¼ ëª¨ë‘ ë”í•´ ë ë¥¼ ë§Œë“¤ë©´</span>
+                            <span class="s_block">ì§€êµ¬ë¥¼ 60ë°”í€´ ê°ì„ ìˆ˜ ìžˆë‹µë‹ˆë‹¤.</span>
                         </p>
                     </figcaption>
                 </figure>
@@ -394,16 +390,16 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="assets/images/brand/bg_legacy_02.png" alt="¿Â ±¹¹ÎÀÌ 3±×¸© ¾¿">
+                        <img src="assets/images/brand/bg_legacy_02.png" alt="ì˜¨ êµ­ë¯¼ì´ 3ê·¸ë¦‡ ì”©">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
-                            <span class="s_block lg_tit fz_01">¿Â ±¹¹ÎÀÌ 3±×¸© ¾¿</span>
-                            <span class="s_block lg_txt">1¾ï 5Ãµ¸¸ ±×¸©ÀÇ Ä¡Å²¸¶¿ä</span>
+                            <span class="s_block lg_tit fz_01">ì˜¨ êµ­ë¯¼ì´ 3ê·¸ë¦‡ ì”©</span>
+                            <span class="s_block lg_txt">1ì–µ 5ì²œë§Œ ê·¸ë¦‡ì˜ ì¹˜í‚¨ë§ˆìš”</span>
                         </h3>
                         <p class="lg_cont_txt">
-                            <span class="s_block">2003³âºÎÅÍ Áö±Ý±îÁö ÆÇ¸ÅµÈ Ä¡Å²¸¶¿ä 1¾ï 5Ãµ¸¸ ±×¸©Àº</span>
-                            <span class="s_block">5000¸¸ ±¹¹Î ¸ðµÎ°¡ 3±×¸© ¾¿ ¸ÔÀ» ¼ö ÀÖ´Â ¾çÀÔ´Ï´Ù.</span>
+                            <span class="s_block">2003ë…„ë¶€í„° ì§€ê¸ˆê¹Œì§€ íŒë§¤ëœ ì¹˜í‚¨ë§ˆìš” 1ì–µ 5ì²œë§Œ ê·¸ë¦‡ì€</span>
+                            <span class="s_block">5000ë§Œ êµ­ë¯¼ ëª¨ë‘ê°€ 3ê·¸ë¦‡ ì”© ë¨¹ì„ ìˆ˜ ìžˆëŠ” ì–‘ìž…ë‹ˆë‹¤.</span>
                         </p>
                     </figcaption>
                 </figure>
@@ -415,16 +411,16 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="assets/images/brand/bg_legacy_03.png" alt="3³â 2°³¿ù">
+                        <img src="assets/images/brand/bg_legacy_03.png" alt="3ë…„ 2ê°œì›”">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
-                            <span class="s_block lg_tit fz_01">ÇØ¿Ü ·¹½ÃÇÇ°³¹ß 1150ÀÏ</span>
+                            <span class="s_block lg_tit fz_01">í•´ì™¸ ë ˆì‹œí”¼ê°œë°œ 1150ì¼</span>
                         </h3>
                         <p class="lg_cont_txt">
-                            <span class="s_block">1993³â ÀÌÈÄ ÇÑ¼Ü ½Ä±¸µéÀÌ ·¹½ÃÇÇ °³¹ßÀ» À§ÇØ ¶°³­</span>
-                            <span class="s_block">ÇØ¿ÜÃâÀå ±â°£Àº 1150ÀÏ¿¡ ´ÞÇÕ´Ï´Ù.</span>
-                            <span class="s_block">²¿¹Ú  3³â 2°³¿ùÀ» ÇØ¿Ü¿¡¼­ Ã¼·ùÇÑ ¼ÀÀÔ´Ï´Ù.</span>
+                            <span class="s_block">1993ë…„ ì´í›„ í•œì†¥ ì‹êµ¬ë“¤ì´ ë ˆì‹œí”¼ ê°œë°œì„ ìœ„í•´ ë– ë‚œ</span>
+                            <span class="s_block">í•´ì™¸ì¶œìž¥ ê¸°ê°„ì€ 1150ì¼ì— ë‹¬í•©ë‹ˆë‹¤.</span>
+                            <span class="s_block">ê¼¬ë°•  3ë…„ 2ê°œì›”ì„ í•´ì™¸ì—ì„œ ì²´ë¥˜í•œ ì…ˆìž…ë‹ˆë‹¤.</span>
                         </p>
                     </figcaption>
                 </figure>
@@ -436,16 +432,16 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
             <div class="bs_cont">
                 <figure class="lg_wrap">
                     <span class="g_visual">
-                        <img src="assets/images/brand/bg_legacy_04.png" alt="200¿©Á¾ÀÇ ¸Þ´º Ãâ½Ã">
+                        <img src="assets/images/brand/bg_legacy_04.png" alt="200ì—¬ì¢…ì˜ ë©”ë‰´ ì¶œì‹œ">
                     </span>
                     <figcaption>
                         <h3 class="h3_tit">
-                            <span class="s_block lg_tit fz_01">200¿©Á¾ÀÇ ¸Þ´º Ãâ½Ã</span>
+                            <span class="s_block lg_tit fz_01">200ì—¬ì¢…ì˜ ë©”ë‰´ ì¶œì‹œ</span>
                         </h3>
                         <p class="lg_cont_txt">
-                            <span class="s_block">1993³â ÀÌÈÄ ÇÑ¼Ü¿¡¼­ Áö±Ý±îÁö °³¹ßÇÑ ¹ÝÂù¼ö´Â ÃÑ 200¿©Á¾.</span>
-                            <span class="s_block">ÀÌ¸¦ À§ÇØ ¸Þ´º°³¹ßÆÀ¿¡¼­ Å×½ºÆ® Çß´ø ¸Þ´º´Â 10ÀÏ¿¡</span>
-                            <span class="s_block">1°³ ²Ã·Î ÃÑ 1,000¿©Á¾ÀÌ ³Ñ½À´Ï´Ù</span>
+                            <span class="s_block">1993ë…„ ì´í›„ í•œì†¥ì—ì„œ ì§€ê¸ˆê¹Œì§€ ê°œë°œí•œ ë°˜ì°¬ìˆ˜ëŠ” ì´ 200ì—¬ì¢….</span>
+                            <span class="s_block">ì´ë¥¼ ìœ„í•´ ë©”ë‰´ê°œë°œíŒ€ì—ì„œ í…ŒìŠ¤íŠ¸ í–ˆë˜ ë©”ë‰´ëŠ” 10ì¼ì—</span>
+                            <span class="s_block">1ê°œ ê¼´ë¡œ ì´ 1,000ì—¬ì¢…ì´ ë„˜ìŠµë‹ˆë‹¤</span>
                         </p>
                     </figcaption>
                 </figure>
@@ -453,46 +449,46 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
         </div>
         <!-- //section05 -->
     </section>
-    <!-- //ºê·£µå À¯»ê -->
+    <!-- //ë¸Œëžœë“œ ìœ ì‚° -->
 </div>
 
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">´õ ¸¹Àº ÀÌ¾ß±â</h2>
+    <h2 class="more_tit">ë” ë§Žì€ ì´ì•¼ê¸°</h2>
     <ul>
         <li>
-            <a href="hansot/vision.go" class="more_link"></a>
+            <a href="vision.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_vision.jpg" alt="ÇÑ¼ÜÀÇ ºñÀü" />
+                    <img src="assets/images/common/more_vision.jpg" alt="í•œì†¥ì˜ ë¹„ì „" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ÇÑ¼ÜÀÇ ºñÀü</h3>
-                    <h3 class="h3_tit_o">ÇÑ¼ÜÀÇ ºñÀü</h3>
+                    <h3 class="h3_tit">í•œì†¥ì˜ ë¹„ì „</h3>
+                    <h3 class="h3_tit_o">í•œì†¥ì˜ ë¹„ì „</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="hansot/promise.go" class="more_link"></a>
+            <a href="promise.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_hansot.jpg" alt="ÇÑ¼ÜÀÇ ¾à¼Ó" />
+                    <img src="assets/images/common/more_hansot.jpg" alt="í•œì†¥ì˜ ì•½ì†" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ÇÑ¼ÜÀÇ ¾à¼Ó</h3>
-                    <h3 class="h3_tit_o">ÇÑ¼ÜÀÇ ¾à¼Ó</h3>
+                    <h3 class="h3_tit">í•œì†¥ì˜ ì•½ì†</h3>
+                    <h3 class="h3_tit_o">í•œì†¥ì˜ ì•½ì†</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="../hansot/news_list.go" class="more_link"></a>
+            <a href="news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_news.jpg" alt="ÇÑ¼Ü NEWS" />
+                    <img src="assets/images/common/more_news.jpg" alt="í•œì†¥ NEWS" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ÇÑ¼Ü NEWS</h3>
-                    <h3 class="h3_tit_o">ÇÑ¼Ü NEWS</h3>
+                    <h3 class="h3_tit">í•œì†¥ NEWS</h3>
+                    <h3 class="h3_tit_o">í•œì†¥ NEWS</h3>
                 </figcaption>
             </figure>
         </li>
@@ -520,42 +516,42 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
-                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="incruit.go">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -563,15 +559,15 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -580,11 +576,11 @@ script tag´Â src¼Ó¼ºÀ» ÅëÇØ  .js ÆÄÀÏÀ» °¡Á®¿Í ¹Ù·Î ½ÇÇàÇÏ´Â ÄÚµåÀÌ´Ù.
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

@@ -175,21 +175,24 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="home.go"><span class="blind">한솥</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">한솥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
                 <!-- 모바일 로그인/회원가입 -->
-						<div class="m_area_flex">
-							<ul>
-								<li><a href="login.do">로그인</a></li>
-								<li><a href="join.do">회원가입</a></li>
-							</ul>
-						</div>
-						<!-- //모바일 로그인/회원가입 -->
+                <div class="m_area_flex">
+                    <ul>
+                        <li>
+                            <a href="login.do">로그인</a>
+                            </li>
+                        <li>
+                            <a href="join.do">회원가입</a>
+                            </li>
+                    </ul>
+                </div>
+                <!-- //모바일 로그인/회원가입 -->
 
-              
-                <div class="gnb_menu">
+               <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
@@ -220,7 +223,6 @@
                                     <li><a href="menu_list.go">전체메뉴</a></li>
                                     <li><a href="material.go">식재료 이야기</a></li>
                                     <li><a href="chancha.go">페루찬차마요커피</a></li>
-                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -249,8 +251,6 @@
                                     <li><a href="success.go">성공수기</a></li>
                                     <li><a href="process.go">창업개설절차</a></li>
                                     <li><a href="calc.go">예상 창업 비용</a></li>
-                                    <li><a href="qna.go">창업문의</a></li>
-                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -263,13 +263,12 @@
                                     <li><a href="history.go">연혁&amp;수상</a></li>
                                     <li><a href="news_list.go">한솥 NEWS</a></li>
                                     <li><a href="location.go">오시는 길</a></li>
-                                    <li><a href="faq_list.go">고객센터</a></li>
-                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
@@ -478,7 +477,7 @@
     <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="brand/story.jsp" class="more_link"></a>
+            <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="assets/images/common/more_story.jpg" alt="브랜드 스토리" />
@@ -490,7 +489,7 @@
             </figure>
         </li>
         <li>
-            <a href="brand/philosophy.jsp" class="more_link"></a>
+            <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="assets/images/common/more_philosophy.jpg" alt="브랜드 철학" />
@@ -502,7 +501,7 @@
             </figure>
         </li>
         <li>
-            <a href="brand/legacy.jsp" class="more_link"></a>
+            <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="assets/images/common/more_legacy.jpg" alt="브랜드 유산" />

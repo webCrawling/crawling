@@ -2,6 +2,7 @@ package frontController;
 
 import java.io.IOException;
 
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,11 +12,14 @@ import javax.servlet.http.HttpSession;
 
 import command.Command_CheckingId;
 import command.Command_Join;
+import command.Command_delete;
 import command.Command_home;
+import command.Command_mypage;
 import dao.Dao_join;
 import dto.Dto_join;
 import etc.Action;
 import etc.ActionForward;
+import etc.Command;
 
 @WebServlet("*.do")
 
@@ -40,9 +44,8 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		Action action = null;
 
 		System.out.println("command is " + command);
-		System.out.println("ignoreÈ®ÀÎ3");
 
-		// ·Î±×ÀÎ ¹öÆ° Å¬¸¯ ½Ã È¨ ÆäÀÌÁö·Î ÀÌµ¿
+		// ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ ì‹œ í™ˆ í˜ì´ì§€ë¡œ ì´ë™
 		if (command.equals("/home.do")) {
 			// System.out.println(request.getParameter("userid1"));
 			action = new Command_home();
@@ -52,14 +55,14 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 				e.printStackTrace();
 			}
 		}
-		// È¨ÆäÀÌÁö ÀÌµ¿
+		// í™ˆí˜ì´ì§€ ì´ë™
 		else if (command.equals("/first_home.do")) {
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("/home.jsp");
 
 		}
-		// ·Î±×¾Æ¿ô ½Ã ÆäÀÌÁö ÀÌµ¿ 
+		// ë¡œê·¸ì•„ì›ƒ ì‹œ í˜ì´ì§€ ì´ë™ 
 		else if (command.equals("/logout.do")) {
 			forward = new ActionForward();
 			forward.setRedirect(false);
@@ -67,10 +70,9 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			session.invalidate();
 			forward.setPath("/home.jsp");
 			
-			
 		}
 
-		// ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+		// ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™
 		else if (command.equals("/login.do")) {
 
 			forward = new ActionForward();
@@ -78,7 +80,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward.setPath("/login/login.jsp");
 		}
 
-		// È¸¿ø°¡ÀÔ ¾à°üµ¿ÀÇ ÆäÀÌÁö·Î ÀÌµ¿
+		// íšŒì›ê°€ì… ì•½ê´€ë™ì˜ í˜ì´ì§€ë¡œ ì´ë™
 		else if (command.equals("/join.do")) {
 
 			forward = new ActionForward();
@@ -87,7 +89,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// È¸¿ø°¡ÀÔ Æû ÆäÀÌÁö ÀÌµ¿
+		// íšŒì›ê°€ì… í¼ í˜ì´ì§€ ì´ë™
 		else if (command.equals("/join2.do")) {
 
 			forward = new ActionForward();
@@ -95,7 +97,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward.setPath("/join/join2.jsp");
 		}
 
-		// ¾ÆÀÌµğ Áßº¹È®ÀÎ
+		// ì•„ì´ë”” ì¤‘ë³µí™•ì¸
 		else if (command.equals("/CheckingId.do")) {
 			action = new Command_CheckingId();
 			try {
@@ -108,7 +110,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// È¸¿ø°¡ÀÔ ºñÁö´Ï½º ·ÎÁ÷
+		// íšŒì›ê°€ì… ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 		else if (command.equals("/joinCompleted.do")) {
 			action = new Command_Join();
 			try {
@@ -121,14 +123,45 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// ÆäÀÌÁö ÀÌµ¿
-		if (forward.isRedirect()) {
-			response.sendRedirect(forward.getPath());
-		} else {
-			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
-			dispatcher.forward(request, response);
+		//ë§ˆì´í˜ì´ì§€ (ìˆ˜ì •)ìœ¼ë¡œ ì´ë™
+		else if (command.equals("/modification.do")){
+			System.out.println("ëª¨ë””í”¼ì¼€ì´ì…˜ ì»¨íŠ¸ë¡¤ëŸ¬ ê¹Œì§€ ì˜¨ë‹¤.");
+			action = new Command_mypage();
+			try {
+
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+
+		//ë§ˆì´í˜ì´ì§€ì—ì„œ íšŒì›íƒˆí‡´
+		else if (command.equals("/delete.do")){
+
+			String id = request.getParameter("id");
+			request.setAttribute("id",id);
+			action = new Command_delete();
+
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	
+	// í˜ì´ì§€ ì´ë™
+	if (forward.isRedirect()) {
+		response.sendRedirect(forward.getPath());
+	} else {
+		RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
+		dispatcher.forward(request, response);
 	}
+}
+
+
 
 }
 
