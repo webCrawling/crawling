@@ -53,8 +53,8 @@
 <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
 
 
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 
 <!-- validatation check -->

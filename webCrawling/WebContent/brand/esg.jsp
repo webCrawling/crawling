@@ -272,7 +272,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                                     <li class="active"><a href="story.go">브랜드 스토리</a></li>
                                     <li><a href="philosophy.go">브랜드 철학</a></li>
                                     <li><a href="legacy.go">브랜드 유산</a></li>
-
                                     </ul>
                             </div>
                         </li>
@@ -305,7 +304,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <div class="dp2">
                                 <ul>
                                     <li><a href="store_find.go">주변점포찾기</a></li>
-
                                 </ul>
                             </div>
                         </li>
@@ -315,7 +313,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                                 <ul>
                                     <li><a href="event_list.go">이 달의 이벤트</a></li>
                                     <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
-
                                 </ul>
                             </div>
                         </li>

@@ -1,5 +1,6 @@
 =\=\=\=\=\=\=
 
+
 eclipse.preferences.version=1
 encoding//WebContent/assets=UTF-8
 encoding//WebContent/assets/css=UTF-8
@@ -7,5 +8,6 @@ encoding//WebContent/join/join1.jsp=UTF-8
 encoding//WebContent/join/join2.jsp=UTF-8
 encoding//WebContent/login/login.jsp=UTF-8
 encoding//WebContent/login/mypage.jsp=UTF-8
+encoding//src/frontController/FrontController_admin.java=UTF-8
 
 encoding//src/frontController/FrontController_join.java=UTF-8
