@@ -1,6 +1,5 @@
 package frontController;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,54 +19,53 @@ import command.Command_deliveryComplete;
 import command.Command_memInfo;
 import command.Command_memList;
 import command.Command_mypage;
+import command.Command_statistics;
 import dao.Dao_admin;
 import dto.Dto_join;
 import dto.Dto_order;
 import etc.Command;
 
-
-
 //@WebServlet("*.am")
 public class FrontController_admin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	public FrontController_admin() {
 	}
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doGet");
-		doProcess(request,response);
+		doProcess(request, response);
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doPost");
-		doProcess(request,response);
+		doProcess(request, response);
 	}
 
 	// FrontController Process
-	public void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doProcess(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doProcess");
 
 		request.setCharacterEncoding("utf-8");
 		String forward = null;
 
-		String uri = request.getRequestURI(); 
-		String contextPath = request.getContextPath(); 
+		String uri = request.getRequestURI();
+		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
 
-		System.out.println("contextPath : "+contextPath);
-		System.out.println("selected command : "+com);
+		System.out.println("contextPath : " + contextPath);
+		System.out.println("selected command : " + com);
 
 		// 관리 페이지로 이동
-		if(com.equals("/goAdmin.am")) {
+		if (com.equals("/goAdmin.am")) {
 			forward = "/admin/adminPage.jsp";
 		}
 
 		// 배달 관리 (관리자)
-		if(com.equals("/deliver_admin.am")) {
+		if (com.equals("/deliver_admin.am")) {
 			Command command = new Command_deliveryAdmin();
 			try {
 				command.exe(request, response);
@@ -78,7 +76,7 @@ public class FrontController_admin extends HttpServlet {
 		}
 
 		// 배달 완료
-		if(com.equals("/deliveryComplete.am")) {
+		if (com.equals("/deliveryComplete.am")) {
 			Command command = new Command_deliveryComplete();
 			try {
 				command.exe(request, response);
@@ -88,9 +86,19 @@ public class FrontController_admin extends HttpServlet {
 			forward = "deliver_admin.am";
 		}
 
+		// 관리자 통계
+		if (com.equals("/Statistics.am")) {
+			Command command = new Command_statistics();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+			forward = "/admin/statistics.jsp";
+		}
 
 		// 회원 관리 버튼 클릭시 클라이언트에게 보여줄 회원 목록을 가져오는 로직
-		else if(com.equals("/memberList.am")) {
+		else if (com.equals("/memberList.am")) {
 			Command command = new Command_memList();
 			try {
 				command.exe(request, response);
@@ -101,23 +109,23 @@ public class FrontController_admin extends HttpServlet {
 		}
 
 		// 회원이름 클릭시 회원정보 + 회원의 전체 주문내역을 가져오는 로직
-		else if (com.equals("/memberInfo.am")){
+		else if (com.equals("/memberInfo.am")) {
 			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+			request.setAttribute("id", id);
 			Command command = new Command_memInfo();
 			try {
 				command.exe(request, response);
 			} catch (NamingException e) {
 				e.printStackTrace();
 			}
-			forward = "/admin/information_member.jsp";			
+			forward = "/admin/information_member.jsp";
 		}
 
 		// 회원 삭제 로직
-		else if (com.equals("/delete.am")){
+		else if (com.equals("/delete.am")) {
 
 			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+			request.setAttribute("id", id);
 			Command command = new Command_delete();
 			try {
 				command.exe(request, response);
@@ -125,14 +133,13 @@ public class FrontController_admin extends HttpServlet {
 				e.printStackTrace();
 			}
 
-			forward = "/memberList.am";		
-
+			forward = "/memberList.am";
 
 		}
 
-		//마이페이지 (수정)으로 이동
-		
-		else if (com.equals("/modification.am")){
+		// 마이페이지 (수정)으로 이동
+
+		else if (com.equals("/modification.am")) {
 
 			Command command = new Command_mypage();
 			try {
@@ -145,8 +152,6 @@ public class FrontController_admin extends HttpServlet {
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
 
-
 	}
-
 
 }

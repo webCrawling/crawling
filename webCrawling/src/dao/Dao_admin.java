@@ -220,7 +220,35 @@ public class Dao_admin {
 		
 	}
 	
-	
+	// 총 수입 계산
+	public int doStatistics() {
+		int sum=0;
+		sql = "select price from ordermenu";
+
+		try {
+			conn = datasource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				int price = rs.getInt(1);
+
+				sum = sum+price;
+			}
+			rs.close();
+			
+			//test
+			System.out.println("sum = "+sum);
+
+		} catch (Exception e) {
+			System.out.println("doStatistics() : 통계 실패");
+			e.printStackTrace();
+		}
+		
+		return sum;
+		
+	}
 
 	// 회원 삭제
 	public void delete(String id) {
