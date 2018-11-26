@@ -171,7 +171,7 @@ public class Dao_admin {
 	public ArrayList<Dto_order> deliverAdmin() {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
-		sql = "select * from ordermenu where status=?";
+		sql = "select * from ordermenu where statement=?";
 
 		try {
 			conn = datasource.getConnection();
@@ -201,28 +201,27 @@ public class Dao_admin {
 		return list;
 
 	}
-	
+
 	// 배달 완료
 	public void orderComplete(String id, int price, int state) throws SQLException {
 		sql = "update ordermenu set statement = 1 where id=? and price=? and statement= ?";
-		
-			conn = datasource.getConnection();
-			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, id);
-			pstmt.setInt(2, price);
-			pstmt.setInt(3, state);
+		conn = datasource.getConnection();
+		pstmt = conn.prepareStatement(sql);
 
-			rs = pstmt.executeQuery();
+		pstmt.setString(1, id);
+		pstmt.setInt(2, price);
+		pstmt.setInt(3, state);
 
-			rs.close();
-		
-		
+		rs = pstmt.executeQuery();
+
+		rs.close();
+
 	}
-	
+
 	// 총 수입 계산
 	public int doStatistics() {
-		int sum=0;
+		int sum = 0;
 		sql = "select price from ordermenu";
 
 		try {
@@ -234,20 +233,20 @@ public class Dao_admin {
 			while (rs.next()) {
 				int price = rs.getInt(1);
 
-				sum = sum+price;
+				sum = sum + price;
 			}
 			rs.close();
-			
-			//test
-			System.out.println("sum = "+sum);
+
+			// test
+			System.out.println("sum = " + sum);
 
 		} catch (Exception e) {
 			System.out.println("doStatistics() : 통계 실패");
 			e.printStackTrace();
 		}
-		
+
 		return sum;
-		
+
 	}
 
 	// 회원 삭제
@@ -261,15 +260,13 @@ public class Dao_admin {
 			pstmt.executeUpdate();
 			
 			rs.close();
-			
-			
+
 		} catch (Exception e) {
 			System.out.println("delete() : 회원삭제에 실패 하였습니다.");
 			e.printStackTrace();
-			
-		}
+
+		} 
 
 	}
-
 
 }
