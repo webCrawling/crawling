@@ -13,8 +13,10 @@ import javax.naming.NamingException;
 
 import javax.sql.DataSource;
 
+import dto.Dto_event;
 import dto.Dto_join;
 import dto.Dto_order;
+
 
 public class Dao_admin {
 
@@ -285,6 +287,72 @@ public class Dao_admin {
 		return sum;
 		
 	}
+	
+	// 이벤트 공지사항 올리기
+	public void uploadEvent(String title, String content) {
+		
+		sql = "INSERT INTO event VALUES (?,?)";
+
+		try {
+			
+			conn = datasource.getConnection();
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, title);
+			pstmt.setString(2, content);
+			
+
+			pstmt.executeUpdate();
+			pstmt.close();
+
+		} catch (Exception e) {
+			
+			System.out.println("이벤트 업로드 예외 발생");
+			e.printStackTrace();
+		}
+		finally{
+			if(rs!=null) try{rs.close();}catch(SQLException ex){}
+			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
+			if(conn!=null)try{conn.close();}catch(SQLException e){}
+		}
+		
+		
+	}
+	
+	// 이벤트 공지 리스트 가져오기
+	public ArrayList<Dto_event> getEventList(){
+		
+		ArrayList<Dto_event> list = new ArrayList<>();
+		sql = "select * from event";
+
+		try {
+			conn = datasource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				Dto_event dto = new Dto_event();
+
+				dto.setTitle(rs.getString(1));
+				dto.setContent(rs.getString(2));
+
+				list.add(dto);
+			}
+			rs.close();
+
+		} catch (Exception e) {
+			System.out.println("getEventList() : 이벤트 목록 가져오기 실패");
+			e.printStackTrace();
+		}
+
+		return list;
+		
+		
+		
+	}
+	
 
 	// 회원 삭제
 	public void delete(String id) {
