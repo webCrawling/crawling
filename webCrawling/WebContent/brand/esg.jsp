@@ -1,33 +1,57 @@
-
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 
-
-
-
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- 
+	*meta tag 
+	html문서 자체의 특성을 담고 있다.
+	 -->
+	<!-- 
+	*인코딩 방식 선언하기
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	HTML4에서 사용하는 인코딩 설정방식이다.
+	HTML5에서 사용하는 인코딩 설정방식이 더 간결하다.
+	 -->
+    <meta charset=utf-8 />
+    
+    <!-- 
+    *viewport 화면상 화상 표시 영역
+    데스크탑에 기반하여 설계된 웹페이지를 모바일 환경에서도 최적화시키기 위해
+    페이지의 너비나 배율을 설정해야 한다. 
+    -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
-    <!-- SNS LINK -->
+    <!-- 
+    *og tag Open Graph
+      SNS 상에서 웹 사이트의 URL링크 공유 시 제목,내용,이미지 미리보기를 만들 때 사용하는 태그
+    -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
+    <meta property="og:title" content="한솥 웹사이트 클론" />
     <meta property="og:url" content="" />
+
     <meta property="og:image" content="" />
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="64da8a4e-f052-43b1-99f4-214c174663a7" /><title>ESG 경영</title>
 
+    
+    <!-- 
+    link tag를 사용해서 외부문서와 연결하기
+    rel 속성:현재문서와 연결문서의 관계 
+    type 속성:연결문서의 타입(content type) 
+     -->
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
-
-<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
-<!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
-
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/ui.brand.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+     <!-- 
+    <style>태그를 사용해서 css 코드 작성하기
+      -->
+     
 <style>
     .file_input {
         font-size:45px;
@@ -48,6 +72,14 @@
     }
 </style>
 
+<!-- 
+외부 js파일을 client-side에서 동작시키기 
+그렇다면 link tag 를 사용해서 js파일을 가져와 볼수도 있을까?
+보통 link tag의 경우 href속성을 통해.css 파일을 연결하는 것이고 (외부파일을 읽으면서 페이지로딩을 병렬처리) 
+script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
+(src에 있는 파일을 읽은 후 페이지로딩 그래서 js파일로드하는것을 페이지 마지막에서 하는 걸 권장한다.) 
+ -->
+ 
 <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
@@ -94,15 +126,15 @@
             }
         });
     });
-</script><script type="text/javascript">
-    </script>
+</script>
 
-    
+    <script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/ui.brand.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics 
+    async 속성 : 스크립트의 비동기 실행
+     브라우저가 async 속성을 만나면 스크립트 실행을 뒤로 미루고 우선 스크립트 파일의 수신과 HTML 문서의 파싱에 집중한다. 
+     외부 스크립트 파일의 수신이 완료되었을 때 스크립트를 실행시킨다.
+    -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -121,7 +153,6 @@
 
       gtag('config', 'AW-864658366');
     </script>
-
 
     <!-- kakao pixcel -->
     <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
@@ -142,6 +173,9 @@
         fbq('init', '241666853119648');
         fbq('track', 'PageView');
     </script>
+    <!-- 
+    noscript : 스크립트 미지원을 표시한다
+     -->
     <noscript>
         <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
     </noscript>
@@ -179,20 +213,24 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="home.go"><span class="blind">한솥</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">한솥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
                 <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-							<ul>
-								<li><a href="login.do">로그인</a></li>
-								<li><a href="join.do">회원가입</a></li>
-							</ul>
-						</div>
+                    <ul>
+                        <li>
+                            <a href="login.do">로그인</a>
+                            </li>
+                        <li>
+                            <a href="join.do">회원가입</a>
+                            </li>
+                    </ul>
+                </div>
                 <!-- //모바일 로그인/회원가입 -->
 
-                 <div class="gnb_menu">
+               <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
@@ -223,7 +261,6 @@
                                     <li><a href="menu_list.go">전체메뉴</a></li>
                                     <li><a href="material.go">식재료 이야기</a></li>
                                     <li><a href="chancha.go">페루찬차마요커피</a></li>
-                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -252,8 +289,6 @@
                                     <li><a href="success.go">성공수기</a></li>
                                     <li><a href="process.go">창업개설절차</a></li>
                                     <li><a href="calc.go">예상 창업 비용</a></li>
-                                    <li><a href="qna.go">창업문의</a></li>
-                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -266,13 +301,12 @@
                                     <li><a href="history.go">연혁&amp;수상</a></li>
                                     <li><a href="news_list.go">한솥 NEWS</a></li>
                                     <li><a href="location.go">오시는 길</a></li>
-                                    <li><a href="faq_list.go">고객센터</a></li>
-                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
