@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ page import="javax.naming.*" %>
 
 
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>���ܸ��</title>
+<meta charset="utf-8">
+<title>명단목록</title>
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 %>
      
         <%if(confirmIds==true){ %>
-    	  <h2 style="position: fixed; top:30%; left:35%">��밡��</h2>
+    	  <h2 style="position: fixed; top:30%; left:35%">사용가능</h2>
         <%}else{%>
-          <h2 style="position: fixed; top:30%; left:20%">���̵� �ߺ��ʤ�</h2>
+          <h2 style="position: fixed; top:30%; left:20%">아이디 중복됨ㅋ</h2>
         <%}%>
 
      

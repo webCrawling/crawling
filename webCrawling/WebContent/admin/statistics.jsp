@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,18 +12,18 @@
 
 <%
 	if(request.getAttribute("sum")==null){
-		out.println("¼öÀÔÀÌ ¾ø½À´Ï´Ù.");
+		out.println("ìˆ˜ì…ì´ ì—†ìŠµë‹ˆë‹¤.");
 	}
 %>
 
 
 <%if(request.getAttribute("sum")!=null){
-	out.println("¼öÀÔÀÌ ÀÖ½À´Ï´Ù.");
+	out.println("ìˆ˜ì…ì´ ìˆìŠµë‹ˆë‹¤.");
 
 	 sum = (int)request.getAttribute("sum");
 } %>
 
-	<h1>ÃÑ ¼öÀÔ</h1>
+	<h1>ì´ ìˆ˜ì…</h1>
 	<%=sum %>
 </body>
 </html>
