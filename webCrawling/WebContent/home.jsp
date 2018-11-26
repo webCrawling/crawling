@@ -21,7 +21,6 @@
 
 <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
-<!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
     .file_input {
@@ -194,7 +193,7 @@
             <% if(id != null && (!id.equals("admin"))){ %>
             	 <li >
            
-                    <a href="my_page.go"> <%=id %> 님의 마이페이지</a> 
+                    <a href="mypage.go"> <%=id %> 님의 마이페이지</a> 
                     
                 </li>
                 <li>

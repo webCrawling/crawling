@@ -60,12 +60,14 @@ public class FrontController_admin extends HttpServlet {
 		System.out.println("contextPath : " + contextPath);
 		System.out.println("selected command : " + com);
 
-		// °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
+
+		// ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
 		if (com.equals("/goAdmin.am")) {
 			forward = "/admin/adminPage.jsp";
 		}
 
-		// ¹è´Ş °ü¸® (°ü¸®ÀÚ)
+
+		// ë°°ë‹¬ ê´€ë¦¬ (ê´€ë¦¬ì)
 		else if (com.equals("/deliver_admin.am")) {
 			Command command = new Command_deliveryAdmin();
 			try {
@@ -76,7 +78,8 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/delivery_admin.jsp";
 		}
 
-		// ¹è´Ş ¿Ï·á
+
+		// ë°°ë‹¬ ì™„ë£Œ
 		else if (com.equals("/deliveryComplete.am")) {
 			Command command = new Command_deliveryComplete();
 			try {
@@ -87,7 +90,8 @@ public class FrontController_admin extends HttpServlet {
 			forward = "deliver_admin.am";
 		}
 
-		// °ü¸®ÀÚ Åë°è
+
+		// ê´€ë¦¬ì í†µê³„
 		else if (com.equals("/Statistics.am")) {
 			Command command = new Command_statistics();
 			try {
@@ -99,12 +103,12 @@ public class FrontController_admin extends HttpServlet {
 		}
 		
 		
-		// °ü¸®ÀÚ ÀÌº¥Æ® °øÁö ÆäÀÌÁö·Î ÀÌµ¿
+		// ê´€ë¦¬ì ì´ë²¤íŠ¸ ê³µì§€ í˜ì´ì§€ë¡œ ì´ë™
 				if (com.equals("/goNewEvent.am")) {
 					forward = "/admin/newEvent.jsp";
 				}
 		
-		// °ü¸®ÀÚ ÀÌº¥Æ® °øÁö ¿Ã¸®±â ·ÎÁ÷
+		// ê´€ë¦¬ì ì´ë²¤íŠ¸ ê³µì§€ ì˜¬ë¦¬ê¸° ë¡œì§
 		else if(com.equals("/uploadEvent.am")) {
 			Command command = new Command_event();
 			try {
@@ -116,7 +120,7 @@ public class FrontController_admin extends HttpServlet {
 			
 		}
 		
-		// ÀÌº¥Æ® °øÁö ÀüÃ¼ º¸±â
+		// ì´ë²¤íŠ¸ ê³µì§€ ì „ì²´ ë³´ê¸°
 		else if(com.equals("/eventList.am")) {
 			Command command = new Command_event();
 			try {
@@ -128,7 +132,8 @@ public class FrontController_admin extends HttpServlet {
 			
 		}	
 
-		// È¸¿ø °ü¸® ¹öÆ° Å¬¸¯½Ã Å¬¶óÀÌ¾ğÆ®¿¡°Ô º¸¿©ÁÙ È¸¿ø ¸ñ·ÏÀ» °¡Á®¿À´Â ·ÎÁ÷
+
+		// íšŒì› ê´€ë¦¬ ë²„íŠ¼ í´ë¦­ì‹œ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë³´ì—¬ì¤„ íšŒì› ëª©ë¡ì„ ê°€ì ¸ì˜¤ëŠ” ë¡œì§
 		else if (com.equals("/memberList.am")) {
 			Command command = new Command_memList();
 			try {
@@ -139,7 +144,7 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/list_member.jsp";
 		}
 
-		// È¸¿øÀÌ¸§ Å¬¸¯½Ã È¸¿øÁ¤º¸ + È¸¿øÀÇ ÀüÃ¼ ÁÖ¹®³»¿ªÀ» °¡Á®¿À´Â ·ÎÁ÷
+		// íšŒì›ì´ë¦„ í´ë¦­ì‹œ íšŒì›ì •ë³´ + íšŒì›ì˜ ì „ì²´ ì£¼ë¬¸ë‚´ì—­ì„ ê°€ì ¸ì˜¤ëŠ” ë¡œì§
 		else if (com.equals("/memberInfo.am")) {
 			String id = request.getParameter("id");
 			request.setAttribute("id", id);
@@ -152,7 +157,7 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/information_member.jsp";
 		}
 
-		// È¸¿ø »èÁ¦ ·ÎÁ÷
+		// íšŒì› ì‚­ì œ ë¡œì§
 		else if (com.equals("/delete.am")) {
 
 			String id = request.getParameter("id");
@@ -168,7 +173,7 @@ public class FrontController_admin extends HttpServlet {
 
 		}
 
-		// ¸¶ÀÌÆäÀÌÁö (¼öÁ¤)À¸·Î ÀÌµ¿
+		// ë§ˆì´í˜ì´ì§€ (ìˆ˜ì •)ìœ¼ë¡œ ì´ë™
 
 		/*else if (com.equals("/modification.am")) {
 
@@ -180,7 +185,7 @@ public class FrontController_admin extends HttpServlet {
 			}
 		}*/
 
-		// ÆäÀÌÁö ÀÌµ¿
+		// í˜ì´ì§€ ì´ë™
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
 

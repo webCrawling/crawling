@@ -103,6 +103,42 @@ public class Dao_admin {
 		return dto;
 	}
 
+	// 회원이 현재 주문한 내역을 가져옴
+	public ArrayList<Dto_order> getOrderList_member(String id, int state){
+		
+		ArrayList<Dto_order> list = new ArrayList<>();
+		sql = "select * from ordermenu where id=? and statement=0";
+
+		try {
+			conn = datasource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				Dto_order dto = new Dto_order();
+
+				dto.setId(rs.getString(1));
+				dto.setMenu(rs.getString(2));
+				dto.setPrice(rs.getInt(3));
+				dto.setPhone(rs.getString(4));
+
+				list.add(dto);
+			}
+			rs.close();
+
+		} catch (Exception e) {
+			System.out.println("getWholeorder() : 회원의 현재 주문 내역 가져오기 실패");
+			e.printStackTrace();
+		}
+
+		return list;
+		
+	}
+	
+	
 	// 회원의 주문 내역을 가져옴
 	public Dto_order getMemberOrderList(String id) {
 
@@ -328,8 +364,8 @@ public class Dao_admin {
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
 			
-			rs.close();
-			
+			pstmt.close();
+			conn.close();
 			
 		} catch (Exception e) {
 			System.out.println("delete() : 회원삭제에 실패 하였습니다.");

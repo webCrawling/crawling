@@ -2,6 +2,7 @@ package frontController;
 
 import java.io.IOException;
 
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import command.Command_memList;
 import command.Command_order;
+import command.Command_orderList_member;
+import etc.Command;
 
 /**
  * Servlet implementation class FrontController_pageGo
@@ -47,6 +51,10 @@ public class FrontController_pageGo extends HttpServlet {
       if (com.equals("/join1.go")) {
          
          forward = "/join/join1.jsp";
+         
+      }else if(com.equals("/join2.go")) {
+    	  forward = "/join/join2.jsp";
+    	  
       }
       
       //brand
@@ -143,7 +151,21 @@ public class FrontController_pageGo extends HttpServlet {
       
       //home
       if(com.equals("/home.go")) {
-    	  forward = "home.jsp";
+    	  forward = "home.jsp";  
+      }
+      
+      //my page
+      if(com.equals("/mypage.go")) {
+    	  forward = "/login/mypage.jsp";  
+      }else if(com.equals("/personalOrder.go")) {
+    	  
+    	  Command command = new Command_orderList_member();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+    	  forward = "/login/personalOrder.jsp";
     	  
       }
       RequestDispatcher dis = request.getRequestDispatcher(forward);
