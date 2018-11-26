@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 
@@ -117,12 +118,12 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('로그인이 필요합니다.')) {
+                if(tss.util.confirm('�α����� �ʿ��մϴ�.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("오류가 발생했습니다.");
+                console.log("��� �߻��߽�ϴ�.");
             }
         });
     });
@@ -182,6 +183,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
     <!-- End Facebook Pixel Code -->
 
 </head>
+
 <body ontouchstart>
 <!-- wrap s -->
 <div id="wrap" class="bg_w">
@@ -193,16 +195,16 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">로그인</a>
+                    <a href="login.do">�α���</a>
                     </li>
                 <li>
-                    <a href="join.do">회원가입</a>
+                    <a href="join.do">ȸ����</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -217,7 +219,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- 모바일 로그인/회원가입 -->
+                <!-- ����� �α���/ȸ���� -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
@@ -236,9 +238,9 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
-                                    <li><a href="philosophy.go">브랜드 철학</a></li>
-                                    <li><a href="legacy.go">브랜드 유산</a></li>
+                                    <li class="active"><a href="story.go">�귣�� ���丮</a></li>
+                                    <li><a href="philosophy.go">�귣�� ö��</a></li>
+                                    <li><a href="legacy.go">�귣�� ���</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -246,10 +248,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
-                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
-                                    <li><a href="social.go">사회공헌(Social)</a></li>
-                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG�濵�̶�?</a></li>
+                                    <li><a href="philosophy.go">ȯ�溸ȣ(Environment)</a></li>
+                                    <li><a href="social.go">��ȸ����(Social)</a></li>
+                                    <li><a href="esg.go">����濵(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -268,7 +270,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">주변점포찾기</a></li>
+                                    <li><a href="store_find.go">�ֺ����ã��</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -276,8 +278,8 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
-                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
+                                    <li><a href="event_list.go">�� ���� �̺�Ʈ</a></li>
+                                    <li><a href="store_event_list.go">�ű�� �����̺�Ʈ</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -327,7 +329,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
 </header>
 <!--// header -->
 
-<!--// inc header e -->
 
     <!-- popup -->
 <!-- container s -->
@@ -336,31 +337,31 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
 <div class="content brand">
     <!-- group_order -->
     <section class="brand_esg">
-        <!-- 상단bg 영역 -->
+        <!-- ���bg ���� -->
         <div class="brand_visual_wrap mo_tr">
             <div class="visual_bg"></div>
         </div>
-        <!-- //상단bg 영역 -->
+        <!-- //���bg ���� -->
         <!-- section01 -->
         <div class="bs_wrap section_01">
-            <p class="menu_tit mo_version">ESG 경영</p>
+            <p class="menu_tit mo_version">ESG �濵</p>
             <div class="bs_cont mo_tr">
-                <h2 class="h2_tit">한솥의 ESG 경영</h2>
+                <h2 class="h2_tit">�Ѽ��� ESG �濵</h2>
                 <div class="bs_txt">
                     <p>
-                        한솥도시락은 UN에서 2015년 공포한 SDGs(지속가능개발목표)에 부응하여 기업차원에서 실천이 요구되는 ESG 경영에 매진하여 왔습니다.
+                        �Ѽܵ��ö�� UN���� 2015�� ������ SDGs(��Ӱ��ɰ��߸�ǥ)�� �����Ͽ� ������ ��õ�� �䱸�Ǵ� ESG �濵�� �����Ͽ� �Խ�ϴ�.
                     </p>
                     <p>
-                        ESG란 환경보호(Environment)·사회공헌(Social)·윤리경영(Governance)의 약자로, 기업이 환경보호에 앞장서며,
-                        사회적 약자에 대한 지원과 남녀 평등한 직장문화의 조성 등 사회공헌 활동을 하며,
-                        법과 윤리를 철저히 준수하는 윤리경영 등 ESG경영을 실천해야 지속적인 성장이 가능하다는 뜻입니다.
-                        유럽연합이나 미국 등에서는 이미 기업을 평가하는데 중요한 기준으로 자리잡고 있으며,
-                        현재 전 세계적으로 확산돼 나가고 있는 추세입니다.
-                        국내에서는 아직까지 보편화 되어있지 않으나 한솥도시락은 창업 때부터 ESG경영을 실천해오고 있습니다.
+                        ESG�� ȯ�溸ȣ(Environment)����ȸ����(Social)������濵(Governance)�� ���ڷ�, ����� ȯ�溸ȣ�� ���弭��,
+                        ��ȸ�� ���ڿ� ���� ���� ���� ����� ���幮ȭ�� ��� �� ��ȸ���� Ȱ��� �ϸ�,
+                        ��� ����� ö���� �ؼ��ϴ� ����濵 �� ESG�濵� ��õ�ؾ� ������� ������ �����ϴٴ� ���Դϴ�.
+                        ��������̳� �̱� ����� �̹� ���� ���ϴµ� �߿��� ������� �ڸ���� �����,
+                        ���� �� ��������� Ȯ��� ������ �ִ� �߼��Դϴ�.
+                        ���������� ������� ����ȭ �Ǿ����� ����� �Ѽܵ��ö�� â�� ������ ESG�濵� ��õ�ؿ�� �ֽ�ϴ�.
                     </p>
                 </div>
                 <div class="bs_img mo_tr">
-                    <img src="assets/images/brand/brand_esg.jpg" alt="ESG기업의 3대 요건" usemap="#map"/>
+                    <img src="assets/images/brand/brand_esg.jpg" alt="ESG����� 3�� ���" usemap="#map"/>
                     <map name="map" id="map">
                         <area target="" alt="social" title="social" href="https://www.hsd.co.kr/hansot/social" shape="rect" coords="240,422,121,323">
                     </map>
@@ -373,7 +374,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
 
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">더 많은 이야기</h2>
+    <h2 class="more_tit">�� ��� �̾߱�</h2>
     <ul>
         <li>
             <a href="vision.go" class="more_link"></a>
@@ -418,18 +419,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
 <script type="text/javascript" src="assets/js/imageMapResizer.min.js"></script>
 
 
-<script>
-  $(document).ready(function() {
-
-    $('map').imageMapResize();
-
-    //contents viewportChecker
-    $('.bs_cont').addClass("hidden").viewportChecker({
-      classToAdd: 'visible animated fadeInUp',
-      offset: 120
-    });
-  });
-</script>
 
 
     </div>
@@ -443,42 +432,42 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
-                <li class="off"><a href="partners.go">협력업체등록</a></li>
-                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
-                <li><a href="faq_list.go">고객 센터</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="agreement.go">이용약관</a></li>
+                <li class="first_be off"><a href="incruit.go">����ä��</a></li>
+                <li class="off"><a href="partners.go">��¾�ü���</a></li>
+                <li class="mo_bl"><a href="notice_list.go">�������</a></li>
+                <li><a href="faq_list.go">�� ����</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>���������޹�ħ</strong></a></li>
+                <li><a href="agreement.go">�̿���</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 프랜차이즈분야 대상2017</span></p></div><!-- 2018-01-11웹어워드마크 -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ���������о� ���2017</span></p></div><!-- 2018-01-11����帶ũ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">대표이사  이영덕</span>
-                <span>사업자등록번호  214-81-96569</span>
-                <span>서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</span>
+                <span class="first_be">��ǥ�̻�  �̿���</span>
+                <span>����ڵ�Ϲ�ȣ  214-81-96569</span>
+                <span>����� ������ ������� 318(���ﵿ) Ÿ��837��� 8,9��</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>한솥 도시락 고객센터  02-585-1114</span>
-                <span>전국창업설명회  1811-0188</span>
-                <span>단체주문  1644-3288</span>
+                <span>�Ѽ� ���ö� ������  02-585-1114</span>
+                <span>��â���ȸ  1811-0188</span>
+                <span>��ü�ֹ�  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">한솥 사업자 정보</a>
+                        <a href="#none">�Ѽ� ����� ���</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">대표이사  이영덕</span>
-                        <span>사업자등록번호  214-81-96569</span>
+                        <span class="mo_bl">��ǥ�̻�  �̿���</span>
+                        <span>����ڵ�Ϲ�ȣ  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</span>
+                        <span class="mo_bl">����� ������ ������� 318(���ﵿ) Ÿ��837��� 8,9��</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -486,15 +475,15 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>한솥 고객센터</dt>
+                                <dt>�Ѽ� ������</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>전국창업설명회</dt>
+                                <dt>��â���ȸ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>단체주문</dt>
+                                <dt>��ü�ֹ�</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -503,28 +492,17 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>㈜한솥. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>���Ѽ�. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" class="sns_insta_02" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" class="sns_insta_02" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
     </div>
 </footer>
 <!--// footer -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109125197-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-109125197-1');
-        </script>
-    <!--// inc footer e -->
-
 </div>
 <!--// wrap e -->
 </body>

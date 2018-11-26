@@ -171,7 +171,7 @@ public class Dao_admin {
 	public ArrayList<Dto_order> deliverAdmin() {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
-		sql = "select * from ordermenu where statement=?";
+		sql = "select * from ordermenu where status=?";
 
 		try {
 			conn = datasource.getConnection();

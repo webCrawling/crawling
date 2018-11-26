@@ -71,7 +71,7 @@ public class FrontController_pageGo extends HttpServlet {
     	  forward = "/event/store_event_list.jsp";
     	  
       }
-      //footer - ªÊª·
+      //footer 
       
       //franchise
       if (com.equals("/briefing.go")) {
