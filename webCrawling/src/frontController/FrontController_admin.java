@@ -1,6 +1,5 @@
 package frontController;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,54 +19,53 @@ import command.Command_deliveryComplete;
 import command.Command_memInfo;
 import command.Command_memList;
 import command.Command_mypage;
+import command.Command_statistics;
 import dao.Dao_admin;
 import dto.Dto_join;
 import dto.Dto_order;
 import etc.Command;
 
-
-
 //@WebServlet("*.am")
 public class FrontController_admin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	public FrontController_admin() {
 	}
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doGet");
-		doProcess(request,response);
+		doProcess(request, response);
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doPost");
-		doProcess(request,response);
+		doProcess(request, response);
 	}
 
 	// FrontController Process
-	public void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doProcess(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("doProcess");
 
 		request.setCharacterEncoding("utf-8");
 		String forward = null;
 
-		String uri = request.getRequestURI(); 
-		String contextPath = request.getContextPath(); 
+		String uri = request.getRequestURI();
+		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
 
-		System.out.println("contextPath : "+contextPath);
-		System.out.println("selected command : "+com);
+		System.out.println("contextPath : " + contextPath);
+		System.out.println("selected command : " + com);
 
-		// °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
-		if(com.equals("/goAdmin.am")) {
+		// ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
+		if (com.equals("/goAdmin.am")) {
 			forward = "/admin/adminPage.jsp";
 		}
 
-		// ¹è´Ş °ü¸® (°ü¸®ÀÚ)
-		if(com.equals("/deliver_admin.am")) {
+		// ë°°ë‹¬ ê´€ë¦¬ (ê´€ë¦¬ì)
+		if (com.equals("/deliver_admin.am")) {
 			Command command = new Command_deliveryAdmin();
 			try {
 				command.exe(request, response);
@@ -77,8 +75,8 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/delivery_admin.jsp";
 		}
 
-		// ¹è´Ş ¿Ï·á
-		if(com.equals("/deliveryComplete.am")) {
+		// ë°°ë‹¬ ì™„ë£Œ
+		if (com.equals("/deliveryComplete.am")) {
 			Command command = new Command_deliveryComplete();
 			try {
 				command.exe(request, response);
@@ -88,9 +86,19 @@ public class FrontController_admin extends HttpServlet {
 			forward = "deliver_admin.am";
 		}
 
+		// ê´€ë¦¬ì í†µê³„
+		if (com.equals("/Statistics.am")) {
+			Command command = new Command_statistics();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+			forward = "/admin/statistics.jsp";
+		}
 
-		// È¸¿ø °ü¸® ¹öÆ° Å¬¸¯½Ã Å¬¶óÀÌ¾ğÆ®¿¡°Ô º¸¿©ÁÙ È¸¿ø ¸ñ·ÏÀ» °¡Á®¿À´Â ·ÎÁ÷
-		else if(com.equals("/memberList.am")) {
+		// íšŒì› ê´€ë¦¬ ë²„íŠ¼ í´ë¦­ì‹œ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë³´ì—¬ì¤„ íšŒì› ëª©ë¡ì„ ê°€ì ¸ì˜¤ëŠ” ë¡œì§
+		else if (com.equals("/memberList.am")) {
 			Command command = new Command_memList();
 			try {
 				command.exe(request, response);
@@ -100,24 +108,24 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/list_member.jsp";
 		}
 
-		// È¸¿øÀÌ¸§ Å¬¸¯½Ã È¸¿øÁ¤º¸ + È¸¿øÀÇ ÀüÃ¼ ÁÖ¹®³»¿ªÀ» °¡Á®¿À´Â ·ÎÁ÷
-		else if (com.equals("/memberInfo.am")){
+		// íšŒì›ì´ë¦„ í´ë¦­ì‹œ íšŒì›ì •ë³´ + íšŒì›ì˜ ì „ì²´ ì£¼ë¬¸ë‚´ì—­ì„ ê°€ì ¸ì˜¤ëŠ” ë¡œì§
+		else if (com.equals("/memberInfo.am")) {
 			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+			request.setAttribute("id", id);
 			Command command = new Command_memInfo();
 			try {
 				command.exe(request, response);
 			} catch (NamingException e) {
 				e.printStackTrace();
 			}
-			forward = "/admin/information_member.jsp";			
+			forward = "/admin/information_member.jsp";
 		}
 
-		// È¸¿ø »èÁ¦ ·ÎÁ÷
-		else if (com.equals("/delete.am")){
+		// íšŒì› ì‚­ì œ ë¡œì§
+		else if (com.equals("/delete.am")) {
 
 			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+			request.setAttribute("id", id);
 			Command command = new Command_delete();
 			try {
 				command.exe(request, response);
@@ -125,14 +133,13 @@ public class FrontController_admin extends HttpServlet {
 				e.printStackTrace();
 			}
 
-			forward = "/memberList.am";		
-
+			forward = "/memberList.am";
 
 		}
 
-		//¸¶ÀÌÆäÀÌÁö (¼öÁ¤)À¸·Î ÀÌµ¿
-		
-		else if (com.equals("/modification.am")){
+		// ë§ˆì´í˜ì´ì§€ (ìˆ˜ì •)ìœ¼ë¡œ ì´ë™
+
+		else if (com.equals("/modification.am")) {
 
 			Command command = new Command_mypage();
 			try {
@@ -141,12 +148,11 @@ public class FrontController_admin extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		// ÆäÀÌÁö ÀÌµ¿
+
+		// í˜ì´ì§€ ì´ë™
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
 
-
 	}
-
 
 }

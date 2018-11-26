@@ -171,7 +171,7 @@ public class Dao_admin {
 	public ArrayList<Dto_order> deliverAdmin() {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
-		sql = "select * from ordermenu where statement=?";
+		sql = "select * from ordermenu where status=?";
 
 		try {
 			conn = datasource.getConnection();
@@ -220,7 +220,35 @@ public class Dao_admin {
 		
 	}
 	
-	
+	// 총 수입 계산
+	public int doStatistics() {
+		int sum=0;
+		sql = "select price from ordermenu";
+
+		try {
+			conn = datasource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				int price = rs.getInt(1);
+
+				sum = sum+price;
+			}
+			rs.close();
+			
+			//test
+			System.out.println("sum = "+sum);
+
+		} catch (Exception e) {
+			System.out.println("doStatistics() : 통계 실패");
+			e.printStackTrace();
+		}
+		
+		return sum;
+		
+	}
 
 	// 회원 삭제
 	public void delete(String id) {
@@ -231,11 +259,14 @@ public class Dao_admin {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
-
+			
 			rs.close();
+			
+			
 		} catch (Exception e) {
 			System.out.println("delete() : 회원삭제에 실패 하였습니다.");
 			e.printStackTrace();
+			
 		}
 
 	}

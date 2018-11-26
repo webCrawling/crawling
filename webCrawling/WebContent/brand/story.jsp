@@ -197,10 +197,10 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="/login">로그인</a>
+                    <a href="login.do">로그인</a>
                     </li>
                 <li>
-                    <a href="/join/join_step1">회원가입</a>
+                    <a href="join.do">회원가입</a>
                     </li>
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
@@ -217,7 +217,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">한솥</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">한솥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
@@ -265,7 +265,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                                     <li><a href="menu_list.go">전체메뉴</a></li>
                                     <li><a href="material.go">식재료 이야기</a></li>
                                     <li><a href="chancha.go">페루찬차마요커피</a></li>
-                                    <li><a href="menu_order.go">단체 주문</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -294,8 +293,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                                     <li><a href="success.go">성공수기</a></li>
                                     <li><a href="process.go">창업개설절차</a></li>
                                     <li><a href="calc.go">예상 창업 비용</a></li>
-                                    <li><a href="qna.go">창업문의</a></li>
-                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -308,8 +305,6 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                                     <li><a href="history.go">연혁&amp;수상</a></li>
                                     <li><a href="news_list.go">한솥 NEWS</a></li>
                                     <li><a href="location.go">오시는 길</a></li>
-                                    <li><a href="faq_list.go">고객센터</a></li>
-                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -435,7 +430,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
                     <!-- btn -->
                     <div class="btn_wrap btn_more">
                         <span class="btn btn_st04">
-                            <a href="../hansot/social.jsp" class="c_05">사회공헌활동</a>
+                            <a href="social.go" class="c_05">사회공헌활동</a>
                         </span>
                     </div>
                     <!-- //btn -->
@@ -479,7 +474,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
     <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="vision.do" class="more_link"></a>
+            <a href="vision.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="assets/images/common/more_vision.jpg" alt="한솥의 비전" />
@@ -503,7 +498,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 코드이다.
             </figure>
         </li>
         <li>
-            <a href="../hansot/news_list.jsp" class="more_link"></a>
+            <a href="news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
                     <img src="assets/images/common/more_news.jpg" alt="한솥 NEWS" />
