@@ -5,7 +5,7 @@ public class Dto_order {
 	private String id;
 	private String menu;
 	private int price;
-	private String phone;
+	private int quan;
 	
 	
 	public String getId() {
@@ -27,12 +27,11 @@ public class Dto_order {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public String getPhone() {
-		return phone;
+	public int getQuan() {
+		return quan;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setQuan(int quan) {
+		this.quan = quan;
+	
 	}
-	
-	
 }

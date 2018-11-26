@@ -41,7 +41,9 @@
  <a href="javascript:location.href='memberList.am'" id="a1"> <img src="images/group.png" style="width:48px"> &nbsp; 회원 관리</a>    <a href="deliver_admin.am" id="a2"> <img src="images/delivery.png" style="width:48px"> &nbsp;배달 관리</a> 
 </div>
 
-
+<div class="my_container4">
+<a href="javascript:history.go(-1)"><img src = "images/return.png" style="float:right; width:30px;"></a>
+</div>
 
 
 

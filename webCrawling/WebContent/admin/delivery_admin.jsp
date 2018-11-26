@@ -18,6 +18,7 @@
 		ArrayList<Dto_order> list_deliverAdmin = (ArrayList<Dto_order>)request.getAttribute("dto_deliverAdmin");
 		String id = null;
 		String menu = null;
+		int quan=0;
 		int price = 0;
 		
 		Iterator iterator = list_deliverAdmin.iterator();
@@ -32,7 +33,7 @@
 
 </div>
 
-<div id="my_container2">
+<div class="my_container2">
 
 <table>
 <% while(iterator.hasNext()){
@@ -41,14 +42,17 @@
 	id = dto_order.getId();  
 	menu = dto_order.getMenu();
 	price = dto_order.getPrice();
+	quan=dto_order.getQuan();
       out.println("<tr> <td><h4>"+i+"</h4></td> <td><h4>"+id+
-    		  "</h4></td> <td><h4>"+menu+"</h4></td> <td><h4>"+price+"</h4></td><td><a href='deliveryComplete.am?idCheck="+id+"&priceCheck="+price+"&state=0' class='my2'>배달 완료</a></td> </tr>");
+    		  "</h4></td> <td><h4>"+menu+"</h4></td> <td><h4>"+price+"</h4></td><td><a href='deliveryComplete.am?idCheck="+id+"&priceCheck="+price+"&state=0' class='my2'>배달 완료</a></td></tr>");
       
 i++;}%>
 </table>
 </div>
 
-
+<div class="my_container4">
+<a href="javascript:history.go(-1)"><img src = "images/return.png" style="float:right; width:30px;"></a>
+</div>
 
 
 

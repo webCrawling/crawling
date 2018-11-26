@@ -40,10 +40,10 @@ public class Dao_admin {
 
 	// method
 
-	// 회원 목록을 가져옴
+	
 	public ArrayList<Dto_join> getMemberList() {
 
-		// 회원 목록을 담을 객체
+		
 		ArrayList<Dto_join> list_member = new ArrayList<>();
 
 		sql = "select * from webcrawling";
@@ -66,14 +66,14 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberList() : 회원목록 가져오기 실패");
+			System.out.println("getMemberList() : ");
 			e.printStackTrace();
 		}
 
 		return list_member;
 	}
 
-	// 회원 정보를 가져옴
+	
 	public Dto_join getMemberInformation(String id) {
 
 		Dto_join dto = new Dto_join();
@@ -96,14 +96,14 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberInformation() : 회원정보 가져오기 실패");
+			System.out.println("getMemberInformation() :");
 			e.printStackTrace();
 		}
 
 		return dto;
 	}
 
-	// 회원이 현재 주문한 내역을 가져옴
+	
 	public ArrayList<Dto_order> getOrderList_member(String id, int state){
 		
 		ArrayList<Dto_order> list = new ArrayList<>();
@@ -123,14 +123,14 @@ public class Dao_admin {
 				dto.setId(rs.getString(1));
 				dto.setMenu(rs.getString(2));
 				dto.setPrice(rs.getInt(3));
-				dto.setPhone(rs.getString(4));
+				dto.setQuan(rs.getInt(4));
 
 				list.add(dto);
 			}
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getWholeorder() : 회원의 현재 주문 내역 가져오기 실패");
+			System.out.println("getWholeorder() : ");
 			e.printStackTrace();
 		}
 
@@ -139,7 +139,7 @@ public class Dao_admin {
 	}
 	
 	
-	// 회원의 주문 내역을 가져옴
+	
 	public Dto_order getMemberOrderList(String id) {
 
 		Dto_order dto = new Dto_order();
@@ -157,12 +157,12 @@ public class Dao_admin {
 				dto.setId(rs.getString(1));
 				dto.setMenu(rs.getString(2));
 				dto.setPrice(rs.getInt(3));
-				dto.setPhone(rs.getString(4));
+				dto.setQuan(rs.getInt(4));
 			}
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberOrderList() : 회원의 주문 내역 가져오기 실패");
+			System.out.println("getMemberOrderList() :");
 			e.printStackTrace();
 		}
 
@@ -170,7 +170,7 @@ public class Dao_admin {
 
 	}
 
-	// 회원의 전체 주문 내역을 가져옴
+	
 	public ArrayList<Dto_order> getWholeorder(String id) {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
@@ -190,14 +190,14 @@ public class Dao_admin {
 				dto.setId(rs.getString(1));
 				dto.setMenu(rs.getString(2));
 				dto.setPrice(rs.getInt(3));
-				dto.setPhone(rs.getString(4));
+				dto.setQuan(rs.getInt(4));
 
 				list.add(dto);
 			}
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getWholeorder() : 회원의 전체 주문 내역 가져오기 실패");
+			System.out.println("getWholeorder() : ");
 			e.printStackTrace();
 		}
 
@@ -205,7 +205,7 @@ public class Dao_admin {
 
 	}
 
-	// 배달 관리 (관리자)
+	
 	public ArrayList<Dto_order> deliverAdmin() {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
@@ -225,14 +225,14 @@ public class Dao_admin {
 				dto.setId(rs.getString(1));
 				dto.setMenu(rs.getString(2));
 				dto.setPrice(rs.getInt(3));
-				dto.setPhone(rs.getString(4));
+				dto.setQuan(rs.getInt(4));
 
 				list.add(dto);
 			}
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("deliverAdmin() : 배달관리 (관리자) 실패");
+			System.out.println("deliverAdmin() : ");
 			e.printStackTrace();
 		}
 
@@ -240,7 +240,7 @@ public class Dao_admin {
 
 	}
 
-	// 배달 완료
+	
 	public void orderComplete(String id, int price, int state) throws SQLException {
 		sql = "update ordermenu set statement = 1 where id=? and price=? and statement= ?";
 
@@ -257,7 +257,7 @@ public class Dao_admin {
 
 	}
 
-	// 총 수입 계산
+	// 珥� �닔�엯 怨꾩궛
 	public int doStatistics() {
 		int sum = 0;
 		sql = "select price from ordermenu";
@@ -279,7 +279,7 @@ public class Dao_admin {
 			System.out.println("sum = " + sum);
 
 		} catch (Exception e) {
-			System.out.println("doStatistics() : 통계 실패");
+			System.out.println("doStatistics() : �넻怨� �떎�뙣");
 			e.printStackTrace();
 		}
 
@@ -287,7 +287,7 @@ public class Dao_admin {
 
 	}
 	
-	// 이벤트 공지사항 올리기
+	// �씠踰ㅽ듃 怨듭��궗�빆 �삱由ш린
 	public void uploadEvent(String title, String content) {
 		
 		sql = "INSERT INTO event VALUES (?,?)";
@@ -307,7 +307,7 @@ public class Dao_admin {
 
 		} catch (Exception e) {
 			
-			System.out.println("이벤트 업로드 예외 발생");
+			System.out.println("�씠踰ㅽ듃 �뾽濡쒕뱶 �삁�쇅 諛쒖깮");
 			e.printStackTrace();
 		}
 		finally{
@@ -319,7 +319,7 @@ public class Dao_admin {
 		
 	}
 	
-	// 이벤트 공지 리스트 가져오기
+	// �씠踰ㅽ듃 怨듭� 由ъ뒪�듃 媛��졇�삤湲�
 	public ArrayList<Dto_event> getEventList(){
 		
 		ArrayList<Dto_event> list = new ArrayList<>();
@@ -342,7 +342,7 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getEventList() : 이벤트 목록 가져오기 실패");
+			System.out.println("getEventList() : �씠踰ㅽ듃 紐⑸줉 媛��졇�삤湲� �떎�뙣");
 			e.printStackTrace();
 		}
 
@@ -353,7 +353,7 @@ public class Dao_admin {
 	}
 	
 
-	// 회원 삭제
+	// �쉶�썝 �궘�젣
 	public void delete(String id) {
 		sql = "delete from webcrawling where id=?";
 
@@ -367,7 +367,7 @@ public class Dao_admin {
 			conn.close();
 			
 		} catch (Exception e) {
-			System.out.println("delete() : 회원삭제에 실패 하였습니다.");
+			System.out.println("delete() : �쉶�썝�궘�젣�뿉 �떎�뙣 �븯���뒿�땲�떎.");
 			e.printStackTrace();
 
 		} 

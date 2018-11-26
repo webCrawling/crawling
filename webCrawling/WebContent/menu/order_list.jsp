@@ -90,6 +90,7 @@
 
 <input type="button" class="my2" value="확인" onclick="javascript:location.href='home.go'"/>
 
+<a href="javascript:history.go(-1)"><img src = "images/return.png" style="float:right; width:30px;"></a>
 
 
 </div>
