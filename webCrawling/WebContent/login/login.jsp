@@ -178,7 +178,7 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">한솥</span></a></h1>
+                <h1><a href="home.go"><span class="blind">한솥</span></a></h1>
             </div>
             
             <!-- gnb -->
@@ -400,9 +400,7 @@ function checkSubmit(){
 	  var userpwd = document.getElementById("userpwd");
 	  var userid1 =  userid.value;
 	  var userpwd1 = userpwd.value;
-	  alert(userid1);
-	  alert(userpwd1);
-
+	 
 	    location.href = "./home.do?userid1="+userid1+"&userpwd1="+userpwd1;  
 }
 

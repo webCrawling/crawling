@@ -34,7 +34,7 @@ public class Dao_order {
 	public void doOrder(Dto_order dto) {
 		
 		// 쿼리문 준비
-		sql = "insert into ordermenu values(?,?,?,?)";
+		sql = "insert into ordermenu ( id,menu,price,phone )values(?,?,?,?)";
 		
 		
 		try {
@@ -50,6 +50,7 @@ public class Dao_order {
 			pstmt.setString(2, dto.getMenu());
 			pstmt.setInt(3, dto.getPrice());
 			pstmt.setString(4, dto.getPhone());
+			
 			
 			// 쿼리문 실행
 			pstmt.executeQuery();

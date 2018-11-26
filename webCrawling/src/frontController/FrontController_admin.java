@@ -132,8 +132,6 @@ public class FrontController_admin extends HttpServlet {
 			
 		}	
 
-
-		// �쉶�썝 愿�由� 踰꾪듉 �겢由��떆 �겢�씪�씠�뼵�듃�뿉寃� 蹂댁뿬以� �쉶�썝 紐⑸줉�쓣 媛��졇�삤�뒗 濡쒖쭅
 		else if (com.equals("/memberList.am")) {
 			Command command = new Command_memList();
 			try {
@@ -144,7 +142,6 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/list_member.jsp";
 		}
 
-		// �쉶�썝�씠由� �겢由��떆 �쉶�썝�젙蹂� + �쉶�썝�쓽 �쟾泥� 二쇰Ц�궡�뿭�쓣 媛��졇�삤�뒗 濡쒖쭅
 		else if (com.equals("/memberInfo.am")) {
 			String id = request.getParameter("id");
 			request.setAttribute("id", id);
@@ -157,7 +154,6 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/information_member.jsp";
 		}
 
-		// �쉶�썝 �궘�젣 濡쒖쭅
 		else if (com.equals("/delete.am")) {
 
 			String id = request.getParameter("id");
@@ -173,11 +169,10 @@ public class FrontController_admin extends HttpServlet {
 
 		}
 
-		// 留덉씠�럹�씠吏� (�닔�젙)�쑝濡� �씠�룞
 
 		/*else if (com.equals("/modification.am")) {
 
-			Command command = new Command_mypage();
+			Command command =  (Command) new Command_mypage();
 			try {
 				command.exe(request, response);
 			} catch (NamingException e) {
@@ -185,7 +180,7 @@ public class FrontController_admin extends HttpServlet {
 			}
 		}*/
 
-		// 페이지 이동
+	
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
 

@@ -40,10 +40,10 @@ public class Dao_admin {
 
 	// method
 
-	// È¸¿ø ¸ñ·ÏÀ» °¡Á®¿È
+	// íšŒì› ëª©ë¡ì„ ê°€ì ¸ì˜´
 	public ArrayList<Dto_join> getMemberList() {
 
-		// È¸¿ø ¸ñ·ÏÀ» ´ãÀ» °´Ã¼
+		// íšŒì› ëª©ë¡ì„ ë‹´ì„ ê°ì²´
 		ArrayList<Dto_join> list_member = new ArrayList<>();
 
 		sql = "select * from webcrawling";
@@ -66,14 +66,14 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberList() : È¸¿ø¸ñ·Ï °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getMemberList() : íšŒì›ëª©ë¡ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
 		return list_member;
 	}
 
-	// È¸¿ø Á¤º¸¸¦ °¡Á®¿È
+	// íšŒì› ì •ë³´ë¥¼ ê°€ì ¸ì˜´
 	public Dto_join getMemberInformation(String id) {
 
 		Dto_join dto = new Dto_join();
@@ -96,14 +96,14 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberInformation() : È¸¿øÁ¤º¸ °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getMemberInformation() : íšŒì›ì •ë³´ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
 		return dto;
 	}
 
-	// È¸¿øÀÌ ÇöÀç ÁÖ¹®ÇÑ ³»¿ªÀ» °¡Á®¿È
+	// íšŒì›ì´ í˜„ì¬ ì£¼ë¬¸í•œ ë‚´ì—­ì„ ê°€ì ¸ì˜´
 	public ArrayList<Dto_order> getOrderList_member(String id, int state){
 		
 		ArrayList<Dto_order> list = new ArrayList<>();
@@ -130,7 +130,7 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getWholeorder() : È¸¿øÀÇ ÇöÀç ÁÖ¹® ³»¿ª °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getWholeorder() : íšŒì›ì˜ í˜„ì¬ ì£¼ë¬¸ ë‚´ì—­ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
@@ -139,7 +139,7 @@ public class Dao_admin {
 	}
 	
 	
-	// È¸¿øÀÇ ÁÖ¹® ³»¿ªÀ» °¡Á®¿È
+	// íšŒì›ì˜ ì£¼ë¬¸ ë‚´ì—­ì„ ê°€ì ¸ì˜´
 	public Dto_order getMemberOrderList(String id) {
 
 		Dto_order dto = new Dto_order();
@@ -162,7 +162,7 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getMemberOrderList() : È¸¿øÀÇ ÁÖ¹® ³»¿ª °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getMemberOrderList() : íšŒì›ì˜ ì£¼ë¬¸ ë‚´ì—­ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
@@ -170,7 +170,7 @@ public class Dao_admin {
 
 	}
 
-	// È¸¿øÀÇ ÀüÃ¼ ÁÖ¹® ³»¿ªÀ» °¡Á®¿È
+	// íšŒì›ì˜ ì „ì²´ ì£¼ë¬¸ ë‚´ì—­ì„ ê°€ì ¸ì˜´
 	public ArrayList<Dto_order> getWholeorder(String id) {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
@@ -197,7 +197,7 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getWholeorder() : È¸¿øÀÇ ÀüÃ¼ ÁÖ¹® ³»¿ª °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getWholeorder() : íšŒì›ì˜ ì „ì²´ ì£¼ë¬¸ ë‚´ì—­ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
@@ -205,11 +205,11 @@ public class Dao_admin {
 
 	}
 
-	// ¹è´Ş °ü¸® (°ü¸®ÀÚ)
+	// ë°°ë‹¬ ê´€ë¦¬ (ê´€ë¦¬ì)
 	public ArrayList<Dto_order> deliverAdmin() {
 
 		ArrayList<Dto_order> list = new ArrayList<>();
-		sql = "select * from ordermenu where status=?";
+		sql = "select * from ordermenu where statement=?";
 
 		try {
 			conn = datasource.getConnection();
@@ -232,35 +232,34 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("deliverAdmin() : ¹è´Ş°ü¸® (°ü¸®ÀÚ) ½ÇÆĞ");
+			System.out.println("deliverAdmin() : ë°°ë‹¬ê´€ë¦¬ (ê´€ë¦¬ì) ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
 		return list;
 
 	}
-	
-	// ¹è´Ş ¿Ï·á
+
+	// ë°°ë‹¬ ì™„ë£Œ
 	public void orderComplete(String id, int price, int state) throws SQLException {
 		sql = "update ordermenu set statement = 1 where id=? and price=? and statement= ?";
-		
-			conn = datasource.getConnection();
-			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, id);
-			pstmt.setInt(2, price);
-			pstmt.setInt(3, state);
+		conn = datasource.getConnection();
+		pstmt = conn.prepareStatement(sql);
 
-			rs = pstmt.executeQuery();
+		pstmt.setString(1, id);
+		pstmt.setInt(2, price);
+		pstmt.setInt(3, state);
 
-			rs.close();
-		
-		
+		rs = pstmt.executeQuery();
+
+		rs.close();
+
 	}
-	
-	// ÃÑ ¼öÀÔ °è»ê
+
+	// ì´ ìˆ˜ì… ê³„ì‚°
 	public int doStatistics() {
-		int sum=0;
+		int sum = 0;
 		sql = "select price from ordermenu";
 
 		try {
@@ -272,23 +271,23 @@ public class Dao_admin {
 			while (rs.next()) {
 				int price = rs.getInt(1);
 
-				sum = sum+price;
+				sum = sum + price;
 			}
 			rs.close();
-			
-			//test
-			System.out.println("sum = "+sum);
+
+			// test
+			System.out.println("sum = " + sum);
 
 		} catch (Exception e) {
-			System.out.println("doStatistics() : Åë°è ½ÇÆĞ");
+			System.out.println("doStatistics() : í†µê³„ ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
-		
+
 		return sum;
-		
+
 	}
 	
-	// ÀÌº¥Æ® °øÁö»çÇ× ¿Ã¸®±â
+	// ì´ë²¤íŠ¸ ê³µì§€ì‚¬í•­ ì˜¬ë¦¬ê¸°
 	public void uploadEvent(String title, String content) {
 		
 		sql = "INSERT INTO event VALUES (?,?)";
@@ -308,7 +307,7 @@ public class Dao_admin {
 
 		} catch (Exception e) {
 			
-			System.out.println("ÀÌº¥Æ® ¾÷·Îµå ¿¹¿Ü ¹ß»ı");
+			System.out.println("ì´ë²¤íŠ¸ ì—…ë¡œë“œ ì˜ˆì™¸ ë°œìƒ");
 			e.printStackTrace();
 		}
 		finally{
@@ -320,7 +319,7 @@ public class Dao_admin {
 		
 	}
 	
-	// ÀÌº¥Æ® °øÁö ¸®½ºÆ® °¡Á®¿À±â
+	// ì´ë²¤íŠ¸ ê³µì§€ ë¦¬ìŠ¤íŠ¸ ê°€ì ¸ì˜¤ê¸°
 	public ArrayList<Dto_event> getEventList(){
 		
 		ArrayList<Dto_event> list = new ArrayList<>();
@@ -343,7 +342,7 @@ public class Dao_admin {
 			rs.close();
 
 		} catch (Exception e) {
-			System.out.println("getEventList() : ÀÌº¥Æ® ¸ñ·Ï °¡Á®¿À±â ½ÇÆĞ");
+			System.out.println("getEventList() : ì´ë²¤íŠ¸ ëª©ë¡ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨");
 			e.printStackTrace();
 		}
 
@@ -354,7 +353,7 @@ public class Dao_admin {
 	}
 	
 
-	// È¸¿ø »èÁ¦
+	// íšŒì› ì‚­ì œ
 	public void delete(String id) {
 		sql = "delete from webcrawling where id=?";
 
@@ -368,12 +367,11 @@ public class Dao_admin {
 			conn.close();
 			
 		} catch (Exception e) {
-			System.out.println("delete() : È¸¿ø»èÁ¦¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù.");
+			System.out.println("delete() : íšŒì›ì‚­ì œì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			e.printStackTrace();
-			
-		}
+
+		} 
 
 	}
-
 
 }

@@ -26,32 +26,32 @@
 <body>
 
 
-	<div id="my_container" class="my_sub_page" style="margin-top: 80px; margin-bottom:20px;">
+	<div id="my_container" class="my_sub_page" style="margin-top: 80px;">
 		<h1>
 			회원 정보 조회 &nbsp;<img src="images/man.png" style="width: 50px">
 		</h1>
 	</div>
 
-	<div class="my_container2">
-		<span style="font-size:20px">회원 기본 정보</span>
-		<table style="border-collapse: separate;border-spacing: 0 30px;">
+	<div class="my_container2" style="margin-top:0;">
+		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; 회원 기본 정보  </span>
+		<table style="border-collapse:separate; margin-top:20px; border-spacing: 0 30px;">
 			<tr>
-				<td>ID :</td>
+				<td align=right>ID :</td>
 				<td><%=dto_memberInfo.getId()%></td>
 			</tr>
 
 			<tr>
-				<td>Password :</td>
+				<td align=right>Password :</td>
 				<td><%=dto_memberInfo.getPass()%></td>
 			</tr>
 
 			<tr>
-				<td>E-mail :</td>
+				<td align=right>E-mail :</td>
 				<td><%=dto_memberInfo.getEmail()%></td>
 			</tr>
 
 			<tr>
-				<td>Phone :</td>
+				<td align=right>Phone :</td>
 				<td><%=dto_memberInfo.getPhone()%></td>
 			</tr>
 
@@ -59,8 +59,8 @@
 	</div>
 
 	<div class="my_container3">
-		<span style="font-size:20px">회원 주문 내역</span>
-		<table style="border-collapse: separate;border-spacing: 0 30px;">
+		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; 회원 주문 내역</span>
+		<table border=1>
 		<%
 			while (iter.hasNext()) {
 				Dto_order dto_order = (Dto_order) iter.next();

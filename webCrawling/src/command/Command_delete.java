@@ -13,7 +13,7 @@ import etc.Command;
 
 public class Command_delete implements Command,Action {
 
-	//admin È¸¿øÅ»Åğ
+	//admin íšŒì›íƒˆí‡´
 	@Override
 	public void exe(HttpServletRequest request, HttpServletResponse response) throws NamingException {
 		String id = (String)request.getParameter("id");
@@ -25,7 +25,7 @@ public class Command_delete implements Command,Action {
 	}
 
 	
-	//mypage È¸¿øÅ»Åğ / ºñ½ÁÇÑ ÄÚµå·Î »èÁ¦¸¦ µÎ °³ ¸¸µç ÀÌÀ¯´Â ¸¶Áö¸·¿¡ jsp·Î »Ñ·ÁÁÖ´Â Àå¼Ò°¡ ´Ù¸£±â ¶§¹®. adminÀº È¸¿ø¸®½ºÆ®·Î °¡°í, mypage´Â homeÀ¸·Î
+	//mypage íšŒì›íƒˆí‡´ / ë¹„ìŠ·í•œ ì½”ë“œë¡œ ì‚­ì œë¥¼ ë‘ ê°œ ë§Œë“  ì´ìœ ëŠ” ë§ˆì§€ë§‰ì— jspë¡œ ë¿Œë ¤ì£¼ëŠ” ì¥ì†Œê°€ ë‹¤ë¥´ê¸° ë•Œë¬¸. adminì€ íšŒì›ë¦¬ìŠ¤íŠ¸ë¡œ ê°€ê³ , mypageëŠ” homeìœ¼ë¡œ
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();

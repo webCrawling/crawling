@@ -321,7 +321,7 @@
                 <!-- join_right -->
                 <div class="join_sub">
 
-                    <form id="joinForm" name="joinForm" action="/join/join_step2" method="post"><h4 class="h4_tit">이용약관</h4>
+                    <form id="joinForm" name="joinForm" action="join2.do" method="post"><h4 class="h4_tit">이용약관</h4>
                     <div class="textarea_wrap cont">
                         <div class="cont_area">
                             <!-- 이용약관 cont-->
