@@ -3,6 +3,8 @@
     pageEncoding="utf-8"%>
 
 
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,7 +20,7 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="0731cdce-8c3e-4b56-bae3-706d37051ba0" /><title>ESG 경영</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="64da8a4e-f052-43b1-99f4-214c174663a7" /><title>ESG 경영</title>
 
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
@@ -340,42 +342,42 @@
     <h2 class="more_tit">더 많은 이야기</h2>
     <ul>
         <li>
-            <a href="story.go" class="more_link"></a>
+            <a href="vision.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_story.jpg" alt="브랜드 스토리" />
+                    <img src="assets/images/common/more_vision.jpg" alt="한솥의 비전" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">브랜드 스토리</h3>
-                    <h3 class="h3_tit_o">브랜드 스토리</h3>
+                    <h3 class="h3_tit">한솥의 비전</h3>
+                    <h3 class="h3_tit_o">한솥의 비전</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="philosophy.go" class="more_link"></a>
+            <a href="promise.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_philosophy.jpg" alt="브랜드 철학" />
+                    <img src="assets/images/common/more_hansot.jpg" alt="한솥의 약속" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">브랜드 철학</h3>
-                    <h3 class="h3_tit_o">브랜드 철학</h3>
+                    <h3 class="h3_tit">한솥의 약속</h3>
+                    <h3 class="h3_tit_o">한솥의 약속</h3>
                 </figcaption>
             </figure>
         </li>
         <li>
-            <a href="legacy.go" class="more_link"></a>
+            <a href="news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_legacy.jpg" alt="브랜드 유산" />
+                    <img src="assets/images/common/more_news.jpg" alt="한솥 NEWS" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">브랜드 유산</h3>
-                    <h3 class="h3_tit_o">브랜드 유산</h3>
+                    <h3 class="h3_tit">한솥 NEWS</h3>
+                    <h3 class="h3_tit_o">한솥 NEWS</h3>
                 </figcaption>
             </figure>
         </li>
-        </ul>
+    </ul>
 </div>
 <!--// more_cont-->
 <script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>

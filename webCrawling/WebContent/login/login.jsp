@@ -18,7 +18,7 @@
 
     <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3a1f9029-2dc0-42ff-bbc3-227a8384a395" /><title>한솥도시락 > 로그인</title>
     
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
@@ -54,7 +54,7 @@
 
 
 <script type="text/javascript" src="../assets/js/tss.js"></script>
-<s\pt type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="../assets/js/tss.util.js"></script>
 
 
 <!-- validatation check -->
@@ -81,7 +81,7 @@
         var token = $("meta[name='_csrf']").attr('content');
         var header = "X-CSRF-TOKEN";
         $(document).ajaxSend(function(event, xhr, options) {
-            xhr.setRequestHeader(hea der, token);
+            xhr.setRequestHeader(header, token);
         });
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
@@ -201,9 +201,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/story.jsp">브랜드 스토리</a></li>
-                                    <li><a href="../brand/philosophy.jsp">브랜드 철학</a></li>
-                                    <li><a href="../brand/legacy.jsp">브랜드 유산</a></li>
+                                    <li class="active"><a href="story.go">브랜드 스토리</a></li>
+                                    <li><a href="philosophy.go">브랜드 철학</a></li>
+                                    <li><a href="legacy.go">브랜드 유산</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -211,10 +211,11 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/esg.jsp">ESG경영이란?</a></li>
-                                    <li><a href="../brand/philosophy.jsp">환경보호(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">사회공헌(Social)</a></li>
-                                    <li><a href="../brand/esg.jsp">윤리경영(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
+
                                     </ul>
                             </div>
                         </li>
@@ -222,10 +223,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">전체메뉴</a></li>
-                                    <li><a href="../menu/material.jsp">식재료 이야기</a></li>
-                                    <li><a href="../menu/chancha.jsp">페루찬차마요커피</a></li>
-                                    <li><a href="../menu/menu_order.jsp">단체 주문</a></li>
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -233,7 +234,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">주변점포찾기</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -241,8 +242,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">이 달의 이벤트</a></li>
-                                    <li><a href="../event/store_event_list.jsp">신규점 오픈이벤트</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -250,12 +251,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why 한솥 가맹점</a></li>
-                                    <li><a href="../franchise/success.jsp">성공수기</a></li>
-                                    <li><a href="../franchise/process.jsp">창업개설절차</a></li>
-                                    <li><a href="../franchise/calc.jsp">예상 창업 비용</a></li>
-                                    <li><a href="../franchise/qna.jsp">창업문의</a></li>
-                                    <li><a href="../franchise/briefing.jsp">창업설명회 일정·신청</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -263,13 +264,12 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">한솥의 약속</a></li>
-                                    <li><a href="../hansot/vision.jsp">한솥의 비전</a></li>
-                                    <li><a href="../hansot/history.jsp">연혁&amp;수상</a></li>
-                                    <li><a href="../hansot/news_list.jsp">한솥 NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">오시는 길</a></li>
-                                    <li><a href="../footer/faq_list.jsp">고객센터</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">인재채용</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -354,13 +354,13 @@
         <!-- //로그인 form -->
         <!-- 회원가입 선택 -->
         <div class="join_select">
-            <span><img src="../assets/images/login/join_temp_01.jpg" alt="bg" /></span>
+            <span><img src="assets/images/login/join_temp_01.jpg" alt="bg" /></span>
             <div class="join_formcont">
                 <h3 class="h3_tit">한솥 회원이 아니신가요?</h3>
                 <p class="txt">회원이 되시면 한솥 도시락의 다양한 정보와 이벤트를 만나보실 수 있습니다.</p>
                 <!-- btn -->
                 <div class="btn_wrap">
-                    <span class="btn btn_st02"><a href="../join/join1.jsp" class="c_02">회원가입</a></span>
+                    <span class="btn btn_st02"><a href="join.do" class="c_02">회원가입</a></span>
                 </div>
                 <!-- //btn -->
             </div>
@@ -423,12 +423,13 @@ function checkSubmit(){
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">인재채용</a></li>
-                <li class="off"><a href="../footer/partners.jsp">협력업체등록</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">공지사항</a></li>
-                <li><a href="../footer/faq_list.jsp">고객 센터</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>개인정보취급방침</strong></a></li>
-                <li><a href="../footer/agreement.jsp">이용약관</a></li>
+                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
+
             </ul>
         </div>
         <!--// family goods -->

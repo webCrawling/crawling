@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,7 +15,7 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="6c2568a4-599f-481b-8bf7-b42ae0626cec" /><title>»çÈ¸°øÇåÈ°µ¿</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="6c2568a4-599f-481b-8bf7-b42ae0626cec" /><title>ì‚¬íšŒê³µí—Œí™œë™</title>
 
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
@@ -80,12 +80,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -153,17 +153,17 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
 
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -174,19 +174,19 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="/"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="/"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
 							<ul>
-								<li><a href="login.do">·Î±×ÀÎ</a></li>
-								<li><a href="join.do">È¸¿ø°¡ÀÔ</a></li>
+								<li><a href="login.do">ë¡œê·¸ì¸</a></li>
+								<li><a href="join.do">íšŒì›ê°€ìž…</a></li>
 
 							</ul>
 						</div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
                <div class="gnb_menu">
                     <ul>
@@ -194,9 +194,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -204,10 +204,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -216,10 +216,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
-                                    <li><a href="menu_order.go">´ÜÃ¼ ÁÖ¹®</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -227,7 +227,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -235,8 +235,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -244,12 +244,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
-                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
-                                    <li><a href="qna.go">Ã¢¾÷¹®ÀÇ</a></li>
-                                    <li><a href="briefing.go">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
+                                    <li><a href="qna.go">ì°½ì—…ë¬¸ì˜</a></li>
+                                    <li><a href="briefing.go">ì°½ì—…ì„¤ëª…íšŒ ì¼ì •Â·ì‹ ì²­</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -257,13 +257,11 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
-                                    <li><a href="faq_list.go">°í°´¼¾ÅÍ</a></li>
-                                    <li class="h_last"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -297,11 +295,11 @@
         
 <div class="content hansot">
     <section class="social">
-        <!-- »çÈ¸°øÇåÈ°µ¿ -->
+        <!-- ì‚¬íšŒê³µí—Œí™œë™ -->
         <div class="social_wrap tab_st01">
             <!-- title -->
             <div class="ontitle">
-                <h2 class="h2_tit h2_01">»çÈ¸°øÇåÈ°µ¿</h2>
+                <h2 class="h2_tit h2_01">ì‚¬íšŒê³µí—Œí™œë™</h2>
             </div>
             <!-- //title -->
             <!-- social_list -->
@@ -309,35 +307,35 @@
                 <!-- sub_tit -->
                 <div class="so_sub_tit">
                     <p class="fz_02">
-                        <span class="s_block">¡°µû²öÇÑ µµ½Ã¶ôÀ¸·Î Áö¿ª»çÈ¸¿¡ °øÇåÇÑ´Ù¡± </span>
-                        <span class="s_block">¶ó´Â ±â¾÷ÀÌ³ä ¾Æ·¡ ´Ù¾çÇÑ »çÈ¸°øÇåÈ°µ¿À» ÁøÇàÇÏ°í ÀÖ½À´Ï´Ù.</span>
+                        <span class="s_block">â€œë”°ëˆí•œ ë„ì‹œë½ìœ¼ë¡œ ì§€ì—­ì‚¬íšŒì— ê³µí—Œí•œë‹¤â€ </span>
+                        <span class="s_block">ë¼ëŠ” ê¸°ì—…ì´ë… ì•„ëž˜ ë‹¤ì–‘í•œ ì‚¬íšŒê³µí—Œí™œë™ì„ ì§„í–‰í•˜ê³  ìžˆìŠµë‹ˆë‹¤.</span>
                     </p>
                 </div>
                 <!-- //sub_tit -->
                 <!-- list -->
                 <div class="news_list_wrap">
-                    <!-- »çÈ¸Ãë¾à°èÃþ Áö¿ø -->
+                    <!-- ì‚¬íšŒì·¨ì•½ê³„ì¸µ ì§€ì› -->
                     <div class="list_box box_01">
-                        <p class="list_title">»çÈ¸Ãë¾à°èÃþ Áö¿ø</p>
+                        <p class="list_title">ì‚¬íšŒì·¨ì•½ê³„ì¸µ ì§€ì›</p>
                         <ul>
                             <!-- 1 -->
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_10.jpg" alt="´Ù¿îº¹Áö°ü µµ½Ã¶ô ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_10.jpg" alt="ë‹¤ìš´ë³µì§€ê´€ ë„ì‹œë½ í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">´Ù¿îº¹Áö°ü µµ½Ã¶ô ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ë‹¤ìš´ë³µì§€ê´€ ë„ì‹œë½ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ´Ù¿îº¹Áö°üÀº ¹ß´ÞÀå¾ÖÀÎ Æ¯¼ºÈ­ º¹Áö°üÀ¸·Î ´Ù¿îÀÎÀÌ °Ç°­ÇÑ ÀÎ°£, ³ôÀº °¡Ä¡¸¦ °¡Áø ÀÎ°£À¸·Î »ì¾Æ°¥ ¼ö ÀÖµµ·Ï Áö¿øÇÏ´Â ´ÜÃ¼ÀÔ´Ï´Ù. ÇÑ¼Ü¿¡¼­´Â µû¶æÇÑ ÀÌ¿ô»ç¶ûÀÇ È°µ¿¿¡ ÈûÀÌ µÇ°íÀÚ ´Ù¿îº¹Áö°ü Çà»ç¿¡ Á¤±âÀûÀ¸·Î µµ½Ã¶ôÀ» ÈÄ¿øÇÏ°í ÀÖ½À´Ï´Ù.
+                                                    ë‹¤ìš´ë³µì§€ê´€ì€ ë°œë‹¬ìž¥ì• ì¸ íŠ¹ì„±í™” ë³µì§€ê´€ìœ¼ë¡œ ë‹¤ìš´ì¸ì´ ê±´ê°•í•œ ì¸ê°„, ë†’ì€ ê°€ì¹˜ë¥¼ ê°€ì§„ ì¸ê°„ìœ¼ë¡œ ì‚´ì•„ê°ˆ ìˆ˜ ìžˆë„ë¡ ì§€ì›í•˜ëŠ” ë‹¨ì²´ìž…ë‹ˆë‹¤. í•œì†¥ì—ì„œëŠ” ë”°ëœ»í•œ ì´ì›ƒì‚¬ëž‘ì˜ í™œë™ì— íž˜ì´ ë˜ê³ ìž ë‹¤ìš´ë³µì§€ê´€ í–‰ì‚¬ì— ì •ê¸°ì ìœ¼ë¡œ ë„ì‹œë½ì„ í›„ì›í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -349,20 +347,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_11.jpg" alt="Çý½É¿ø ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_11.jpg" alt="í˜œì‹¬ì› í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">Çý½É¿ø ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">í˜œì‹¬ì› í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    Çý½É¿øÀº 1929³â ½ÃÀÛµÈ ¾Æµ¿ ¾çÀ°½Ã¼³·Î °í¾Æ µî À¯¾Æ¿¡¼­ °íµîÇÐ»ý±îÁö 18¼¼ ¹Ì¸¸ 55¸íÀÇ ¾Æµ¿ÀÌ »ýÈ°ÇÏ°í ÀÖ´Â º¸À°½Ã¼³ÀÔ´Ï´Ù. Á¤ºÎÁö¿ø¸¸À¸·Î ¿î¿µ¿¡ ¾î·Á¿òÀ» °Þ°í ÀÖ¾î, ÇÑ¼Ü¿¡¼­´Â ÈÄ¿ø±Ý°ú µµ½Ã¶ôÀ» Á¤±âÀûÀ¸·Î ±âºÎÇØ ¡®µû²öÇÑ µµ½Ã¶ôÀ¸·Î Áö¿ª»çÈ¸¿¡ °øÇåÇÑ´Ù.¡¯ ¶ó´Â °æ¿µÀÌ³äÀ» ½ÇÃµÇÏ°í ÀÖ½À´Ï´Ù.
+                                                    í˜œì‹¬ì›ì€ 1929ë…„ ì‹œìž‘ëœ ì•„ë™ ì–‘ìœ¡ì‹œì„¤ë¡œ ê³ ì•„ ë“± ìœ ì•„ì—ì„œ ê³ ë“±í•™ìƒê¹Œì§€ 18ì„¸ ë¯¸ë§Œ 55ëª…ì˜ ì•„ë™ì´ ìƒí™œí•˜ê³  ìžˆëŠ” ë³´ìœ¡ì‹œì„¤ìž…ë‹ˆë‹¤. ì •ë¶€ì§€ì›ë§Œìœ¼ë¡œ ìš´ì˜ì— ì–´ë ¤ì›€ì„ ê²ªê³  ìžˆì–´, í•œì†¥ì—ì„œëŠ” í›„ì›ê¸ˆê³¼ ë„ì‹œë½ì„ ì •ê¸°ì ìœ¼ë¡œ ê¸°ë¶€í•´ â€˜ë”°ëˆí•œ ë„ì‹œë½ìœ¼ë¡œ ì§€ì—­ì‚¬íšŒì— ê³µí—Œí•œë‹¤.â€™ ë¼ëŠ” ê²½ì˜ì´ë…ì„ ì‹¤ì²œí•˜ê³  ìžˆìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -374,20 +372,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_08.jpg" alt="»ç¶ûÀÇ ½Ò ³ª´®¿îµ¿º»ºÎ" />
+                                        <img src="assets/images/hansot/so_img_08.jpg" alt="ì‚¬ëž‘ì˜ ìŒ€ ë‚˜ëˆ”ìš´ë™ë³¸ë¶€" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">»ç¶ûÀÇ ½Ò ³ª´®¿îµ¿º»ºÎ ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì‚¬ëž‘ì˜ ìŒ€ ë‚˜ëˆ”ìš´ë™ë³¸ë¶€ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    È¦¸ö¾î¸£½Å, ³ë¼÷ÀÎ, Àå¾ÖÀÎµé ,¿Ü·Ó°í ¼Ò¿ÜµÈ ºÐµé¿¡°Ô ¹«·á±Þ½ÄÀ» Á¦°øÇÏ´Â »ç¶ûÀÇ ¹äÂ÷±âÁö°¡ È­Àç·Î ÆóÇã°¡ µÇ¾î, ´çÀå »ç¶ûÀÇ ½Ò ³ª´®¿îµ¿º»ºÎÀÇ ¹«·á±Þ½ÄÀÌ Áß´ÜµÉ »óÈ²¿¡ Ã³ÇØ ÇÑ¼Üµµ½Ã¶ô¿¡¼­´Â ¹Ù·Î µµ½Ã¶ô 750ÀÎºÐÀ» Áö¿ø, Áö¿ª»çÈ¸ÀÇ ³ª´®À» ÀÌ¾î°¥ ¼ö ÀÖµµ·Ï ÈÄ¿øÇÏ¿´½À´Ï´Ù.
+                                                    í™€ëª¸ì–´ë¥´ì‹ , ë…¸ìˆ™ì¸, ìž¥ì• ì¸ë“¤ ,ì™¸ë¡­ê³  ì†Œì™¸ëœ ë¶„ë“¤ì—ê²Œ ë¬´ë£Œê¸‰ì‹ì„ ì œê³µí•˜ëŠ” ì‚¬ëž‘ì˜ ë°¥ì°¨ê¸°ì§€ê°€ í™”ìž¬ë¡œ íí—ˆê°€ ë˜ì–´, ë‹¹ìž¥ ì‚¬ëž‘ì˜ ìŒ€ ë‚˜ëˆ”ìš´ë™ë³¸ë¶€ì˜ ë¬´ë£Œê¸‰ì‹ì´ ì¤‘ë‹¨ë  ìƒí™©ì— ì²˜í•´ í•œì†¥ë„ì‹œë½ì—ì„œëŠ” ë°”ë¡œ ë„ì‹œë½ 750ì¸ë¶„ì„ ì§€ì›, ì§€ì—­ì‚¬íšŒì˜ ë‚˜ëˆ”ì„ ì´ì–´ê°ˆ ìˆ˜ ìžˆë„ë¡ í›„ì›í•˜ì˜€ìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -399,20 +397,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_07.jpg" alt="°­³²º¹ÁöÀç´Ü" />
+                                        <img src="assets/images/hansot/so_img_07.jpg" alt="ê°•ë‚¨ë³µì§€ìž¬ë‹¨" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">°­³²º¹ÁöÀç´Ü ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ê°•ë‚¨ë³µì§€ìž¬ë‹¨ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    °­³²±¸´Â ¼­¿ï½Ã 25°³ ÀÚÄ¡±¸ ±âÃÊ»ýÈ° ¼ö±ÞÀÚ°¡ 8¹øÂ°·Î ¸¹Àº °÷À¸·Î 2014³â 10¿ù 1ÀÏ Á¤½Ä Ãâ¹üÇÏ¿´½À´Ï´Ù. ÇÑ¼Üµµ½Ã¶ôÀº ºóºÎ °ÝÂ÷¸¦ ÁÙÀÌ°í Áö¿ª»çÈ¸ÀÇ º¹Áö »ç°¢Áö´ë¸¦ ÇØ¼ÒÇÏ°íÀÚ °­³² º¹Áö Àç´Ü ¿î¿µ±â±ÝÀ» ÈÄ¿øÇÏ°í ÀÖ½À´Ï´Ù.
+                                                    ê°•ë‚¨êµ¬ëŠ” ì„œìš¸ì‹œ 25ê°œ ìžì¹˜êµ¬ ê¸°ì´ˆìƒí™œ ìˆ˜ê¸‰ìžê°€ 8ë²ˆì§¸ë¡œ ë§Žì€ ê³³ìœ¼ë¡œ 2014ë…„ 10ì›” 1ì¼ ì •ì‹ ì¶œë²”í•˜ì˜€ìŠµë‹ˆë‹¤. í•œì†¥ë„ì‹œë½ì€ ë¹ˆë¶€ ê²©ì°¨ë¥¼ ì¤„ì´ê³  ì§€ì—­ì‚¬íšŒì˜ ë³µì§€ ì‚¬ê°ì§€ëŒ€ë¥¼ í•´ì†Œí•˜ê³ ìž ê°•ë‚¨ ë³µì§€ ìž¬ë‹¨ ìš´ì˜ê¸°ê¸ˆì„ í›„ì›í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -424,21 +422,21 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_01.jpg" alt="»ç¶ûÀÇ ¿­¸Å" />
+                                        <img src="assets/images/hansot/so_img_01.jpg" alt="ì‚¬ëž‘ì˜ ì—´ë§¤" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">»çÈ¸º¹Áö°øµ¿¸ð±ÝÈ¸ »ç¶ûÀÇ¿­¸Å ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì‚¬íšŒë³µì§€ê³µë™ëª¨ê¸ˆíšŒ ì‚¬ëž‘ì˜ì—´ë§¤ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ÇÑ¼ÜÀº °í°´°ú ÇÔ²²ÇÏ´Â ±âºÎ¹®È­¸¦ ¸¸µé¾î ¼Ò¿ÜµÈ ÀÌ¿ôµé¿¡°Ô Å« »ç¶ûÀ» Àü´ÞÇÏ°íÀÚ ¸Å³â 12¿ù ±âºÎÇà»ç¸¦ ÁøÇàÇÏ°í ÀÖ½À´Ï´Ù. 2015³â¿¡´Â ¡®¸¸¿øÀÇ Çàº¹, 100¿øÀÇ »ç¶û¡¯ Çà»ç¸¦ ÅëÇØ 1,145¸¸ 7,900¿øÀ», 2016³â 12¿ù¿¡´Â ¡°2016³â ½Å¸Þ´º »çÀºÇà»ç¡± ¸¦ ÅëÇØ 2000¸¸¿øÀ» »çÈ¸º¹Áö °øµ¿¸ð±ÝÈ¸(»ç¶ûÀÇ ¿­¸Å)¿¡ ±âºÎÇÏ¿´½À´Ï´Ù.
+                                                    í•œì†¥ì€ ê³ ê°ê³¼ í•¨ê»˜í•˜ëŠ” ê¸°ë¶€ë¬¸í™”ë¥¼ ë§Œë“¤ì–´ ì†Œì™¸ëœ ì´ì›ƒë“¤ì—ê²Œ í° ì‚¬ëž‘ì„ ì „ë‹¬í•˜ê³ ìž ë§¤ë…„ 12ì›” ê¸°ë¶€í–‰ì‚¬ë¥¼ ì§„í–‰í•˜ê³  ìžˆìŠµë‹ˆë‹¤. 2015ë…„ì—ëŠ” â€˜ë§Œì›ì˜ í–‰ë³µ, 100ì›ì˜ ì‚¬ëž‘â€™ í–‰ì‚¬ë¥¼ í†µí•´ 1,145ë§Œ 7,900ì›ì„, 2016ë…„ 12ì›”ì—ëŠ” â€œ2016ë…„ ì‹ ë©”ë‰´ ì‚¬ì€í–‰ì‚¬â€ ë¥¼ í†µí•´ 2000ë§Œì›ì„ ì‚¬íšŒë³µì§€ ê³µë™ëª¨ê¸ˆíšŒ(ì‚¬ëž‘ì˜ ì—´ë§¤)ì— ê¸°ë¶€í•˜ì˜€ìŠµë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -448,33 +446,33 @@
                             <!-- //5 -->
                         </ul>
                     </div>
-                    <!-- //»çÈ¸Ãë¾à°èÃþ Áö¿ø -->
-                    <!-- ºÒ¿ìÈ¯ÀÚ Ä¡·á±â±Ý ¹× ¿¬±¸±â±Ý ÈÄ¿ø -->
+                    <!-- //ì‚¬íšŒì·¨ì•½ê³„ì¸µ ì§€ì› -->
+                    <!-- ë¶ˆìš°í™˜ìž ì¹˜ë£Œê¸°ê¸ˆ ë° ì—°êµ¬ê¸°ê¸ˆ í›„ì› -->
                     <div class="list_box box_02">
                         <p class="list_title">
-                            <span class="s_block">ºÒ¿ìÈ¯ÀÚ Ä¡·á±â±Ý ¹× ¿¬±¸±â±Ý ÈÄ¿ø</span>
-                            <span class="s_block">(±¹³» ÁÖ¿ä ÀÇ·á±â°ü)</span>
+                            <span class="s_block">ë¶ˆìš°í™˜ìž ì¹˜ë£Œê¸°ê¸ˆ ë° ì—°êµ¬ê¸°ê¸ˆ í›„ì›</span>
+                            <span class="s_block">(êµ­ë‚´ ì£¼ìš” ì˜ë£Œê¸°ê´€)</span>
                         </p>
                         <ul>
                             <!-- 1 -->
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_02.jpg" alt="»ï¼º¼­¿ïº´¿ø ÈÄ¿ø" /><!-- 2017.10.26 ÅØ½ºÆ® ¼öÁ¤ -->
+                                        <img src="assets/images/hansot/so_img_02.jpg" alt="ì‚¼ì„±ì„œìš¸ë³‘ì› í›„ì›" /><!-- 2017.10.26 í…ìŠ¤íŠ¸ ìˆ˜ì • -->
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">»ï¼º¼­¿ïº´¿ø ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì‚¼ì„±ì„œìš¸ë³‘ì› í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    2012³âºÎÅÍ ÇØ¸¶´Ù ÇÑ¼Ü¿¡¼­´Â Áúº´À¸·Î °íÅë¹Þ´Â »ç¶÷µéÀ» À§ÇÑ ±¹¹Î º¸°Ç Çâ»óÀ» À§ÇØ ¼­¿ï »ï¼ºº´¿ø¿¡ ºÒ¿ìÈ¯ÀÚ Ä¡·á ±â±Ý ¹× ½ÉÀå ³úÇ÷°ü º´¿ø ¹ßÀü±â±ÝÀ» ÈÄ¿øÇÔÀ¸·Î, ´Ù¾çÇÑ »çÈ¸ ±âºÎ È°µ¿À» ½ÇÃµÇØ ³ª°¡°í ÀÖ½À´Ï´Ù.
+                                                    2012ë…„ë¶€í„° í•´ë§ˆë‹¤ í•œì†¥ì—ì„œëŠ” ì§ˆë³‘ìœ¼ë¡œ ê³ í†µë°›ëŠ” ì‚¬ëžŒë“¤ì„ ìœ„í•œ êµ­ë¯¼ ë³´ê±´ í–¥ìƒì„ ìœ„í•´ ì„œìš¸ ì‚¼ì„±ë³‘ì›ì— ë¶ˆìš°í™˜ìž ì¹˜ë£Œ ê¸°ê¸ˆ ë° ì‹¬ìž¥ ë‡Œí˜ˆê´€ ë³‘ì› ë°œì „ê¸°ê¸ˆì„ í›„ì›í•¨ìœ¼ë¡œ, ë‹¤ì–‘í•œ ì‚¬íšŒ ê¸°ë¶€ í™œë™ì„ ì‹¤ì²œí•´ ë‚˜ê°€ê³  ìžˆìŠµë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -486,20 +484,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_03.jpg" alt="¼¼ºê¶õ½º" />
+                                        <img src="assets/images/hansot/so_img_03.jpg" alt="ì„¸ë¸Œëž€ìŠ¤" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">¿¬¼¼ÀÇ·á¿ø ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì—°ì„¸ì˜ë£Œì› í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    2014³âºÎÅÍ ÇÑ¼Ü¿¡¼­´Â ¼¼ºê¶õ½º Ê«ÀÇ ³ª´®À» ½ÇÃµÇÏ°í ÀÖ´Â ¿¬¼¼ÀÇ·á¿ø¿¡ ÀÇ·á¿ø ¹ßÀü±â±ÝÀ» ÈÄ¿øÇÏ¿© ¾Ï, Èñ±ÍÁúÈ¯ Ä¡·á»ç¾÷, ÀÇ·á¼±±³»ç¾÷ µî »çÈ¸°øÇåÀÌ¶ó´Â ½Ã¾÷ÀÇ »çÈ¸Àû ¼Ò¸íÀ» ½ÇÃµÇÏ°í ÀÖ½À´Ï´Ù.
+                                                    2014ë…„ë¶€í„° í•œì†¥ì—ì„œëŠ” ì„¸ë¸Œëž€ìŠ¤ å®¶ì˜ ë‚˜ëˆ”ì„ ì‹¤ì²œí•˜ê³  ìžˆëŠ” ì—°ì„¸ì˜ë£Œì›ì— ì˜ë£Œì› ë°œì „ê¸°ê¸ˆì„ í›„ì›í•˜ì—¬ ì•”, í¬ê·€ì§ˆí™˜ ì¹˜ë£Œì‚¬ì—…, ì˜ë£Œì„ êµì‚¬ì—… ë“± ì‚¬íšŒê³µí—Œì´ë¼ëŠ” ì‹œì—…ì˜ ì‚¬íšŒì  ì†Œëª…ì„ ì‹¤ì²œí•˜ê³  ìžˆìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -511,20 +509,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_04.jpg" alt="¼­¿ï¾Æ»êº´¿ø ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_04.jpg" alt="ì„œìš¸ì•„ì‚°ë³‘ì› í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">¼­¿ï¾Æ»êº´¿ø ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì„œìš¸ì•„ì‚°ë³‘ì› í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    2015³â ÇÑ¼ÜÀº ¡°¿ì¸® »çÈ¸ÀÇ °¡Àå ºÒ¿ìÇÑ ÀÌ¿ôÀ» µ½´Â´Ù¡± ´Â ¾Æ»êÀç´ÜÀÇ ¼³¸³ÃëÁö¿¡ µ¿ÂüÇÏ°íÀÚ ¼­¿ï¾Æ»êº´¿ø¿¡ ºÒ¿ì È¯ÀÚ  Ä¡·á±â±Ý ¹× Á¤Çü¿Ü°ú ¿¬±¸±â±Ý¿¡ ÈÄ¿øÇÏ¿´½À´Ï´Ù.
+                                                    2015ë…„ í•œì†¥ì€ â€œìš°ë¦¬ ì‚¬íšŒì˜ ê°€ìž¥ ë¶ˆìš°í•œ ì´ì›ƒì„ ë•ëŠ”ë‹¤â€ ëŠ” ì•„ì‚°ìž¬ë‹¨ì˜ ì„¤ë¦½ì·¨ì§€ì— ë™ì°¸í•˜ê³ ìž ì„œìš¸ì•„ì‚°ë³‘ì›ì— ë¶ˆìš° í™˜ìž  ì¹˜ë£Œê¸°ê¸ˆ ë° ì •í˜•ì™¸ê³¼ ì—°êµ¬ê¸°ê¸ˆì— í›„ì›í•˜ì˜€ìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -536,20 +534,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_05.jpg" alt="±¹¸³¾Ï¼¾ÅÍ" />
+                                        <img src="assets/images/hansot/so_img_05.jpg" alt="êµ­ë¦½ì•”ì„¼í„°" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">±¹¸³¾Ï¼¾ÅÍ ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">êµ­ë¦½ì•”ì„¼í„° í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ±¹¸³¾Ï¼¾ÅÍ´Â ¾ÏÀÇ ¿¹¹æ°ú Á¶±âÁø´ÜÀ» À§ÇÑ È«º¸, ±³À°, °ËÁø ¹× ¿¬±¸»ç¾÷ ¹× ¾Ï°ü·Ã ±¹³», ¿Ü ÇÐ¼ú±³·ù¿Í ÇÐ¼ú´ëÈ¸¸¦ Áö¿øÇÏ´Â ±â°üÀÔ´Ï´Ù. ÇÑ¼ÜÀº 2016³â 12¿ù 30ÀÏ ±¹¸³¾Ï¼¾ÅÍ ¹ßÀü±â±ÝÀ¸·Î 1,500¸¸¿øÀ» Æó¾Ï¿¬±¸¿¡ ±âºÎÇÏ¿© ¾Ï °ÆÁ¤¾ø´Â ¼¼»óÀ» ¸¸µé¾î ÀÎ·ù »çÈ¸ ¹ßÀü¿¡ ±â¿©ÇÏ´Â °æ¿µÀÌ³äÀ» ½ÇÃµÇÏ¿´½À´Ï´Ù.
+                                                    êµ­ë¦½ì•”ì„¼í„°ëŠ” ì•”ì˜ ì˜ˆë°©ê³¼ ì¡°ê¸°ì§„ë‹¨ì„ ìœ„í•œ í™ë³´, êµìœ¡, ê²€ì§„ ë° ì—°êµ¬ì‚¬ì—… ë° ì•”ê´€ë ¨ êµ­ë‚´, ì™¸ í•™ìˆ êµë¥˜ì™€ í•™ìˆ ëŒ€íšŒë¥¼ ì§€ì›í•˜ëŠ” ê¸°ê´€ìž…ë‹ˆë‹¤. í•œì†¥ì€ 2016ë…„ 12ì›” 30ì¼ êµ­ë¦½ì•”ì„¼í„° ë°œì „ê¸°ê¸ˆìœ¼ë¡œ 1,500ë§Œì›ì„ íì•”ì—°êµ¬ì— ê¸°ë¶€í•˜ì—¬ ì•” ê±±ì •ì—†ëŠ” ì„¸ìƒì„ ë§Œë“¤ì–´ ì¸ë¥˜ ì‚¬íšŒ ë°œì „ì— ê¸°ì—¬í•˜ëŠ” ê²½ì˜ì´ë…ì„ ì‹¤ì²œí•˜ì˜€ìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -559,29 +557,29 @@
                             <!-- //4 -->
                         </ul>
                     </div>
-                    <!-- //ºÒ¿ìÈ¯ÀÚ Ä¡·á±â±Ý ¹× ¿¬±¸±â±Ý ÈÄ¿ø -->
-                    <!-- Àú¼Òµæ ±³À°Áö¿ø -->
+                    <!-- //ë¶ˆìš°í™˜ìž ì¹˜ë£Œê¸°ê¸ˆ ë° ì—°êµ¬ê¸°ê¸ˆ í›„ì› -->
+                    <!-- ì €ì†Œë“ êµìœ¡ì§€ì› -->
                     <div class="list_box box_03">
-                        <p class="list_title">Àú¼Òµæ ±³À°Áö¿ø</p>
+                        <p class="list_title">ì €ì†Œë“ êµìœ¡ì§€ì›</p>
                         <ul>
                             <!-- 1 -->
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_06.jpg" alt="¼­¿ï´ëÇÐ±³" />
+                                        <img src="assets/images/hansot/so_img_06.jpg" alt="ì„œìš¸ëŒ€í•™êµ" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">¼­¿ï´ëÇÐ±³ ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">ì„œìš¸ëŒ€í•™êµ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ÇÑ¼Ü¿¡¼­´Â ¼­¿ï´ëÇÐ±³ ´ëÇÐ¿ø»ý°ú ÇÐºÎ»ý¿¡°Ô 2016³âºÎÅÍ 2019³â±îÁö ¸Å ÇÐ±â´ç ÀåÇÐ±ÝÀ» Àü´ÞÇÏ¿© Àú¼ÒµæÃþ ÇÐ»ýµéÀÇ ÇÐ¾÷À» Àå·ÁÇÏ°í ¿Ü½Ä»ê¾÷ ÀÎÀç À°¼º¿¡ ¾ÕÀå¼­°í ÀÖ½À´Ï´Ù.
+                                                    í•œì†¥ì—ì„œëŠ” ì„œìš¸ëŒ€í•™êµ ëŒ€í•™ì›ìƒê³¼ í•™ë¶€ìƒì—ê²Œ 2016ë…„ë¶€í„° 2019ë…„ê¹Œì§€ ë§¤ í•™ê¸°ë‹¹ ìž¥í•™ê¸ˆì„ ì „ë‹¬í•˜ì—¬ ì €ì†Œë“ì¸µ í•™ìƒë“¤ì˜ í•™ì—…ì„ ìž¥ë ¤í•˜ê³  ì™¸ì‹ì‚°ì—… ì¸ìž¬ ìœ¡ì„±ì— ì•žìž¥ì„œê³  ìžˆìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -591,30 +589,30 @@
                             <!-- //1 -->
                         </ul>
                     </div>
-                    <!-- //Àú¼Òµæ ±³À°Áö¿ø -->
-                    <!-- ±âÅ¸ °øÀÍ »ç¾÷ ÈÄ¿ø -->
+                    <!-- //ì €ì†Œë“ êµìœ¡ì§€ì› -->
+                    <!-- ê¸°íƒ€ ê³µìµ ì‚¬ì—… í›„ì› -->
                     <div class="list_box box_03">
-                        <p class="list_title">±âÅ¸ °øÀÍ »ç¾÷ ÈÄ¿ø</p>
+                        <p class="list_title">ê¸°íƒ€ ê³µìµ ì‚¬ì—… í›„ì›</p>
                         <ul>
                             <!-- 1 -->
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_14.JPG" alt="¼­¿ï·Î 7017 °ø°¨³ª´® ÃàÁ¦" />
+                                        <img src="assets/images/hansot/so_img_14.JPG" alt="ì„œìš¸ë¡œ 7017 ê³µê°ë‚˜ëˆ” ì¶•ì œ" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">¼­¿ï·Î 7017 °ø°¨³ª´® ÃàÁ¦</h3>
+                                        <h3 class="h3_tit fz_02">ì„œìš¸ë¡œ 7017 ê³µê°ë‚˜ëˆ” ì¶•ì œ</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ¼­¿ï·Î 7017 °ø°¨³ª´® ÃàÁ¦´Â Àå¾ÖÀÎ°ú ºñÀå¾ÖÀÎÀÌ ÇÔ²² ÇÏ´Â ¾î¿ï¸² Çà»çÀÔ´Ï´Ù. ÇÑ¼ÜÀº ÇÔ²² »ç´Â ¼¼»óÀ» ¸¸µå´Âµ¥ ³ë·ÂÇÏ´Â ¼­¿ï½Ã¿¡ ÈûÀ» º¸ÅÂ±â À§ÇØ µµ½Ã¶ôÀ» ÈÄ¿øÇÏ¿´½À´Ï´Ù.
+                                                    ì„œìš¸ë¡œ 7017 ê³µê°ë‚˜ëˆ” ì¶•ì œëŠ” ìž¥ì• ì¸ê³¼ ë¹„ìž¥ì• ì¸ì´ í•¨ê»˜ í•˜ëŠ” ì–´ìš¸ë¦¼ í–‰ì‚¬ìž…ë‹ˆë‹¤. í•œì†¥ì€ í•¨ê»˜ ì‚¬ëŠ” ì„¸ìƒì„ ë§Œë“œëŠ”ë° ë…¸ë ¥í•˜ëŠ” ì„œìš¸ì‹œì— íž˜ì„ ë³´íƒœê¸° ìœ„í•´ ë„ì‹œë½ì„ í›„ì›í•˜ì˜€ìŠµë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -626,21 +624,21 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_15.JPG" alt="´ëÇÑÀû½ÊÀÚ»ç" />
+                                        <img src="assets/images/hansot/so_img_15.JPG" alt="ëŒ€í•œì ì‹­ìžì‚¬" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">´ëÇÑÀû½ÊÀÚ»ç</h3>
+                                        <h3 class="h3_tit fz_02">ëŒ€í•œì ì‹­ìžì‚¬</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ´ëÇÑÀû½ÊÀÚ»ç¿¡ H½ºÆä¼ÈÆ¼ Ä«Æä¶ó¶¼ 43,560°³¸¦ ±âºÎÇÏ¿´½À´Ï´Ù. ÇÑ¼ÜÀº µ¶°Å³ëÀÎµé¿¡°Ô µû¶æÇÑ À§·Î°¡ µÇ´Â »çÈ¸, ÇåÇ÷ÀÚµéÀ» °Ý·ÁÇÔÀ¸·Î½á ÈÆÈÆÇÑ ÀÎÁ¤ÀÌ ³ÑÄ¡´Â »çÈ¸¸¦ ÀÌ·ï³ª°¡±â¸¦ Èñ¸ÁÇÕ´Ï´Ù.
+                                                    ëŒ€í•œì ì‹­ìžì‚¬ì— HìŠ¤íŽ˜ì…œí‹° ì¹´íŽ˜ë¼ë–¼ 43,560ê°œë¥¼ ê¸°ë¶€í•˜ì˜€ìŠµë‹ˆë‹¤. í•œì†¥ì€ ë…ê±°ë…¸ì¸ë“¤ì—ê²Œ ë”°ëœ»í•œ ìœ„ë¡œê°€ ë˜ëŠ” ì‚¬íšŒ, í—Œí˜ˆìžë“¤ì„ ê²©ë ¤í•¨ìœ¼ë¡œì¨ í›ˆí›ˆí•œ ì¸ì •ì´ ë„˜ì¹˜ëŠ” ì‚¬íšŒë¥¼ ì´ë¤„ë‚˜ê°€ê¸°ë¥¼ í¬ë§í•©ë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -652,21 +650,21 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_12.jpg" alt="±Â½ÃÁî ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_12.jpg" alt="êµ¿ì‹œì¦ˆ í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">±Â½ÃÁî ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">êµ¿ì‹œì¦ˆ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ±Â½ÃÁî´Â Ã»¼Ò³â ¸àÅä¸µÀ» ÅëÇØ °Ç°­ÇÏ°í Çàº¹ÇÑ ´ëÇÑ¹Î±¹ »çÈ¸¸¦ ¸¸µé°íÀÚ ¼³¸³µÈ ºñ¿µ¸® ´ÜÃ¼ÀÔ´Ï´Ù. ÇÑ¼Üµµ½Ã¶ôÀº Ã»¼Ò³âµéÀÌ ¿Ã¹Ù¸¥ ¼ºÀå¿¡ µµ¿òÀÌ µÇ°íÀÚ µµ½Ã¶ôÀ» ÈÄ¿øÇÏ¿´½À´Ï´Ù.
+                                                    êµ¿ì‹œì¦ˆëŠ” ì²­ì†Œë…„ ë©˜í† ë§ì„ í†µí•´ ê±´ê°•í•˜ê³  í–‰ë³µí•œ ëŒ€í•œë¯¼êµ­ ì‚¬íšŒë¥¼ ë§Œë“¤ê³ ìž ì„¤ë¦½ëœ ë¹„ì˜ë¦¬ ë‹¨ì²´ìž…ë‹ˆë‹¤. í•œì†¥ë„ì‹œë½ì€ ì²­ì†Œë…„ë“¤ì´ ì˜¬ë°”ë¥¸ ì„±ìž¥ì— ë„ì›€ì´ ë˜ê³ ìž ë„ì‹œë½ì„ í›„ì›í•˜ì˜€ìŠµë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -678,21 +676,21 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_09.jpg" alt="ÇÑÀÏÃàÁ¦ÇÑ¸¶´ç Çà»ç ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_09.jpg" alt="í•œì¼ì¶•ì œí•œë§ˆë‹¹ í–‰ì‚¬ í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">ÇÑÀÏÃàÁ¦ÇÑ¸¶´ç Çà»ç ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">í•œì¼ì¶•ì œí•œë§ˆë‹¹ í–‰ì‚¬ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    ¡®ÇÑÀÏÃàÁ¦ ÇÑ¸¶´ç¡¯Àº ¼ö¸¸ ¸íÀÇ ÇÑ±¹ÀÎ°ú ÀÏº»ÀÎÀÌ ÇÏ³ª°¡ µÇ¾î ¸¸µé¾î°¡´Â ÃÖ´ë ±Ô¸ðÀÇ ÇÑÀÏ±³·ù Çà»çÀÔ´Ï´Ù. ÀÌ¸¦ ÅëÇØ ÇÑÀÏ ¹®È­ÀÇ Â÷ÀÌ¸¦ ´õ ÀÌÇØÇÏ°í ¼­·Î¸¦ ´õ Á¸ÁßÇÏ´Â °è±â°¡ µÇ°í ÀÖ½À´Ï´Ù. ÇÑ¼Ü¿¡¼­´Â ¡®ÇÑÀÏÃàÁ¦ ÇÑ¸¶´ç¡¯ Çà»ç¿¡ µµ½Ã¶ô ÈÄ¿øµé ÅëÇØ ÇÑÀÏ ¾ç±¹ °£ ¿ìÈ£Ä£¼±À» À§ÇÑ ¼º°øÀûÀÎ Çà»ç °³ÃÖ¸¦ Áö¿øÇÏ°í ÀÖ½À´Ï´Ù.
+                                                    â€˜í•œì¼ì¶•ì œ í•œë§ˆë‹¹â€™ì€ ìˆ˜ë§Œ ëª…ì˜ í•œêµ­ì¸ê³¼ ì¼ë³¸ì¸ì´ í•˜ë‚˜ê°€ ë˜ì–´ ë§Œë“¤ì–´ê°€ëŠ” ìµœëŒ€ ê·œëª¨ì˜ í•œì¼êµë¥˜ í–‰ì‚¬ìž…ë‹ˆë‹¤. ì´ë¥¼ í†µí•´ í•œì¼ ë¬¸í™”ì˜ ì°¨ì´ë¥¼ ë” ì´í•´í•˜ê³  ì„œë¡œë¥¼ ë” ì¡´ì¤‘í•˜ëŠ” ê³„ê¸°ê°€ ë˜ê³  ìžˆìŠµë‹ˆë‹¤. í•œì†¥ì—ì„œëŠ” â€˜í•œì¼ì¶•ì œ í•œë§ˆë‹¹â€™ í–‰ì‚¬ì— ë„ì‹œë½ í›„ì›ë“¤ í†µí•´ í•œì¼ ì–‘êµ­ ê°„ ìš°í˜¸ì¹œì„ ì„ ìœ„í•œ ì„±ê³µì ì¸ í–‰ì‚¬ ê°œìµœë¥¼ ì§€ì›í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
 
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -704,20 +702,20 @@
                             <li>
                                 <div class="news_list">
                                     <div class="news_visual">
-                                        <img src="assets/images/hansot/so_img_13.jpg" alt="Æä·çÂùÂ÷¸¶¿ä½Ã Á¤Èï¿ø »çÀå ÈÄ¿ø" />
+                                        <img src="assets/images/hansot/so_img_13.jpg" alt="íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì‹œ ì •í¥ì› ì‚¬ìž¥ í›„ì›" />
                                     </div>
                                     <div class="news_txt">
-                                        <h3 class="h3_tit fz_02">Æä·çÂùÂ÷¸¶¿ä½Ã Á¤Èï¿ø »çÀå ÈÄ¿ø</h3>
+                                        <h3 class="h3_tit fz_02">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì‹œ ì •í¥ì› ì‚¬ìž¥ í›„ì›</h3>
                                         <div class="so_txt_wrap">
                                             <!-- mobile_btn -->
-                                            <a href="#none" class="so_open_btn"/>³»¿ëº¸±â</a>
+                                            <a href="#none" class="so_open_btn"/>ë‚´ìš©ë³´ê¸°</a>
                                             <!-- //mobile_btn -->
                                             <div class="so_txt_cont">
                                                 <p class="story_txt">
-                                                    2012³â 5¿ù ¹æ¿µµÈ KBS ±Û·Î¹ú ¼º°ø½Ã´ë¸¦ ÅëÇØ ÀÎ¿¬ÀÌ µÇ¾î, ÇÑ¼Ü¿¡¼­ Æä·ç ÂùÂ÷¸¶¿ä Á¤Èï¿ø ½ÃÀå´ÔÀ» ÈÄ¿øÇÏ°Ô µÇ¾úÀ¸¸ç, ÀÌÈÄ Æä·ç ÂùÂ÷¸¶¿ä½Ã °¡³­ÇÑ ¿µ¼¼³ó¹ÎÀÇ Ä¿ÇÇ¸¦ ¼öÃâÇÏ°íÀÚ ÇÏ´Â Á¤ »çÀå´ÔÀÇ ¼Ò¿øÀ» ÀÌ·ç±â À§ÇØ ÇÑ¼Ü¿¡¼­´Â ¸Å³â ÂùÂ÷¸¶¿ä Ä¿ÇÇ¸¦ ¼öÀÔÇØ ÆÇ¸ÅÇÏ°í ÀÖ½À´Ï´Ù. ÇÑ¼Ü¿¡¼­ ¼öÀÔÇÏ´Â Ä¿ÇÇ ¼öÀÍ ±Ý¾× ÀÏºÎ´Â ÂùÂ÷¸¶¿ä½Ã¿¡ ±âºÎµÇ°í ÀÖÀ¸¸ç, µµ·ÎÁ¤ºñ ¹× Ä¿ÇÇ½Ã¼³ °Ç¼³À» À§ÇÑ ÁßÀåºñ ±¸¸Å¸¦ À§ÇØ 5¸¸ºÒÀ» Áö¿øÇÏ¿´½À´Ï´Ù.
+                                                    2012ë…„ 5ì›” ë°©ì˜ëœ KBS ê¸€ë¡œë²Œ ì„±ê³µì‹œëŒ€ë¥¼ í†µí•´ ì¸ì—°ì´ ë˜ì–´, í•œì†¥ì—ì„œ íŽ˜ë£¨ ì°¬ì°¨ë§ˆìš” ì •í¥ì› ì‹œìž¥ë‹˜ì„ í›„ì›í•˜ê²Œ ë˜ì—ˆìœ¼ë©°, ì´í›„ íŽ˜ë£¨ ì°¬ì°¨ë§ˆìš”ì‹œ ê°€ë‚œí•œ ì˜ì„¸ë†ë¯¼ì˜ ì»¤í”¼ë¥¼ ìˆ˜ì¶œí•˜ê³ ìž í•˜ëŠ” ì • ì‚¬ìž¥ë‹˜ì˜ ì†Œì›ì„ ì´ë£¨ê¸° ìœ„í•´ í•œì†¥ì—ì„œëŠ” ë§¤ë…„ ì°¬ì°¨ë§ˆìš” ì»¤í”¼ë¥¼ ìˆ˜ìž…í•´ íŒë§¤í•˜ê³  ìžˆìŠµë‹ˆë‹¤. í•œì†¥ì—ì„œ ìˆ˜ìž…í•˜ëŠ” ì»¤í”¼ ìˆ˜ìµ ê¸ˆì•¡ ì¼ë¶€ëŠ” ì°¬ì°¨ë§ˆìš”ì‹œì— ê¸°ë¶€ë˜ê³  ìžˆìœ¼ë©°, ë„ë¡œì •ë¹„ ë° ì»¤í”¼ì‹œì„¤ ê±´ì„¤ì„ ìœ„í•œ ì¤‘ìž¥ë¹„ êµ¬ë§¤ë¥¼ ìœ„í•´ 5ë§Œë¶ˆì„ ì§€ì›í•˜ì˜€ìŠµë‹ˆë‹¤.
                                                 </p>
                                                 <!-- mobile_btn -->
-                                                <a href="#none" class="so_close_btn"/>´Ý±â</a>
+                                                <a href="#none" class="so_close_btn"/>ë‹«ê¸°</a>
                                                 <!-- //mobile_btn -->
                                             </div>
                                         </div>
@@ -727,29 +725,29 @@
                             <!-- //5 -->
                         </ul>
                     </div>
-                    <!-- //±âÅ¸ °øÀÍ »ç¾÷ ÈÄ¿ø -->
+                    <!-- //ê¸°íƒ€ ê³µìµ ì‚¬ì—… í›„ì› -->
                 </div>
                 <!-- //list -->
             </div>
             <!-- //social_list -->
         </div>
-        <!-- //»çÈ¸°øÇåÈ°µ¿ -->
+        <!-- //ì‚¬íšŒê³µí—Œí™œë™ -->
     </section>
 </div>
 
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">´õ ¸¹Àº ÀÌ¾ß±â</h2>
+    <h2 class="more_tit">ë” ë§Žì€ ì´ì•¼ê¸°</h2>
     <ul>
         <li>
             <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_story.jpg" alt="ºê·£µå ½ºÅä¸®" />
+                    <img src="assets/images/common/more_story.jpg" alt="ë¸Œëžœë“œ ìŠ¤í† ë¦¬" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå ½ºÅä¸®</h3>
-                    <h3 class="h3_tit_o">ºê·£µå ½ºÅä¸®</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
                 </figcaption>
             </figure>
         </li>
@@ -757,11 +755,11 @@
             <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_philosophy.jpg" alt="ºê·£µå Ã¶ÇÐ" />
+                    <img src="assets/images/common/more_philosophy.jpg" alt="ë¸Œëžœë“œ ì² í•™" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå Ã¶ÇÐ</h3>
-                    <h3 class="h3_tit_o">ºê·£µå Ã¶ÇÐ</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ì² í•™</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ì² í•™</h3>
                 </figcaption>
             </figure>
         </li>
@@ -769,11 +767,11 @@
             <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_legacy.jpg" alt="ºê·£µå À¯»ê" />
+                    <img src="assets/images/common/more_legacy.jpg" alt="ë¸Œëžœë“œ ìœ ì‚°" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå À¯»ê</h3>
-                    <h3 class="h3_tit_o">ºê·£µå À¯»ê</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìœ ì‚°</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìœ ì‚°</h3>
                 </figcaption>
             </figure>
         </li>
@@ -792,42 +790,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-               <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
-                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
+               <li class="first_be off"><a href="incruit.go">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -835,15 +833,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -852,11 +850,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,7 +16,7 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="be887547-da7b-4585-86da-36d32dfb8647" /><title>¿À½Ã´Â±æ</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="be887547-da7b-4585-86da-36d32dfb8647" /><title>ì˜¤ì‹œëŠ”ê¸¸</title>
 
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
@@ -81,12 +81,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -154,16 +154,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -174,22 +174,22 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="home.go"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="home.go"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                     </ul>
                 </div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
                 <div class="gnb_menu">
                     <ul>
@@ -197,9 +197,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -207,10 +207,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -219,10 +219,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
-                                    <li><a href="menu_order.go">´ÜÃ¼ ÁÖ¹®</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
+                                    <li><a href="menu_order.go">ë‹¨ì²´ ì£¼ë¬¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -230,7 +230,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -238,8 +238,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -247,12 +247,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
-                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
-                                    <li><a href="qna.go">Ã¢¾÷¹®ÀÇ</a></li>
-                                    <li><a href="briefing.go">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
+                                    <li><a href="qna.go">ì°½ì—…ë¬¸ì˜</a></li>
+                                    <li><a href="briefing.go">ì°½ì—…ì„¤ëª…íšŒ ì¼ì •Â·ì‹ ì²­</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -260,13 +260,12 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
-                                    <li><a href="faq_list.go">°í°´¼¾ÅÍ</a></li>
-                                    <li class="h_last"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="news_list.go">í•œì†¥ NEWS</a></li>
+                                    <li><a href="location.go">ì˜¤ì‹œëŠ” ê¸¸</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -300,267 +299,267 @@
         
 <div class="content hansot">
     <section class="location">
-        <!-- Ã£¾Æ¿À½Ã´Â ±æ -->
+        <!-- ì°¾ì•„ì˜¤ì‹œëŠ” ê¸¸ -->
         <div class="location_wrap tab_st01">
             <!-- title -->
             <div class="ontitle">
-                <h2 class="h2_tit h2_02 mo_version">¿À½Ã´Â ±æ</h2>
+                <h2 class="h2_tit h2_02 mo_version">ì˜¤ì‹œëŠ” ê¸¸</h2>
                 <div class="tab_wrap mo_version cont_area">
                     <ul class="tab_menu">
-                        <li class="active"><a href="javascript:loadMap(0);">¼­¿ïº»»ç</a></li>
-                        <li><a href="javascript:loadMap(1);">ÁßºÎ»ç¾÷ºÎ</a></li>
-                        <li><a href="javascript:loadMap(2);">´ë±¸»ç¾÷ºÎ</a></li>
-                        <li><a href="javascript:loadMap(3);">ºÎ»ê»ç¾÷ºÎ</a></li>
-                        <li><a href="javascript:loadMap(4);">È£³²»ç¾÷ºÎ</a></li>
+                        <li class="active"><a href="javascript:loadMap(0);">ì„œìš¸ë³¸ì‚¬</a></li>
+                        <li><a href="javascript:loadMap(1);">ì¤‘ë¶€ì‚¬ì—…ë¶€</a></li>
+                        <li><a href="javascript:loadMap(2);">ëŒ€êµ¬ì‚¬ì—…ë¶€</a></li>
+                        <li><a href="javascript:loadMap(3);">ë¶€ì‚°ì‚¬ì—…ë¶€</a></li>
+                        <li><a href="javascript:loadMap(4);">í˜¸ë‚¨ì‚¬ì—…ë¶€</a></li>
                     </ul>
                 </div>
             </div>
             <!-- //title -->
 
-            <!-- ¼­¿ï º»»ç À§Ä¡¾È³» -->
+            <!-- ì„œìš¸ ë³¸ì‚¬ ìœ„ì¹˜ì•ˆë‚´ -->
             <div class="tab_cont active">
                 <div class="traffic_wrap">
-                    <!-- Áöµµ api -->
+                    <!-- ì§€ë„ api -->
                     <div class="area_map">
                         <div class="map_img">
                             <div id="map1" style="width:100%;height:500px;"></div>
                         </div>
                     </div>
-                    <!-- //Áöµµ api -->
+                    <!-- //ì§€ë„ api -->
                     <div class="map_info_wrap mo_version">
-                        <!-- ÁÖ¼Ò -->
+                        <!-- ì£¼ì†Œ -->
                         <div class="map_tit_wrap">
-                            <h3 class="h3_tit fz_01">¼­¿ï º»»ç</h3>
+                            <h3 class="h3_tit fz_01">ì„œìš¸ ë³¸ì‚¬</h3>
                             <p class="map_address">
-                                <span class="s_block">¼­¿ï °­³²±¸ °­³²´ë·Î 318 8Ãþ, 9Ãþ</span>
+                                <span class="s_block">ì„œìš¸ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318 8ì¸µ, 9ì¸µ</span>
                                 <span class="s_block call">02-585-1114</span>
                             </p>
                         </div>
-                        <!-- //ÁÖ¼Ò -->
-                        <!-- ±³ÅëÆí¾È³» -->
+                        <!-- //ì£¼ì†Œ -->
+                        <!-- êµí†µíŽ¸ì•ˆë‚´ -->
                         <div class="map_tr_wrap">
                             <div class="tr_sub">
-                                <h4 class="fz_03">ÁöÇÏÃ¶ ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ì§€í•˜ì²  ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>2È£¼±</dt>
-                                    <dd>°­³²¿ª 4¹ø Ãâ±¸</dd>
-                                    <dt>3È£¼±</dt>
-                                    <dd>¾çÀç¿ª 3¹ø Ãâ±¸</dd>
+                                    <dt>2í˜¸ì„ </dt>
+                                    <dd>ê°•ë‚¨ì—­ 4ë²ˆ ì¶œêµ¬</dd>
+                                    <dt>3í˜¸ì„ </dt>
+                                    <dd>ì–‘ìž¬ì—­ 3ë²ˆ ì¶œêµ¬</dd>
                                 </dl>
                             </div>
                             <div class="tr_bus">
-                                <h4 class="fz_03">¹ö½º ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ë²„ìŠ¤ ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>ÀÏ¹Ý</dt>
+                                    <dt>ì¼ë°˜</dt>
                                     <dd>500-5</dd>
-                                    <dt>°£¼±</dt>
+                                    <dt>ê°„ì„ </dt>
                                     <dd>140, 400, 402, 407, 420, 421, 440, 441, 462, 470, 471, 541, 542, N37</dd>
-                                    <dt>Á÷Çà</dt>
+                                    <dt>ì§í–‰</dt>
                                     <dd>
                                         <span class="s_block">500-2, 1005, 1005-1, 1151, 1241, 1251, 1550-1, 1550-3, 1551, 1551B, 1560, </span>
                                         <span class="s_block">3030, 3200, 5001, 5001-1, 5002, 5003, 5006, 5100, 6001, 6501, 9004, 9700</span>
                                     </dd>
-                                    <dt>±ÞÇà</dt>
+                                    <dt>ê¸‰í–‰</dt>
                                     <dd>8101</dd>
-                                    <dt>±¤¿ª</dt>
+                                    <dt>ê´‘ì—­</dt>
                                     <dd>9100, 9200, 9201, 9300, 9404, 9408, 9500, 9501, 9711A, 9711B, 9802, M6405</dd>
-                                    <dt>½Ã¿Ü</dt>
+                                    <dt>ì‹œì™¸</dt>
                                     <dd>9502</dd>
-                                    <dt>°øÇ×</dt>
+                                    <dt>ê³µí•­</dt>
                                     <dd>6009, 6500</dd>
                                 </dl>
                             </div>
                         </div>
-                        <!-- //±³ÅëÆí¾È³» -->
+                        <!-- //êµí†µíŽ¸ì•ˆë‚´ -->
                     </div>
                 </div>
             </div>
-            <!-- //¼­¿ï º»»ç À§Ä¡¾È³» -->
-            <!-- ÁßºÎ »ç¾÷ºÎ À§Ä¡¾È³» -->
+            <!-- //ì„œìš¸ ë³¸ì‚¬ ìœ„ì¹˜ì•ˆë‚´ -->
+            <!-- ì¤‘ë¶€ ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
             <div class="tab_cont">
                 <div class="traffic_wrap">
-                    <!-- Áöµµ api -->
+                    <!-- ì§€ë„ api -->
                     <div class="area_map">
                         <div class="map_img">
                             <div id="map2" style="width:100%;height:500px;"></div>
                         </div>
                     </div>
-                    <!-- //Áöµµ api -->
+                    <!-- //ì§€ë„ api -->
                     <div class="map_info_wrap mo_version">
-                        <!-- ÁÖ¼Ò -->
+                        <!-- ì£¼ì†Œ -->
                         <div class="map_tit_wrap">
-                            <h3 class="h3_tit fz_01">ÁßºÎ »ç¾÷ºÎ</h3>
+                            <h3 class="h3_tit fz_01">ì¤‘ë¶€ ì‚¬ì—…ë¶€</h3>
                             <p class="map_address">
-                                <span class="s_block">´ëÀü±¤¿ª½Ã ¼­±¸ Åº¹æµ¿ 792¹øÁö </span>
-                                <span class="s_block">Å¸¿ö·º½ººôµù 5Ãþ 503È£</span>
+                                <span class="s_block">ëŒ€ì „ê´‘ì—­ì‹œ ì„œêµ¬ íƒ„ë°©ë™ 792ë²ˆì§€ </span>
+                                <span class="s_block">íƒ€ì›Œë ‰ìŠ¤ë¹Œë”© 5ì¸µ 503í˜¸</span>
                                 <span class="s_block call">042-624-1117</span>
                             </p>
                         </div>
-                        <!-- //ÁÖ¼Ò -->
-                        <!-- ±³Åë¾È³» -->
+                        <!-- //ì£¼ì†Œ -->
+                        <!-- êµí†µì•ˆë‚´ -->
                         <div class="map_tr_wrap">
                             <div class="tr_sub">
-                                <h4 class="fz_03">ÁöÇÏÃ¶ ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ì§€í•˜ì²  ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>1È£¼±</dt>
-                                    <dd>Åº¹æ¿ª 4¹ø Ãâ±¸ ÇÏÂ÷ ÈÄ ÇÑ°¡¶÷¾ÆÆÄÆ®³×°Å¸®¹æÇâ 500MÁöÁ¡</dd>
+                                    <dt>1í˜¸ì„ </dt>
+                                    <dd>íƒ„ë°©ì—­ 4ë²ˆ ì¶œêµ¬ í•˜ì°¨ í›„ í•œê°€ëžŒì•„íŒŒíŠ¸ë„¤ê±°ë¦¬ë°©í–¥ 500Mì§€ì </dd>
                                 </dl>
                             </div>
                             <div class="tr_bus">
-                                <h4 class="fz_03">¹ö½º ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ë²„ìŠ¤ ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt class="blind">ÀÏ¹Ý</dt>
+                                    <dt class="blind">ì¼ë°˜</dt>
                                     <dd>104, 105, 106, 706, 911</dd>
                                 </dl>
                             </div>
                         </div>
-                        <!-- //±³Åë¾È³» -->
+                        <!-- //êµí†µì•ˆë‚´ -->
                     </div>
                 </div>
             </div>
-            <!-- //ÁßºÎ »ç¾÷ºÎ À§Ä¡¾È³» -->
-            <!-- ´ë±¸»ç¾÷ºÎ À§Ä¡¾È³» -->
+            <!-- //ì¤‘ë¶€ ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
+            <!-- ëŒ€êµ¬ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
             <div class="tab_cont">
                 <div class="traffic_wrap">
-                    <!-- Áöµµ api -->
+                    <!-- ì§€ë„ api -->
                     <div class="area_map">
                         <div class="map_img">
                             <div id="map3" style="width:100%;height:500px;"></div>
                         </div>
                     </div>
-                    <!-- //Áöµµ api -->
+                    <!-- //ì§€ë„ api -->
                     <div class="map_info_wrap mo_version">
-                        <!-- ÁÖ¼Ò -->
+                        <!-- ì£¼ì†Œ -->
                         <div class="map_tit_wrap">
-                            <h3 class="h3_tit fz_01">´ë±¸ »ç¾÷ºÎ</h3>
+                            <h3 class="h3_tit fz_01">ëŒ€êµ¬ ì‚¬ì—…ë¶€</h3>
                             <p class="map_address">
-                                <span class="s_block">´ë±¸±¤¿ª½Ã µ¿±¸ ½ÅÃµ4µ¿ 350-7¹øÁö</span>
-                                <span class="s_block">°æµ¿ºôµù 4Ãþ</span>
+                                <span class="s_block">ëŒ€êµ¬ê´‘ì—­ì‹œ ë™êµ¬ ì‹ ì²œ4ë™ 350-7ë²ˆì§€</span>
+                                <span class="s_block">ê²½ë™ë¹Œë”© 4ì¸µ</span>
                                 <span class="s_block call">053-745-6114</span>
                             </p>
                         </div>
-                        <!-- //ÁÖ¼Ò -->
-                        <!-- ±³Åë¾È³» -->
+                        <!-- //ì£¼ì†Œ -->
+                        <!-- êµí†µì•ˆë‚´ -->
                         <div class="map_tr_wrap">
                             <div class="tr_sub">
-                                <h4 class="fz_03">ÁöÇÏÃ¶ ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ì§€í•˜ì²  ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>1È£¼±</dt>
-                                    <dd>µ¿´ë±¸¿ª ÇÏÂ÷ ÈÄ 2¹ø Ãâ±¸ µ¿´ë±¸¼¼¹«¼­¹æ¸é 1.3KM ÁöÁ¡</dd>
-                                    <dt>2È£¼±</dt>
-                                    <dd>¹ü¾î¿ª ÇÏÂ÷ ÈÄ 4¹ø Ãâ±¸ µ¿´ë±¸¼¼¹«¼­ ¹æ¸é 1.2KM ÁöÁ¡</dd>
+                                    <dt>1í˜¸ì„ </dt>
+                                    <dd>ë™ëŒ€êµ¬ì—­ í•˜ì°¨ í›„ 2ë²ˆ ì¶œêµ¬ ë™ëŒ€êµ¬ì„¸ë¬´ì„œë°©ë©´ 1.3KM ì§€ì </dd>
+                                    <dt>2í˜¸ì„ </dt>
+                                    <dd>ë²”ì–´ì—­ í•˜ì°¨ í›„ 4ë²ˆ ì¶œêµ¬ ë™ëŒ€êµ¬ì„¸ë¬´ì„œ ë°©ë©´ 1.2KM ì§€ì </dd>
                                 </dl>
                             </div>
                             <div class="tr_bus">
-                                <h4 class="fz_03">¹ö½º ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ë²„ìŠ¤ ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt class="blind">ÀÏ¹Ý</dt>
-                                    <dd>508, 518, ¼øÈ¯2, 818, 399</dd>
+                                    <dt class="blind">ì¼ë°˜</dt>
+                                    <dd>508, 518, ìˆœí™˜2, 818, 399</dd>
                                 </dl>
                             </div>
                         </div>
-                        <!-- //±³Åë¾È³» -->
+                        <!-- //êµí†µì•ˆë‚´ -->
                     </div>
                 </div>
             </div>
-            <!-- //´ë±¸»ç¾÷ºÎ À§Ä¡¾È³» -->
-            <!-- ºÎ»ê»ç¾÷ºÎ À§Ä¡¾È³» -->
+            <!-- //ëŒ€êµ¬ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
+            <!-- ë¶€ì‚°ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
             <div class="tab_cont">
                 <div class="traffic_wrap">
-                    <!-- Áöµµ api -->
+                    <!-- ì§€ë„ api -->
                     <div class="area_map">
                         <div class="map_img">
                             <div id="map4" style="width:100%;height:500px;"></div>
                         </div>
                     </div>
-                    <!-- //Áöµµ api -->
-                    <!-- ÁÖ¼Ò -->
+                    <!-- //ì§€ë„ api -->
+                    <!-- ì£¼ì†Œ -->
                     <div class="map_info_wrap mo_version">
                         <div class="map_tit_wrap">
-                            <h3 class="h3_tit fz_01">ºÎ»ê »ç¾÷ºÎ</h3>
+                            <h3 class="h3_tit fz_01">ë¶€ì‚° ì‚¬ì—…ë¶€</h3>
                             <p class="map_address">
-                                <span class="s_block">ºÎ»ê±¤¿ª½Ã µ¿±¸ Áß¾Ó´ë·Î 236</span>
-                                <span class="s_block">½ÅÈïºôµù 9Ãþ (ÃÊ·®µ¿ 1198-1)</span>
+                                <span class="s_block">ë¶€ì‚°ê´‘ì—­ì‹œ ë™êµ¬ ì¤‘ì•™ëŒ€ë¡œ 236</span>
+                                <span class="s_block">ì‹ í¥ë¹Œë”© 9ì¸µ (ì´ˆëŸ‰ë™ 1198-1)</span>
                                 <span class="s_block call">051-804-1114</span>
                             </p>
                         </div>
-                        <!-- //ÁÖ¼Ò -->
-                        <!-- ±³Åë¾È³» -->
+                        <!-- //ì£¼ì†Œ -->
+                        <!-- êµí†µì•ˆë‚´ -->
                         <div class="map_tr_wrap">
                             <div class="tr_sub">
-                                <h4 class="fz_03">ÁöÇÏÃ¶ ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ì§€í•˜ì²  ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>1È£¼±</dt>
-                                    <dd>ºÎ»ê¿ª ÇÏÂ÷ ÈÄ 10¹ø Ãâ±¸ ¹æ¸é 250MÁöÁ¡</dd>
+                                    <dt>1í˜¸ì„ </dt>
+                                    <dd>ë¶€ì‚°ì—­ í•˜ì°¨ í›„ 10ë²ˆ ì¶œêµ¬ ë°©ë©´ 250Mì§€ì </dd>
                                 </dl>
                             </div>
                             <div class="tr_bus">
-                                <h4 class="fz_03">¹ö½º ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ë²„ìŠ¤ ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>ÀÏ¹Ý</dt>
+                                    <dt>ì¼ë°˜</dt>
                                     <dd>
                                         <span class="s_block">2, 17, 26, 27, 40, 41, 43, 59, 61, 66, 67, 82, 87, 88-1A, 88-1B, 88A, 101, 103, 134, </span>
                                         <span class="s_block">167, 190, 333, 508</span>
                                     </dd>
-                                    <dt>±ÞÇà</dt>
+                                    <dt>ê¸‰í–‰</dt>
                                     <dd>1000, 1001, 1003, 1004</dd>
                                 </dl>
                             </div>
                         </div>
-                        <!-- //±³Åë¾È³» -->
+                        <!-- //êµí†µì•ˆë‚´ -->
                     </div>
                 </div>
             </div>
-            <!-- //ºÎ»ê»ç¾÷ºÎ À§Ä¡¾È³» -->
-            <!-- È£³²»ç¾÷ºÎ À§Ä¡¾È³» -->
+            <!-- //ë¶€ì‚°ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
+            <!-- í˜¸ë‚¨ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
             <div class="tab_cont">
                 <div class="traffic_wrap">
-                    <!-- Áöµµ api -->
+                    <!-- ì§€ë„ api -->
                     <div class="area_map">
                         <div class="map_img">
                             <div id="map5" style="width:100%;height:500px;"></div>
                         </div>
                     </div>
-                    <!-- //Áöµµ api -->
-                    <!-- ÁÖ¼Ò -->
+                    <!-- //ì§€ë„ api -->
+                    <!-- ì£¼ì†Œ -->
                     <div class="map_info_wrap mo_version">
                         <div class="map_tit_wrap">
-                            <h3 class="h3_tit fz_01">È£³² »ç¾÷ºÎ</h3>
+                            <h3 class="h3_tit fz_01">í˜¸ë‚¨ ì‚¬ì—…ë¶€</h3>
                             <p class="map_address">
-                                <span class="s_block">±¤ÁÖ±¤¿ª½Ã µ¿±¸ Áß¾Ó·Î 143,</span>
-                                <span class="s_block">2Ãþ(È£³²µ¿)</span>
+                                <span class="s_block">ê´‘ì£¼ê´‘ì—­ì‹œ ë™êµ¬ ì¤‘ì•™ë¡œ 143,</span>
+                                <span class="s_block">2ì¸µ(í˜¸ë‚¨ë™)</span>
                                 <span class="s_block call">062-943-1114</span>
                             </p>
                         </div>
-                        <!-- //ÁÖ¼Ò -->
-                        <!-- ±³Åë¾È³» -->
+                        <!-- //ì£¼ì†Œ -->
+                        <!-- êµí†µì•ˆë‚´ -->
                         <div class="map_tr_wrap">
                             <div class="tr_sub">
-                                <h4 class="fz_03">ÁöÇÏÃ¶ ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ì§€í•˜ì²  ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>1È£¼±</dt>
-                                    <dd>±Ý³²·Î4°¡¿ª ±¤ÁÖ1È£¼± 1¹ø Ãâ±¸</dd>
+                                    <dt>1í˜¸ì„ </dt>
+                                    <dd>ê¸ˆë‚¨ë¡œ4ê°€ì—­ ê´‘ì£¼1í˜¸ì„  1ë²ˆ ì¶œêµ¬</dd>
                                 </dl>
                             </div>
                             <div class="tr_bus">
-                                <h4 class="fz_03">¹ö½º ÀÌ¿ë½Ã</h4>
+                                <h4 class="fz_03">ë²„ìŠ¤ ì´ìš©ì‹œ</h4>
                                 <dl>
-                                    <dt>°£¼±</dt>
-                                    <dd>¼ö¿Ï12, Áö¿ø45, ±Ý³²59</dd>
-                                    <dt>Áö¼±</dt>
-                                    <dd>´ëÃÌ170, ¼Û¾Ï74, ±Ý³²55, ´ëÃÌ70, ¹®Èï80</dd>
-                                    <dt>±ÞÇà</dt>
-                                    <dd>¸Å¿ù06, Áø¿ù07</dd>
+                                    <dt>ê°„ì„ </dt>
+                                    <dd>ìˆ˜ì™„12, ì§€ì›45, ê¸ˆë‚¨59</dd>
+                                    <dt>ì§€ì„ </dt>
+                                    <dd>ëŒ€ì´Œ170, ì†¡ì•”74, ê¸ˆë‚¨55, ëŒ€ì´Œ70, ë¬¸í¥80</dd>
+                                    <dt>ê¸‰í–‰</dt>
+                                    <dd>ë§¤ì›”06, ì§„ì›”07</dd>
                                 </dl>
                             </div>
                         </div>
-                        <!-- //±³Åë¾È³» -->
+                        <!-- //êµí†µì•ˆë‚´ -->
                     </div>
                 </div>
             </div>
-            <!-- //È£³²»ç¾÷ºÎ À§Ä¡¾È³» -->
+            <!-- //í˜¸ë‚¨ì‚¬ì—…ë¶€ ìœ„ì¹˜ì•ˆë‚´ -->
         </div>
-        <!-- //Ã£¾Æ¿À½Ã´Â ±æ -->
+        <!-- //ì°¾ì•„ì˜¤ì‹œëŠ” ê¸¸ -->
     </section>
 </div>
 
@@ -573,28 +572,28 @@
     //});
 
     var latlng = [
-        {lat : "37.4915804", lng : "127.0311893"},  // ¼­¿ïº»»ç
-        {lat : "36.3464304", lng : "127.3899069"},  // ÁßºÎ»ç¾÷ºÎ
-        {lat : "35.8681321", lng : "128.6303401"},  // ´ë±¸»ç¾÷ºÎ
-        {lat : "35.1177324", lng : "129.0415861"},  // ºÎ»ê»ç¾÷ºÎ
-        {lat : "35.1474656", lng : "126.9119342"}   // È£³²»ç¾÷ºÎ
+        {lat : "37.4915804", lng : "127.0311893"},  // ì„œìš¸ë³¸ì‚¬
+        {lat : "36.3464304", lng : "127.3899069"},  // ì¤‘ë¶€ì‚¬ì—…ë¶€
+        {lat : "35.8681321", lng : "128.6303401"},  // ëŒ€êµ¬ì‚¬ì—…ë¶€
+        {lat : "35.1177324", lng : "129.0415861"},  // ë¶€ì‚°ì‚¬ì—…ë¶€
+        {lat : "35.1474656", lng : "126.9119342"}   // í˜¸ë‚¨ì‚¬ì—…ë¶€
     ];
     var mapContainer, map, mapOptions, position, markerOptions;
 
-    // Áöµµ»ý¼º
+    // ì§€ë„ìƒì„±
     function loadMap(n) {
         var lat = latlng[n].lat;
         var lng = latlng[n].lng;
         var id = $(".tab_cont.active").find(".map_img > div").attr("id");
-        mapContainer = document.getElementById(id); // Áöµµ¸¦ Ç¥½ÃÇÒ div
+        mapContainer = document.getElementById(id); // ì§€ë„ë¥¼ í‘œì‹œí•  div
         mapResize();
 
         position = new naver.maps.LatLng(lat, lng);
         mapOptions = {
             center: position,
             zoom: 10,
-            logoControl : false,        // naver ·Î°í
-            mapDataControl : false      // ÀúÀÛ±Ç ÄÁÆ®·Ñ
+            logoControl : false,        // naver ë¡œê³ 
+            mapDataControl : false      // ì €ìž‘ê¶Œ ì»¨íŠ¸ë¡¤
         };
 
         map = new naver.maps.Map(mapContainer, mapOptions);
@@ -603,7 +602,7 @@
             position: position.destinationPoint(0, 0),
             map: map,
             icon: {
-                url: '../assets/images/common/icon_map.png',
+                url: 'assets/images/common/icon_map.png',
                 size: new naver.maps.Size(42, 52),
                 scaledSize: new naver.maps.Size(42, 52),
                 origin: new naver.maps.Point(0, 0),
@@ -638,42 +637,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
-                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="incruit.go">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -681,15 +680,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -698,11 +697,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
