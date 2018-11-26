@@ -52,6 +52,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/mycss.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/mycss2.css" />
 <link rel="stylesheet" type="text/css" href="./assets/css/ui.menu.css" />
 
 </head>
@@ -59,12 +60,12 @@
 
 
 
-<div id="my_container" class="my_sub_page" >
-<h1 class="my_h1"> <%=id%> &nbsp;회원님의 주문 내역</h1>
+<div id="my_container" class="my_sub_page"  style="margin-top:80px;">
+<h1 class="my_h1"> <%=id%> &nbsp;회원님의 주문 내역 &nbsp; <img src="images/order.png" style="width:80px; height:60px;"></h1>
 
 </div>
 
-<div class="my_container2">
+<div class="my_container2" style="margin-bottom:5px;">
 <h3 id="h31">메뉴 </h3>  <h3 id="h32"> 가격 </h3><h3 id="h33"> 수량</h3>
 </div>
 
@@ -72,22 +73,22 @@
 
 
 
-<div class="my_container3">
-<table >
+<div class="my_container3" style="margin-left:280px">
+<table>
 <% for(int i = 0 ; i<field.length ; i++){
      
-      out.println("<tr><td style='width:250px'><h4 id='h41'>"+check[i]+"</h4></td><td><h4 id='h42'>"+field[i]+"</h4></td><td><h4 id='h43'>"+quan[i]+"</h4></td></tr>");
+      out.println("<tr><td style='width:250px;' align='center'><h4 id='h41'>"+check[i]+"</h4></td><td><h4 id='h42' >"+field[i]+"</h4></td><td><h4 id='h43'>"+quan[i]+"</h4></td></tr>");
       
 }%>
 </table>
 <div class="my_container4">
 
-<h2>총 가격</h2>
+<h2>총 가격</h2><br>
 <%=price %>원
 
 </div>
 
-<input type="button" class="my2" value="확인했습니다." onclick="javascript:location.href='home.do'"/>
+<input type="button" class="my2" value="확인" onclick="javascript:location.href='home.go'"/>
 
 
 

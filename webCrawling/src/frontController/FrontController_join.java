@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import command.Command_CheckingId;
 import command.Command_Join;
@@ -57,6 +58,16 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward.setRedirect(false);
 			forward.setPath("/home.jsp");
 
+		}
+		// 로그아웃 시 페이지 이동 
+		else if (command.equals("/logout.do")) {
+			forward = new ActionForward();
+			forward.setRedirect(false);
+			HttpSession session=request.getSession();
+			session.invalidate();
+			forward.setPath("/home.jsp");
+			
+			
 		}
 
 		// 로그인 페이지로 이동
@@ -118,9 +129,6 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			dispatcher.forward(request, response);
 		}
 	}
-<<<<<<< HEAD
-}
-=======
 
 }
->>>>>>> 8796eb0e1098ae62b07924e92cdf3d81e6155f6b
+

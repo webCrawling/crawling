@@ -176,13 +176,29 @@
 <header id="header">
     <!-- header flex-->
     <div class="hd_flex">
-        <div class="area_flex">
+        <div class="area_flex" >
         
-            <ul>
-            <% if(id != null){ %>
+            <ul style="width:300px">
+              <% if(id != null && id.equals("admin")){ %>
             	 <li>
            
-                    <%=id %>님 환영합니다.
+                   <a href="goAdmin.am"><img src="images/key.png" style="width:15px;">&nbsp;관리자 페이지</a>
+                   
+                </li>
+                
+                <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
+                </li>
+           <%}%>
+           
+            <% if(id != null && (!id.equals("admin"))){ %>
+            	 <li >
+           
+                    <a href="my_page.go"> <%=id %> 님의 마이페이지</a> 
+                    
+                </li>
+                <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
                 </li>
            <%}%>
             <% if(id == null){
@@ -190,11 +206,11 @@
             %>
                 <li>
 
-                    <a href="./login.do">로그인</a>
+                    <a href="login.do">로그인</a>
                 </li>
                     
                 <li>
-                    <a href="./join.do">회원가입</a>
+                    <a href="join.do">회원가입</a>
                </li>
              <%} %> 
 
@@ -216,7 +232,7 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="home.go"><span class="blind">�Ѽ�</span></a></h1>
+                <h1><a href="home.go"><span class="blind"></span></a></h1>
 
             </div>
             <!-- gnb -->
@@ -228,7 +244,7 @@
 								<li><a href="join.do">회원가입</a></li>
 							</ul>
 						</div>
-                <!-- //����� �α���/ȸ������ -->
+              
 
 
                 <div class="gnb_menu">
@@ -248,10 +264,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG�濵�̶�?</a></li>
-                                    <li><a href="philosophy.go">ȯ�溸ȣ(Environment)</a></li>
-                                    <li><a href="social.go">��ȸ����(Social)</a></li>
-                                    <li><a href="esg.go">�����濵(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESG 경영이란?</a></li>
+                                    <li><a href="philosophy.go">환경보호(Environment)</a></li>
+                                    <li><a href="social.go">사회공헌(Social)</a></li>
+                                    <li><a href="esg.go">윤리경영(Governance)</a></li>
 
 
                                     </ul>
@@ -261,11 +277,10 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">��ü�޴�</a></li>
-                                    <li><a href="material.go">����� �̾߱�</a></li>
-                                    <li><a href="chancha.go">�����������Ŀ��</a></li>
-                                    <li><a href="menu_order.go">��ü �ֹ�</a></li>
-
+                                    <li><a href="menu_list.go">전체메뉴</a></li>
+                                    <li><a href="material.go">식재료 이야기</a></li>
+                                    <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                   
                                 </ul>
                             </div>
                         </li>
@@ -273,7 +288,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">�ֺ�����ã��</a></li>
+                                    <li><a href="store_find.go">주변점포찾기</a></li>
 
                                 </ul>
                             </div>
@@ -282,8 +297,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">�� ���� �̺�Ʈ</a></li>
-                                    <li><a href="store_event_list.go">�ű��� �����̺�Ʈ</a></li>
+                                    <li><a href="event_list.go">이 달의 이벤트</a></li>
+                                    <li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
 
                                 </ul>
                             </div>
@@ -292,12 +307,12 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why �Ѽ� ������</a></li>
-                                    <li><a href="success.go">��������</a></li>
-                                    <li><a href="process.go">â����������</a></li>
-                                    <li><a href="calc.go">���� â�� ���</a></li>
-                                    <li><a href="qna.go">â������</a></li>
-                                    <li><a href="briefing.go">â������ȸ ��������û</a></li>
+                                    <li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+                                    <li><a href="success.go">성공수기</a></li>
+                                    <li><a href="process.go">창업개설절차</a></li>
+                                    <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
 
                                 </ul>
                             </div>
@@ -306,13 +321,13 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">�Ѽ��� ���</a></li>
-                                    <li><a href="vision.go">�Ѽ��� ����</a></li>
-                                    <li><a href="history.go">����&amp;����</a></li>
-                                    <li><a href="news_list.go">�Ѽ� NEWS</a></li>
-                                    <li><a href="location.go">���ô� ��</a></li>
-                                    <li><a href="faq_list.go">������</a></li>
-                                    <li class="h_last"><a href="incruit.go">����ä��</a></li>
+                                    <li><a href="promise.go">한솥의 약속</a></li>
+                                    <li><a href="vision.go">한솥의 비전</a></li>
+                                    <li><a href="history.go">연혁&amp;수상</a></li>
+                                    <li><a href="news_list.go">한솥 NEWS</a></li>
+                                    <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
 
                                 </ul>
                             </div>
@@ -597,7 +612,7 @@
             <a href="news_list.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="more_news.go" alt="�Ѽ� NEWS" />
+                    <img src="assets/images/common/more_news.jpg" alt="�Ѽ� NEWS" />
                 </span>
                 <figcaption>
                     <h3 class="h3_tit">한솥 NEWS</h3>
@@ -644,12 +659,12 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">����ä��</a></li>
-                <li class="off"><a href="partners.go">���¾�ü���</a></li>
-                <li class="mo_bl"><a href="notice_list.go">��������</a></li>
-                <li><a href="faq_list.go">�� ����</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>����������޹�ħ</strong></a></li>
-                <li><a href="agreement.go">�̿���</a></li>
+                <li class="first_be off"><a href="incruit.go">인재채용</a></li>
+                <li class="off"><a href="partners.go">협력업체등록</a></li>
+                <li class="mo_bl"><a href="notice_list.go">공지사항</a></li>
+                <li><a href="faq_list.go">고객 센터</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="agreement.go">이용약관</a></li>
             </ul>
         </div>
         <!--// family goods -->

@@ -71,7 +71,7 @@ public class FrontController_pageGo extends HttpServlet {
     	  forward = "/event/store_event_list.jsp";
     	  
       }
-      //footer - ªÊª·
+      //footer 
       
       //franchise
       if (com.equals("/briefing.go")) {
@@ -119,8 +119,8 @@ public class FrontController_pageGo extends HttpServlet {
       }
 
       //menu
-      if(com.equals("/chacha.go")) {
-    	  forward = "/menu/chacha.jsp";
+      if(com.equals("/chancha.go")) {
+    	  forward = "/menu/chancha.jsp";
     	  
       }else if(com.equals("/material.go")) {
     	  forward = "/menu/material.jsp";
