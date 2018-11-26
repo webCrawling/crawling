@@ -535,7 +535,7 @@
                         </p>
                         <!-- btn -->
                         <div class="btn_wrap btn_info">
-                            <span class="btn btn_st04"><a href="philosophy.go" class="c_06">�귣�� ö��</a></span>
+                            <span class="btn btn_st04"><a href="philosophy.go" class="c_06">브랜드 철학</a></span>
 
                         </div>
                         <!-- //btn -->
