@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-	
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -25,10 +25,8 @@
 <link rel="icon" href="assets/images/common/favicon.ico"
 	type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css"
-	href="assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css"
-	href="assets/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -52,8 +50,7 @@
 </style>
 
 <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript"
-	src="../assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="assets/js/ui.common.js"></script>
@@ -108,16 +105,16 @@
         });
     });
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.join.css" />
-
-   
+    
+    </script>
 <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-111772169-1');
-    </script>
+</script>
+<link rel="stylesheet" type="text/css" href="assets/css/ui.join.css" />
 
 <!-- Global site tag (gtag.js) - AdWords: 864658366 -->
 <script async
@@ -159,9 +156,10 @@
 <%String id = (String)session.getAttribute("id"); %>
 <%System.out.println(id); %>
 
-<input type="text" value="<%=id%>" id="ids" name="ids" style="visibility:hidden"></input>
+<input type="text" value="<%=id%>" id="ids" name="ids"
+	style="visibility: hidden"></input>
 <script type="text/javascript">
-ㅂ
+
 //마이페이지(수정) 코드
 function modification(){
 	alert('modification()들어옴');
@@ -180,7 +178,7 @@ function modification(){
 	
 	alert(passQuery+','+modifiedpassQuery+','+emailQuery+','+phoneQuery);
 	//FrontController_join으로 url보냄
-	window.open ("../modification.do?passQuery="+passQuery+"&modifiedpassQuery="+modifiedpassQuery+"&emailQuery="+emailQuery+"&phoneQuery="+phoneQuery,"수정결과",
+	window.open ("modification.do?passQuery="+passQuery+"&modifiedpassQuery="+modifiedpassQuery+"&emailQuery="+emailQuery+"&phoneQuery="+phoneQuery,"수정결과",
 	"width=300, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
 	
 }
@@ -193,7 +191,7 @@ function memOut(){
 	var idQuery = userid.value;
 	alert(idQuery);
 	//FrontController_join으로 아이디값이랑 함께 url보냄
-	location.href= "../delete.do?idQuery="+idQuery;
+	location.href= "delete.do?idQuery="+idQuery;
 	
 }
     </script>
@@ -209,8 +207,8 @@ function memOut(){
 			<div class="hd_flex">
 				<div class="area_flex">
 					<ul>
-						<li><a href="/logout">로그아웃</a></li>
-						<li><a href="/join/modify">마이페이지</a></li>
+						<li><a href="logout.do">로그아웃</a></li>
+						<li><a href="mypage.go">마이페이지</a></li>
 						<li class="sns_insta"><a
 							href="https://www.instagram.com/hansot_official/" target="_blank"
 							title="새 창 열림"><span class="blind">instagram</span></a></li>
@@ -228,7 +226,7 @@ function memOut(){
 				<div class="hd_content">
 					<div class="logo">
 						<h1>
-							<a href="/"><span class="blind">한솥</span></a>
+							<a href="home.go"><span class="blind">한솥</span></a>
 						</h1>
 					</div>
 					<!-- gnb -->
@@ -236,8 +234,8 @@ function memOut(){
 						<!-- 모바일 로그인/회원가입 -->
 						<div class="m_area_flex">
 							<ul>
-								<li><a href="/logout">로그아웃</a></li>
-								<li><a href="/join/modify">마이페이지</a></li>
+								<li><a href="logout.do">로그아웃</a></li>
+								<li><a href="mypage.go">마이페이지</a></li>
 							</ul>
 						</div>
 						<!-- //모바일 로그인/회원가입 -->
@@ -250,9 +248,9 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li class="active"><a href="/brand/story">브랜드 스토리</a></li>
-											<li><a href="/brand/philosophy">브랜드 철학</a></li>
-											<li><a href="/brand/legacy">브랜드 유산</a></li>
+											<li class="active"><a href="story.go">브랜드 스토리</a></li>
+											<li><a href="philosophy.go">브랜드 철학</a></li>
+											<li><a href="legacy.go">브랜드 유산</a></li>
 										</ul>
 									</div>
 								</li>
@@ -262,10 +260,10 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li class="active"><a href="/brand/esg">ESG경영이란?</a></li>
-											<li><a href="/brand/philosophy">환경보호(Environment)</a></li>
-											<li><a href="/hansot/social">사회공헌(Social)</a></li>
-											<li><a href="/brand/esg">윤리경영(Governance)</a></li>
+											<li class="active"><a href="esg.go">ESG경영이란?</a></li>
+											<li><a href="philosophy.go">환경보호(Environment)</a></li>
+											<li><a href="social.go">사회공헌(Social)</a></li>
+											<li><a href="esg.go">윤리경영(Governance)</a></li>
 
 										</ul>
 									</div>
@@ -276,9 +274,9 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li><a href="/menu/menu_list">전체메뉴</a></li>
-											<li><a href="/menu/material">식재료 이야기</a></li>
-											<li><a href="/menu/chancha">페루찬차마요커피</a></li>
+											<li><a href="menu_list.go">전체메뉴</a></li>
+											<li><a href="material.go">식재료 이야기</a></li>
+											<li><a href="chancha.go">페루찬차마요커피</a></li>
 											<li><a href="/menu/menu_order">단체 주문</a></li>
 										</ul>
 									</div>
@@ -289,7 +287,7 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li><a href="/store/store_find">주변점포찾기</a></li>
+											<li><a href="store_find.go">주변점포찾기</a></li>
 										</ul>
 									</div>
 								</li>
@@ -299,8 +297,8 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li><a href="/event/event_list">이 달의 이벤트</a></li>
-											<li><a href="/event/store_event_list">신규점 오픈이벤트</a></li>
+											<li><a href="event_list.go">이 달의 이벤트</a></li>
+											<li><a href="store_event_list.go">신규점 오픈이벤트</a></li>
 										</ul>
 									</div>
 								</li>
@@ -310,12 +308,12 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li><a href="/franchise/hansot_store">Why 한솥 가맹점</a></li>
-											<li><a href="/franchise/success">성공수기</a></li>
-											<li><a href="/franchise/process">창업개설절차</a></li>
-											<li><a href="/franchise/calc">예상 창업 비용</a></li>
-											<li><a href="/franchise/qna">창업문의</a></li>
-											<li><a href="/franchise/briefing">창업설명회 일정·신청</a></li>
+											<li><a href="hansot_store.go">Why 한솥 가맹점</a></li>
+											<li><a href="success.go">성공수기</a></li>
+											<li><a href="process.go">창업개설절차</a></li>
+											<li><a href="calc.go">예상 창업 비용</a></li>
+											<li><a href="qna.go">창업문의</a></li>
+											<li><a href="briefing.go">창업설명회 일정·신청</a></li>
 										</ul>
 									</div>
 								</li>
@@ -325,13 +323,13 @@ function memOut(){
 									</p>
 									<div class="dp2">
 										<ul>
-											<li><a href="/hansot/promise">한솥의 약속</a></li>
-											<li><a href="/hansot/vision">한솥의 비전</a></li>
-											<li><a href="/hansot/history">연혁&amp;수상</a></li>
-											<li><a href="/hansot/news_list">한솥 NEWS</a></li>
-											<li><a href="/hansot/location">오시는 길</a></li>
-											<li><a href="/footer/faq_list">고객센터</a></li>
-											<li class="h_last"><a href="/footer/incruit">인재채용</a></li>
+											<li><a href="promise.go">한솥의 약속</a></li>
+											<li><a href="vision.go">한솥의 비전</a></li>
+											<li><a href="history.go">연혁&amp;수상</a></li>
+											<li><a href="news_list.go">한솥 NEWS</a></li>
+											<li><a href="location.go">오시는 길</a></li>
+											<li><a href="faq_list.go">고객센터</a></li>
+											<li class="h_last"><a href="incruit.go">인재채용</a></li>
 										</ul>
 									</div>
 								</li>
@@ -345,8 +343,9 @@ function memOut(){
 					<!-- mobile_btn -->
 					<div class="mobile_menu_btn">
 						<div class="hamburger" id="hamburger-6">
-							<span class="line"></span> <span class="line"></span> <span
-								class="line"></span>
+							<span class="line"></span> 
+							<span class="line"></span> 
+							<span class="line"></span>
 						</div>
 					</div>
 					<!-- //mobile_btn -->
@@ -369,11 +368,29 @@ function memOut(){
 						<h2 class="h2_tit h2_01">내정보 수정</h2>
 						<div class="tab_wrap">
 							<ul class="tab_menu col_02">
-								<li class="active"><a href="#none">내정보 수정</a></li>
-								<li><a href="/join/question_list">1:1 문의</a></li>
+								<li><a href="personalOrder.go">내 주문 내역</a></li>
+								<li class="active"><a href="#none">내 정보 수정</a></li>
 							</ul>
 						</div>
+
+						<div class="join_step_cont cont_st01">
+						
+						
+						<!-- join_left -->
+							<div class="join_tit">
+								<h3 class="h3_tit blind">내 정보</h3>
+								<!-- pc -->
+								<p class="pc_s_block">
+									<span class="s_block"><em class="emphasis username"><%=id %></em>님,</span>
+									<span class="s_block">안녕하세요.
+								</p>
+								<!-- //pc -->
+								
+							</div>
 							<!-- //join_left -->
+
+
+
 							<!-- join_right -->
 							<div class="join_sub">
 								<!-- 개인 정보 변경 -->
@@ -413,9 +430,7 @@ function memOut(){
 												<dt>이메일</dt>
 												<dd>
 													<span class="form text"> <input type="text"
-														id="email" name="email"
-														style="ime-mode: active" />
-														<label
+														id="email" name="email" style="ime-mode: active" /> <label
 														for="email">이메일을 입력해주세요</label>
 													</span>
 												</dd>
@@ -428,9 +443,7 @@ function memOut(){
 												<dt>휴대폰</dt>
 												<dd>
 													<span class="form text"> <input type="text"
-														id="phone" name="phone"
-														style="ime-mode: active" />
-														<label
+														id="phone" name="phone" style="ime-mode: active" /> <label
 														for="phone">핸드폰 번호를 입력해주세요</label>
 													</span>
 												</dd>
@@ -485,6 +498,7 @@ function memOut(){
 					<!-- //내 정보 수정 -->
 				</section>
 			</div>
+			
 			<script type="text/javascript" src="assets/js/join.js"></script>
 			<script type="text/javascript">
     $(function(){

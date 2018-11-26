@@ -4,6 +4,7 @@ import javax.naming.NamingException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.Dao_admin;
 import etc.Action;
@@ -28,9 +29,11 @@ public class Command_delete implements Command,Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		String id = (String)request.getParameter("id");
+		String id = (String)request.getParameter("idQuery");
 		System.out.println("delete name : "+id);
 		
+		HttpSession session = request.getSession();
+		session.invalidate();
 		Dao_admin dao = new Dao_admin();
 		dao.delete(id);
 	

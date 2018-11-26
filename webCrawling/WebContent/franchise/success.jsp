@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,7 +16,7 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="22ae22c2-21e3-4ad4-b776-68a154ffd3bd" /><title>¼º°ø¼ö±â</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="22ae22c2-21e3-4ad4-b776-68a154ffd3bd" /><title>ì„±ê³µìˆ˜ê¸°</title>
 
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
@@ -81,12 +81,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -154,16 +154,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -174,22 +174,22 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="first_home.do"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="login.do">·Î±×ÀÎ</a>
+                            <a href="login.do">ë¡œê·¸ì¸</a>
                             </li>
                         <li>
-                            <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                            <a href="join.do">íšŒì›ê°€ìž…</a>
                             </li>
                     </ul>
                 </div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
                <div class="gnb_menu">
                     <ul>
@@ -197,9 +197,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -207,10 +207,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -219,9 +219,9 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -229,7 +229,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -237,8 +237,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -246,10 +246,10 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
-                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -257,11 +257,11 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="news_list.go">í•œì†¥ NEWS</a></li>
+                                    <li><a href="location.go">ì˜¤ì‹œëŠ” ê¸¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -296,47 +296,47 @@
         
 <div class="content franchise success">
     <section class="success_list">
-        <!-- ¼º°ø¼ö±â -->
+        <!-- ì„±ê³µìˆ˜ê¸° -->
         <div class="suc_wrap">
-            <h2 class="h2_tit h2_01">¼º°ø¼ö±â</h2>
+            <h2 class="h2_tit h2_01">ì„±ê³µìˆ˜ê¸°</h2>
             <div class="suc_cont">
-                <!-- ¼º°ø¼ö±â intro -->
+                <!-- ì„±ê³µìˆ˜ê¸° intro -->
                 <div class="suc_title">
                     <p class="fz_02">
-                        <span class="s_block">ÇÑ¼Üµµ½Ã¶ô 20ÁÖ³â ±â³ä</span>
-                        <span class="s_block">°¡¸ÍÁ¡ÁÖÀÇ</span>
+                        <span class="s_block">í•œì†¥ë„ì‹œë½ 20ì£¼ë…„ ê¸°ë…</span>
+                        <span class="s_block">ê°€ë§¹ì ì£¼ì˜</span>
                     </p>
                     <p class="fz_02">
-                        <span class="s_block">¡®³ªÀÇ ¼º°ø ½ºÅä¸®¡¯ °ø¸ðÀü</span>
-                        <span class="s_block">¼ö»óÀÛµéÀÔ´Ï´Ù</span>
+                        <span class="s_block">â€˜ë‚˜ì˜ ì„±ê³µ ìŠ¤í† ë¦¬â€™ ê³µëª¨ì „</span>
+                        <span class="s_block">ìˆ˜ìƒìž‘ë“¤ìž…ë‹ˆë‹¤</span>
                     </p>
                 </div>
-                <!-- //¼º°ø¼ö±â intro -->
+                <!-- //ì„±ê³µìˆ˜ê¸° intro -->
                 <!-- list -->
                 <div class="suc_list_wrap mo_version">
                     <ul>
                         <li>
-                            <p class="suc_prime grand"><span>´ë»ó</span></p>
+                            <p class="suc_prime grand"><span>ëŒ€ìƒ</span></p>
                                 <div class="suc_list_cnt">
-                                <!-- ÁöÁ¡/Á¦¸ñ -->
+                                <!-- ì§€ì /ì œëª© -->
                                 <div class="suc_list_tit">
-                                    <span class="store_tit">¹èÀç´ë¾ÕÁ¡</span>
-                                    <h3 class="h3_tit fz_02">ÇÑ¼Ü°ú ÇÔ²² ÇØÇÇ¿£µù</h3>
+                                    <span class="store_tit">ë°°ìž¬ëŒ€ì•žì </span>
+                                    <h3 class="h3_tit fz_02">í•œì†¥ê³¼ í•¨ê»˜ í•´í”¼ì—”ë”©</h3>
                                 </div>
-                                <!-- //ÁöÁ¡/Á¦¸ñ -->
+                                <!-- //ì§€ì /ì œëª© -->
                                 <p class="suc_txt">
-                                    Áö³­ 30³âÀº Âü ÆÄ¶õ¸¸ÀåÇß½À´Ï´Ù. °è¼ÓµÇ´Â »ç¾÷½ÇÆÐ, ´ëÀå¾ÏÀ¸·Î ½ÃÇÑºÎ ÆÇÁ¤±îÁö. Á¦°¡ ´Ù½Ã ÀÏ¾î¼± °Ç ÇÑ¼Ü°ú ÇÔ²² ¿´½À´Ï´Ù. 
-´ëÀü¿¡ µÎ ÁöÁ¡À» ¿î¿µÇÏ°í ÀÖ´Â Áö±Ý, Àú´Â ÇÑ¼Ü°ú ÇÔ²² ÇØÇÇ¿£µùÀ» ÇâÇØ ´Þ¸®°í ÀÖ½À´Ï´Ù.</p>
+                                    ì§€ë‚œ 30ë…„ì€ ì°¸ íŒŒëž€ë§Œìž¥í–ˆìŠµë‹ˆë‹¤. ê³„ì†ë˜ëŠ” ì‚¬ì—…ì‹¤íŒ¨, ëŒ€ìž¥ì•”ìœ¼ë¡œ ì‹œí•œë¶€ íŒì •ê¹Œì§€. ì œê°€ ë‹¤ì‹œ ì¼ì–´ì„  ê±´ í•œì†¥ê³¼ í•¨ê»˜ ì˜€ìŠµë‹ˆë‹¤. 
+ëŒ€ì „ì— ë‘ ì§€ì ì„ ìš´ì˜í•˜ê³  ìžˆëŠ” ì§€ê¸ˆ, ì €ëŠ” í•œì†¥ê³¼ í•¨ê»˜ í•´í”¼ì—”ë”©ì„ í–¥í•´ ë‹¬ë¦¬ê³  ìžˆìŠµë‹ˆë‹¤.</p>
                                 <!-- img -->
                                 <span class="suc_img s_block">
-                                    <img src="https://www.hsd.co.kr/images/66a2c273f0ab46f6a89c6352ccb1596d20171019102947.jpg" alt="¹èÀç´ë¾ÕÁ¡" />
+                                    <img src="https://www.hsd.co.kr/images/66a2c273f0ab46f6a89c6352ccb1596d20171019102947.jpg" alt="ë°°ìž¬ëŒ€ì•žì " />
                                 </span>
                                 <!-- //img -->
-                                <!-- ¹öÆ° -->
+                                <!-- ë²„íŠ¼ -->
                                 <div class="btn_wrap">
                                     
                                 </div>
-                                <!-- //¹öÆ° -->
+                                <!-- //ë²„íŠ¼ -->
                                 <!-- border_bg -->
                                 <span class="bg t_l"></span>
                                 <span class="bg t_r"></span>
@@ -346,26 +346,26 @@
                             </div>
                         </li>
                         <li>
-                            <p class="suc_prime"><span>ÃÖ¿ì¼ö»ó</span></p>
+                            <p class="suc_prime"><span>ìµœìš°ìˆ˜ìƒ</span></p>
                                 <div class="suc_list_cnt">
-                                <!-- ÁöÁ¡/Á¦¸ñ -->
+                                <!-- ì§€ì /ì œëª© -->
                                 <div class="suc_list_tit">
-                                    <span class="store_tit">¿ï»ê½ÃÃ»¾ÕÁ¡</span>
-                                    <h3 class="h3_tit fz_02">Á¦ 2ÀÇ Àü¼º±â</h3>
+                                    <span class="store_tit">ìš¸ì‚°ì‹œì²­ì•žì </span>
+                                    <h3 class="h3_tit fz_02">ì œ 2ì˜ ì „ì„±ê¸°</h3>
                                 </div>
-                                <!-- //ÁöÁ¡/Á¦¸ñ -->
+                                <!-- //ì§€ì /ì œëª© -->
                                 <p class="suc_txt">
-                                    ³ªÀÌ ¼­¸¥¿¡ ´ë¸®Á¡ Ã¢¾÷, ¾ÆÆÄÆ® ¼ÒÀ¯ ±×°ÍÀÌ Ã¹ ¹øÂ° Àü¼º±â¿´½À´Ï´Ù. 
-ÇÏÁö¸¸ µÎ ¹ø¿¡ °ÉÄ£ Áý»ç¶÷ÀÇ ½ÉÀå¼ö¼ú, IMF±îÁö. ¿ì¿¬È÷ ÇÑ¼ÜÀ» ¸¸³­ µÚ, Áö±Ý ¿ï»ê¿¡¼­ Á¦ 2ÀÇ Àü¼º±â¸¦ ´©¸®°í ÀÖ½À´Ï´Ù.</p>
+                                    ë‚˜ì´ ì„œë¥¸ì— ëŒ€ë¦¬ì  ì°½ì—…, ì•„íŒŒíŠ¸ ì†Œìœ  ê·¸ê²ƒì´ ì²« ë²ˆì§¸ ì „ì„±ê¸°ì˜€ìŠµë‹ˆë‹¤. 
+í•˜ì§€ë§Œ ë‘ ë²ˆì— ê±¸ì¹œ ì§‘ì‚¬ëžŒì˜ ì‹¬ìž¥ìˆ˜ìˆ , IMFê¹Œì§€. ìš°ì—°ížˆ í•œì†¥ì„ ë§Œë‚œ ë’¤, ì§€ê¸ˆ ìš¸ì‚°ì—ì„œ ì œ 2ì˜ ì „ì„±ê¸°ë¥¼ ëˆ„ë¦¬ê³  ìžˆìŠµë‹ˆë‹¤.</p>
                                 <!-- img -->
                                 <span class="suc_img s_block">
-                                    <img src="https://www.hsd.co.kr/images/7fd13ab70a8745b3898e343d35dd096020171019102916.jpg" alt="¿ï»ê½ÃÃ»¾ÕÁ¡" />
+                                    <img src="https://www.hsd.co.kr/images/7fd13ab70a8745b3898e343d35dd096020171019102916.jpg" alt="ìš¸ì‚°ì‹œì²­ì•žì " />
                                 </span>
                                 <!-- //img -->
-                                <!-- ¹öÆ° -->
+                                <!-- ë²„íŠ¼ -->
                                 <div class="btn_wrap">
                                 </div>
-                                <!-- //¹öÆ° -->
+                                <!-- //ë²„íŠ¼ -->
                                 <!-- border_bg -->
                                 <span class="bg t_l"></span>
                                 <span class="bg t_r"></span>
@@ -375,27 +375,27 @@
                             </div>
                         </li>
                         <li>
-                            <p class="suc_prime"><span>ÃÖ¿ì¼ö»ó</span></p>
+                            <p class="suc_prime"><span>ìµœìš°ìˆ˜ìƒ</span></p>
                                 <div class="suc_list_cnt">
-                                <!-- ÁöÁ¡/Á¦¸ñ -->
+                                <!-- ì§€ì /ì œëª© -->
                                 <div class="suc_list_tit">
-                                    <span class="store_tit">ÆÄÁÖ±³ÇÏÁ¡</span>
-                                    <h3 class="h3_tit fz_02">ÇÑ¼Ü¹ä ¾ö¸¶</h3>
+                                    <span class="store_tit">íŒŒì£¼êµí•˜ì </span>
+                                    <h3 class="h3_tit fz_02">í•œì†¥ë°¥ ì—„ë§ˆ</h3>
                                 </div>
-                                <!-- //ÁöÁ¡/Á¦¸ñ -->
+                                <!-- //ì§€ì /ì œëª© -->
                                 <p class="suc_txt">
-                                    ³²ÆíÀÌ È¸»ç¸¦ ±×¸¸ µÎ¾ú½À´Ï´Ù. ±×¸®°í ¿î¸íÃ³·³ ÇÑ¼ÜÀ» ¸¸³µ½À´Ï´Ù. 
-¸¶Ä§ ¸ÅÀå ±ÙÃ³¿¡ ±Þ½Ä½ÇÀÌ ¾ø´Â ÁßÇÐ±³°¡ »ý°å°í ±× ÀÌÈÄ, Àú´Â ÇÑ¼Ü¹ä ¾ö¸¶·Î ºÒ¸®°í ÀÖ½À´Ï´Ù. 
-15³âÀÌ Áö³­ Áö±Ý, ÇÑ¼Ü¹ä ÇÒ¸Ó´Ï°¡ µÇ¾ú¾îµµ Çàº¹ÇÕ´Ï´Ù.</p>
+                                    ë‚¨íŽ¸ì´ íšŒì‚¬ë¥¼ ê·¸ë§Œ ë‘ì—ˆìŠµë‹ˆë‹¤. ê·¸ë¦¬ê³  ìš´ëª…ì²˜ëŸ¼ í•œì†¥ì„ ë§Œë‚¬ìŠµë‹ˆë‹¤. 
+ë§ˆì¹¨ ë§¤ìž¥ ê·¼ì²˜ì— ê¸‰ì‹ì‹¤ì´ ì—†ëŠ” ì¤‘í•™êµê°€ ìƒê²¼ê³  ê·¸ ì´í›„, ì €ëŠ” í•œì†¥ë°¥ ì—„ë§ˆë¡œ ë¶ˆë¦¬ê³  ìžˆìŠµë‹ˆë‹¤. 
+15ë…„ì´ ì§€ë‚œ ì§€ê¸ˆ, í•œì†¥ë°¥ í• ë¨¸ë‹ˆê°€ ë˜ì—ˆì–´ë„ í–‰ë³µí•©ë‹ˆë‹¤.</p>
                                 <!-- img -->
                                 <span class="suc_img s_block">
-                                    <img src="https://www.hsd.co.kr/images/1fae0d27c15e4b6688b5a59e7be9a54220171019102904.jpg" alt="ÆÄÁÖ±³ÇÏÁ¡" />
+                                    <img src="https://www.hsd.co.kr/images/1fae0d27c15e4b6688b5a59e7be9a54220171019102904.jpg" alt="íŒŒì£¼êµí•˜ì " />
                                 </span>
                                 <!-- //img -->
-                                <!-- ¹öÆ° -->
+                                <!-- ë²„íŠ¼ -->
                                 <div class="btn_wrap">
                                 </div>
-                                <!-- //¹öÆ° -->
+                                <!-- //ë²„íŠ¼ -->
                                 <!-- border_bg -->
                                 <span class="bg t_l"></span>
                                 <span class="bg t_r"></span>
@@ -405,27 +405,27 @@
                             </div>
                         </li>
                         <li>
-                            <p class="suc_prime"><span>ÃÖ¿ì¼ö»ó</span></p>
+                            <p class="suc_prime"><span>ìµœìš°ìˆ˜ìƒ</span></p>
                                 <div class="suc_list_cnt">
-                                <!-- ÁöÁ¡/Á¦¸ñ -->
+                                <!-- ì§€ì /ì œëª© -->
                                 <div class="suc_list_tit">
-                                    <span class="store_tit">È­¸í½Å½Ã°¡ÁöÁ¡</span>
-                                    <h3 class="h3_tit fz_02">µû¶æÇÑ ÀÎ»ý</h3>
+                                    <span class="store_tit">í™”ëª…ì‹ ì‹œê°€ì§€ì </span>
+                                    <h3 class="h3_tit fz_02">ë”°ëœ»í•œ ì¸ìƒ</h3>
                                 </div>
-                                <!-- //ÁöÁ¡/Á¦¸ñ -->
+                                <!-- //ì§€ì /ì œëª© -->
                                 <p class="suc_txt">
-                                    2006³â °Ü¿ï, ¾î´À ÇÑ¼Ü »çÀå´ÔÀÇ ÇÑ ¸¶µð°¡ Á¦ ÀÎ»ýÀ» ¹Ù²ã³õ¾Ò½À´Ï´Ù.
-´ë±â¾÷»ýÈ°, ÆíÀÇÁ¡Ã¢¾÷¿¡ ÁöÃÄÀÖ´ø ³ª¿¡°Ô ÇÑ¼Üµµ½Ã¶ô ¿î¿µÀ» ±ÇÇÏ¼Ì´ø °ÍÀÔ´Ï´Ù. 
-±× ÀÌÈÄ 10³âÀÌ Áö³­ Áö±Ý, Á¦ ÀÎ»ýÀº °« ÁöÀº ¹äÃ³·³ µû¶æÇÕ´Ï´Ù.</p>
+                                    2006ë…„ ê²¨ìš¸, ì–´ëŠ í•œì†¥ ì‚¬ìž¥ë‹˜ì˜ í•œ ë§ˆë””ê°€ ì œ ì¸ìƒì„ ë°”ê¿”ë†“ì•˜ìŠµë‹ˆë‹¤.
+ëŒ€ê¸°ì—…ìƒí™œ, íŽ¸ì˜ì ì°½ì—…ì— ì§€ì³ìžˆë˜ ë‚˜ì—ê²Œ í•œì†¥ë„ì‹œë½ ìš´ì˜ì„ ê¶Œí•˜ì…¨ë˜ ê²ƒìž…ë‹ˆë‹¤. 
+ê·¸ ì´í›„ 10ë…„ì´ ì§€ë‚œ ì§€ê¸ˆ, ì œ ì¸ìƒì€ ê°“ ì§€ì€ ë°¥ì²˜ëŸ¼ ë”°ëœ»í•©ë‹ˆë‹¤.</p>
                                 <!-- img -->
                                 <span class="suc_img s_block">
-                                    <img src="https://www.hsd.co.kr/images/cc1461514d4840609471d549b2ed6a6620171019102728.jpg" alt="È­¸í½Å½Ã°¡ÁöÁ¡" />
+                                    <img src="https://www.hsd.co.kr/images/cc1461514d4840609471d549b2ed6a6620171019102728.jpg" alt="í™”ëª…ì‹ ì‹œê°€ì§€ì " />
                                 </span>
                                 <!-- //img -->
-                                <!-- ¹öÆ° -->
+                                <!-- ë²„íŠ¼ -->
                                 <div class="btn_wrap">
                                 </div>
-                                <!-- //¹öÆ° -->
+                                <!-- //ë²„íŠ¼ -->
                                 <!-- border_bg -->
                                 <span class="bg t_l"></span>
                                 <span class="bg t_r"></span>
@@ -439,23 +439,23 @@
                 <!-- //list -->
             </div>
         </div>
-        <!-- //¼º°ø¼ö±â -->
+        <!-- //ì„±ê³µìˆ˜ê¸° -->
     </section>
 </div>
 
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">´õ ¸¹Àº ÀÌ¾ß±â</h2>
+    <h2 class="more_tit">ë” ë§Žì€ ì´ì•¼ê¸°</h2>
     <ul>
         <li>
             <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_story.jpg" alt="ºê·£µå ½ºÅä¸®" />
+                    <img src="assets/images/common/more_story.jpg" alt="ë¸Œëžœë“œ ìŠ¤í† ë¦¬" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå ½ºÅä¸®</h3>
-                    <h3 class="h3_tit_o">ºê·£µå ½ºÅä¸®</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
                 </figcaption>
             </figure>
         </li>
@@ -463,11 +463,11 @@
             <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_philosophy.jpg" alt="ºê·£µå Ã¶ÇÐ" />
+                    <img src="assets/images/common/more_philosophy.jpg" alt="ë¸Œëžœë“œ ì² í•™" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå Ã¶ÇÐ</h3>
-                    <h3 class="h3_tit_o">ºê·£µå Ã¶ÇÐ</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ì² í•™</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ì² í•™</h3>
                 </figcaption>
             </figure>
         </li>
@@ -475,11 +475,11 @@
             <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_legacy.jpg" alt="ºê·£µå À¯»ê" />
+                    <img src="assets/images/common/more_legacy.jpg" alt="ë¸Œëžœë“œ ìœ ì‚°" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå À¯»ê</h3>
-                    <h3 class="h3_tit_o">ºê·£µå À¯»ê</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìœ ì‚°</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìœ ì‚°</h3>
                 </figcaption>
             </figure>
         </li>
@@ -498,43 +498,43 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
-                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="incruit.go">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
 
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -542,15 +542,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -559,11 +559,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

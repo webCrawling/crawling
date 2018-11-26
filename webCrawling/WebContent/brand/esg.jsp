@@ -183,7 +183,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
     <!-- End Facebook Pixel Code -->
 
 </head>
-
+<% String id = (String)session.getAttribute("id"); %>
 <body ontouchstart>
 <!-- wrap s -->
 <div id="wrap" class="bg_w">
@@ -192,21 +192,54 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
 <header id="header">
     <!-- header flex-->
     <div class="hd_flex">
-        <div class="area_flex">
-            <ul>
+        <div class="area_flex" >
+        
+            <ul style="width:300px">
+              <% if(id != null && id.equals("admin")){ %>
+            	 <li>
+           
+                   <a href="goAdmin.am"><img src="images/key.png" style="width:15px;">&nbsp;관리자 페이지</a>
+                   
+                </li>
+                
                 <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
+                </li>
+           <%}%>
+           
+            <% if(id != null && (!id.equals("admin"))){ %>
+            	 <li >
+           
+                    <a href="my_page.go"> <%=id %> 님의 마이페이지</a> 
+                    
+                </li>
+                <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
+                </li>
+           <%}%>
+            <% if(id == null){
+            
+            %>
+                <li>
+
                     <a href="login.do">로그인</a>
-                    </li>
+                </li>
+                    
                 <li>
                     <a href="join.do">회원가입</a>
-                    </li>
+               </li>
+             <%} %> 
+
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
                 </li>
+                
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
                 </li>
+                
             </ul>
+            
         </div>
     </div>
     <!-- //header flex -->
@@ -215,24 +248,22 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="first_home.do"><span class="blind">한솥</span></a></h1>
+                <h1><a href="home.go"><span class="blind"></span></a></h1>
+
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ����� �α���/ȸ���� -->
+                <!-- 모바일 로그인/회원가입 -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="login.do">로그인</a>
-                            </li>
-                        <li>
-                            <a href="join.do">회원가입</a>
-                            </li>
-                    </ul>
-                </div>
-                <!-- //모바일 로그인/회원가입 -->
+							<ul>
+								<li><a href="login.do">로그인</a></li>
+								<li><a href="join.do">회원가입</a></li>
+							</ul>
+						</div>
+              
 
-               <div class="gnb_menu">
+
+                <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
@@ -248,10 +279,11 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG경영이란?</a></li>
+                                    <li class="active"><a href="esg.go">ESG 경영이란?</a></li>
                                     <li><a href="philosophy.go">환경보호(Environment)</a></li>
                                     <li><a href="social.go">사회공헌(Social)</a></li>
                                     <li><a href="esg.go">윤리경영(Governance)</a></li>
+
 
                                     </ul>
                             </div>
@@ -263,6 +295,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                                     <li><a href="menu_list.go">전체메뉴</a></li>
                                     <li><a href="material.go">식재료 이야기</a></li>
                                     <li><a href="chancha.go">페루찬차마요커피</a></li>
+                                   
                                 </ul>
                             </div>
                         </li>
@@ -291,6 +324,9 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                                     <li><a href="success.go">성공수기</a></li>
                                     <li><a href="process.go">창업개설절차</a></li>
                                     <li><a href="calc.go">예상 창업 비용</a></li>
+                                    <li><a href="qna.go">창업문의</a></li>
+                                    <li><a href="briefing.go">창업설명회 일정·신청</a></li>
+
                                 </ul>
                             </div>
                         </li>
@@ -303,12 +339,14 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                                     <li><a href="history.go">연혁&amp;수상</a></li>
                                     <li><a href="news_list.go">한솥 NEWS</a></li>
                                     <li><a href="location.go">오시는 길</a></li>
+                                    <li><a href="faq_list.go">고객센터</a></li>
+                                    <li class="h_last"><a href="incruit.go">인재채용</a></li>
+
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
-
             </section>
             <!--// gnb -->
             <!-- pc:bg -->
@@ -327,6 +365,8 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
         <!--// header content -->
     </div>
 </header>
+<!--// header -->
+
 <!--// header -->
 
 
@@ -349,10 +389,15 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
                 <h2 class="h2_tit">한솥의 ESG 경영</h2>
                 <div class="bs_txt">
                     <p>
-                       한솥도시락은 UN에서 2015년 공포한 SDGs(지속가능개발목표)에 부응하여 기업차원에서 실천이 요구되는 ESG 경영에 매진하여 왔습니다.
+                        한솥도시락은 UN에서 2015년 공포한 SDGs(지속가능개발목표)에 부응하여 기업차원에서 실천이 요구되는 ESG 경영에 매진하여 왔습니다.
                     </p>
                     <p>
-                        ESG란 환경보호(Environment)·사회공헌(Social)·윤리경영(Governance)의 약자로, 기업이 환경보호에 앞장서며, 사회적 약자에 대한 지원과 남녀 평등한 직장문화의 조성 등 사회공헌 활동을 하며, 법과 윤리를 철저히 준수하는 윤리경영 등 ESG경영을 실천해야 지속적인 성장이 가능하다는 뜻입니다. 유럽연합이나 미국 등에서는 이미 기업을 평가하는데 중요한 기준으로 자리잡고 있으며, 현재 전 세계적으로 확산돼 나가고 있는 추세입니다. 국내에서는 아직까지 보편화 되어있지 않으나 한솥도시락은 창업 때부터 ESG경영을 실천해오고 있습니다.
+                        ESG란 환경보호(Environment)·사회공헌(Social)·윤리경영(Governance)의 약자로, 기업이 환경보호에 앞장서며,
+                        사회적 약자에 대한 지원과 남녀 평등한 직장문화의 조성 등 사회공헌 활동을 하며,
+                        법과 윤리를 철저히 준수하는 윤리경영 등 ESG경영을 실천해야 지속적인 성장이 가능하다는 뜻입니다.
+                        유럽연합이나 미국 등에서는 이미 기업을 평가하는데 중요한 기준으로 자리잡고 있으며,
+                        현재 전 세계적으로 확산돼 나가고 있는 추세입니다.
+                        국내에서는 아직까지 보편화 되어있지 않으나 한솥도시락은 창업 때부터 ESG경영을 실천해오고 있습니다.
                     </p>
                 </div>
                 <div class="bs_img mo_tr">
@@ -410,11 +455,15 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
     </ul>
 </div>
 <!--// more_cont-->
-<script type="text/javascript" src="assets/js/jquery.viewportchecker.min.js"></script>
-<script type="text/javascript" src="assets/js/imageMapResizer.min.js"></script>
-
-
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        //contents viewportChecker
+        $('.bs_cont').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated fadeInUp',
+            offset: 120
+        });
+    });
+</script>
 
     </div>
     <!--// container e -->
@@ -436,7 +485,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 프랜차이즈분야 대상2017</span></p></div><!-- 2018-01-11����帶ũ -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 프랜차이즈분야 대상2017</span></p></div><!-- 2018-01-11웹어워드마크 -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
@@ -456,7 +505,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">�Ѽ� ����� ���</a>
+                        <a href="#none">한솥 사업자 정보</a>
                     </p>
                     <div class="mo_info_on">
                         <span class="mo_bl">대표이사  이영덕</span>
@@ -490,8 +539,8 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             <p class="copyright">COPYRIGHT<span>&copy;</span>㈜한솥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="�� â ����" class="sns_insta_02" target="_blank" title="�� â ����" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="�� â ����" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" class="sns_insta_02" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->

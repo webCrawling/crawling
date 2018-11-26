@@ -138,9 +138,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		//留덉씠�럹�씠吏��뿉�꽌 �쉶�썝�깉�눜
 		else if (command.equals("/delete.do")){
-
-			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+		
 			action = new Command_delete();
 
 			try {

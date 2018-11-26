@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,7 +16,7 @@
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="c14d230a-1550-44ed-99f5-7bae85c218c3" /><title>Why ÇÑ¼Ü °¡¸ÍÁ¡</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="c14d230a-1550-44ed-99f5-7bae85c218c3" /><title>Why í•œì†¥ ê°€ë§¹ì </title>
 
     <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
@@ -81,12 +81,12 @@
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -155,16 +155,16 @@
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="login.do">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ìž…</a>
                     </li>
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -175,22 +175,22 @@
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="first_home.do"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="first_home.do"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
                 <div class="m_area_flex">
                     <ul>
                         <li>
-                            <a href="login.do">·Î±×ÀÎ</a>
+                            <a href="login.do">ë¡œê·¸ì¸</a>
                             </li>
                         <li>
-                            <a href="join.do">È¸¿ø°¡ÀÔ</a>
+                            <a href="join.do">íšŒì›ê°€ìž…</a>
                             </li>
                     </ul>
                 </div>
-                <!-- //¸ð¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ìž… -->
 
                <div class="gnb_menu">
                     <ul>
@@ -198,9 +198,9 @@
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="story.go">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="philosophy.go">ºê·£µå Ã¶ÇÐ</a></li>
-                                    <li><a href="legacy.go">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëžœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëžœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -208,10 +208,10 @@
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="esg.go">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="philosophy.go">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="social.go">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="esg.go">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ëž€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -220,9 +220,9 @@
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="menu_list.go">ÀüÃ¼¸Þ´º</a></li>
-                                    <li><a href="material.go">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="chancha.go">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ìž¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">íŽ˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -230,7 +230,7 @@
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="store_find.go">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -238,8 +238,8 @@
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="event_list.go">ÀÌ ´ÞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="store_event_list.go">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -247,10 +247,10 @@
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="hansot_store.go">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="success.go">¼º°ø¼ö±â</a></li>
-                                    <li><a href="process.go">Ã¢¾÷°³¼³ÀýÂ÷</a></li>
-                                    <li><a href="calc.go">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -258,11 +258,11 @@
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="promise.go">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="vision.go">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="history.go">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="news_list.go">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="location.go">¿À½Ã´Â ±æ</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="news_list.go">í•œì†¥ NEWS</a></li>
+                                    <li><a href="location.go">ì˜¤ì‹œëŠ” ê¸¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -298,26 +298,26 @@
 <div class="content franchise">
     <!-- group_order -->
     <section class="hansot_store">
-        <!-- »ó´Übg ¿µ¿ª -->
+        <!-- ìƒë‹¨bg ì˜ì—­ -->
         <div class="hs_visual_wrap mo_tr">
             <div class="visual_bg"></div>
         </div>
-        <!-- //»ó´Übg ¿µ¿ª -->
+        <!-- //ìƒë‹¨bg ì˜ì—­ -->
         <!-- section01 -->
         <div class="hs_wrap section_01">
-            <p class="menu_tit mo_version">Why ÇÑ¼Ü °¡¸ÍÁ¡</p>
+            <p class="menu_tit mo_version">Why í•œì†¥ ê°€ë§¹ì </p>
             <div class="hs_cont mo_tr">
                 <h2 class="h2_tit">
-                    <span class="s_block">10³â, 20³â</span>
-                    <span class="s_block">´ë¸¦ ÀÕ´Â °¡Á· »ç¾÷</span>
+                    <span class="s_block">10ë…„, 20ë…„</span>
+                    <span class="s_block">ëŒ€ë¥¼ ìž‡ëŠ” ê°€ì¡± ì‚¬ì—…</span>
                 </h2>
                 <div class="hs_txt">
                     <p>
-                        <span class="s_block">Ã¢¾÷, ±×°ÍÀº ¼º°ø°ú µ·¸¸À» ÁÀ´Ù º¸¸é ¼º°øµµ µ·µµ ¾òÀ» ¼ö ¾ø½À´Ï´Ù.</span>
-                        <span class="s_block">ÇÑ¼ÜÀÌ ¼º°øÇÑ ÀÌÀ¯´Â º»»ç¸¸ÀÇ ÀÌÀÍº¸´Ù ¸ðµÎÀÇ ÀÌÀÍÀ» ¾ðÁ¦³ª ¿ì¼±½Ã Çß±â ¶§¹®ÀÔ´Ï´Ù.</span>
-                        <span class="s_block">µû²öÇÑ ÇÑ ³¢·Î »çÈ¸¿¡ °øÇåÇÏ°Ú´Ù´Â Ã¶ÇÐÀ» ÁöÄÑ¿Ô±â ¶§¹®ÀÔ´Ï´Ù.</span>
-                        <span class="s_block">¿Ü½ÄÁ¾ÇÕ±â¾÷¿¡ ´ëÇÑ ½Å³ä°ú Á¤Á÷ÇÑ °æ¿µÀ¸·Î ½Å·Ú¹Þ´Â ¿Ü½Ä¹®È­¸¦ ¸¸µé¾î°¡°í ÀÖ±â</span>
-                        <span class="s_block">¶§¹®ÀÔ´Ï´Ù. ÂøÇÑ »ç¶÷°ú ÇÔ²²¶ó¸é ÂøÇÑ ÇÑ¼ÜÀº ¾ðÁ¦³ª µ¿ÇàÇÒ ÁØºñ°¡ µÇ¾î ÀÖ½À´Ï´Ù.</span>
+                        <span class="s_block">ì°½ì—…, ê·¸ê²ƒì€ ì„±ê³µê³¼ ëˆë§Œì„ ì¢‡ë‹¤ ë³´ë©´ ì„±ê³µë„ ëˆë„ ì–»ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.</span>
+                        <span class="s_block">í•œì†¥ì´ ì„±ê³µí•œ ì´ìœ ëŠ” ë³¸ì‚¬ë§Œì˜ ì´ìµë³´ë‹¤ ëª¨ë‘ì˜ ì´ìµì„ ì–¸ì œë‚˜ ìš°ì„ ì‹œ í–ˆê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.</span>
+                        <span class="s_block">ë”°ëˆí•œ í•œ ë¼ë¡œ ì‚¬íšŒì— ê³µí—Œí•˜ê² ë‹¤ëŠ” ì² í•™ì„ ì§€ì¼œì™”ê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.</span>
+                        <span class="s_block">ì™¸ì‹ì¢…í•©ê¸°ì—…ì— ëŒ€í•œ ì‹ ë…ê³¼ ì •ì§í•œ ê²½ì˜ìœ¼ë¡œ ì‹ ë¢°ë°›ëŠ” ì™¸ì‹ë¬¸í™”ë¥¼ ë§Œë“¤ì–´ê°€ê³  ìžˆê¸°</span>
+                        <span class="s_block">ë•Œë¬¸ìž…ë‹ˆë‹¤. ì°©í•œ ì‚¬ëžŒê³¼ í•¨ê»˜ë¼ë©´ ì°©í•œ í•œì†¥ì€ ì–¸ì œë‚˜ ë™í–‰í•  ì¤€ë¹„ê°€ ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.</span>
                     </p>
                 </div>
             </div>
@@ -327,30 +327,30 @@
         <div class="hs_wrap section_02">
             <div class="hs_cont">
                 <div class="hs_img mo_tr">
-                    <img src="assets/images/franchise/fr_img_01.jpg" alt="ÇÑ¼ÜÀÌ¾î¾ß ÇÏ´Â ¼¼°¡Áö ÀÌÀ¯ ÀÌ¹ÌÁö" />
+                    <img src="assets/images/franchise/fr_img_01.jpg" alt="í•œì†¥ì´ì–´ì•¼ í•˜ëŠ” ì„¸ê°€ì§€ ì´ìœ  ì´ë¯¸ì§€" />
                 </div>
                 <div class="hs_txt_wrap">
                     <h3 class="h3_tit fz_01">
-                        <span class="s_block">ÇÑ¼ÜÀÌ¾î¾ß ÇÏ´Â</span>
-                        <span class="s_block">¼¼ °¡Áö ÀÌÀ¯</span>
+                        <span class="s_block">í•œì†¥ì´ì–´ì•¼ í•˜ëŠ”</span>
+                        <span class="s_block">ì„¸ ê°€ì§€ ì´ìœ </span>
                     </h3>
                     <div class="hs_txt">
                         <p>
-                            <strong>Æ®·»µå¿¡ ¿µÇâÀ» ¹ÞÁö ¾Ê½À´Ï´Ù</strong>
+                            <strong>íŠ¸ë Œë“œì— ì˜í–¥ì„ ë°›ì§€ ì•ŠìŠµë‹ˆë‹¤</strong>
                             <span class="s_block">
-                                À¯µ¶ Æ®·»µå¿¡ µû¶ó ¼ºÆÐ¸¦ ´Þ¸®ÇÏ´Â ¿Ü½Ä¾÷! ÇÑ¼ÜÀº À¯Çà°ú »ó°ü¾øÀÌ ²ÙÁØÈ÷ ¼º°ú¸¦ ³»´Â ½ºÅ×µð¼¿·¯ ÇÁ·£Â÷ÀÌÁîÀÔ´Ï´Ù. °¡¸ÍÁ¡ Áß  30%°¡ ³Ñ´Â °¡¸ÍÁ¡ÀÌ 10³â ÀÌ»ó Á¡Æ÷¸¦ ¿î¿µÇÏ°í ÀÖ´Â ÇÑ¼Ü. ÇÑ¼ÜÀº °¡Á·ÀÌ ´ë¸¦ ÀÌ¾î ÁøÇàÇÒ ¼ö ÀÖ´Â »ç¾÷ÀÔ´Ï´Ù.
+                                ìœ ë… íŠ¸ë Œë“œì— ë”°ë¼ ì„±íŒ¨ë¥¼ ë‹¬ë¦¬í•˜ëŠ” ì™¸ì‹ì—…! í•œì†¥ì€ ìœ í–‰ê³¼ ìƒê´€ì—†ì´ ê¾¸ì¤€ížˆ ì„±ê³¼ë¥¼ ë‚´ëŠ” ìŠ¤í…Œë””ì…€ëŸ¬ í”„ëžœì°¨ì´ì¦ˆìž…ë‹ˆë‹¤. ê°€ë§¹ì  ì¤‘  30%ê°€ ë„˜ëŠ” ê°€ë§¹ì ì´ 10ë…„ ì´ìƒ ì í¬ë¥¼ ìš´ì˜í•˜ê³  ìžˆëŠ” í•œì†¥. í•œì†¥ì€ ê°€ì¡±ì´ ëŒ€ë¥¼ ì´ì–´ ì§„í–‰í•  ìˆ˜ ìžˆëŠ” ì‚¬ì—…ìž…ë‹ˆë‹¤.
                             </span>
                         </p>
                         <p>
-                            <strong>°í°´°ú Á¡ÁÖ´ÔÀÇ ÀÌÀÍÀ» ¸ÕÀú »ý°¢ÇÕ´Ï´Ù</strong>
+                            <strong>ê³ ê°ê³¼ ì ì£¼ë‹˜ì˜ ì´ìµì„ ë¨¼ì € ìƒê°í•©ë‹ˆë‹¤</strong>
                             <span class="s_block">
-                                ¾ðÁ¦³ª °¡¸ÍÁ¡ÁÖÀÇ ÀÌÀÍÀ» ¿ì¼±À¸·Î »ý°¢ÇÕ´Ï´Ù. ¾ÈÁ¤ÀûÀÎ ¹°·ù¸Á°ú ³ôÀº °¡¼ººñÀÇ ½ÄÀç·á¸¦ ÅëÇØ ¸ðµç °¡¸ÍÁ¡ÁÖ°¡ ¸¸Á·ÇÒ ¼ö ÀÖµµ·Ï ³ë·ÂÇÕ´Ï´Ù. ¼ö¸¹Àº °¡¸ÍÁ¡ÁÖ·ÎºÎÅÍ ÇÑ¼ÜÀº ÂøÇÏ´Ù´Â ¸»À» µè´Â ÀÌÀ¯ÀÔ´Ï´Ù.
+                                ì–¸ì œë‚˜ ê°€ë§¹ì ì£¼ì˜ ì´ìµì„ ìš°ì„ ìœ¼ë¡œ ìƒê°í•©ë‹ˆë‹¤. ì•ˆì •ì ì¸ ë¬¼ë¥˜ë§ê³¼ ë†’ì€ ê°€ì„±ë¹„ì˜ ì‹ìž¬ë£Œë¥¼ í†µí•´ ëª¨ë“  ê°€ë§¹ì ì£¼ê°€ ë§Œì¡±í•  ìˆ˜ ìžˆë„ë¡ ë…¸ë ¥í•©ë‹ˆë‹¤. ìˆ˜ë§Žì€ ê°€ë§¹ì ì£¼ë¡œë¶€í„° í•œì†¥ì€ ì°©í•˜ë‹¤ëŠ” ë§ì„ ë“£ëŠ” ì´ìœ ìž…ë‹ˆë‹¤.
                             </span>
                         </p>
                         <p>
-                            <strong>Åõ¸íÇÏ°í Á¤Á÷ÇÕ´Ï´Ù</strong>
+                            <strong>íˆ¬ëª…í•˜ê³  ì •ì§í•©ë‹ˆë‹¤</strong>
                             <span class="s_block">
-                                ÇÑ¼ÜÀº Ã¢¾÷ ÀÌ·¡ °¡¸ÍÁ¡°ú º»»çÀÇ ¹ýÀû ¹®Á¦°¡ ´Ü 1°Çµµ ¾ø¾ú½À´Ï´Ù. ÀÌÀÍÀ» ±âÁØÀ¸·Î °¡¸ÍÁ¡À» ¹Ù¶óº¸´Â º»»çÀÇ °üÁ¡ÀÌ ¾Æ´Ñ ½Å·Ú¸¦ ±âÁØÀ¸·Î ¹Ì·¡¸¦ ÇÔ²² ÇÏ´Â ºÎ¸ðÀÇ ¸¶À½À¸·Î ÀÓÇÏ±â ¶§¹®ÀÔ´Ï´Ù. ±×°ÍÀÌ ÇÑ¼ÜÀÇ °¡¸ÍÁ¡ÀÌ ²ÙÁØÈ÷ ´Ã¾î³ª´Â ÀÌÀ¯ Áß ÇÏ³ªÀÔ´Ï´Ù.
+                                í•œì†¥ì€ ì°½ì—… ì´ëž˜ ê°€ë§¹ì ê³¼ ë³¸ì‚¬ì˜ ë²•ì  ë¬¸ì œê°€ ë‹¨ 1ê±´ë„ ì—†ì—ˆìŠµë‹ˆë‹¤. ì´ìµì„ ê¸°ì¤€ìœ¼ë¡œ ê°€ë§¹ì ì„ ë°”ë¼ë³´ëŠ” ë³¸ì‚¬ì˜ ê´€ì ì´ ì•„ë‹Œ ì‹ ë¢°ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¯¸ëž˜ë¥¼ í•¨ê»˜ í•˜ëŠ” ë¶€ëª¨ì˜ ë§ˆìŒìœ¼ë¡œ ìž„í•˜ê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤. ê·¸ê²ƒì´ í•œì†¥ì˜ ê°€ë§¹ì ì´ ê¾¸ì¤€ížˆ ëŠ˜ì–´ë‚˜ëŠ” ì´ìœ  ì¤‘ í•˜ë‚˜ìž…ë‹ˆë‹¤.
                             </span>
                         </p>
                     </div>
@@ -365,102 +365,102 @@
                     <!-- h3 -->
                     <div class="hs_txt h3">
                         <h3 class="h3_tit fz_01">
-                            <span class="s_block">25³â ³ëÇÏ¿ì·Î Áö¿øÇØ µå¸³´Ï´Ù.</span>
+                            <span class="s_block">25ë…„ ë…¸í•˜ìš°ë¡œ ì§€ì›í•´ ë“œë¦½ë‹ˆë‹¤.</span>
                         </h3>
                         <p>
-                            <span class="s_block">¿¹ºñÃ¢¾÷Á¡ÁÖ´ÔÀº °¡¸Íº»ºÎÀÇ ²ÙÁØÇÑ »óÇ° °³¹ß, Áö¿ø½Ã½ºÅÛÀ» º¸°í </span>
-                            <span class="s_block">¼º°ø ÆÄÆ®³Ê¸¦ °áÁ¤ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.</span>
+                            <span class="s_block">ì˜ˆë¹„ì°½ì—…ì ì£¼ë‹˜ì€ ê°€ë§¹ë³¸ë¶€ì˜ ê¾¸ì¤€í•œ ìƒí’ˆ ê°œë°œ, ì§€ì›ì‹œìŠ¤í…œì„ ë³´ê³  </span>
+                            <span class="s_block">ì„±ê³µ íŒŒíŠ¸ë„ˆë¥¼ ê²°ì •í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //h3 -->
                     <!-- list_01 -->
                     <div class="hs_txt hs_01">
                         <h4 class="h4_tit">
-                            <span class="s_block">°¡¸ÍÁ¡ Áß½É</span>
-                            <span class="s_block">°æ¿µÁöµµ Á¦µµ</span>
+                            <span class="s_block">ê°€ë§¹ì  ì¤‘ì‹¬</span>
+                            <span class="s_block">ê²½ì˜ì§€ë„ ì œë„</span>
                         </h4>
                         <p>
-                            <span class="s_block">SUPERVISOR(Á¡Æ÷¿î¿µ°ü¸®ÀÚ)¸¦ ÅëÇØ Àü¹®ÀûÀÎ</span>
-                            <span class="s_block">Á¡Æ÷¿î¿µ°ú °æ¿µÁöµµ¸¦ ÅëÇØ¼­ °¡¸ÍÁ¡ÀÇ ¸ÅÃâ°ú ÀÌÀÍÀÇ</span>
-                            <span class="s_block">±Ø´ëÈ­¸¦ À§ÇÏ¿© µµ¿Íµå¸³´Ï´Ù.</span>
+                            <span class="s_block">SUPERVISOR(ì í¬ìš´ì˜ê´€ë¦¬ìž)ë¥¼ í†µí•´ ì „ë¬¸ì ì¸</span>
+                            <span class="s_block">ì í¬ìš´ì˜ê³¼ ê²½ì˜ì§€ë„ë¥¼ í†µí•´ì„œ ê°€ë§¹ì ì˜ ë§¤ì¶œê³¼ ì´ìµì˜</span>
+                            <span class="s_block">ê·¹ëŒ€í™”ë¥¼ ìœ„í•˜ì—¬ ë„ì™€ë“œë¦½ë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_01 -->
                     <!-- list_02 -->
                     <div class="hs_txt hs_02">
                         <h4 class="h4_tit">
-                            <span class="s_block">Á¤±â °¡°Ý ÇÒÀÎÇà»ç ½Ã</span>
-                            <span class="s_block">½ÄÀç·á, Æ÷ÀåÀç Áö¿ø</span>
+                            <span class="s_block">ì •ê¸° ê°€ê²© í• ì¸í–‰ì‚¬ ì‹œ</span>
+                            <span class="s_block">ì‹ìž¬ë£Œ, í¬ìž¥ìž¬ ì§€ì›</span>
                         </h4>
                         <p>
-                            <span class="s_block">1¿ù, 8¿ù¿¡ ½Ç½ÃÇÏ´Â Á¤±âÇÒÀÎÇà»ç½Ã ÇÒÀÎ ±â°£µ¿¾È</span>
-                            <span class="s_block">°¡¸ÍÁ¡¿¡ °ø±ÞµÇ´Â ½ÄÀç·á ¹× ¿ë±âÆ÷ÀåÀç°¡</span>
-                            <span class="s_block">3~10%(ÀÏºÎÇ°¸ñ Á¦¿Ü) ÇÒÀÎµÇ¾î °ø±ÞµÇ¹Ç·Î °¡¸ÍÁ¡Àº</span>
-                            <span class="s_block">ÇÒÀÎ¿¡ µû¸¥ Ãß°¡ ¿ø°¡ ºÎ´ãÀÌ ¾ø½À´Ï´Ù.</span>
+                            <span class="s_block">1ì›”, 8ì›”ì— ì‹¤ì‹œí•˜ëŠ” ì •ê¸°í• ì¸í–‰ì‚¬ì‹œ í• ì¸ ê¸°ê°„ë™ì•ˆ</span>
+                            <span class="s_block">ê°€ë§¹ì ì— ê³µê¸‰ë˜ëŠ” ì‹ìž¬ë£Œ ë° ìš©ê¸°í¬ìž¥ìž¬ê°€</span>
+                            <span class="s_block">3~10%(ì¼ë¶€í’ˆëª© ì œì™¸) í• ì¸ë˜ì–´ ê³µê¸‰ë˜ë¯€ë¡œ ê°€ë§¹ì ì€</span>
+                            <span class="s_block">í• ì¸ì— ë”°ë¥¸ ì¶”ê°€ ì›ê°€ ë¶€ë‹´ì´ ì—†ìŠµë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_02 -->
                     <!-- list_03 -->
                     <div class="hs_txt hs_03">
                         <h4 class="h4_tit">
-                            <span class="s_block">ÀÎ¼â¹°(Àü´ÜÁö,</span>
-                            <span class="s_block"> Æ÷½ºÅÍ µî) ¹«»óÁö¿ø</span>
+                            <span class="s_block">ì¸ì‡„ë¬¼(ì „ë‹¨ì§€,</span>
+                            <span class="s_block"> í¬ìŠ¤í„° ë“±) ë¬´ìƒì§€ì›</span>
                         </h4>
                         <p>
-                            <span class="s_block">½Å¸Þ´º Ãâ½Ã¿Í °¢Á¾Çà»ç ½Ç½Ã¶§¸¶´Ù Á¢Áö Àü´ÜÁö(4,000¸Å),</span>
-                            <span class="s_block">Æ÷½ºÅÍ µîÀ» Á¦ÀÛÇÏ¿© ¹«»óÁö¿ø ÇØµå¸³´Ï´Ù.</span>
+                            <span class="s_block">ì‹ ë©”ë‰´ ì¶œì‹œì™€ ê°ì¢…í–‰ì‚¬ ì‹¤ì‹œë•Œë§ˆë‹¤ ì ‘ì§€ ì „ë‹¨ì§€(4,000ë§¤),</span>
+                            <span class="s_block">í¬ìŠ¤í„° ë“±ì„ ì œìž‘í•˜ì—¬ ë¬´ìƒì§€ì› í•´ë“œë¦½ë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_03 -->
                     <!-- list_04 -->
                     <div class="hs_txt hs_04">
                         <h4 class="h4_tit">
-                            <span class="s_block">¹°Ç°´ë±Ý °áÁ¦¿ë</span>
-                            <span class="s_block"> ¸¶ÀÌ³Ê½º ÅëÀå</span>
+                            <span class="s_block">ë¬¼í’ˆëŒ€ê¸ˆ ê²°ì œìš©</span>
+                            <span class="s_block"> ë§ˆì´ë„ˆìŠ¤ í†µìž¥</span>
                         </h4>
                         <p>
-                            <span class="s_block">ÇÑ¼Ü°ú ÇÏ³ªÀºÇàÀÌ Á¦ÈÞÇÏ¿© ÇÑ¼Ü °¡¸ÍÁ¡ÀÌ µÇ½Ã¸é</span>
-                            <span class="s_block">¹°Ç°´ë±Ý °áÁ¦¸¦ ¿øÈ°ÇÏ°Ô ÇÏ½Ç ¼ö ÀÖµµ·Ï 500¸¸¿ø</span>
-                            <span class="s_block">ÇÑµµÀÇ ¸¶ÀÌ³Ê½º ÅëÀåÀ» °³¼³ÇØ µå¸³´Ï´Ù.</span>
+                            <span class="s_block">í•œì†¥ê³¼ í•˜ë‚˜ì€í–‰ì´ ì œíœ´í•˜ì—¬ í•œì†¥ ê°€ë§¹ì ì´ ë˜ì‹œë©´</span>
+                            <span class="s_block">ë¬¼í’ˆëŒ€ê¸ˆ ê²°ì œë¥¼ ì›í™œí•˜ê²Œ í•˜ì‹¤ ìˆ˜ ìžˆë„ë¡ 500ë§Œì›</span>
+                            <span class="s_block">í•œë„ì˜ ë§ˆì´ë„ˆìŠ¤ í†µìž¥ì„ ê°œì„¤í•´ ë“œë¦½ë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_04 -->
                     <!-- list_05 -->
                     <div class="hs_txt hs_05">
                         <h4 class="h4_tit">
-                            <span class="s_block">¹ÏÀ» ¼ö ÀÖ´Â ÃÖ°í Ç°ÁúÀÇ</span>
-                            <span class="s_block"> ½ÄÀç·á</span>
+                            <span class="s_block">ë¯¿ì„ ìˆ˜ ìžˆëŠ” ìµœê³  í’ˆì§ˆì˜</span>
+                            <span class="s_block"> ì‹ìž¬ë£Œ</span>
                         </h4>
                         <p>
-                            <span class="s_block">HACCPÀÎÁõÀ» ¹ÞÀº ¾÷Ã¼·ÎºÎÅÍ ¹ÏÀ» ¼ö ÀÖ´Â ÃÖ°í</span>
-                            <span class="s_block">Ç°ÁúÀÇ Àç·á¸¦ ¾ö¼±ÇÏ°í ³³Ç°¹Þ°í ÀÖ½À´Ï´Ù. ¶ÇÇÑ</span>
-                            <span class="s_block">¾ÈÁ¤ÀûÀÎ °¡°ÝÀ¸·Î Àç·á¸¦ ³³Ç°ÇÏ°í ÀÖÀ¸¸ç Ã¶ÀúÇÑ</span>
-                            <span class="s_block">°ËÇ°, °Ë¼ö ½Ã½ºÅÛÀ¸·Î Ç°Áú ¹× À§»ý°ü¸®¿¡ ¸¸ÀüÀ» ±âÇÏ°í ÀÖ½À´Ï´Ù.</span>
+                            <span class="s_block">HACCPì¸ì¦ì„ ë°›ì€ ì—…ì²´ë¡œë¶€í„° ë¯¿ì„ ìˆ˜ ìžˆëŠ” ìµœê³ </span>
+                            <span class="s_block">í’ˆì§ˆì˜ ìž¬ë£Œë¥¼ ì—„ì„ í•˜ê³  ë‚©í’ˆë°›ê³  ìžˆìŠµë‹ˆë‹¤. ë˜í•œ</span>
+                            <span class="s_block">ì•ˆì •ì ì¸ ê°€ê²©ìœ¼ë¡œ ìž¬ë£Œë¥¼ ë‚©í’ˆí•˜ê³  ìžˆìœ¼ë©° ì² ì €í•œ</span>
+                            <span class="s_block">ê²€í’ˆ, ê²€ìˆ˜ ì‹œìŠ¤í…œìœ¼ë¡œ í’ˆì§ˆ ë° ìœ„ìƒê´€ë¦¬ì— ë§Œì „ì„ ê¸°í•˜ê³  ìžˆìŠµë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_05 -->
                     <!-- list_06 -->
                     <div class="hs_txt hs_06">
                         <h4 class="h4_tit">
-                            <span class="s_block">ÇÑ¼Ü Á¾ÇÕ ¸Å´º¾óÁý ¡¤</span>
-                            <span class="s_block">¿ù°£ ¼Ò½ÄÁö ¡®ÇÑ¼Ü¹ä¡¯</span>
+                            <span class="s_block">í•œì†¥ ì¢…í•© ë§¤ë‰´ì–¼ì§‘ Â·</span>
+                            <span class="s_block">ì›”ê°„ ì†Œì‹ì§€ â€˜í•œì†¥ë°¥â€™</span>
                         </h4>
                         <p>
-                            <span class="s_block">20³â°£ ÃàÀûµÈ ÇÑ¼ÜÀÇ ¸ðµç ³ëÇÏ¿ì¸¦ ´ãÀº Á¾ÇÕ</span>
-                            <span class="s_block">¸Å´º¾óÁýÀ» Á¦°øÇÏ¿© ¼º°ø Ã¢¾÷À» Áö¿øÇØ µå¸®¸ç ¿ù°£</span>
-                            <span class="s_block">¼Ò½ÄÁö¸¦ ÅëÇØ ÇÁ·Î¸ð¼Ç ¹× ½Å¸Þ´º µî ±âÅ¸ Áß¿äÇÑ Á¤º¸¸¦</span>
-                            <span class="s_block">Á¦°øÇØ µå¸³´Ï´Ù.</span>
+                            <span class="s_block">20ë…„ê°„ ì¶•ì ëœ í•œì†¥ì˜ ëª¨ë“  ë…¸í•˜ìš°ë¥¼ ë‹´ì€ ì¢…í•©</span>
+                            <span class="s_block">ë§¤ë‰´ì–¼ì§‘ì„ ì œê³µí•˜ì—¬ ì„±ê³µ ì°½ì—…ì„ ì§€ì›í•´ ë“œë¦¬ë©° ì›”ê°„</span>
+                            <span class="s_block">ì†Œì‹ì§€ë¥¼ í†µí•´ í”„ë¡œëª¨ì…˜ ë° ì‹ ë©”ë‰´ ë“± ê¸°íƒ€ ì¤‘ìš”í•œ ì •ë³´ë¥¼</span>
+                            <span class="s_block">ì œê³µí•´ ë“œë¦½ë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_06 -->
                     <!-- list_07 -->
                     <div class="hs_txt hs_07">
-                        <h4 class="h4_tit">¿¬¼ö ±³À° Á¦µµ</h4>
+                        <h4 class="h4_tit">ì—°ìˆ˜ êµìœ¡ ì œë„</h4>
                         <p>
-                            <span class="s_block">À½½Ä¾÷ °æÇèÀÌ ¾ø´Â ºÐÀÌ¶óµµ ÈÇ¸¢ÇÑ °æ¿µÁÖ°¡ µÇ½Ç ¼ö</span>
-                            <span class="s_block">ÀÖµµ·Ï ¿¬¼ö ¼¾ÅÍ °­ÀÇ¿Í  Á÷¿µÁ¡ ½Ç½ÀÀ» ÅëÇØ ±â¾÷ÀÌ³ä,</span>
-                            <span class="s_block">À§»ý, Á¶¸®, Á¢°´, ÆÇÃË, È¸°è µî ¸ðµç ºÐ¾ß¸¦ 3ÁÖµ¿¾È</span>
-                            <span class="s_block">Ã¼°èÀûÀ¸·Î ±³À°ÇØ µå¸³´Ï´Ù.</span>
+                            <span class="s_block">ìŒì‹ì—… ê²½í—˜ì´ ì—†ëŠ” ë¶„ì´ë¼ë„ í›Œë¥­í•œ ê²½ì˜ì£¼ê°€ ë˜ì‹¤ ìˆ˜</span>
+                            <span class="s_block">ìžˆë„ë¡ ì—°ìˆ˜ ì„¼í„° ê°•ì˜ì™€  ì§ì˜ì  ì‹¤ìŠµì„ í†µí•´ ê¸°ì—…ì´ë…,</span>
+                            <span class="s_block">ìœ„ìƒ, ì¡°ë¦¬, ì ‘ê°, íŒì´‰, íšŒê³„ ë“± ëª¨ë“  ë¶„ì•¼ë¥¼ 3ì£¼ë™ì•ˆ</span>
+                            <span class="s_block">ì²´ê³„ì ìœ¼ë¡œ êµìœ¡í•´ ë“œë¦½ë‹ˆë‹¤.</span>
                         </p>
                     </div>
                     <!-- //list_07 -->
@@ -474,17 +474,17 @@
 
 <!-- more_cont -->
 <div class="conts_more">
-    <h2 class="more_tit">´õ ¸¹Àº ÀÌ¾ß±â</h2>
+    <h2 class="more_tit">ë” ë§Žì€ ì´ì•¼ê¸°</h2>
     <ul>
         <li>
             <a href="story.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_story.jpg" alt="ºê·£µå ½ºÅä¸®" />
+                    <img src="assets/images/common/more_story.jpg" alt="ë¸Œëžœë“œ ìŠ¤í† ë¦¬" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå ½ºÅä¸®</h3>
-                    <h3 class="h3_tit_o">ºê·£µå ½ºÅä¸®</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìŠ¤í† ë¦¬</h3>
                 </figcaption>
             </figure>
         </li>
@@ -492,11 +492,11 @@
             <a href="philosophy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_philosophy.jpg" alt="ºê·£µå Ã¶ÇÐ" />
+                    <img src="assets/images/common/more_philosophy.jpg" alt="ë¸Œëžœë“œ ì² í•™" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå Ã¶ÇÐ</h3>
-                    <h3 class="h3_tit_o">ºê·£µå Ã¶ÇÐ</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ì² í•™</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ì² í•™</h3>
                 </figcaption>
             </figure>
         </li>
@@ -504,11 +504,11 @@
             <a href="legacy.go" class="more_link"></a>
             <figure>
                 <span class="more_img">
-                    <img src="assets/images/common/more_legacy.jpg" alt="ºê·£µå À¯»ê" />
+                    <img src="assets/images/common/more_legacy.jpg" alt="ë¸Œëžœë“œ ìœ ì‚°" />
                 </span>
                 <figcaption>
-                    <h3 class="h3_tit">ºê·£µå À¯»ê</h3>
-                    <h3 class="h3_tit_o">ºê·£µå À¯»ê</h3>
+                    <h3 class="h3_tit">ë¸Œëžœë“œ ìœ ì‚°</h3>
+                    <h3 class="h3_tit_o">ë¸Œëžœë“œ ìœ ì‚°</h3>
                 </figcaption>
             </figure>
         </li>
@@ -536,42 +536,42 @@
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="incruit.go">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="partners.go">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="notice_list.go">°øÁö»çÇ×</a></li>
-                <li><a href="faq_list.go">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="policy.go"><strong>°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§</strong></a></li>
-                <li><a href="agreement.go">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="incruit.go">ì¸ìž¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºÐ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëžœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ìž ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãþ</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -579,15 +579,15 @@
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -596,11 +596,11 @@
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
