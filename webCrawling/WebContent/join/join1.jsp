@@ -823,7 +823,7 @@
                         </span>
                         <!-- btn -->
                         <div class="btn_wrap pa_01">
-                            <span class="btn btn_st03"><a href="javascript:nextStep();" class="c_01">다음</a></span>
+                            <span class="btn btn_st03"><a href="javascript:location.href='join2.go'" class="c_01">다음</a></span>
                         </div>
                         <!--// btn -->
                     </div>

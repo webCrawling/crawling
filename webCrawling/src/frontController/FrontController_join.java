@@ -45,7 +45,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		System.out.println("command is " + command);
 
-		// 로그인 버튼 클릭 시 홈 페이지로 이동
+		// 濡쒓렇�씤 踰꾪듉 �겢由� �떆 �솃 �럹�씠吏�濡� �씠�룞
 		if (command.equals("/home.do")) {
 			// System.out.println(request.getParameter("userid1"));
 			action = new Command_home();
@@ -55,14 +55,14 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 				e.printStackTrace();
 			}
 		}
-		// 홈페이지 이동
+		// �솃�럹�씠吏� �씠�룞
 		else if (command.equals("/first_home.do")) {
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("/home.jsp");
 
 		}
-		// 로그아웃 시 페이지 이동 
+		// 濡쒓렇�븘�썐 �떆 �럹�씠吏� �씠�룞 
 		else if (command.equals("/logout.do")) {
 			forward = new ActionForward();
 			forward.setRedirect(false);
@@ -72,7 +72,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			
 		}
 
-		// 로그인 페이지로 이동
+		// 濡쒓렇�씤 �럹�씠吏�濡� �씠�룞
 		else if (command.equals("/login.do")) {
 
 			forward = new ActionForward();
@@ -80,7 +80,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward.setPath("/login/login.jsp");
 		}
 
-		// 회원가입 약관동의 페이지로 이동
+		// �쉶�썝媛��엯 �빟愿��룞�쓽 �럹�씠吏�濡� �씠�룞
 		else if (command.equals("/join.do")) {
 
 			forward = new ActionForward();
@@ -89,7 +89,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// 회원가입 폼 페이지 이동
+		// �쉶�썝媛��엯 �뤌 �럹�씠吏� �씠�룞
 		else if (command.equals("/join2.do")) {
 
 			forward = new ActionForward();
@@ -97,7 +97,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward.setPath("/join/join2.jsp");
 		}
 
-		// 아이디 중복확인
+		// �븘�씠�뵒 以묐났�솗�씤
 		else if (command.equals("/CheckingId.do")) {
 			action = new Command_CheckingId();
 			try {
@@ -110,7 +110,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// 회원가입 비지니스 로직
+		// �쉶�썝媛��엯 鍮꾩��땲�뒪 濡쒖쭅
 		else if (command.equals("/joinCompleted.do")) {
 			action = new Command_Join();
 			try {
@@ -123,9 +123,9 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		//마이페이지 (수정)으로 이동
+		//留덉씠�럹�씠吏� (�닔�젙)�쑝濡� �씠�룞
 		else if (command.equals("/modification.do")){
-			System.out.println("모디피케이션 컨트롤러 까지 온다.");
+			System.out.println("紐⑤뵒�뵾耳��씠�뀡 而⑦듃濡ㅻ윭 源뚯� �삩�떎.");
 			action = new Command_mypage();
 			try {
 
@@ -136,11 +136,9 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			}
 		}
 
-		//마이페이지에서 회원탈퇴
+		//留덉씠�럹�씠吏��뿉�꽌 �쉶�썝�깉�눜
 		else if (command.equals("/delete.do")){
-
-			String id = request.getParameter("id");
-			request.setAttribute("id",id);
+		
 			action = new Command_delete();
 
 			try {
@@ -152,7 +150,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		}
 
 	
-	// 페이지 이동
+	// �럹�씠吏� �씠�룞
 	if (forward.isRedirect()) {
 		response.sendRedirect(forward.getPath());
 	} else {

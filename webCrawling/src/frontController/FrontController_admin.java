@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import command.Command_delete;
 import command.Command_deliveryAdmin;
 import command.Command_deliveryComplete;
+import command.Command_event;
 import command.Command_memInfo;
 import command.Command_memList;
 import command.Command_mypage;
@@ -59,12 +60,15 @@ public class FrontController_admin extends HttpServlet {
 		System.out.println("contextPath : " + contextPath);
 		System.out.println("selected command : " + com);
 
-	
+
+		// 관리 페이지로 이동
 		if (com.equals("/goAdmin.am")) {
 			forward = "/admin/adminPage.jsp";
 		}
 
-		if (com.equals("/deliver_admin.am")) {
+
+		// 배달 관리 (관리자)
+		else if (com.equals("/deliver_admin.am")) {
 			Command command = new Command_deliveryAdmin();
 			try {
 				command.exe(request, response);
@@ -74,7 +78,9 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/delivery_admin.jsp";
 		}
 
-		if (com.equals("/deliveryComplete.am")) {
+
+		// 배달 완료
+		else if (com.equals("/deliveryComplete.am")) {
 			Command command = new Command_deliveryComplete();
 			try {
 				command.exe(request, response);
@@ -84,8 +90,9 @@ public class FrontController_admin extends HttpServlet {
 			forward = "deliver_admin.am";
 		}
 
-		
-		if (com.equals("/Statistics.am")) {
+
+		// 관리자 통계
+		else if (com.equals("/Statistics.am")) {
 			Command command = new Command_statistics();
 			try {
 				command.exe(request, response);
@@ -94,8 +101,37 @@ public class FrontController_admin extends HttpServlet {
 			}
 			forward = "/admin/statistics.jsp";
 		}
-
 		
+		
+		// 관리자 이벤트 공지 페이지로 이동
+				if (com.equals("/goNewEvent.am")) {
+					forward = "/admin/newEvent.jsp";
+				}
+		
+		// 관리자 이벤트 공지 올리기 로직
+		else if(com.equals("/uploadEvent.am")) {
+			Command command = new Command_event();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+			forward = "/admin/adminPage.jsp";
+			
+		}
+		
+		// 이벤트 공지 전체 보기
+		else if(com.equals("/eventList.am")) {
+			Command command = new Command_event();
+			try {
+				command.exe(request, response);
+			} catch (NamingException e) {
+				e.printStackTrace();
+			}
+			forward = "/event/event_list.jsp";
+			
+		}	
+
 		else if (com.equals("/memberList.am")) {
 			Command command = new Command_memList();
 			try {
@@ -118,7 +154,6 @@ public class FrontController_admin extends HttpServlet {
 			forward = "/admin/information_member.jsp";
 		}
 
-		
 		else if (com.equals("/delete.am")) {
 
 			String id = request.getParameter("id");
@@ -135,7 +170,7 @@ public class FrontController_admin extends HttpServlet {
 		}
 
 
-		else if (com.equals("/modification.am")) {
+		/*else if (com.equals("/modification.am")) {
 
 			Command command =  (Command) new Command_mypage();
 			try {
@@ -143,7 +178,7 @@ public class FrontController_admin extends HttpServlet {
 			} catch (NamingException e) {
 				e.printStackTrace();
 			}
-		}
+		}*/
 
 	
 		RequestDispatcher dis = request.getRequestDispatcher(forward);

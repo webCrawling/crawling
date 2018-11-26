@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ page import="dto.Dto_join"%>
 <%@ page import="dto.Dto_order"%>
 <%@ page import="java.util.ArrayList"%>
@@ -20,20 +20,20 @@
 <head>
 <link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/mycss.css" />
-<meta charset="EUC-KR">
-<title>х╦©Ь а╓╨╦</title>
+<meta charset="utf-8">
+<title>М ▄Л⌡░ Л═∙КЁ╢</title>
 </head>
 <body>
 
 
 	<div id="my_container" class="my_sub_page" style="margin-top: 80px;">
 		<h1>
-			х╦©Ь а╓╨╦ а╤х╦ &nbsp;<img src="images/man.png" style="width: 50px">
+			М ▄Л⌡░ Л═∙КЁ╢ Л║╟М ▄ &nbsp;<img src="images/man.png" style="width: 50px">
 		</h1>
 	</div>
 
 	<div class="my_container2" style="margin-top:0;">
-		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; х╦©Ь ╠Б╨╩ а╓╨╦  </span>
+		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; М ▄Л⌡░ Й╦╟КЁ╦ Л═∙КЁ╢  </span>
 		<table style="border-collapse:separate; margin-top:20px; border-spacing: 0 30px;">
 			<tr>
 				<td align=right>ID :</td>
@@ -59,7 +59,7 @@
 	</div>
 
 	<div class="my_container3">
-		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; х╦©Ь аж╧╝ Ё╩©╙</span>
+		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; М ▄Л⌡░ Лё╪К╛╦ К┌╢Л≈╜</span>
 		<table border=1>
 		<%
 			while (iter.hasNext()) {
