@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
+	
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,13 +22,13 @@
 <meta name="_csrf" content="2aef3679-65b9-4889-82b4-802dba1e4803" />
 <title>한솥도시락 > 내 정보 수정</title>
 
-<link rel="icon" href="../assets/images/common/favicon.ico"
+<link rel="icon" href="assets/images/common/favicon.ico"
 	type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/ui.common.css" />
+	href="assets/css/ui.common.css" />
 <link rel="stylesheet" type="text/css"
-	href="../assets/css/swiper.min.css" />
+	href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -51,39 +51,39 @@
 }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript"
 	src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
 
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
 <script type="text/javascript"
-	src="../assets/js/validation/jquery.validate.min.js"></script>
+	src="assets/js/validation/jquery.validate.min.js"></script>
 <script type="text/javascript"
-	src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+	src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
 <script type="text/javascript"
-	src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
+	src="assets/js/fileupload/jquery.iframe-transport.js"></script>
 <script type="text/javascript"
-	src="../assets/js/fileupload/jquery.fileupload.js"></script>
+	src="assets/js/fileupload/jquery.fileupload.js"></script>
 
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript"
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
 
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript"
 	src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
@@ -110,8 +110,7 @@
 
     <link rel="stylesheet" type="text/css" href="../assets/css/ui.join.css" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
+   
 <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -157,17 +156,45 @@
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+<%String id = (String)session.getAttribute("id"); %>
+<%System.out.println(id); %>
+
+<input type="text" value="<%=id%>" id="ids" name="ids" style="visibility:hidden"></input>
 <script type="text/javascript">
-//컨트롤러에 보내는 코드
+ㅂ
+//마이페이지(수정) 코드
 function modification(){
 	alert('modification()들어옴');
 	
 	var pass = document.getElementById("orgPassword");
 	var modifiedpass = document.getElementById("newPassword");
-	var passQuery = orgPassword.value; //현재 비밀번호 
-	var modifiedpassQuery = newPassword.value; //새로운 비밀번호
-	alert(orgQuery+','+newQuery);
-	location.href = "./modification.am?passQuery="+passQuery+"&modifiedpassQuery="+modifiedpassQuery;
+	var email = document.getElementById("email");
+	var phone = document.getElementById("phone");
+	
+	
+	var passQuery = pass.value; //현재 비밀번호 
+	var modifiedpassQuery = modifiedpass.value; //새로운 비밀번호
+	var emailQuery = email.value; //이메일
+	var phoneQuery = phone.value; //폰
+	
+	
+	alert(passQuery+','+modifiedpassQuery+','+emailQuery+','+phoneQuery);
+	//FrontController_join으로 url보냄
+	window.open ("../modification.do?passQuery="+passQuery+"&modifiedpassQuery="+modifiedpassQuery+"&emailQuery="+emailQuery+"&phoneQuery="+phoneQuery,"수정결과",
+	"width=300, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
+	
+}
+
+//마이 페이지에서 회원탈퇴
+function memOut(){
+	alert('memOut()들어옴');
+
+	var userid = document.getElementById("ids"); 
+	var idQuery = userid.value;
+	alert(idQuery);
+	//FrontController_join으로 아이디값이랑 함께 url보냄
+	location.href= "../delete.do?idQuery="+idQuery;
+	
 }
     </script>
 
@@ -346,27 +373,6 @@ function modification(){
 								<li><a href="/join/question_list">1:1 문의</a></li>
 							</ul>
 						</div>
-						<div class="join_step_cont cont_st01">
-							<!-- join_left -->
-							<div class="join_tit">
-								<h3 class="h3_tit blind">내 정보</h3>
-								<!-- pc -->
-								<p class="pc_s_block">
-									<span class="s_block"><em class="emphasis username">이상래</em>님,</span>
-									<span class="s_block">안녕하세요.</span> <span class="s_block">회원님의
-										아이디는</span> <span class="s_block"><em class="emphasis">dltkdfo3001</em></span>
-									<span class="s_block">입니다.</span>
-								</p>
-								<!-- //pc -->
-								<!-- mobile -->
-								<p class="mo_s_block">
-									<span class="s_block"><em class="emphasis username">이상래</em>님,
-										안녕하세요.</span> <span class="s_block">회원님의 아이디는</span> <span
-										class="s_block"><em class="emphasis">dltkdfo3001</em>
-										입니다.</span>
-								</p>
-								<!-- //mobile -->
-							</div>
 							<!-- //join_left -->
 							<!-- join_right -->
 							<div class="join_sub">
@@ -407,8 +413,10 @@ function modification(){
 												<dt>이메일</dt>
 												<dd>
 													<span class="form text"> <input type="text"
-														id="email" name="email" value="qlqlql56@naver.com"
+														id="email" name="email"
 														style="ime-mode: active" />
+														<label
+														for="email">이메일을 입력해주세요</label>
 													</span>
 												</dd>
 											</dl>
@@ -420,12 +428,11 @@ function modification(){
 												<dt>휴대폰</dt>
 												<dd>
 													<span class="form text"> <input type="text"
-														id="phone" value="01068895449" class="loadtext"
-														disabled="disabled" /> <a href="#none"
-														onclick="fnAuthMobile();" class="btn_overlap">재인증</a>
+														id="phone" name="phone"
+														style="ime-mode: active" />
+														<label
+														for="phone">핸드폰 번호를 입력해주세요</label>
 													</span>
-													<p class="result_comment true hpResultTrue"
-														style="display: none;">인증이 완료되었습니다.</p>
 												</dd>
 											</dl>
 										</div>
@@ -453,7 +460,7 @@ function modification(){
 										<!-- 탈퇴btn -->
 										<div class="btn_wrap fl_l">
 											<span class="btn btn_st04"><a href="#none"
-												class="c_04" onclick="memberOut();">회원탈퇴</a></span>
+												class="c_04" onclick="memOut()">회원탈퇴</a></span>
 										</div>
 										<!-- //탈퇴btn -->
 										<!-- btn -->
@@ -478,7 +485,7 @@ function modification(){
 					<!-- //내 정보 수정 -->
 				</section>
 			</div>
-			<script type="text/javascript" src="../assets/js/join.js"></script>
+			<script type="text/javascript" src="assets/js/join.js"></script>
 			<script type="text/javascript">
     $(function(){
         $.validator.addMethod("equalPassword", function(value, element) {
