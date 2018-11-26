@@ -35,7 +35,7 @@ public class Command_home implements Action{
 				session.setAttribute("id", id);
 				
 				forward.setRedirect(false);
-		   		forward.setPath("first_home.do");
+		   		forward.setPath("first_home.do"); 
 	   			return forward;
 			}
 			

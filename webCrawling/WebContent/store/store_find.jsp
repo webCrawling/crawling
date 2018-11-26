@@ -4,87 +4,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <title>?«ê¸°ê°€ ê°€?¥í•œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´</title>
-    <style>
-    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '?‹ì?', sans-serif;line-height: 1.5;}
-    .wrap * {padding: 0;margin: 0;}
-    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
-    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-    .info .close:hover {cursor: pointer;}
-    .info .body {position: relative;overflow: hidden;}
-    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
-    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
-    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
-    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-    .info .link {color: #5085BB;}
-</style>
-
-</head>
-<body>
-123
-<div id="map" style="width:100%;height:350px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=25758686751d9ec9d09f35f5b6eef26a">/* api ??*/</script>
-<script>
-var mapContainer = document.getElementById('map'), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
-    mapOption = { 
-        center: new daum.maps.LatLng(33.451475, 126.570528), // ì§€?„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
-        level: 3 // ì§€?„ì˜ ?•ë? ?ˆë²¨
-    }; 
-    alert("12");
-var map = new daum.maps.Map(mapContainer, mapOption); // ì§€?„ë? ?ì„±?©ë‹ˆ??
-
-// ì§€?„ì— ë§ˆì»¤ë¥??œì‹œ?©ë‹ˆ??
-var marker = new daum.maps.Marker({
-    map: map, 
-    position: new daum.maps.LatLng(33.450701, 126.570667)
-});
-
-// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???œì‹œ??ì»¨í…ì¸??…ë‹ˆ??
-// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´???„ë˜?€ ê°™ì´ ?¬ìš©?ê? ?ìœ ë¡?²Œ ì»¨í…ì¸ ë? êµ¬ì„±?˜ê³  ?´ë²¤?¸ë? ?œì–´?????ˆê¸° ?Œë¬¸??
-// ë³„ë„???´ë²¤??ë©”ì†Œ?œë? ?œê³µ?˜ì? ?ŠìŠµ?ˆë‹¤ 
-var content = '<div class="wrap">' + 
-            '    <div class="info">' + 
-            '        <div class="title">' + 
-            '            ì¹´ì¹´???¤í˜?´ìŠ¤?·ì›' + 
-            '            <div class="close" onclick="closeOverlay()" title="?«ê¸°"></div>' + 
-            '        </div>' + 
-            '        <div class="body">' + 
-            '            <div class="img">' +
-            '                <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
-            '           </div>' + 
-            '            <div class="desc">' + 
-            '                <div class="ellipsis">?œì£¼?¹ë³„?ì¹˜???œì£¼??ì²¨ë‹¨ë¡?242</div>' + 
-            '                <div class="jibun ellipsis">(?? 63309 (ì§€ë²? ?í‰??2181</div>' + 
-            '                <div><a href="http://www.kakaocorp.com/main" target="_blank" class="link">?ˆí˜?´ì?</a></div>' + 
-            '            </div>' + 
-            '        </div>' + 
-            '    </div>' +    
-            '</div>';
-
-// ë§ˆì»¤ ?„ì— ì»¤ìŠ¤?€?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
-// ë§ˆì»¤ë¥?ì¤‘ì‹¬?¼ë¡œ ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?˜ê¸°?„í•´ CSSë¥??´ìš©???„ì¹˜ë¥??¤ì •?ˆìŠµ?ˆë‹¤
-var overlay = new daum.maps.CustomOverlay({
-    content: content,
-    map: map,
-    position: marker.getPosition()       
-});
-
-// ë§ˆì»¤ë¥??´ë¦­?ˆì„ ??ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??œì‹œ?©ë‹ˆ??
-daum.maps.event.addListener(marker, 'click', function() {
-    overlay.setMap(map);
-});
-
-// ì»¤ìŠ¤?€ ?¤ë²„?ˆì´ë¥??«ê¸° ?„í•´ ?¸ì¶œ?˜ëŠ” ?¨ìˆ˜?…ë‹ˆ??
-function closeOverlay() {
-    overlay.setMap(null);     
-}
-</script>
-=======
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -97,14 +16,12 @@ function closeOverlay() {
     <meta property="og:description" content="" />
     <!--// SNS LINK -->
 
-    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="3caca266-b988-4ce5-a3db-343784207d4a" /><title>ÇÑ¼Ü > STORE > ÁÖº¯Á¡Æ÷Ã£±â</title>
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="8e0910b5-cef9-4e60-adf7-7c25f3a77a84" /><title>í•œì†¥ > STORE > ì£¼ë³€ì í¬ì°¾ê¸°</title>
 
-    <link rel="icon" href="../assets/images/common/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.common.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.pop.css" />
-<link rel="stylesheet" type="text/css" href="../assets/css/ui.store.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/ui.common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
 <!--[if gte IE 9 ]><link rel="stylesheet" href="/assets/css/ui.ie9.css" type="text/css" /><![endif]-->
 
 <style>
@@ -127,33 +44,30 @@ function closeOverlay() {
     }
 </style>
 
-<script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../assets/js/ui.common.js"></script>
-<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/TweenMax.min.js"></script>
-
-<script type="text/javascript" src="../assets/js/tss.js"></script>
-<script type="text/javascript" src="../assets/js/tss.util.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/js/ui.common.js"></script>
+<script type="text/javascript" src="assets/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="assets/js/tss.js"></script>
+<script type="text/javascript" src="assets/js/tss.util.js"></script>
 
 <!-- validatation check -->
-<script type="text/javascript" src="../assets/js/validation/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../assets/js/validation/messages_ko.min.js"></script>
-<script type="text/javascript" src="../assets/js/validate.js"></script>
+<script type="text/javascript" src="assets/js/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/validation/messages_ko.min.js"></script>
+<script type="text/javascript" src="assets/js/validate.js"></script>
 
 <!-- fileupload -->
-<script type="text/javascript" src="../assets/js/fileupload/jquery.iframe-transport.js"></script>
-<script type="text/javascript" src="../assets/js/fileupload/jquery.fileupload.js"></script>
-
-<script type="text/javascript" src="../assets/js/hansot.common.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="assets/js/fileupload/jquery.fileupload.js"></script>
+<script type="text/javascript" src="assets/js/hansot.common.js"></script>
 
 <!-- naver map api -->
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1MATn4mHBIsSKNHepOXg&submodules=geocoder"></script>
-
 <!-- moment js api -->
-<script type="text/javascript" src="../assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
 <!-- lodash js api -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
@@ -167,12 +81,12 @@ function closeOverlay() {
         $(document).ajaxError(function(event, xhr, options) {
             if(xhr.status === 401) {
                 console.log(xhr);
-                if(tss.util.confirm('·Î±×ÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù.')) {
+                if(tss.util.confirm('ë¡œê·¸ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤.')) {
                     tss.util.auth();
                 }
             }
             if(xhr.status === 500 || xhr.status === 400) {
-                console.log("¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                console.log("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             }
         });
     });
@@ -181,15 +95,18 @@ function closeOverlay() {
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.menu.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.min.css"/>
-    <script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.store.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.pop.css"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111772169-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'UA-111772169-1');
@@ -199,7 +116,11 @@ function closeOverlay() {
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-864658366"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
       gtag('js', new Date());
 
       gtag('config', 'AW-864658366');
@@ -208,27 +129,26 @@ function closeOverlay() {
     <!-- kakao pixcel -->
     <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
     <script type="text/javascript">
-    kakaoPixel('5575357302971415199').pageView();
+        kakaoPixel('5575357302971415199').pageView();
     </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '241666853119648');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '241666853119648');
+        fbq('track', 'PageView');
     </script>
     <noscript>
-    <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=241666853119648&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
-
 
 </head>
 <body ontouchstart>
@@ -242,16 +162,17 @@ function closeOverlay() {
         <div class="area_flex">
             <ul>
                 <li>
-                    <a href="../login/login.jsp">·Î±×ÀÎ</a>
+                    <a href="login.do">ë¡œê·¸ì¸</a>
                     </li>
                 <li>
-                    <a href="../join/join1.jsp">È¸¿ø°¡ÀÔ</a>
+                    <a href="join.do">íšŒì›ê°€ì…</a>
                     </li>
+
                 <li class="sns_insta">
-                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
+                    <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
                 </li>
                 <li class="sns_face">
-                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                    <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
                 </li>
             </ul>
         </div>
@@ -262,32 +183,30 @@ function closeOverlay() {
     <div class="hd_fixed">
         <div class="hd_content">
             <div class="logo">
-                <h1><a href="../home.jsp"><span class="blind">ÇÑ¼Ü</span></a></h1>
+                <h1><a href="home.go"><span class="blind">í•œì†¥</span></a></h1>
             </div>
             <!-- gnb -->
             <section id="gnb" class="area_gnb mo_version">
-                <!-- ¸ğ¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+                <!-- ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ì… -->
                 <div class="m_area_flex">
-                    <ul>
-                        <li>
-                            <a href="/login">·Î±×ÀÎ</a>
-                            </li>
-                        <li>
-                            <a href="/join/join_step1">È¸¿ø°¡ÀÔ</a>
-                            </li>
-                    </ul>
-                </div>
-                <!-- //¸ğ¹ÙÀÏ ·Î±×ÀÎ/È¸¿ø°¡ÀÔ -->
+							<ul>
+								<li><a href="login.do">ë¡œê·¸ì¸</a></li>
+								<li><a href="join.do">íšŒì›ê°€ì…</a></li>
 
-                <div class="gnb_menu">
+							</ul>
+						</div>
+                <!-- //ëª¨ë°”ì¼ ë¡œê·¸ì¸/íšŒì›ê°€ì… -->
+
+               
+                 <div class="gnb_menu">
                     <ul>
                         <li class="dp1">
                             <p class="dp1_tit"><a href="#none">BRAND</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/story.jsp">ºê·£µå ½ºÅä¸®</a></li>
-                                    <li><a href="../brand/philosophy.jsp">ºê·£µå Ã¶ÇĞ</a></li>
-                                    <li><a href="../brand/legacy.jsp">ºê·£µå À¯»ê</a></li>
+                                    <li class="active"><a href="story.go">ë¸Œëœë“œ ìŠ¤í† ë¦¬</a></li>
+                                    <li><a href="philosophy.go">ë¸Œëœë“œ ì² í•™</a></li>
+                                    <li><a href="legacy.go">ë¸Œëœë“œ ìœ ì‚°</a></li>
                                     </ul>
                             </div>
                         </li>
@@ -295,10 +214,10 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">ESG</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li class="active"><a href="../brand/esg.jsp">ESG°æ¿µÀÌ¶õ?</a></li>
-                                    <li><a href="../brand/philosophy.jsp">È¯°æº¸È£(Environment)</a></li>
-                                    <li><a href="../hansot/social.jsp">»çÈ¸°øÇå(Social)</a></li>
-                                    <li><a href="../brand/esg.jsp">À±¸®°æ¿µ(Governance)</a></li>
+                                    <li class="active"><a href="esg.go">ESGê²½ì˜ì´ë€?</a></li>
+                                    <li><a href="philosophy.go">í™˜ê²½ë³´í˜¸(Environment)</a></li>
+                                    <li><a href="social.go">ì‚¬íšŒê³µí—Œ(Social)</a></li>
+                                    <li><a href="esg.go">ìœ¤ë¦¬ê²½ì˜(Governance)</a></li>
 
                                     </ul>
                             </div>
@@ -307,10 +226,9 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">MENU</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../menu/menu_list.jsp">ÀüÃ¼¸Ş´º</a></li>
-                                    <li><a href="../menu/material.jsp">½ÄÀç·á ÀÌ¾ß±â</a></li>
-                                    <li><a href="../menu/chancha.jsp">Æä·çÂùÂ÷¸¶¿äÄ¿ÇÇ</a></li>
-                                    <li><a href="../menu/menu_order.jsp">´ÜÃ¼ ÁÖ¹®</a></li>
+                                    <li><a href="menu_list.go">ì „ì²´ë©”ë‰´</a></li>
+                                    <li><a href="material.go">ì‹ì¬ë£Œ ì´ì•¼ê¸°</a></li>
+                                    <li><a href="chancha.go">í˜ë£¨ì°¬ì°¨ë§ˆìš”ì»¤í”¼</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -318,7 +236,7 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">STORE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../store/store_find.jsp">ÁÖº¯Á¡Æ÷Ã£±â</a></li>
+                                    <li><a href="store_find.go">ì£¼ë³€ì í¬ì°¾ê¸°</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -326,8 +244,8 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">EVENT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../event/event_list.jsp">ÀÌ ´ŞÀÇ ÀÌº¥Æ®</a></li>
-                                    <li><a href="../event/store_event_list.jsp">½Å±ÔÁ¡ ¿ÀÇÂÀÌº¥Æ®</a></li>
+                                    <li><a href="event_list.go">ì´ ë‹¬ì˜ ì´ë²¤íŠ¸</a></li>
+                                    <li><a href="store_event_list.go">ì‹ ê·œì  ì˜¤í”ˆì´ë²¤íŠ¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -335,12 +253,10 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">FRANCHISE</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../franchise/hansot_store.jsp">Why ÇÑ¼Ü °¡¸ÍÁ¡</a></li>
-                                    <li><a href="../franchise/success.jsp">¼º°ø¼ö±â</a></li>
-                                    <li><a href="../franchise/process.jsp">Ã¢¾÷°³¼³ÀıÂ÷</a></li>
-                                    <li><a href="../franchise/calc.jsp">¿¹»ó Ã¢¾÷ ºñ¿ë</a></li>
-                                    <li><a href="../franchise/qna.jsp">Ã¢¾÷¹®ÀÇ</a></li>
-                                    <li><a href="../franchise/briefing.jsp">Ã¢¾÷¼³¸íÈ¸ ÀÏÁ¤¡¤½ÅÃ»</a></li>
+                                    <li><a href="hansot_store.go">Why í•œì†¥ ê°€ë§¹ì </a></li>
+                                    <li><a href="success.go">ì„±ê³µìˆ˜ê¸°</a></li>
+                                    <li><a href="process.go">ì°½ì—…ê°œì„¤ì ˆì°¨</a></li>
+                                    <li><a href="calc.go">ì˜ˆìƒ ì°½ì—… ë¹„ìš©</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -348,13 +264,11 @@ function closeOverlay() {
                             <p class="dp1_tit"><a href="#none">HANSOT</a></p>
                             <div class="dp2">
                                 <ul>
-                                    <li><a href="../hansot/promise.jsp">ÇÑ¼ÜÀÇ ¾à¼Ó</a></li>
-                                    <li><a href="../hansot/vision.jsp">ÇÑ¼ÜÀÇ ºñÀü</a></li>
-                                    <li><a href="../hansot/history.jsp">¿¬Çõ&amp;¼ö»ó</a></li>
-                                    <li><a href="../hansot/news_list.jsp">ÇÑ¼Ü NEWS</a></li>
-                                    <li><a href="../hansot/location.jsp">¿À½Ã´Â ±æ</a></li>
-                                    <li><a href="../footer/faq_list.jsp">°í°´¼¾ÅÍ</a></li>
-                                    <li class="h_last"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
+                                    <li><a href="promise.go">í•œì†¥ì˜ ì•½ì†</a></li>
+                                    <li><a href="vision.go">í•œì†¥ì˜ ë¹„ì „</a></li>
+                                    <li><a href="history.go">ì—°í˜&amp;ìˆ˜ìƒ</a></li>
+                                    <li><a href="news_list.go">í•œì†¥ NEWS</a></li>
+                                    <li><a href="location.go">ì˜¤ì‹œëŠ” ê¸¸</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -378,7 +292,6 @@ function closeOverlay() {
         <!--// header content -->
     </div>
 </header>
-
 <!--// header -->
 
 <!--// inc header e -->
@@ -393,49 +306,49 @@ function closeOverlay() {
         <div class="store_wrap">
             <!-- title -->
             <div class="ontitle">
-                <h2 class="h2_tit h2_01 mo_version">ÁÖº¯Á¡Æ÷Ã£±â</h2>
-                <!-- ÁÖº¯Á¡Æ÷Ã£±â Form -->
-                <form id="searchForm" name="searchForm" action="../store/store_find.jsp" method="get" onsubmit="searchStore(1);return false;"><input type="hidden" id="idx" name="idx" value=""/>
+                <h2 class="h2_tit h2_01 mo_version">ì£¼ë³€ì í¬ì°¾ê¸°</h2>
+                <!-- ì£¼ë³€ì í¬ì°¾ê¸° Form -->
+                <form id="searchForm" name="searchForm" action="store_find" method="get" onsubmit="searchStore(1);return false;"><input type="hidden" id="idx" name="idx" value=""/>
                     <dl class="store_form mo_version" id="map_position">
                         <div class="in_box">
                             <dl class="in_box_th">
-                                <dt class="blind">ÁÖº¯Á¡Æ÷Ã£±â</dt>
-                                <!-- ½Ã/µµ ¼±ÅÃ -->
+                                <dt class="blind">ì£¼ë³€ì í¬ì°¾ê¸°</dt>
+                                <!-- ì‹œ/ë„ ì„ íƒ -->
                                 <dd class="store_select">
                                 <span class="select">
-                                    <select class="classic" title="½Ã/µµ ¼±ÅÃ ±¸ºĞ" id="sido" name="sido">
-                                        <option value="">½Ã/µµ ¼±ÅÃ</option>
+                                    <select class="classic" title="ì‹œ/ë„ ì„ íƒ êµ¬ë¶„" id="sido" name="sido">
+                                        <option value="">ì‹œ/ë„ ì„ íƒ</option>
                                     </select>
                                 </span>
                                 </dd>
-                                <!-- //½Ã/µµ ¼±ÅÃ -->
-                                <!-- ±º/±¸ ¼±ÅÃ -->
+                                <!-- //ì‹œ/ë„ ì„ íƒ -->
+                                <!-- êµ°/êµ¬ ì„ íƒ -->
                                 <dd class="store_select last_selcet">
                                 <span class="select">
-                                    <select class="classic" title="±¸/±º ¼±ÅÃ ±¸ºĞ" id="gungoo" name="gungoo">
-                                        <option value="">±¸/±º ¼±ÅÃ</option>
+                                    <select class="classic" title="êµ¬/êµ° ì„ íƒ êµ¬ë¶„" id="gungoo" name="gungoo">
+                                        <option value="">êµ¬/êµ° ì„ íƒ</option>
                                     </select>
                                 </span>
                                 </dd>
-                                <!-- //±º/±¸ ¼±ÅÃ -->
-                                <!-- °Ë»öÃ¢ -->
+                                <!-- //êµ°/êµ¬ ì„ íƒ -->
+                                <!-- ê²€ìƒ‰ì°½ -->
                                     <dd class="store_search">
                                     <div class="in_box">
                                     <span class="form text">
                                         <input type="text" maxlength="16" id="searchKeyword" name="searchKeyword">
-                                        <label for="searchKeyword">°Ë»ö¾î ÀÔ·Â</label>
+                                        <label for="searchKeyword">ê²€ìƒ‰ì–´ ì…ë ¥</label>
                                         <a href="#none" onclick="searchStore(1);return false;"
-                                           class="btn_overlap se_box"><span class="blind">°Ë»ö¾ÆÀÌÄÜ</span></a>
+                                           class="btn_overlap se_box"><span class="blind">ê²€ìƒ‰ì•„ì´ì½˜</span></a>
                                     </span>
                                     </div>
                                 </dd>
-                                <!-- //°Ë»öÃ¢ -->
+                                <!-- //ê²€ìƒ‰ì°½ -->
                                 <!-- btn -->
                                 <dd class="btn_store">
                                     <div class="btn_wrap">
                                         <span class="btn btn_st03"><a href="#none"
                                                                       onclick="searchStore(1);return false;"
-                                                                      class="c_02" id="btn_search">¸ÅÀåÃ£±â</a></span>
+                                                                      class="c_02" id="btn_search">ë§¤ì¥ì°¾ê¸°</a></span>
                                     </div>
                                 </dd>
                                 <!-- //btn -->
@@ -443,7 +356,7 @@ function closeOverlay() {
                         </div>
                     </dl>
                 <div>
-</div></form><!-- //ÁÖº¯Á¡Æ÷Ã£±â Form -->
+</div></form><!-- //ì£¼ë³€ì í¬ì°¾ê¸° Form -->
             </div>
             <!-- //title -->
             <!-- map -->
@@ -456,7 +369,7 @@ function closeOverlay() {
     </section>
     <!-- //store_find -->
 
-    <!--°Ë»ö °á°ú Å×ÀÌºí-->
+    <!--ê²€ìƒ‰ ê²°ê³¼ í…Œì´ë¸”-->
     <section class="store_search_result">
         <div class="table-wrapper">
             <table class="store_table">
@@ -470,13 +383,13 @@ function closeOverlay() {
 
     </section>
 
-    <!-- ½Å±Ô °¡¸ÍÁ¡ -->
+    <!-- ì‹ ê·œ ê°€ë§¹ì  -->
     <section class="store_new">
         <div class="store_new_wrap">
             <h2 class="h2_tit fz_01">
-                <span class="s_block">ÇÑ¼ÜÀÇ</span>
-                <span class="s_block"><em class="f_b">½Å±Ô °¡¸ÍÁ¡</em>À»</span>
-                <span class="s_block">¼Ò°³ÇÕ´Ï´Ù</span>
+                <span class="s_block">í•œì†¥ì˜</span>
+                <span class="s_block"><em class="f_b">ì‹ ê·œ ê°€ë§¹ì </em>ì„</span>
+                <span class="s_block">ì†Œê°œí•©ë‹ˆë‹¤</span>
             </h2>
             <div class="store_new_list">
 
@@ -488,10 +401,10 @@ function closeOverlay() {
             </div>
         </div>
     </section>
-    <!-- //½Å±Ô °¡¸ÍÁ¡ -->
+    <!-- //ì‹ ê·œ ê°€ë§¹ì  -->
 </div>
 
-<!-- ÆË¾÷ -->
+<!-- íŒì—… -->
 <div id="map_popup" style="display:none;">
     <div class="marker_wrap">
         <div class="store_info_wrap" style="display:block;">
@@ -500,16 +413,16 @@ function closeOverlay() {
                 <p class="info_add" id="pop_store_address"></p>
                 <p class="info_call" id="pop_store_phone"></p>
                 <div class="detail">
-                    <a href="javascript:openLayerPopup('pop-store');" class="btn_de">ÀÚ¼¼È÷ º¸±â</a>
+                    <a href="javascript:openLayerPopup('pop-store');" class="btn_de">ìì„¸íˆ ë³´ê¸°</a>
                 </div>
                 <a href="#none" class="btn_close" onclick="closeOverlay();"><span class="blind">close</span></a>
             </div>
         </div>
     </div>
 </div>
-<!-- // ÆË¾÷-->
+<!-- // íŒì—…-->
 
-<!-- ÀÚ¼¼È÷º¸±â popup -->
+<!-- ìì„¸íˆë³´ê¸° popup -->
 <div class="pop-wrap" id="pop-store" style="display:none">
     <dl class="pop-store-wrap">
         <dt class="pop-header fz_02"><span id="pop2_store_name"></span>
@@ -519,79 +432,79 @@ function closeOverlay() {
             <div class="pop-cont">
                 <div class="pop-msg">
                     <dl class="pop-store-info">
-                        <dt>ÁÖ¼Ò</dt>
+                        <dt>ì£¼ì†Œ</dt>
                         <dd id="pop2_store_address"></dd>
-                        <dt>ÀüÈ­¹øÈ£</dt>
+                        <dt>ì „í™”ë²ˆí˜¸</dt>
                         <dd id="pop2_store_phone"></dd>
-                        <dt>¿µ¾÷½Ã°£</dt>
+                        <dt>ì˜ì—…ì‹œê°„</dt>
                         <dd id="pop2_store_business_hour"></dd>
                     </dl>
-                    <!-- ¸ÅÀåÀÌº¥Æ® -->
+                    <!-- ë§¤ì¥ì´ë²¤íŠ¸ -->
                     <dl class="shop_event">
-                        <dt>½Å±ÔÁ¡ ¿ÀÇÂ ÀÌº¥Æ®</dt>
+                        <dt>ì‹ ê·œì  ì˜¤í”ˆ ì´ë²¤íŠ¸</dt>
                         <dd id="pop2_store_event"></dd>
                     </dl>
-                    <!-- //¸ÅÀåÀÌº¥Æ® -->
-                    <!-- ÁÂ¼®/ÁÖÂ÷ -->
+                    <!-- //ë§¤ì¥ì´ë²¤íŠ¸ -->
+                    <!-- ì¢Œì„/ì£¼ì°¨ -->
                     <dl class="shop_etc">
-                        <dt><span class="blind">ÁÂ¼®¿©ºÎ</span></dt>
+                        <dt><span class="blind">ì¢Œì„ì—¬ë¶€</span></dt>
                         <dd class="seat" id="pop2_store_seat"></dd>
-                        <dt><span class="blind">ÁÖÂ÷¿©ºÎ</span></dt>
+                        <dt><span class="blind">ì£¼ì°¨ì—¬ë¶€</span></dt>
                         <dd class="car" id="pop2_store_car"></dd>
                     </dl>
-                    <!-- //ÁÂ¼®/ÁÖÂ÷ -->
+                    <!-- //ì¢Œì„/ì£¼ì°¨ -->
                 </div>
             </div>
         </dd>
     </dl>
 </div>
-<!-- // ÀÚ¼¼È÷º¸±â popup -->
+<!-- // ìì„¸íˆë³´ê¸° popup -->
 
-<!-- °Ë»ö°á°ú ¾øÀ»°æ¿ì popup -->
+<!-- ê²€ìƒ‰ê²°ê³¼ ì—†ì„ê²½ìš° popup -->
 <div class="pop-wrap" id="pop-search" style="display:none">
     <dl class="pop-search-wrap">
         <dt class="pop-header fz_02"></dt>
         <dd class="pop-box">
             <div class="pop-cont">
                 <div class="pop-msg">
-                    °Ë»ö°á°ú°¡ ¾ø½À´Ï´Ù.
+                    ê²€ìƒ‰ê²°ê³¼ê°€ ì—†ìŠµë‹ˆë‹¤.
                 </div>
-                <a href="javascript:closeLayerPopup();" class="btnp-close">È®ÀÎ</a>
+                <a href="javascript:closeLayerPopup();" class="btnp-close">í™•ì¸</a>
             </div>
         </dd>
     </dl>
 </div>
-<!-- //°Ë»ö°á°ú ¾øÀ»°æ¿ì popup -->
+<!-- //ê²€ìƒ‰ê²°ê³¼ ì—†ì„ê²½ìš° popup -->
 
 <script type="text/javascript">
   $(function () {
     mapResize();
     currentLoc();
-    newStore(1);    // ½Å±Ô °¡¸ÍÁ¡
+    newStore(1);    // ì‹ ê·œ ê°€ë§¹ì 
   });
 
   var useCurrentLoc = true;
   var lat, lng;
   var map, markerOptions, infowindow, contentString;
-  var mapContainer = document.getElementById("map"); // Áöµµ¸¦ Ç¥½ÃÇÒ div
-  var eventStoreIdx = $.trim('');    // ¸ÅÀåÀÌº¥Æ®¿¡¼­ ³Ñ¾î¿Â idx
+  var mapContainer = document.getElementById("map"); // ì§€ë„ë¥¼ í‘œì‹œí•  div
+  var eventStoreIdx = $.trim('');    // ë§¤ì¥ì´ë²¤íŠ¸ì—ì„œ ë„˜ì–´ì˜¨ idx
   var markerList = [];
 
-  // ÇöÀçÀ§Ä¡
+  // í˜„ì¬ìœ„ì¹˜
   function currentLoc() {
 
     if (eventStoreIdx != "" && !isNaN(parseInt(eventStoreIdx))) {
       chanageLoc(eventStoreIdx);
     } else {
-      lat = 37.4964502;   // À§Ä¡ °Ë»ö¾ÈµÉ½Ã ±âº»³ëÃâ : °­³²¿ªÁ¡
+      lat = 37.4964502;   // ìœ„ì¹˜ ê²€ìƒ‰ì•ˆë ì‹œ ê¸°ë³¸ë…¸ì¶œ : ê°•ë‚¨ì—­ì 
       lng = 127.0278032;
 
-      // HTML5ÀÇ geolocationÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù
+      // HTML5ì˜ geolocationìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤
       if (navigator.geolocation) {
-        // GeoLocationÀ» ÀÌ¿ëÇØ¼­ Á¢¼Ó À§Ä¡¸¦ ¾ò¾î¿É´Ï´Ù
+        // GeoLocationì„ ì´ìš©í•´ì„œ ì ‘ì† ìœ„ì¹˜ë¥¼ ì–»ì–´ì˜µë‹ˆë‹¤
         navigator.geolocation.getCurrentPosition(function (position) {
-          lat = position.coords.latitude; // ÇöÀç À§µµ
-          lng = position.coords.longitude; // ÇöÀç °æµµ
+          lat = position.coords.latitude; // í˜„ì¬ ìœ„ë„
+          lng = position.coords.longitude; // í˜„ì¬ ê²½ë„
         });
       }
 
@@ -599,22 +512,22 @@ function closeOverlay() {
     }
   }
 
-  // Áöµµ»ı¼º
+  // ì§€ë„ìƒì„±
   function loadMap() {
     var loc = new naver.maps.LatLng(lat, lng);
     var mapOption = {
-      center: loc.destinationPoint(0, 500), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
-      zoom: 9, // ÁöµµÀÇ È®´ë ·¹º§
-      minZoom: 3, // ÁöµµÀÇ ÃÖ¼Ò ·¹º§
-      logoControl: false,        // naver ·Î°í
-      mapDataControl: false      // ÀúÀÛ±Ç ÄÁÆ®·Ñ
+      center: loc.destinationPoint(0, 500), // ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+      zoom: 9, // ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
+      minZoom: 3, // ì§€ë„ì˜ ìµœì†Œ ë ˆë²¨
+      logoControl: false,        // naver ë¡œê³ 
+      mapDataControl: false      // ì €ì‘ê¶Œ ì»¨íŠ¸ë¡¤
     };
 
-    // Áöµµ¸¦ »ı¼ºÇÑ´Ù
+    // ì§€ë„ë¥¼ ìƒì„±í•œë‹¤
     map = new naver.maps.Map(mapContainer, mapOption);
   }
 
-  // Á¤º¸Ã¢¿­±â
+  // ì •ë³´ì°½ì—´ê¸°
   function makeOverlay(idx) {
     closeOverlay();
     $.getJSON("/api/store_detail/" + idx, function (rst) {
@@ -635,7 +548,7 @@ function closeOverlay() {
         });
         $("#pop2_store_event").html(event_content);
       } else {
-        $("#pop2_store_event").text("ÀÌº¥Æ®°¡ ¾ø½À´Ï´Ù.");
+        $("#pop2_store_event").text("ì´ë²¤íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤.");
       }
 
       if (data.seatYn == 'Y') $("#pop2_store_seat").removeClass("off");
@@ -657,19 +570,19 @@ function closeOverlay() {
       //$(".store_info_wrap").show();
 
 
-      // Å¬¸¯ÇÑ ÁöÁ¡ÀÌ Áß½ÉÀ¸·Î ¿Àµµ·Ï ÀÌµ¿
+      // í´ë¦­í•œ ì§€ì ì´ ì¤‘ì‹¬ìœ¼ë¡œ ì˜¤ë„ë¡ ì´ë™
       //map.setCenter(moveLatLon);
       var moveLatLon = new naver.maps.LatLng(data.lat, data.lng);
       map.panTo(moveLatLon);
     });
   }
 
-  // Á¤º¸Ã¢´İ±â
+  // ì •ë³´ì°½ë‹«ê¸°
   function closeOverlay() {
     if (infowindow != null) infowindow.close();
   }
 
-  // Áöµµ»çÀÌÁî
+  // ì§€ë„ì‚¬ì´ì¦ˆ
   function mapResize() {
     var rate = window.innerWidth <= 1023 ? 0.9 : 0.598;
     var w = $(".store_wrap").width();
@@ -684,14 +597,14 @@ function closeOverlay() {
     mapResize();
   });
 
-  // ¸ÅÀåÃ£±â
+  // ë§¤ì¥ì°¾ê¸°
   function searchStore(pageNo) {
     useCurrentLoc = false;
     $("#idx").val("");
     /*console.log($("input[name='searchCondition']:checked").val());
-    if($("input[name='searchCondition']:checked").val() == 'address') { //ÁÖ¼Ò·Î °Ë»ö
+    if($("input[name='searchCondition']:checked").val() == 'address') { //ì£¼ì†Œë¡œ ê²€ìƒ‰
 
-    } else { //¸ÅÀå¸íÀ¸·Î °Ë»ö
+    } else { //ë§¤ì¥ëª…ìœ¼ë¡œ ê²€ìƒ‰
 
     }*/
 
@@ -704,22 +617,22 @@ function closeOverlay() {
       if (data.length > 0) {
 
         $.each(data, function (key, val) {
-          // Áöµµ¿¡ ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Ç¥½ÃÇÑ´Ù.
+          // ì§€ë„ì— ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  í‘œì‹œí•œë‹¤.
           markerOptions = {
             position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
             map: map,
             icon: {
-              url: '../assets/images/common/icon_map.png',
+              url: 'assets/images/common/icon_map.png',
               size: new naver.maps.Size(50, 52),
               scaledSize: new naver.maps.Size(42, 52),
 
             }
           };
 
-          // ¸¶Ä¿¿¡ Å¬¸¯ÀÌº¥Æ® µî·Ï
+          // ë§ˆì»¤ì— í´ë¦­ì´ë²¤íŠ¸ ë“±ë¡
           var marker = new naver.maps.Marker(markerOptions);
           naver.maps.Event.addListener(marker, 'click', function () {
-            // ¿À¹ö·¹ÀÌ »ı¼º
+            // ì˜¤ë²„ë ˆì´ ìƒì„±
             makeOverlay(val.idx);
           });
 
@@ -734,7 +647,7 @@ function closeOverlay() {
 
   }
 
-  //¸ÅÀåÃ£±â ¸®½ºÆ® ·»´õ
+  //ë§¤ì¥ì°¾ê¸° ë¦¬ìŠ¤íŠ¸ ë Œë”
   function renderSearchResult(pageNo) {
     $.getJSON("/api/store_search/" + pageNo + "?" + $("#searchForm").serialize(), function (data) {
       console.log(data);
@@ -744,9 +657,9 @@ function closeOverlay() {
       if (data.list.length > 0) {
 
         list += '<tr>';
-        list += ' <th>¸ÅÀå¸í</th>';
-        list += ' <th>¿¬¶ôÃ³</th>';
-        list += ' <th>ÁÖ¼Ò</th>';
+        list += ' <th>ë§¤ì¥ëª…</th>';
+        list += ' <th>ì—°ë½ì²˜</th>';
+        list += ' <th>ì£¼ì†Œ</th>';
         list += '<tr>';
 
         $.each(data.list, function (key, val) {
@@ -776,7 +689,7 @@ function closeOverlay() {
     });
   }
 
-  // ½Å±Ô °¡¸ÍÁ¡ _ À§Ä¡º¯°æ
+  // ì‹ ê·œ ê°€ë§¹ì  _ ìœ„ì¹˜ë³€ê²½
   function chanageLoc(idx) {
     useCurrentLoc = false;
     $("#idx").val(idx);
@@ -786,24 +699,24 @@ function closeOverlay() {
       if (data.length > 0) {
 
         $.each(data, function (key, val) {
-          // Áöµµ¿¡ ¸¶Ä¿¸¦ »ı¼ºÇÏ°í Ç¥½ÃÇÑ´Ù.
+          // ì§€ë„ì— ë§ˆì»¤ë¥¼ ìƒì„±í•˜ê³  í‘œì‹œí•œë‹¤.
           console.log(val)
 
           markerOptions = {
             position: new naver.maps.LatLng(val.lat, val.lng).destinationPoint(0, 0),
             map: map,
             icon: {
-              url: '../assets/images/common/icon_map.png',
+              url: 'assets/images/common/icon_map.png',
               size: new naver.maps.Size(50, 52),
               scaledSize: new naver.maps.Size(42, 52),
 
             }
           };
 
-          // ¸¶Ä¿¿¡ Å¬¸¯ÀÌº¥Æ® µî·Ï
+          // ë§ˆì»¤ì— í´ë¦­ì´ë²¤íŠ¸ ë“±ë¡
           var marker = new naver.maps.Marker(markerOptions);
           naver.maps.Event.addListener(marker, 'click', function () {
-            // ¿À¹ö·¹ÀÌ »ı¼º
+            // ì˜¤ë²„ë ˆì´ ìƒì„±
             makeOverlay(val.idx);
           });
 
@@ -811,7 +724,7 @@ function closeOverlay() {
 
         });
 
-        // ¸¶Ä¿ÀÇ Áß½ÉÀ» ÀÌµ¿ ½ÃÅµ´Ï´Ù.
+        // ë§ˆì»¤ì˜ ì¤‘ì‹¬ì„ ì´ë™ ì‹œí‚µë‹ˆë‹¤.
         if (useCurrentLoc === false) {
           lat = data[0].lat;
           lng = data[0].lng;
@@ -822,16 +735,16 @@ function closeOverlay() {
 
     });
 
-    // ½ºÅ©·Ñ À§Ä¡ ÀÌµ¿
+    // ìŠ¤í¬ë¡¤ ìœ„ì¹˜ ì´ë™
     var offset = $("#map_position").offset();
     $("html, body").animate({scrollTop: offset.top}, 400);
   }
 
 
-  // ½Å±Ô °¡¸ÍÁ¡
+  // ì‹ ê·œ ê°€ë§¹ì 
   function newStore(pageNo) {
     $.ajax({
-      type: 'POST',
+      type: 'get',
       url: "/api/store_new/" + pageNo,
       headers: {
         Accept: "application/json; charset=utf-8",
@@ -860,10 +773,10 @@ function closeOverlay() {
           if (val["openEvent"] != null) {
             list += '       <dd><span>' + val["openEvent"] + '</span></dd>';
           } else {
-            list += '       <dd><span>ÀÌº¥Æ®°¡ ¾ø½À´Ï´Ù</span></dd>';
+            list += '       <dd><span>ì´ë²¤íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤</span></dd>';
           }
           list += '   </dl>';
-          list += '   <a href="#none" class="location" onclick="chanageLoc(' + val["idx"] + ');">À§Ä¡º¸±â</a>';
+          list += '   <a href="#none" class="location" onclick="chanageLoc(' + val["idx"] + ');">ìœ„ì¹˜ë³´ê¸°</a>';
           list += '   </div>';
           list += '</li>';
 
@@ -882,18 +795,18 @@ function closeOverlay() {
     });
   }
 
-  // ½Å±Ô¸ÅÀå ÆäÀÌÂ¡
+  // ì‹ ê·œë§¤ì¥ í˜ì´ì§•
   function paging(data) {
 
     var txt = '';
     txt += '<div class="pageinate">';
     txt += '    <div class="cont">';
 
-    // ÀÌÀüÆäÀÌÁö
+    // ì´ì „í˜ì´ì§€
     if (data.prevPageNo == data.currentPageNo) {
-      txt += '        <a href="#none" class="arr prev off">ÀÌÀüÆäÀÌÁö</a>';
+      txt += '        <a href="#none" class="arr prev off">ì´ì „í˜ì´ì§€</a>';
     } else {
-      txt += '        <a href="javascript:newStore(' + data.prevPageNo + ')" class="arr prev">ÀÌÀüÆäÀÌÁö</a>';
+      txt += '        <a href="javascript:newStore(' + data.prevPageNo + ')" class="arr prev">ì´ì „í˜ì´ì§€</a>';
     }
 
     for (var i = data.startPageNo; i <= data.endPageNo; i++) {
@@ -904,11 +817,11 @@ function closeOverlay() {
       }
     }
 
-    // ´ÙÀ½ÆäÀÌÁö
+    // ë‹¤ìŒí˜ì´ì§€
     if (data.lastPageNo == data.currentPageNo) {
-      txt += '        <a href="#none" class="arr next off">´ÙÀ½ÆäÀÌÁö</a>';
+      txt += '        <a href="#none" class="arr next off">ë‹¤ìŒí˜ì´ì§€</a>';
     } else {
-      txt += '        <a href="javascript:newStore(' + data.nextPageNo + ')" class="arr next">´ÙÀ½ÆäÀÌÁö</a>';
+      txt += '        <a href="javascript:newStore(' + data.nextPageNo + ')" class="arr next">ë‹¤ìŒí˜ì´ì§€</a>';
     }
     txt += '    </div>';
     txt += '</div>';
@@ -918,18 +831,18 @@ function closeOverlay() {
 
   }
 
-  // ¸ÅÀå °Ë»ö°á°ú ÆäÀÌÂ¡
+  // ë§¤ì¥ ê²€ìƒ‰ê²°ê³¼ í˜ì´ì§•
   function searchPaging(data) {
 
     var txt = '';
     txt += '<div class="pageinate">';
     txt += '    <div class="cont">';
 
-    // ÀÌÀüÆäÀÌÁö
+    // ì´ì „í˜ì´ì§€
     if (data.prevPageNo == data.currentPageNo) {
-      txt += '        <a href="#none" class="arr prev off">ÀÌÀüÆäÀÌÁö</a>';
+      txt += '        <a href="#none" class="arr prev off">ì´ì „í˜ì´ì§€</a>';
     } else {
-      txt += '        <a href="javascript:renderSearchResult(' + data.prevPageNo + ')" class="arr prev">ÀÌÀüÆäÀÌÁö</a>';
+      txt += '        <a href="javascript:renderSearchResult(' + data.prevPageNo + ')" class="arr prev">ì´ì „í˜ì´ì§€</a>';
     }
 
     for (var i = data.startPageNo; i <= data.endPageNo; i++) {
@@ -940,11 +853,11 @@ function closeOverlay() {
       }
     }
 
-    // ´ÙÀ½ÆäÀÌÁö
+    // ë‹¤ìŒí˜ì´ì§€
     if (data.lastPageNo == data.currentPageNo) {
-      txt += '        <a href="#none" class="arr next off">´ÙÀ½ÆäÀÌÁö</a>';
+      txt += '        <a href="#none" class="arr next off">ë‹¤ìŒí˜ì´ì§€</a>';
     } else {
-      txt += '        <a href="javascript:renderSearchResult(' + data.nextPageNo + ')" class="arr next">´ÙÀ½ÆäÀÌÁö</a>';
+      txt += '        <a href="javascript:renderSearchResult(' + data.nextPageNo + ')" class="arr next">ë‹¤ìŒí˜ì´ì§€</a>';
     }
     txt += '    </div>';
     txt += '</div>';
@@ -961,50 +874,48 @@ function closeOverlay() {
 
     <!-- inc footer s -->
     <!-- footer -->
-
-
 <footer id="footer">
     <div class="ft_content mo_version">
 
         <!-- family goods -->
         <div class="ft_menu">
             <ul>
-                <li class="first_be off"><a href="../footer/incruit.jsp">ÀÎÀçÃ¤¿ë</a></li>
-                <li class="off"><a href="../footer/partners.jsp">Çù·Â¾÷Ã¼µî·Ï</a></li>
-                <li class="mo_bl"><a href="../footer/notice_list.jsp">°øÁö»çÇ×</a></li>
-                <li><a href="../footer/faq_list.jsp">°í°´ ¼¾ÅÍ</a></li>
-                <li class="mo_bl"><a href="../footer/policy.jsp"><strong>°³ÀÎÁ¤º¸Ãë±Ş¹æÄ§</strong></a></li>
-                <li><a href="../footer/agreement.jsp">ÀÌ¿ë¾à°ü</a></li>
+                <li class="first_be off"><a href="incruit.go">ì¸ì¬ì±„ìš©</a></li>
+                <li class="off"><a href="partners.go">í˜‘ë ¥ì—…ì²´ë“±ë¡</a></li>
+                <li class="mo_bl"><a href="notice_list.go">ê³µì§€ì‚¬í•­</a></li>
+                <li><a href="faq_list.go">ê³ ê° ì„¼í„°</a></li>
+                <li class="mo_bl"><a href="policy.go"><strong>ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</strong></a></li>
+                <li><a href="agreement.go">ì´ìš©ì•½ê´€</a></li>
             </ul>
         </div>
         <!--// family goods -->
-		<div class="mark_webaward"><p><span class="blind">web award korea 2017 ÇÁ·£Â÷ÀÌÁîºĞ¾ß ´ë»ó2017</span></p></div><!-- 2018-01-11À¥¾î¿öµå¸¶Å© -->
+		<div class="mark_webaward"><p><span class="blind">web award korea 2017 í”„ëœì°¨ì´ì¦ˆë¶„ì•¼ ëŒ€ìƒ2017</span></p></div><!-- 2018-01-11ì›¹ì–´ì›Œë“œë§ˆí¬ -->
         <!-- info -->
         <div class="ft_info_wrap">
             <!-- pc -->
             <div class="ft_info pc_info">
-                <span class="first_be">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
-                <span>¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãş</span>
+                <span class="first_be">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                <span>ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸  214-81-96569</span>
+                <span>ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                 <span>T.  02-585-1114</span>
                 <span>F.  02-598-1116</span>
                 <span class="first_be">E.  webmaster@hsd.co.kr</span>
-                <span>ÇÑ¼Ü µµ½Ã¶ô °í°´¼¾ÅÍ  02-585-1114</span>
-                <span>Àü±¹Ã¢¾÷¼³¸íÈ¸  1811-0188</span>
-                <span>´ÜÃ¼ÁÖ¹®  1644-3288</span>
+                <span>í•œì†¥ ë„ì‹œë½ ê³ ê°ì„¼í„°  02-585-1114</span>
+                <span>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ  1811-0188</span>
+                <span>ë‹¨ì²´ì£¼ë¬¸  1644-3288</span>
             </div>
             <!-- //pc -->
             <!-- mobile -->
             <div class="ft_info mo_info">
                 <div class="mo_info_list">
                     <p class="btn_toggle">
-                        <a href="#none">ÇÑ¼Ü »ç¾÷ÀÚ Á¤º¸</a>
+                        <a href="#none">í•œì†¥ ì‚¬ì—…ì ì •ë³´</a>
                     </p>
                     <div class="mo_info_on">
-                        <span class="mo_bl">´ëÇ¥ÀÌ»ç  ÀÌ¿µ´ö</span>
-                        <span>»ç¾÷ÀÚµî·Ï¹øÈ£  214-81-96569</span>
+                        <span class="mo_bl">ëŒ€í‘œì´ì‚¬  ì´ì˜ë•</span>
+                        <span>ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸  214-81-96569</span>
                         <br/>
-                        <span class="mo_bl">¼­¿ï½Ã °­³²±¸ °­³²´ë·Î 318(¿ª»ïµ¿) Å¸¿ö837ºôµù 8,9Ãş</span>
+                        <span class="mo_bl">ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 318(ì—­ì‚¼ë™) íƒ€ì›Œ837ë¹Œë”© 8,9ì¸µ</span>
                         <br/>
                         <span class="mo_bl">T.  02-585-1114</span>
                         <span>F.  02-598-1116</span>
@@ -1012,15 +923,15 @@ function closeOverlay() {
                         <span class="mo_bl">E.  webmaster@hsd.co.kr</span>
                         <div class="mo_info_call">
                             <dl>
-                                <dt>ÇÑ¼Ü °í°´¼¾ÅÍ</dt>
+                                <dt>í•œì†¥ ê³ ê°ì„¼í„°</dt>
                                 <dd>02-585-1114</dd>
                             </dl>
                             <dl>
-                                <dt>Àü±¹Ã¢¾÷¼³¸íÈ¸</dt>
+                                <dt>ì „êµ­ì°½ì—…ì„¤ëª…íšŒ</dt>
                                 <dd>1811-0188</dd>
                             </dl>
                             <dl>
-                                <dt>´ÜÃ¼ÁÖ¹®</dt>
+                                <dt>ë‹¨ì²´ì£¼ë¬¸</dt>
                                 <dd>1644-3288</dd>
                             </dl>
                         </div>
@@ -1029,18 +940,17 @@ function closeOverlay() {
             </div>
             <!-- //mobile -->
 
-            <p class="copyright">COPYRIGHT<span>&copy;</span>¢ßÇÑ¼Ü. ALL RIGHTS RESERVED.</p>
+            <p class="copyright">COPYRIGHT<span>&copy;</span>ãˆœí•œì†¥. ALL RIGHTS RESERVED.</p>
 
             <div class="ft_sns">
-                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="»õ Ã¢ ¿­¸²" class="sns_insta_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">instagram</span></a>
-                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="»õ Ã¢ ¿­¸²" ><span class="blind">facebook</span></a>
+                <a href="https://www.instagram.com/hansot_official/" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" class="sns_insta_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">instagram</span></a>
+                <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" class="sns_face_02" target="_blank" title="ìƒˆ ì°½ ì—´ë¦¼" ><span class="blind">facebook</span></a>
             </div>
         </div>
         <!--// info -->
     </div>
 </footer>
 <!--// footer -->
-
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109125197-1"></script>
         <script>
@@ -1051,8 +961,8 @@ function closeOverlay() {
             gtag('config', 'UA-109125197-1');
         </script>
     <!--// inc footer e -->
+
 </div>
 <!--// wrap e -->
->>>>>>> master
 </body>
 </html>

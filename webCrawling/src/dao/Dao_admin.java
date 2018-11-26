@@ -259,11 +259,14 @@ public class Dao_admin {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
-
+			
 			rs.close();
+			
+			
 		} catch (Exception e) {
 			System.out.println("delete() : 회원삭제에 실패 하였습니다.");
 			e.printStackTrace();
+			
 		}
 
 	}

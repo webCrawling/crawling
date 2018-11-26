@@ -10,7 +10,6 @@ import java.util.Iterator;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.sql.DataSource;
 
 import dto.Dto_join;
@@ -22,7 +21,6 @@ public class Dao_mypage {
 
 	Context context;
 	DataSource datasource;
-
 	Connection conn;
 
 	String sql;
@@ -56,8 +54,11 @@ public class Dao_mypage {
 			conn = datasource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
-			pstmt.executeUpdate();
-
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				System.out.println(rs.getString(1));
 			if(rs.getString(1).equals(pass)) {
 
 				pstmt = conn.prepareStatement(sql2);
@@ -74,8 +75,9 @@ public class Dao_mypage {
 				System.out.println("현재 비밀번호가 틀렸습니다.");
 				return false;
 			}
+			}
 		} catch (Exception e) {
-			System.out.println("modify() : 회원수정에 실패 하였습니다.");
+			System.out.println("passModification() : 회원수정에 실패 하였습니다.");
 			e.printStackTrace();
 		}finally{
 			if(rs!=null)try{rs.close();}catch(SQLException e){}
