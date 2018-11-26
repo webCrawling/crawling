@@ -2,6 +2,7 @@ package frontController;
 
 import java.io.IOException;
 
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,11 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import command.Command_CheckingId;
 import command.Command_Join;
+import command.Command_delete;
 import command.Command_home;
+import command.Command_mypage;
 import dao.Dao_join;
 import dto.Dto_join;
 import etc.Action;
 import etc.ActionForward;
+import etc.Command;
 
 @WebServlet("*.do")
 
@@ -39,7 +43,6 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 		Action action = null;
 
 		System.out.println("command is " + command);
-		System.out.println("ignore확인3");
 
 		// 로그인 버튼 클릭 시 홈 페이지로 이동
 		if (command.equals("/home.do")) {
@@ -56,7 +59,7 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("/home.jsp");
-			
+
 		}
 
 		// 로그인 페이지로 이동
@@ -110,14 +113,44 @@ public class FrontController_join extends javax.servlet.http.HttpServlet impleme
 
 		}
 
-		// 페이지 이동
-		if (forward.isRedirect()) {
-			response.sendRedirect(forward.getPath());
-		} else {
-			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
-			dispatcher.forward(request, response);
+		//마이페이지 (수정)으로 이동
+		else if (command.equals("/modification.do")){
+			System.out.println("모디피케이션 컨트롤러 까지 온다.");
+			action = new Command_mypage();
+			try {
+
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+
+		//마이페이지에서 회원탈퇴
+		else if (command.equals("/delete.do")){
+
+			String id = request.getParameter("id");
+			request.setAttribute("id",id);
+			action = new Command_delete();
+
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	
+	// 페이지 이동
+	if (forward.isRedirect()) {
+		response.sendRedirect(forward.getPath());
+	} else {
+		RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
+		dispatcher.forward(request, response);
 	}
+}
+
 
 
 }

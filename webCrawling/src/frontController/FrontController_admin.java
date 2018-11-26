@@ -130,17 +130,7 @@ public class FrontController_admin extends HttpServlet {
 
 		}
 
-		//마이페이지 (수정)으로 이동
 		
-		else if (com.equals("/modification.am")){
-
-			Command command = new Command_mypage();
-			try {
-				command.exe(request, response);
-			} catch (NamingException e) {
-				e.printStackTrace();
-			}
-		}
 		// 페이지 이동
 		RequestDispatcher dis = request.getRequestDispatcher(forward);
 		dis.forward(request, response);
