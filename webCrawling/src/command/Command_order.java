@@ -16,6 +16,7 @@ public class Command_order implements Command {
 	
 	private String menu; // 주문한 메뉴들
 	
+	private int quan2; // 주문한 메뉴들 수량
 	private int price;	// 주문한 메뉴들 총 가격
 	
 	// constructor
@@ -53,6 +54,7 @@ public class Command_order implements Command {
 		for(int i =0 ; i<quan.length ; i++) {
 			quan_parsing[i] = Integer.parseInt(quan[i]);
 			
+			
 		}
 		
 		for(int i =0 ; i<field.length ; i++) {
@@ -69,7 +71,7 @@ public class Command_order implements Command {
 			else {
 			menu = menu+","+check[i];
 			}
-			
+			quan2=quan_parsing[i];
 			// 총 금액
 			price += parsing[i]*quan_parsing[i];
 		}
@@ -81,7 +83,7 @@ public class Command_order implements Command {
 		dto.setId(id);
 		dto.setMenu(menu);
 		dto.setPrice(price);
-		dto.setPhone(phone);
+		dto.setQuan(quan2);
 		
 		dao.doOrder(dto);
 		
