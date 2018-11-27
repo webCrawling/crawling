@@ -153,19 +153,51 @@
     <!-- header flex-->
     <div class="hd_flex">
         <div class="area_flex">
-            <ul>
+            <% String id = (String)session.getAttribute("id"); %>
+            <ul style="width:300px">
+              <% if(id != null && id.equals("admin")){ %>
+            	 <li>
+           
+                   <a href="goAdmin.am"><img src="images/key.png" style="width:15px;">&nbsp;관리자 페이지</a>
+                   
+                </li>
+                
                 <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
+                </li>
+           <%}%>
+           
+            <% if(id != null && (!id.equals("admin"))){ %>
+            	 <li >
+           
+                    <a href="mypage.go"> <%=id %> 님의 마이페이지</a> 
+                    
+                </li>
+                <li>
+                <a href="javascript:location.href='logout.do'" id="logout"/> logout </a>
+                </li>
+           <%}%>
+            <% if(id == null){
+            
+            %>
+                <li>
+
                     <a href="login.do">로그인</a>
-                    </li>
+                </li>
+                    
                 <li>
                     <a href="join.do">회원가입</a>
-                    </li>
+               </li>
+             <%} %> 
+
                 <li class="sns_insta">
                     <a href="https://www.instagram.com/hansot_official/" target="_blank" title="새 창 열림" ><span class="blind">instagram</span></a>
                 </li>
+                
                 <li class="sns_face">
                     <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="새 창 열림" ><span class="blind">facebook</span></a>
                 </li>
+                
             </ul>
         </div>
     </div>

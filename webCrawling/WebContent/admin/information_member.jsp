@@ -60,7 +60,7 @@
 
 	<div class="my_container3">
 		<span style="font-size:30px; margin-bottom:50px; color:#FFBF00;"><img src="images/check.png" style="width: 30px"> &nbsp; 회원 주문 내역</span>
-		<table border=1>
+		<table style="border-collapse:separate; margin-top:20px; border-spacing: 0 30px;">
 		<%
 			while (iter.hasNext()) {
 				Dto_order dto_order = (Dto_order) iter.next();

@@ -210,7 +210,7 @@ script tag는 src속성을 통해  .js 파일을 가져와 바로 실행하는 �
             <% if(id != null && (!id.equals("admin"))){ %>
             	 <li >
            
-                    <a href="my_page.go"> <%=id %> 님의 마이페이지</a> 
+                    <a href="mypage.go"> <%=id %> 님의 마이페이지</a> 
                     
                 </li>
                 <li>
